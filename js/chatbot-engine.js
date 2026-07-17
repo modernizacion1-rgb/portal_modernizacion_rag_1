@@ -145,11 +145,23 @@ class SAMGPChatbotEngine {
      * Algoritmo de RAG Local: Calcula el puntaje de similitud semántica y de palabras clave
      * entre la consulta del usuario y los nodos del corpus.
      */
-    retrieveRelevantNodes(query) {
+     retrieveRelevantNodes(query) {
         if (!this.knowledgeBase || !this.knowledgeBase.knowledge_nodes) return [];
 
         const normalizedQuery = this.normalizeText(query);
-        const queryTokens = normalizedQuery.split(" ").filter(w => w.length > 2);
+        const stopwords = new Set([
+            'que', 'para', 'como', 'con', 'sin', 'por', 'sobre', 'entre', 'hacia', 'hasta', 'desde',
+            'cuales', 'cual', 'quien', 'quienes', 'donde', 'cuando', 'cuyo', 'cuya', 'cuyos', 'cuyas',
+            'son', 'sea', 'ser', 'estar', 'este', 'esta', 'estos', 'estas', 'ese', 'esa', 'esos', 'esas',
+            'aquel', 'aquella', 'aquellos', 'aquellas', 'esto', 'eso', 'aquello', 'mas', 'muy', 'tanto',
+            'del', 'las', 'los', 'una', 'uno', 'unas', 'unos', 'pero', 'sino', 'porque', 'pues', 'aunque',
+            'habia', 'hay', 'tiene', 'tienen', 'hacer', 'pueden', 'puede', 'debe', 'deben', 'ademas',
+            'luego', 'tambien', 'asi', 'bien', 'solo', 'solamente', 'cada', 'todo', 'toda', 'todos', 'todas',
+            'institucion', 'institucional', 'entidad', 'entidades', 'publica', 'publicas', 'publico', 'publicos',
+            'estado', 'estatal', 'gestion', 'general', 'sistema', 'sistemas', 'norma', 'normas', 'requisito',
+            'requisitos', 'oficina', 'camioneta', 'pasaporte', 'motor', 'reparar', 'renovar', 'cocinar', 'receta'
+        ]);
+        const queryTokens = normalizedQuery.split(" ").filter(w => w.length > 2 && !stopwords.has(w));
 
         let scoredNodes = this.knowledgeBase.knowledge_nodes.map(node => {
             // Filtrar por categoría activa si no es 'all'
@@ -158,6 +170,7 @@ class SAMGPChatbotEngine {
             }
 
             let score = 0;
+            let hasKeywordMatch = false;
             const normTitle = this.normalizeText(node.title);
             const normAnswer = this.normalizeText(node.answer);
 
@@ -165,7 +178,8 @@ class SAMGPChatbotEngine {
             for (let qp of (node.question_patterns || [])) {
                 const normQP = this.normalizeText(qp);
                 if (normalizedQuery.includes(normQP) || normQP.includes(normalizedQuery)) {
-                    score += 10.0;
+                    score += 12.0;
+                    hasKeywordMatch = true;
                 }
             }
 
@@ -173,7 +187,8 @@ class SAMGPChatbotEngine {
             for (let kw of (node.keywords || [])) {
                 const normKw = this.normalizeText(kw);
                 if (normalizedQuery.includes(normKw)) {
-                    score += 4.5;
+                    score += 6.0;
+                    hasKeywordMatch = true;
                 } else {
                     // Chequear coincidencia de tokens de la keyword
                     const kwTokens = normKw.split(" ");
@@ -182,19 +197,31 @@ class SAMGPChatbotEngine {
                         if (normalizedQuery.includes(kt)) matchedKwTokens++;
                     }
                     if (matchedKwTokens === kwTokens.length && kwTokens.length > 0) {
-                        score += 3.0;
+                        score += 4.5;
+                        hasKeywordMatch = true;
                     }
                 }
             }
 
-            // 3. Coincidencia por tokens individuales en título y cuerpo
+            // 3. Coincidencia por tokens individuales en título y cuerpo (solo tokens significativos)
+            let matchedTokensCount = 0;
             for (let token of queryTokens) {
-                if (normTitle.includes(token)) score += 2.0;
-                if (normAnswer.includes(token)) score += 0.8;
+                if (normTitle.includes(token)) {
+                    score += 2.0;
+                    matchedTokensCount++;
+                }
+                if (normAnswer.includes(token)) {
+                    score += 0.8;
+                    matchedTokensCount++;
+                }
             }
 
-            // Normalización adicional por longitud para evitar sesgos
-            return { node, score };
+            // Si no hay coincidencia de palabra clave oficial y apenas coincidieron 1 o 2 tokens comunes, penalizar
+            if (!hasKeywordMatch && score < 3.0) {
+                score = 0;
+            }
+
+            return { node, score, hasKeywordMatch };
         });
 
         // Ordenar descendentemente
@@ -229,8 +256,8 @@ class SAMGPChatbotEngine {
             sources: []
         };
 
-        // 2. Guardrail de Out-of-Scope (si el puntaje es menor a 1.5 y la consulta no tiene relación)
-        if (!topCandidate || topCandidate.score < 1.5) {
+        // 2. Guardrail de Out-of-Scope (si el puntaje es menor a 2.5 y no tiene relevancia real)
+        if (!topCandidate || topCandidate.score < 2.5) {
             aiMsg.text = `<p>⚖️ <strong>Consulta fuera del alcance de especialización (Out of Scope):</strong></p>
                           <p class="mt-2">Como Asistente Virtual institucional del <strong>SAMGP</strong>, mi especialización está rigurosamente orientada y delimitada a:</p>
                           <ul class="list-disc pl-5 mt-2 space-y-1 text-slate-700">
@@ -248,6 +275,7 @@ class SAMGPChatbotEngine {
         }
 
         // Si el usuario configuró API Key de Gemini y desea usar LLM en vivo
+        let fallbackTriggered = false;
         if (this.settings.useLiveLLM && this.settings.geminiApiKey && this.settings.geminiApiKey.trim() !== '') {
             try {
                 const llmResult = await this.callGeminiAPI(userText, retrieved.slice(0, 3));
@@ -258,11 +286,22 @@ class SAMGPChatbotEngine {
                 return { userMsg, aiMsg };
             } catch (error) {
                 console.warn("Fallo al consultar la API de Gemini en vivo, aplicando RAG Local de respaldo:", error);
+                fallbackTriggered = true;
             }
         }
 
         // 3. Respuesta estándar de RAG Local (Alta precisión basada en el nodo o nodos coincidentes)
         aiMsg.text = topCandidate.node.answer;
+        if (fallbackTriggered) {
+            aiMsg.text = `<div class="mb-3 p-3 bg-amber-50 border-l-4 border-amber-500 rounded-r-xl text-amber-900 text-xs flex items-start gap-2.5 shadow-sm">
+                            <span class="text-base leading-none shrink-0">⚠️</span>
+                            <div>
+                                <strong class="block font-bold">Mecanismo de Resiliencia Activado (Fallback RAG Local)</strong>
+                                No se pudo procesar con Google Gemini en vivo (API Key errónea, caducada o sin conexión). El sistema intervino automáticamente entregando la respuesta oficial desde LocalStorage sin interrupción.
+                            </div>
+                          </div>` + aiMsg.text;
+        }
+
         aiMsg.sources = [{
             title: topCandidate.node.source,
             category: topCandidate.node.category,

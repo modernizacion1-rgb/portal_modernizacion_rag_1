@@ -128,32 +128,8 @@
                         <div class="accordion-content">
                             <div class="p-6 bg-blue-50/50 text-slate-600 text-sm italic border-t border-slate-100">
                                 Repositorio centralizado que alberga todas las directivas y normas internas vigentes de la entidad. Utiliza este catálogo para consultar los marcos normativos que regulan nuestras funciones, procesos operativos y administrativos.
-                            </div>
-                            <div class="p-0 border-t border-slate-50 overflow-x-auto">
-                                <table class="w-full text-left text-sm">
-                                    <thead class="bg-slate-50 text-slate-500 border-b border-slate-200">
-                                        <tr class="text-[10px] uppercase font-black tracking-widest">
-                                            <th class="p-4">Directiva</th>
-                                            <th class="p-4">Código Directiva</th>
-                                            <th class="p-4">Fecha Publicación</th>
-                                            <th class="p-4 text-center">Descarga</th>
-                                        </tr>
-                                    </thead>
-                                    <tbody class="divide-y divide-slate-100">
-                                        <tr class="hover:bg-slate-50/50 transition-colors">
-                                            <td class="p-4 font-bold text-slate-700">Directiva sobre Rendición de Viáticos</td>
-                                            <td class="p-4 text-xs font-mono text-slate-500">DI N°001-2023-MIDAGRI-AGROIDEAS</td>
-                                            <td class="p-4 text-xs text-slate-600">12/05/2023</td>
-                                            <td class="p-4 text-center"><button class="p-2 text-red-600 hover:bg-red-50 rounded-lg"><i data-lucide="file-type-2" class="w-5 h-5"></i></button></td>
-                                        </tr>
-                                        <tr class="hover:bg-slate-50/50 transition-colors">
-                                            <td class="p-4 font-bold text-slate-700">Directiva de Seguridad de la Información</td>
-                                            <td class="p-4 text-xs font-mono text-slate-500">DI N°004-2024-MIDAGRI-AGROIDEAS</td>
-                                            <td class="p-4 text-xs text-slate-600">01/02/2024</td>
-                                            <td class="p-4 text-center"><button class="p-2 text-red-600 hover:bg-red-50 rounded-lg"><i data-lucide="file-type-2" class="w-5 h-5"></i></button></td>
-                                        </tr>
-                                    </tbody>
-                                </table>
+                                               <div class="p-0 border-t border-slate-50 overflow-x-auto divide-y divide-slate-100" id="lista-oficial-directivas">
+                                <!-- El contenido dinámico de las directivas (json) se cargará aquí -->
                             </div>
                         </div>
                     </div>
@@ -658,15 +634,18 @@
             });
         });
 
-        // ACCORDION LOGIC
+        // ACCORDION LOGIC (Soporta acordeones anidados)
         function toggleAccordion(button) {
             const item = button.closest('.accordion-item');
             const isActive = item.classList.contains('active');
             
-            const parent = document.getElementById('accordion-directivas');
-            const allItems = parent.querySelectorAll('.accordion-item');
+            // Encuentra el contenedor padre directo (para no afectar sub-acordeones o padres)
+            const parent = item.parentElement;
             
-            allItems.forEach(i => {
+            // Solo buscar items que sean hijos directos de este contenedor
+            const siblingItems = Array.from(parent.children).filter(child => child.classList.contains('accordion-item'));
+            
+            siblingItems.forEach(i => {
                 i.classList.remove('active');
                 const content = i.querySelector('.accordion-content');
                 if(content) content.style.maxHeight = '0';
@@ -677,7 +656,16 @@
             if (!isActive) {
                 item.classList.add('active');
                 const content = item.querySelector('.accordion-content');
+                // Al ser anidado, si abrimos uno hijo, debemos asegurar que el padre recalcule su altura
                 content.style.maxHeight = content.scrollHeight + "px";
+                
+                // Actualizar altura del padre si está dentro de otro accordion-content
+                let parentContent = item.closest('.accordion-content');
+                while(parentContent && parentContent !== content) {
+                    parentContent.style.maxHeight = (parentContent.scrollHeight + content.scrollHeight) + "px";
+                    parentContent = parentContent.parentElement.closest('.accordion-content');
+                }
+                
                 const icon = item.querySelector('.chevron-icon');
                 if(icon) icon.classList.add('rotate-180');
             }

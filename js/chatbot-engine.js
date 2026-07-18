@@ -38,7 +38,7 @@ class SAMGPChatbotEngine {
             if (cachedKB) {
                 try {
                     const parsed = JSON.parse(cachedKB);
-                    if (parsed && parsed.metadata && parsed.metadata.version === "2026.1") {
+                    if (parsed && parsed.metadata && parsed.metadata.version === "2026.7") {
                         this.knowledgeBase = parsed;
                         needsRefresh = false;
                     }
@@ -266,6 +266,7 @@ class SAMGPChatbotEngine {
                             <li><strong>Reglamento SAMGP:</strong> Ente rector (SGP - PCM) y articulación sistémica (DS 123-2018-PCM).</li>
                             <li><strong>Normas Técnicas 2025:</strong> Gestión por Procesos (GxP), Calidad de Servicios (GCS), Gestión del Conocimiento e Innovación Pública.</li>
                             <li><strong>Estructura del Estado:</strong> Lineamientos ROF y MOP.</li>
+                            <li><strong>Instructivos Operativos:</strong> Asociatividad, Gestión Empresarial, Formas Asociativas, EEMRI y Adopción de Tecnología.</li>
                           </ul>
                           <p class="mt-2 font-semibold text-blue-900">Por favor, reformula tu consulta en relación a las materias mencionadas para poder brindarte el soporte legal exacto.</p>`;
             aiMsg.sources = [];
@@ -334,11 +335,11 @@ class SAMGPChatbotEngine {
             return `--- DOCUMENTO/NORMA ${idx + 1}: ${item.node.source} ---\nContenido Legal: ${item.node.answer.replace(/<[^>]*>?/gm, ' ')}\n`;
         }).join("\n");
 
-        const systemPrompt = `Eres el Asistente Virtual Especializado del Sistema Administrativo de Modernización de la Gestión Pública (SAMGP) en el portal de AGROIDEAS - MIDAGRI (Perú).
+        const systemPrompt = `Eres el Asistente Virtual Especializado del Sistema Administrativo de Modernización de la Gestión Pública (SAMGP) y experto en los Instructivos Operativos en el portal de AGROIDEAS - MIDAGRI (Perú).
 Tus respuestas deben ser rigurosas, institucionales, profesionales y formateadas con HTML limpio (<p>, <strong>, <ul>, <li>) para verse increíbles en una burbuja de chat.
 Instrucción Innegociable: Responde a la pregunta del usuario BASÁNDOTE EXCLUSIVAMENTE en el siguiente contexto normativo proporcionado y citando la fuente exacta. Si el contexto no tiene suficiente información, indícalo con cortesía.
 
-CONTEXTO NORMATIVO SAMGP AL 2030:
+CONTEXTO NORMATIVO SAMGP E INSTRUCTIVOS AGROIDEAS:
 ${contextText}`;
 
         const payload = {

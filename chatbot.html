@@ -63,9 +63,9 @@
                         <i data-lucide="download" class="w-4 h-4 text-emerald-300"></i>
                         <span>Exportar</span>
                     </button>
-                    <button id="btn-clear-chat" class="px-3.5 py-2 rounded-xl bg-red-500/20 hover:bg-red-500/30 text-red-300 border border-red-500/30 text-xs font-semibold flex items-center gap-1.5 transition-all shadow-sm" title="Reiniciar conversación">
+                    <button id="btn-clear-chat" class="px-3.5 py-2 rounded-xl bg-red-500/20 hover:bg-red-500/30 text-red-300 border border-red-500/30 text-xs font-semibold flex items-center gap-1.5 transition-all shadow-sm" title="Limpiar conversaciones anteriores">
                         <i data-lucide="trash-2" class="w-4 h-4"></i>
-                        <span class="hidden md:inline">Reiniciar</span>
+                        <span class="hidden md:inline">Limpiar Historial</span>
                     </button>
                 </div>
             </div>
@@ -147,6 +147,13 @@
                         <span class="flex items-center gap-2.5 truncate">
                             <i data-lucide="building-2" class="w-4 h-4 text-slate-600 shrink-0"></i>
                             <span class="truncate">7. Organización Estado</span>
+                        </span>
+                    </button>
+
+                    <button data-cat="instructivos_agroideas" class="cat-btn w-full text-left px-3.5 py-3 rounded-2xl font-semibold text-xs text-slate-600 hover:bg-slate-50 flex items-center justify-between transition-all">
+                        <span class="flex items-center gap-2.5 truncate">
+                            <i data-lucide="file-text" class="w-4 h-4 text-emerald-600 shrink-0"></i>
+                            <span class="truncate">8. Instructivos Operativos</span>
                         </span>
                     </button>
                 </div>
@@ -523,7 +530,7 @@
 
             // 6. Botones de Acción Superior (Reiniciar, Ajustes, Exportar)
             btnClearChat.addEventListener('click', () => {
-                if (confirm('¿Deseas reiniciar la conversación normativo con el Asistente SAMGP?')) {
+                if (confirm('¿Deseas limpiar el historial de conversaciones anteriores con el Asistente SAMGP?')) {
                     window.SAMGPChatbot.clearHistory();
                     renderFullHistory();
                 }

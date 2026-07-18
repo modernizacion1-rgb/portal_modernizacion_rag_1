@@ -9,12 +9,13 @@ const contentLoader = {
     async init() {
         try {
             // Priorizar LocalStorage para reflejar cambios del admin
-            const localData = localStorage.getItem('agro_content_data');
-            if (localData) {
-                this.data = JSON.parse(localData);
-                console.log("Contenido cargado desde LocalStorage");
-                return this.data;
-            }
+            // const localData = localStorage.getItem('agro_content_data');
+            // if (localData) {
+            //     this.data = JSON.parse(localData);
+            //     console.log("Contenido cargado desde LocalStorage");
+            //     return this.data;
+            // }
+
 
             const response = await fetch('data/content.json');
             if (response.ok) {
@@ -124,7 +125,7 @@ const contentLoader = {
         if (!this.data) return;
 
         // 1. Directivas (Accordion)
-        const accordion = document.getElementById('accordion-directivas');
+        const accordion = document.getElementById('lista-oficial-directivas');
         if (accordion && this.data.repository.directivas) {
             accordion.innerHTML = this.data.repository.directivas.map((cat, idx) => `
                 <div class="accordion-item ${idx === 0 ? 'active' : ''}">

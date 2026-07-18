@@ -1,9 +1,9 @@
 {
     "metadata": {
         "title": "Corpus Normativo del Sistema Administrativo de Modernización de la Gestión Pública (SAMGP) al 2030",
-        "version": "2026.1",
-        "last_updated": "2026-07-17",
-        "total_modules": 8
+        "version": "2026.6",
+        "last_updated": "2026-07-18",
+        "total_modules": 9
     },
     "categories": [
         { "id": "all", "name": "Todos los Temas", "icon": "layers" },
@@ -14,7 +14,8 @@
         { "id": "gestion_calidad", "name": "4. Calidad de Servicios (GCS)", "icon": "award" },
         { "id": "gestion_conocimiento", "name": "5. Gestión del Conocimiento", "icon": "brain" },
         { "id": "innovacion_publica", "name": "6. Innovación Pública", "icon": "lightbulb" },
-        { "id": "organizacion_estado", "name": "7. Organización del Estado", "icon": "building-2" }
+        { "id": "organizacion_estado", "name": "7. Organización del Estado", "icon": "building-2" },
+        { "id": "instructivos_agroideas", "name": "8. Instructivos Operativos", "icon": "file-text" }
     ],
     "knowledge_nodes": [
         {
@@ -190,6 +191,250 @@
             ],
             "answer": "<p>El <strong>Sistema Administrativo de Modernización de la Gestión Pública (SAMGP)</strong> no opera de manera aislada; actúa como un sistema integrador que articula las herramientas técnicas de los demás sistemas administrativos transversales:</p><ul class='list-disc pl-5 mt-2 space-y-1.5'><li><strong>Con Planeamiento Estratégico (SINAPLAN - CEPLAN):</strong> Los objetivos prioritarios y los procesos misionales deben estar perfectamente alineados con el Plan Estratégico Institucional (PEI) y el Plan Operativo Institucional (POI).</li><li><strong>Con Presupuesto Público (MEF):</strong> Los procesos mejorados y orientados a resultados fundamentan la asignación y ejecución del Presupuesto por Resultados (PpR).</li><li><strong>Con Gestión de Recursos Humanos (SERVIR):</strong> La optimización de procesos y el MOP determinan los perfiles de puestos, competencias y planes de desarrollo del personal.</li><li><strong>Con Gobierno Digital e Informática (SEGDI):</strong> La simplificación y digitalización se apalancan en la interoperabilidad y el gobierno de datos para servicios ciudadanos 100% en línea.</li></ul>",
             "quick_prompt": "¿Cómo se articula el SAMGP con el Planeamiento (CEPLAN) y Presupuesto (MEF)?"
+        },
+        {
+            "id": "node_011",
+            "category": "instructivos_agroideas",
+            "title": "Instructivo de Asociatividad - General",
+            "source": "Instructivo de Asociatividad - AGROIDEAS",
+            "pdf_path": "MARCO NORMATIVO SAMGP 2026/8. Instructivos/1. Instructivo Asociatividad/INSTRUCTIVO_ASOCIATIVIDAD.pdf",
+            "keywords": [
+                "asociatividad", "instructivo de asociatividad", "conformacion", "asociaciones", "agroideas asociatividad", "asociarse", "agruparse", "formar asociacion", "juntarse", "asocitividad", "asociativida", "asoziacion"
+            ],
+            "question_patterns": [
+                "¿Qué establece el Instructivo de Asociatividad?",
+                "¿De qué trata el instructivo de asociatividad?",
+                "¿Cómo me asocio en Agroideas?",
+                "¿Qué se necesita para armar una asociacion?"
+            ],
+            "answer": "<p>El <strong>Instructivo de Asociatividad</strong> establece las disposiciones y procedimientos operativos para que las organizaciones agrarias puedan acceder a los incentivos de AGROIDEAS mediante el fortalecimiento de sus bases asociativas.</p>",
+            "quick_prompt": "¿Qué establece el Instructivo de Asociatividad?"
+        },
+        {
+            "id": "node_011_a",
+            "category": "instructivos_agroideas",
+            "title": "Requisitos y Flujo de Asociatividad",
+            "source": "Instructivo de Asociatividad - Requisitos y Flujo",
+            "pdf_path": "MARCO NORMATIVO SAMGP 2026/8. Instructivos/1. Instructivo Asociatividad/INSTRUCTIVO_ASOCIATIVIDAD.pdf",
+            "keywords": [
+                "requisitos de asociatividad", "flujo de asociatividad", "evaluacion", "idoneidad", "productores", "quien califica", "organizacion de productores", "reqisitos", "idoneida"
+            ],
+            "question_patterns": [
+                "¿Cuáles son los requisitos para la asociatividad en AGROIDEAS?",
+                "¿Cómo se evalúa la idoneidad de los productores en asociatividad?",
+                "¿Cuál es el flujo para postular a asociatividad?",
+                "¿Quiénes pueden postular a asociatividad?"
+            ],
+            "answer": "<p>Para acceder al incentivo de asociatividad, se evalúa la <strong>idoneidad de los productores</strong> (que sean pequeños o medianos agricultores familiares) y la formalización jurídica de la asociación. El flujo comprende la presentación del expediente de elegibilidad, la constatación de campo y la aprobación final por el comité técnico.</p>",
+            "quick_prompt": "¿Cuáles son los requisitos para asociatividad?"
+        },
+        {
+            "id": "node_011_b",
+            "category": "instructivos_agroideas",
+            "title": "Formatos y Anexos de Asociatividad",
+            "source": "Instructivo de Asociatividad - Anexos",
+            "pdf_path": "MARCO NORMATIVO SAMGP 2026/8. Instructivos/1. Instructivo Asociatividad/ANEXO_INFORMATIVO.pdf",
+            "keywords": [
+                "anexos de asociatividad", "formatos de asociatividad", "anexo 1", "anexo 2", "anexo 3", "anexo 4", "padron de socios", "acta de asamblea", "anesos", "patron de socios"
+            ],
+            "question_patterns": [
+                "¿Cuáles son los anexos de asociatividad?",
+                "¿Qué formatos debo presentar para asociatividad en AGROIDEAS?",
+                "¿Qué papeles debo presentar para asociarme?",
+                "¿Qué formatos pide Agroideas para asociarse?"
+            ],
+            "answer": "<p>La postulación requiere la entrega de los siguientes anexos oficiales digitalizados:</p><ul class='list-disc pl-5 mt-2 space-y-1'><li><strong>Anexo 1:</strong> Solicitud de apoyo y declaración jurada.</li><li><strong>Anexo 2:</strong> Padrón oficial de socios activos de la organización agraria.</li><li><strong>Anexo 3:</strong> Acta de asamblea general aprobando la postulación.</li><li><strong>Anexo 4:</strong> Ficha técnica informativa de la organización.</li></ul>",
+            "quick_prompt": "¿Cuáles son los anexos de asociatividad?"
+        },
+        {
+            "id": "node_012",
+            "category": "instructivos_agroideas",
+            "title": "Instructivo para el Incentivo de Gestión Empresarial - General",
+            "source": "RDE N° 114-2026 - Gestión Empresarial",
+            "pdf_path": "MARCO NORMATIVO SAMGP 2026/8. Instructivos/2. Instructivo Gestión Empresarial/RDE 114-2026/RDE_114_2026_INstructivo-para-incentivo-de-gestion-empresarial.pdf",
+            "keywords": [
+                "gestion empresarial", "instructivo de gestion empresarial", "rde 114-2026", "incentivo", "gerente", "administrador", "gestor", "gesion", "gention"
+            ],
+            "question_patterns": [
+                "¿De qué trata el Instructivo de Gestión Empresarial?",
+                "¿Qué establece la RDE 114-2026 sobre Gestión Empresarial?",
+                "¿Cómo funciona el incentivo de gerente?"
+            ],
+            "answer": "<p>Aprobado mediante la <strong>RDE N° 114-2026</strong>, este instructivo regula el otorgamiento del incentivo de <strong>Gestión Empresarial</strong>, cuyo fin es cofinanciar la contratación de gerentes o profesionales calificados para mejorar la administración y sostenibilidad de las organizaciones agrarias.</p>",
+            "quick_prompt": "¿De qué trata el Instructivo de Gestión Empresarial?"
+        },
+        {
+            "id": "node_012_a",
+            "category": "instructivos_agroideas",
+            "title": "Perfil y Requisitos del Gerente (Gestión Empresarial)",
+            "source": "RDE N° 114-2026 - Perfil Gerente",
+            "pdf_path": "MARCO NORMATIVO SAMGP 2026/8. Instructivos/2. Instructivo Gestión Empresarial/RDE 114-2026/RDE_114_2026_INstructivo-para-incentivo-de-gestion-empresarial.pdf",
+            "keywords": [
+                "perfil del gerente", "requisitos del gerente", "experiencia gerente", "estudios del gerente", "contratacion gerente", "estudios", "cv", "reqisitos", "gerente"
+            ],
+            "question_patterns": [
+                "¿Qué requisitos debe cumplir el gerente en Gestión Empresarial?",
+                "¿Cuál es el perfil del gerente para AGROIDEAS?",
+                "¿Qué debe haber estudiado el gerente de Agroideas?"
+            ],
+            "answer": "<p>El gerente a contratar bajo el incentivo de Gestión Empresarial debe poseer título profesional (en administración, ingeniería agronómica, economía o afines), acreditar experiencia mínima en gestión de negocios agrícolas o proyectos de desarrollo rural, y no contar con antecedentes penales ni deudas pendientes con el Estado.</p>",
+            "quick_prompt": "¿Qué requisitos debe cumplir the gerente?"
+        },
+        {
+            "id": "node_012_b",
+            "category": "instructivos_agroideas",
+            "title": "Cofinanciamiento y Plazos (Gestión Empresarial)",
+            "source": "RDE N° 114-2026 - Montos y Plazos",
+            "pdf_path": "MARCO NORMATIVO SAMGP 2026/8. Instructivos/2. Instructivo Gestión Empresarial/RDE 114-2026/RDE_114_2026_INstructivo-para-incentivo-de-gestion-empresarial.pdf",
+            "keywords": [
+                "cofinanciamiento gerente", "cuanto paga agroideas gerente", "plazos gerente", "sueldo gerente", "escala de pago gerente", "pagar gerente", "sueldo de gerente", "cuanto tiempo gerente", "cofinansiamiento", "escalonado"
+            ],
+            "question_patterns": [
+                "¿Cómo funciona el cofinanciamiento de Gestión Empresarial?",
+                "¿Cuánto aporta AGROIDEAS para el sueldo del gerente y por cuánto tiempo?",
+                "¿Agroideas paga el sueldo del gerente?",
+                "¿Cómo pido un gerente para mi asociacion?"
+            ],
+            "answer": "<p>El cofinanciamiento de la plaza de gerencia dura hasta un máximo de <strong>3 años (36 meses)</strong> y se otorga de forma degressiva:</p><ul class='list-disc pl-5 mt-2 space-y-1'><li><strong>Año 1:</strong> AGROIDEAS cofinancia hasta el 70% del sueldo (máximo mensual topado).</li><li><strong>Año 2:</strong> AGROIDEAS cofinancia hasta el 50%.</li><li><strong>Año 3:</strong> AGROIDEAS cofinancia hasta el 30%.</li></ul><p>La organización agraria debe asumir el porcentaje restante como contrapartida líquida.</p>",
+            "quick_prompt": "¿Cuánto aporta AGROIDEAS para el gerente?"
+        },
+        {
+            "id": "node_013",
+            "category": "instructivos_agroideas",
+            "title": "Instructivo para el Fortalecimiento de Formas Asociativas - General",
+            "source": "Instructivo Formas Asociativas",
+            "pdf_path": "MARCO NORMATIVO SAMGP 2026/8. Instructivos/3. Instructivo Formas Asosiativas/Fortalecimiento_FA.pdf.pdf",
+            "keywords": [
+                "formas asociativas", "fortalecimiento", "instructivo de formas asociativas", "cooperativas", "redes comerciales", "fortalecer cooperativa", "asosiativas", "cooperatibas"
+            ],
+            "question_patterns": [
+                "¿Qué es el Instructivo de Formas Asociativas?",
+                "¿De qué trata el documento de Fortalecimiento de Formas Asociativas?",
+                "¿Cómo se fortalecen las cooperativas?"
+            ],
+            "answer": "<p>El <strong>Instructivo para el Fortalecimiento de Formas Asociativas</strong> define los lineamientos para apoyar la consolidación técnica, legal y comercial de cooperativas, comunidades y otras redes empresariales del sector agrario.</p>",
+            "quick_prompt": "¿De qué trata el Instructivo de Formas Asociativas?"
+        },
+        {
+            "id": "node_013_a",
+            "category": "instructivos_agroideas",
+            "title": "Requisitos y Diagnóstico Organizacional (Formas Asociativas)",
+            "source": "Instructivo Formas Asociativas - Requisitos",
+            "pdf_path": "MARCO NORMATIVO SAMGP 2026/8. Instructivos/3. Instructivo Formas Asosiativas/Fortalecimiento_FA.pdf.pdf",
+            "keywords": [
+                "requisitos formas asociativas", "diagnostico organizacional", "evaluacion formas asociativas", "cooperativas agroideas", "diagnostico de la asociacion", "diagnostico", "reqisitos"
+            ],
+            "question_patterns": [
+                "¿Cuáles son los requisitos de Formas Asociativas?",
+                "¿Qué es el diagnóstico organizacional en Formas Asociativas?",
+                "¿Qué requisitos piden para fortalecer cooperativas?"
+            ],
+            "answer": "<p>Las cooperativas o asociaciones elegibles deben contar con personería jurídica activa y un padrón de socios formalizado. Antes del desembolso de los incentivos de fortalecimiento, AGROIDEAS exige la realización de un <strong>diagnóstico organizacional previo</strong> para identificar las brechas operativas y los puntos clave a optimizar.</p>",
+            "quick_prompt": "¿Cuáles son los requisitos de Formas Asociativas?"
+        },
+        {
+            "id": "node_014",
+            "category": "instructivos_agroideas",
+            "title": "Instructivo EEMRI (Estrategia de Emprendimiento de Mujeres) - General",
+            "source": "Instructivo EEMRI",
+            "pdf_path": "MARCO NORMATIVO SAMGP 2026/8. Instructivos/4. Instructivo EEMRI/EMRI 2024/Directiva_EMRI_2024.pdf",
+            "keywords": [
+                "eemri", "mujeres rurales", "indigenas", "emprendimiento", "instructivo eemri", "mujeres", "emprendimiento femenino", "comunidades nativas", "oam", "emri", "eemry"
+            ],
+            "question_patterns": [
+                "¿Qué es el EEMRI y cuáles son sus lineamientos?",
+                "¿De qué trata el Instructivo EEMRI (Mujeres Rurales e Indígenas)?",
+                "¿Cómo postular al programa de mujeres de Agroideas?"
+            ],
+            "answer": "<p>El <strong>Instructivo de la Estrategia de Emprendimiento de Mujeres Rurales e Indígenas (EEMRI)</strong> regula el acceso a las subvenciones económicas destinadas exclusivamente a Organizaciones Agrarias de Mujeres (OAM).</p>",
+            "quick_prompt": "¿Qué es la Estrategia EEMRI para Mujeres Rurales?"
+        },
+        {
+            "id": "node_014_a",
+            "category": "instructivos_agroideas",
+            "title": "Elegibilidad de la OAM (Estrategia Mujeres - EEMRI)",
+            "source": "Instructivo EEMRI - Elegibilidad",
+            "pdf_path": "MARCO NORMATIVO SAMGP 2026/8. Instructivos/4. Instructivo EEMRI/EMRI 2024/Directiva_EMRI_2024.pdf",
+            "keywords": [
+                "oam elegibilidad", "requisitos eemri", "porcentaje de mujeres", "junta directiva eemri", "organizacion de mujeres", "organizaciones de mujeres", "elejibilidad", "porcentajes"
+            ],
+            "question_patterns": [
+                "¿Qué requisitos debe cumplir una organización para calificar a EEMRI?",
+                "¿Qué es una OAM y cómo califica en AGROIDEAS?",
+                "¿Qué requisitos piden a las mujeres rurales?"
+            ],
+            "answer": "<p>Para calificar como una <strong>Organización Agraria de Mujeres (OAM)</strong> elegible para la estrategia EEMRI, la entidad debe estar conformada por un mínimo de <strong>70% de socias mujeres</strong> en su padrón general y contar con al menos una mujer ocupando un cargo directivo principal.</p>",
+            "quick_prompt": "¿Qué requisitos debe cumplir la OAM?"
+        },
+        {
+            "id": "node_014_b",
+            "category": "instructivos_agroideas",
+            "title": "Montos de Subvención y Cadenas Priorizadas (EEMRI)",
+            "source": "Instructivo EEMRI - Montos",
+            "pdf_path": "MARCO NORMATIVO SAMGP 2026/8. Instructivos/4. Instructivo EEMRI/EMRI 2024/Directiva_EMRI_2024.pdf",
+            "keywords": [
+                "montos eemri", "financiamiento mujeres", "subvencion mujeres", "cuanto dinero eemri", "ideas de negocio mujeres", "bono mujeres", "subvencion mujer", "subvension", "indijenas"
+            ],
+            "question_patterns": [
+                "¿Cuánto es el monto máximo de subvención en EEMRI?",
+                "¿Qué ideas de negocio financia la estrategia de mujeres?",
+                "¿Cuánto dinero le dan a las organizaciones de mujeres?"
+            ],
+            "answer": "<p>La estrategia otorga subvenciones directas no reembolsables con topes anuales regulados por la UIT vigente. Se priorizan planes orientados a la transformación de materias primas, comercialización conjunta y adopción de tecnologías ecológicas en cadenas productivas agrícolas, pecuarias y forestales.</p>",
+            "quick_prompt": "¿Cuánto financia la estrategia EEMRI?"
+        },
+        {
+            "id": "node_015",
+            "category": "instructivos_agroideas",
+            "title": "Instructivo para la Adopción de Tecnología (PNT)",
+            "source": "RDE N° 260-2023 - Adopción de Tecnología",
+            "pdf_path": "MARCO NORMATIVO SAMGP 2026/8. Instructivos/5. Instructivo para la Adopción de Tecnología/RDE 260-2023/4987670-instructivo-pnt.pdf",
+            "keywords": [
+                "adopcion de tecnologia", "tecnologia", "pnt", "rde 260-2023", "planes de negocio", "instructivo de adopcion de tecnologia", "cofinanciamiento de tecnologia", "maquinaria", "tractores", "comprar herramientas", "tecnoloiga", "tecnolgia"
+            ],
+            "question_patterns": [
+                "¿De qué trata el Instructivo para la Adopción de Tecnología?",
+                "¿Qué establece la RDE 260-2023 sobre el PNT?",
+                "¿Cómo postular a adopcion de tecnologia?"
+            ],
+            "answer": "<p>Aprobado mediante la <strong>RDE N° 260-2023</strong>, este documento normativo es el <strong>Instructivo para el Incentivo de Adopción de Tecnología (PNT)</strong>. Establece las reglas y criterios de evaluación para el cofinanciamiento de Planes de Negocio enfocados en innovación tecnológica.</p>",
+            "quick_prompt": "¿De qué trata el Instructivo de Adopción de Tecnología?"
+        },
+        {
+            "id": "node_015_a",
+            "category": "instructivos_agroideas",
+            "title": "Gastos Elegibles y No Elegibles (PNT)",
+            "source": "RDE N° 260-2023 - Gastos PNT",
+            "pdf_path": "MARCO NORMATIVO SAMGP 2026/8. Instructivos/5. Instructivo para la Adopción de Tecnología/RDE 260-2023/4987670-instructivo-pnt.pdf",
+            "keywords": [
+                "gastos elegibles pnt", "gastos no elegibles pnt", "que se puede comprar pnt", "maquinaria pnt", "asistencia tecnica pnt", "bienes elegibles", "que no cubre", "gastos prohibidos", "no financia", "maquinara", "bienes"
+            ],
+            "question_patterns": [
+                "¿Cuáles son los gastos elegibles en Adopción de Tecnología (PNT)?",
+                "¿Qué no se puede cofinanciar en el PNT de AGROIDEAS?",
+                "¿Qué puedo comprar con el dinero de tecnologia?",
+                "¿Agroideas financia la compra de tractores?",
+                "¿Cuáles son los gastos que no cubre el PNT?"
+            ],
+            "answer": "<p>El cofinanciamiento del PNT distingue entre:</p><ul class='list-disc pl-5 mt-2 space-y-1.5'><li><strong>Gastos Elegibles:</strong> Compra de maquinaria agrícola, equipos de procesamiento, cámaras de frío, insumos productivos de inicio, certificaciones orgánicas y asistencia técnica especializada.</li><li><strong>Gastos NO Elegibles:</strong> Compra de tierras o predios, vehículos de transporte de pasajeros, pago de deudas financieras, impuestos, y gastos administrativos ordinarios de la asociación.</li></ul>",
+            "quick_prompt": "¿Cuáles son los gastos elegibles del PNT?"
+        },
+        {
+            "id": "node_015_b",
+            "category": "instructivos_agroideas",
+            "title": "Porcentajes de Cofinanciamiento PNT",
+            "source": "RDE N° 260-2023 - Financiamiento PNT",
+            "pdf_path": "MARCO NORMATIVO SAMGP 2026/8. Instructivos/5. Instructivo para la Adopción de Tecnología/RDE 260-2023/4987670-instructivo-pnt.pdf",
+            "keywords": [
+                "porcentaje de cofinanciamiento pnt", "financiamiento pnt", "cuanto aporta agroideas", "contrapartida pnt", "monto maximo pnt", "cuanto dinero", "contrapartida", "uit", "elegivilidad", "eligibilidad", "cofinansiamiento"
+            ],
+            "question_patterns": [
+                "¿Cuánto es el porcentaje de cofinanciamiento en Adopción de Tecnología (PNT)?",
+                "¿Cuánto debe aportar la organizacion agraria como contrapartida en PNT?",
+                "¿Cuánto dinero tengo que poner yo para tecnologia?"
+            ],
+            "answer": "<p>El porcentaje de cofinanciamiento se define según el monto del plan de negocio expresado en UIT:</p><ul class='list-disc pl-5 mt-2 space-y-1'><li><strong>Hasta 15 UIT:</strong> AGROIDEAS cofinancia hasta el 80%, y la organización aporta el 20%.</li><li><strong>De 15 a 50 UIT:</strong> AGROIDEAS cofinancia hasta el 70%, y la organización aporta el 30%.</li><li><strong>Más de 50 UIT:</strong> AGROIDEAS cofinancia hasta el 60% (con topes máximos por UIT establecidos anualmente), y la organización aporta el 40%.</li></ul>",
+            "quick_prompt": "¿Cuál es el porcentaje de cofinanciamiento del PNT?"
         }
     ]
 }

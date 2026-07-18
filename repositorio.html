@@ -45,23 +45,28 @@
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         
         
+        
         <!-- Navegación por Pestañas -->
-        <div class="bg-white p-2 rounded-2xl shadow-sm mb-8 flex flex-wrap justify-between gap-2" data-aos="fade-up">
-            <button class="tab-link active flex-1 min-w-[150px] p-4 rounded-xl font-bold flex flex-col items-center gap-2 transition-all shadow-sm border border-transparent" data-target="normatividad">
+        <div class="bg-white p-2 rounded-2xl shadow-sm mb-8 flex flex-wrap justify-center gap-2" data-aos="fade-up">
+            <button class="tab-link active min-w-[150px] p-4 rounded-xl font-bold flex flex-col items-center gap-2 transition-all shadow-sm border border-transparent" data-target="normatividad">
                 <i data-lucide="landmark" class="w-6 h-6"></i>
                 <span class="text-sm">1. Normatividad y Directivas</span>
             </button>
-            <button class="tab-link flex-1 min-w-[150px] p-4 rounded-xl font-bold flex flex-col items-center gap-2 transition-all text-slate-600 shadow-sm border border-transparent" data-target="conocimiento">
+            <button class="tab-link min-w-[150px] p-4 rounded-xl font-bold flex flex-col items-center gap-2 transition-all text-slate-600 shadow-sm border border-transparent" data-target="conocimiento">
                 <i data-lucide="brain-circuit" class="w-6 h-6"></i>
                 <span class="text-sm">2. Gestión del Conocimiento</span>
             </button>
-            <button class="tab-link flex-1 min-w-[150px] p-4 rounded-xl font-bold flex flex-col items-center gap-2 transition-all text-slate-600 shadow-sm border border-transparent" data-target="innovacion">
+            <button class="tab-link min-w-[150px] p-4 rounded-xl font-bold flex flex-col items-center gap-2 transition-all text-slate-600 shadow-sm border border-transparent" data-target="innovacion">
                 <i data-lucide="lightbulb" class="w-6 h-6"></i>
                 <span class="text-sm">3. Innovación Pública</span>
             </button>
-            <button class="tab-link flex-1 min-w-[150px] p-4 rounded-xl font-bold flex flex-col items-center gap-2 transition-all text-slate-600 shadow-sm border border-transparent" data-target="publicaciones">
+            <button class="tab-link min-w-[150px] p-4 rounded-xl font-bold flex flex-col items-center gap-2 transition-all text-slate-600 shadow-sm border border-transparent" data-target="publicaciones">
                 <i data-lucide="bar-chart-3" class="w-6 h-6"></i>
                 <span class="text-sm">4. Publicaciones y Procesos</span>
+            </button>
+            <button class="tab-link min-w-[150px] p-4 rounded-xl font-bold flex flex-col items-center gap-2 transition-all text-slate-600 shadow-sm border border-transparent" data-target="planeamiento">
+                <i data-lucide="target" class="w-6 h-6"></i>
+                <span class="text-sm">5. Planeamiento y Resultados</span>
             </button>
         </div>
         
@@ -80,7 +85,6 @@
                  TAB 1: NORMATIVIDAD Y DIRECTIVAS
             =========================================== -->
             <div id="normatividad" class="tab-pane block space-y-8">
-                
                 <div class="divide-y divide-slate-100 bg-white rounded-[2rem] shadow-sm overflow-hidden border border-slate-100" id="accordion-normatividad">
                     <!-- 1.1 Lineamientos -->
                     <div class="accordion-item active">
@@ -89,7 +93,10 @@
                             <i data-lucide="chevron-down" class="w-5 h-5 text-slate-400 transition-transform rotate-180 chevron-icon"></i>
                         </button>
                         <div class="accordion-content" style="max-height: 2000px;">
-                            <div class="p-6 border-t border-slate-50 grid md:grid-cols-2 gap-6 bg-slate-50/50">
+                            <div class="p-6 bg-blue-50/50 text-slate-600 text-sm italic border-t border-slate-100">
+                                Espacio dedicado a estandarizar la creación de nuestros instrumentos normativos internos. Aquí encontrarás el flujograma oficial y la "norma madre" que rige cómo elaborar, revisar y aprobar directivas en la entidad, garantizando consistencia y calidad regulatoria.
+                            </div>
+                            <div class="p-6 grid md:grid-cols-2 gap-6 bg-slate-50/50 border-t border-slate-100">
                                 <a href="#" class="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm hover:shadow-md transition-all group">
                                     <div class="flex items-start gap-4">
                                         <div class="w-12 h-12 bg-red-50 text-red-600 rounded-xl flex items-center justify-center shrink-0"><i data-lucide="file-text" class="w-6 h-6"></i></div>
@@ -119,6 +126,9 @@
                             <i data-lucide="chevron-down" class="w-5 h-5 text-slate-400 transition-transform chevron-icon"></i>
                         </button>
                         <div class="accordion-content">
+                            <div class="p-6 bg-blue-50/50 text-slate-600 text-sm italic border-t border-slate-100">
+                                Repositorio centralizado que alberga todas las directivas y normas internas vigentes de la entidad. Utiliza este catálogo para consultar los marcos normativos que regulan nuestras funciones, procesos operativos y administrativos.
+                            </div>
                             <div class="p-0 border-t border-slate-50 overflow-x-auto">
                                 <table class="w-full text-left text-sm">
                                     <thead class="bg-slate-50 text-slate-500 border-b border-slate-200">
@@ -154,16 +164,18 @@
                  TAB 2: GESTIÓN DEL CONOCIMIENTO
             =========================================== -->
             <div id="conocimiento" class="tab-pane hidden space-y-8">
-                
                 <div class="divide-y divide-slate-100 bg-white rounded-[2rem] shadow-sm overflow-hidden border border-slate-100" id="accordion-conocimiento">
                     <!-- 2.1 Registros de Sistematización -->
                     <div class="accordion-item active">
                         <button class="w-full p-6 flex justify-between items-center focus:outline-none hover:bg-slate-50 transition-all group" onclick="toggleAccordion(this)">
-                            <span class="font-bold text-slate-700 text-lg flex items-center gap-3"><i data-lucide="database" class="text-blue-600"></i> 2.1 Registros de Conocimiento Sistematizado</span>
+                            <span class="font-bold text-slate-700 text-lg flex items-center gap-3"><i data-lucide="database" class="text-emerald-600"></i> 2.1 Registros de Conocimiento Sistematizado</span>
                             <i data-lucide="chevron-down" class="w-5 h-5 text-slate-400 transition-transform rotate-180 chevron-icon"></i>
                         </button>
                         <div class="accordion-content" style="max-height: 2000px;">
-                            <div class="p-6 border-t border-slate-50 grid grid-cols-1 md:grid-cols-3 gap-6 bg-slate-50/50">
+                            <div class="p-6 bg-emerald-50/50 text-slate-600 text-sm italic border-t border-slate-100">
+                                El capital intelectual de nuestra entidad. En esta sección documentamos y ponemos a disposición el conocimiento tácito y explícito capturado durante nuestra operatividad, asegurando que las lecciones del pasado y las mejores prácticas guíen nuestras decisiones futuras.
+                            </div>
+                            <div class="p-6 grid grid-cols-1 md:grid-cols-3 gap-6 bg-slate-50/50 border-t border-slate-100">
                                 <a href="#" class="bg-white rounded-[2rem] p-6 border border-slate-200 shadow-sm hover:shadow-lg hover:-translate-y-1 transition-all group flex flex-col">
                                     <div class="w-14 h-14 bg-emerald-50 text-emerald-600 rounded-2xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform"><i data-lucide="book-open-check" class="w-7 h-7"></i></div>
                                     <h4 class="font-bold text-slate-900 mb-2">Lecciones Aprendidas</h4>
@@ -189,11 +201,14 @@
                     <!-- 2.2 Micro-Cursos -->
                     <div class="accordion-item">
                         <button class="w-full p-6 flex justify-between items-center focus:outline-none hover:bg-slate-50 transition-all group" onclick="toggleAccordion(this)">
-                            <span class="font-bold text-slate-700 text-lg flex items-center gap-3"><i data-lucide="monitor-play" class="text-blue-600"></i> 2.2 Micro-Cursos (Fichas de Conocimiento)</span>
+                            <span class="font-bold text-slate-700 text-lg flex items-center gap-3"><i data-lucide="monitor-play" class="text-emerald-600"></i> 2.2 Micro-Cursos (Fichas de Conocimiento)</span>
                             <i data-lucide="chevron-down" class="w-5 h-5 text-slate-400 transition-transform chevron-icon"></i>
                         </button>
                         <div class="accordion-content">
-                            <div class="p-6 border-t border-slate-50 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                            <div class="p-6 bg-emerald-50/50 text-slate-600 text-sm italic border-t border-slate-100">
+                                Plataforma de autoaprendizaje rápido. Estos módulos empaquetan el conocimiento técnico-operativo en formatos ágiles y digeribles, diseñados para facilitar la inducción y el entrenamiento continuo de nuestros servidores públicos.
+                            </div>
+                            <div class="p-6 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 border-t border-slate-100">
                                 <!-- Curso 1 -->
                                 <a href="#" class="block bg-slate-50 rounded-[1.5rem] overflow-hidden border border-slate-100 hover:shadow-md transition-all group">
                                     <div class="h-32 bg-slate-200 relative">
@@ -257,7 +272,10 @@
                             <i data-lucide="chevron-down" class="w-5 h-5 text-slate-400 transition-transform rotate-180 chevron-icon"></i>
                         </button>
                         <div class="accordion-content" style="max-height: 2000px;">
-                            <div class="p-6 border-t border-slate-50 grid md:grid-cols-2 gap-6 bg-slate-50/50">
+                            <div class="p-6 bg-amber-50/50 text-slate-600 text-sm italic border-t border-slate-100">
+                                Vitrina de nuestras iniciativas disruptivas. Aquí monitoreamos los pilotos y proyectos de innovación que buscan resolver problemas públicos mediante nuevos enfoques, tecnologías o mejora radical de servicios.
+                            </div>
+                            <div class="p-6 grid md:grid-cols-2 gap-6 bg-slate-50/50 border-t border-slate-100">
                                 <!-- Proyecto 1 -->
                                 <a href="#" class="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm hover:shadow-md transition-all group relative overflow-hidden">
                                     <div class="absolute top-0 right-0 p-4"><span class="px-3 py-1 bg-amber-100 text-amber-700 text-xs font-bold rounded-full">Piloto</span></div>
@@ -283,6 +301,9 @@
                             <i data-lucide="chevron-down" class="w-5 h-5 text-slate-400 transition-transform chevron-icon"></i>
                         </button>
                         <div class="accordion-content">
+                            <div class="p-6 bg-amber-50/50 text-slate-600 text-sm italic border-t border-slate-100">
+                                El valor de la innovación se mide. Este apartado consolida los reportes técnicos y métricas de impacto de los proyectos ejecutados, permitiendo escalar lo que funciona y aprender de lo que no.
+                            </div>
                             <div class="p-0 border-t border-slate-50 overflow-x-auto">
                                 <table class="w-full text-left text-sm">
                                     <thead class="bg-slate-50 text-slate-500 border-b border-slate-200">
@@ -321,7 +342,10 @@
                             <i data-lucide="chevron-down" class="w-5 h-5 text-slate-400 transition-transform rotate-180 chevron-icon"></i>
                         </button>
                         <div class="accordion-content" style="max-height: 2000px;">
-                            <div class="p-6 border-t border-slate-50 grid md:grid-cols-2 gap-6 bg-slate-50/50">
+                            <div class="p-6 bg-indigo-50/50 text-slate-600 text-sm italic border-t border-slate-100">
+                                La radiografía operativa de la entidad. Documentos que estructuran nuestra cadena de valor, desde el Mapa de Procesos de nivel 0 hasta la caracterización detallada (fichas) de los procesos estratégicos, misionales y de apoyo.
+                            </div>
+                            <div class="p-6 grid md:grid-cols-2 gap-6 bg-slate-50/50 border-t border-slate-100">
                                 <a href="#" class="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm hover:shadow-md transition-all group flex items-start gap-4">
                                     <div class="w-12 h-12 bg-indigo-50 text-indigo-600 rounded-xl flex items-center justify-center shrink-0"><i data-lucide="map" class="w-6 h-6"></i></div>
                                     <div>
@@ -347,6 +371,9 @@
                             <i data-lucide="chevron-down" class="w-5 h-5 text-slate-400 transition-transform chevron-icon"></i>
                         </button>
                         <div class="accordion-content">
+                            <div class="p-6 bg-indigo-50/50 text-slate-600 text-sm italic border-t border-slate-100">
+                                El "cómo lo hacemos" a nivel de detalle. Aquí se concentran los Manuales de Procedimientos y diagramas de flujo que guían el paso a paso del trabajo diario, reduciendo la variabilidad y asegurando la estandarización.
+                            </div>
                             <div class="p-0 border-t border-slate-50 overflow-x-auto">
                                 <table class="w-full text-left text-sm">
                                     <thead class="bg-slate-50 text-slate-500 border-b border-slate-200">
@@ -377,6 +404,9 @@
                             <i data-lucide="chevron-down" class="w-5 h-5 text-slate-400 transition-transform chevron-icon"></i>
                         </button>
                         <div class="accordion-content">
+                            <div class="p-6 bg-indigo-50/50 text-slate-600 text-sm italic border-t border-slate-100">
+                                Colección de memorias, boletines y literatura especializada que documentan los hitos, estudios y avances de la entidad en su camino hacia una gestión pública moderna y orientada al ciudadano.
+                            </div>
                             <div class="p-0 border-t border-slate-50 overflow-x-auto">
                                 <table class="w-full text-left text-sm">
                                     <thead class="bg-slate-50 text-slate-500 border-b border-slate-200">
@@ -398,6 +428,107 @@
                         </div>
                     </div>
 
+                </div>
+            </div>
+
+            <!-- ==========================================
+                 TAB 5: PLANEAMIENTO Y RESULTADOS
+            =========================================== -->
+            <div id="planeamiento" class="tab-pane hidden space-y-8">
+                <div class="divide-y divide-slate-100 bg-white rounded-[2rem] shadow-sm overflow-hidden border border-slate-100" id="accordion-planeamiento">
+                    
+                    <!-- 5.1 Instrumentos -->
+                    <div class="accordion-item active">
+                        <button class="w-full p-6 flex justify-between items-center focus:outline-none hover:bg-slate-50 transition-all group" onclick="toggleAccordion(this)">
+                            <span class="font-bold text-slate-700 text-lg flex items-center gap-3"><i data-lucide="target" class="text-teal-600"></i> 5.1 Instrumentos de Gestión Institucional</span>
+                            <i data-lucide="chevron-down" class="w-5 h-5 text-slate-400 transition-transform rotate-180 chevron-icon"></i>
+                        </button>
+                        <div class="accordion-content" style="max-height: 2000px;">
+                            <div class="p-6 bg-teal-50/50 text-slate-600 text-sm italic border-t border-slate-100">
+                                Repositorio del POI (Plan Operativo) y alineamiento al PEI sectorial. El "norte" de AGROIDEAS para elevar la competitividad de los pequeños y medianos productores agrarios.
+                            </div>
+                            <div class="p-0 border-t border-slate-50 overflow-x-auto">
+                                <table class="w-full text-left text-sm">
+                                    <thead class="bg-slate-50 text-slate-500 border-b border-slate-200">
+                                        <tr class="text-[10px] uppercase font-black tracking-widest">
+                                            <th class="p-4">Documento</th>
+                                            <th class="p-4">Periodo</th>
+                                            <th class="p-4 text-center">Descarga</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody class="divide-y divide-slate-100">
+                                        <tr class="hover:bg-slate-50/50 transition-colors">
+                                            <td class="p-4 font-bold text-slate-700">Plan Operativo Institucional Multianual</td>
+                                            <td class="p-4 text-xs font-mono text-slate-500">2024-2026</td>
+                                            <td class="p-4 text-center"><button class="p-2 text-red-600 hover:bg-red-50 rounded-lg"><i data-lucide="file-type-2" class="w-5 h-5"></i></button></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 5.2 Evaluacion de Intervenciones -->
+                    <div class="accordion-item">
+                        <button class="w-full p-6 flex justify-between items-center focus:outline-none hover:bg-slate-50 transition-all group" onclick="toggleAccordion(this)">
+                            <span class="font-bold text-slate-700 text-lg flex items-center gap-3"><i data-lucide="microscope" class="text-teal-600"></i> 5.2 Evaluación de Resultados e Intervenciones</span>
+                            <i data-lucide="chevron-down" class="w-5 h-5 text-slate-400 transition-transform chevron-icon"></i>
+                        </button>
+                        <div class="accordion-content">
+                            <div class="p-6 bg-teal-50/50 text-slate-600 text-sm italic border-t border-slate-100">
+                                Estudios y reportes técnicos sobre los resultados de los cuatro pilares core: Fomento a la Asociatividad, Gestión Empresarial, Adopción de Tecnología y Reconversión Productiva.
+                            </div>
+                            <div class="p-0 border-t border-slate-50 overflow-x-auto">
+                                <table class="w-full text-left text-sm">
+                                    <thead class="bg-slate-50 text-slate-500 border-b border-slate-200">
+                                        <tr class="text-[10px] uppercase font-black tracking-widest">
+                                            <th class="p-4">Estudio / Reporte</th>
+                                            <th class="p-4">Línea de Intervención</th>
+                                            <th class="p-4 text-center">Descarga</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody class="divide-y divide-slate-100">
+                                        <tr class="hover:bg-slate-50/50 transition-colors">
+                                            <td class="p-4 font-bold text-slate-700">Resultados de Adopción de Tecnología en Cacao</td>
+                                            <td class="p-4 text-xs font-mono text-slate-500">Adopción de Tecnología</td>
+                                            <td class="p-4 text-center"><button class="p-2 text-red-600 hover:bg-red-50 rounded-lg"><i data-lucide="file-type-2" class="w-5 h-5"></i></button></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 5.3 Indicadores -->
+                    <div class="accordion-item">
+                        <button class="w-full p-6 flex justify-between items-center focus:outline-none hover:bg-slate-50 transition-all group" onclick="toggleAccordion(this)">
+                            <span class="font-bold text-slate-700 text-lg flex items-center gap-3"><i data-lucide="pie-chart" class="text-teal-600"></i> 5.3 Indicadores de Desempeño y Memorias</span>
+                            <i data-lucide="chevron-down" class="w-5 h-5 text-slate-400 transition-transform chevron-icon"></i>
+                        </button>
+                        <div class="accordion-content">
+                            <div class="p-6 bg-teal-50/50 text-slate-600 text-sm italic border-t border-slate-100">
+                                Tableros de control (Dashboards) o informes de KPIs estratégicos y de ejecución presupuestal de los recursos no reembolsables, asegurando la transparencia y la rendición de cuentas.
+                            </div>
+                            <div class="p-0 border-t border-slate-50 overflow-x-auto">
+                                <table class="w-full text-left text-sm">
+                                    <thead class="bg-slate-50 text-slate-500 border-b border-slate-200">
+                                        <tr class="text-[10px] uppercase font-black tracking-widest">
+                                            <th class="p-4">Documento</th>
+                                            <th class="p-4">Año Fiscal</th>
+                                            <th class="p-4 text-center">Descarga</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody class="divide-y divide-slate-100">
+                                        <tr class="hover:bg-slate-50/50 transition-colors">
+                                            <td class="p-4 font-bold text-slate-700">Memoria Institucional AGROIDEAS</td>
+                                            <td class="p-4 text-xs font-mono text-slate-500">2025</td>
+                                            <td class="p-4 text-center"><button class="p-2 text-red-600 hover:bg-red-50 rounded-lg"><i data-lucide="file-type-2" class="w-5 h-5"></i></button></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
             

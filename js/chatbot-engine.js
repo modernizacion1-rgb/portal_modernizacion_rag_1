@@ -328,7 +328,7 @@ class SAMGPChatbotEngine {
      */
     async callGeminiAPI(userPrompt, topNodes) {
         const apiKey = this.settings.geminiApiKey.trim();
-        const url = `https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent?key=${apiKey}`;
+        const url = `https://generativelanguage.googleapis.com/v1beta/models/gemini-flash-latest:generateContent?key=${apiKey}`;
 
         // Construir contexto normativo a partir de los nodos recuperados
         let contextText = topNodes.map((item, idx) => {

@@ -1,8 +1,8 @@
 :root {
-    --primary-gob: #C9002B;
-    --secondary-gob: #1E2D3D;
-    --accent-gob: #0072CE;
-    --bg-light: #F4F7F6;
+    --primary-gob: var(--color-primary, #1A5336);
+    --secondary-gob: var(--color-secondary, #53A548);
+    --accent-gob: var(--color-accent, #F1C40F);
+    --bg-light: var(--color-bg-light, #F4F6F5);
 }
 
 body {
@@ -19,7 +19,7 @@ body {
 .tab-link.active {
     background-color: var(--primary-gob);
     color: white !important;
-    box-shadow: 0 4px 15px rgba(201, 0, 43, 0.3);
+    box-shadow: 0 4px 15px rgba(26, 83, 54, 0.3);
     border-color: var(--primary-gob);
 }
 
@@ -27,7 +27,7 @@ body {
     background-color: white !important;
     color: var(--primary-gob) !important;
     border-color: var(--primary-gob);
-    box-shadow: 0 4px 15px rgba(201, 0, 43, 0.1);
+    box-shadow: 0 4px 15px rgba(26, 83, 54, 0.1);
 }
 
 .tab-link:not(.active):hover {
@@ -86,7 +86,7 @@ body {
 .dataTables_wrapper .dt-button:hover {
     background: #f1f5f9 !important;
     border-color: #cbd5e1 !important;
-    color: #C9002B !important;
+    color: var(--primary-gob) !important;
     transform: translateY(-1px);
 }
 .dataTables_wrapper .dataTables_paginate {
@@ -107,9 +107,9 @@ body {
     color: #334155 !important;
 }
 .dataTables_wrapper .dataTables_paginate .paginate_button.current {
-    background: #C9002B !important;
+    background: var(--primary-gob) !important;
     color: white !important;
-    border: 1px solid #C9002B !important;
+    border: 1px solid var(--primary-gob) !important;
 }
 .dataTables_wrapper .dataTables_paginate .paginate_button.current:hover {
     color: white !important;

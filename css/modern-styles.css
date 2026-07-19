@@ -1,20 +1,32 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;900&family=Montserrat:wght@400;600;700;800;900&display=swap');
 
 :root {
-    --agro-blue: #0b4b8a;
-    --agro-green: #6aa84f;
-    --pcm-red: #e30613;
+    --color-primary: #1A5336;
+    --color-secondary: #53A548;
+    --color-accent: #F1C40F;
+    --color-bg-light: #F4F6F5;
+    --color-text-main: #333333;
+    --color-text-inverse: #FFFFFF;
 }
 
 body {
     font-family: 'Inter', sans-serif;
     scroll-behavior: smooth;
+    color: var(--color-text-main);
 }
 
-.bg-agro-blue { background-color: var(--agro-blue); }
-.text-agro-blue { color: var(--agro-blue); }
-.border-agro-green { border-color: var(--agro-green); }
-.bg-pcm-red { background-color: var(--pcm-red); }
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Montserrat', sans-serif;
+}
+
+.bg-primary { background-color: var(--color-primary); }
+.text-primary { color: var(--color-primary); }
+.border-primary { border-color: var(--color-primary); }
+.bg-secondary { background-color: var(--color-secondary); }
+.text-secondary { color: var(--color-secondary); }
+.border-secondary { border-color: var(--color-secondary); }
+.bg-accent { background-color: var(--color-accent); }
+.text-accent { color: var(--color-accent); }
 
 @keyframes blob {
     0% { transform: translate(0px, 0px) scale(1); }

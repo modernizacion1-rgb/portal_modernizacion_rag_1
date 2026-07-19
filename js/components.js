@@ -96,15 +96,15 @@ const components = {
     </header>
     `,
     footer: `
-    <footer class="bg-slate-950 text-slate-500 py-12 border-t border-white/5">
+    <footer class="bg-primary text-white/80 py-12 border-t border-white/5">
         <div class="max-w-7xl mx-auto px-4 flex flex-col md:flex-row justify-between items-center gap-6">
             <div class="flex flex-col items-center md:items-start gap-1">
                 <span class="text-white font-bold tracking-tight uppercase text-sm">Unidad de Planeamiento y Presupuesto</span>
                 <span class="text-xs opacity-60 uppercase tracking-widest">Agroideas - MIDAGRI</span>
             </div>
             <div class="flex flex-col items-center md:items-end gap-1 text-xs">
-                <p>Última actualización: <span id="current-date-footer" class="text-slate-300 font-semibold"></span></p>
-                <p class="opacity-50">&copy; 2026 AGROIDEAS - Programa de Compensaciones para la Competitividad</p>
+                <p>Última actualización: <span id="current-date-footer" class="text-white font-semibold"></span></p>
+                <p class="opacity-70">&copy; 2026 AGROIDEAS - Programa de Compensaciones para la Competitividad</p>
             </div>
         </div>
     </footer>
@@ -172,20 +172,4 @@ document.addEventListener('DOMContentLoaded', () => {
     };
     updateFooterDate();
 
-    // Inject Global Floating Chatbot Widget (FAB) on all pages except chatbot.html itself
-    if (!window.location.pathname.includes('chatbot.html')) {
-        const fab = document.createElement('div');
-        fab.id = 'global-chatbot-fab';
-        fab.innerHTML = `
-            <a href="chatbot.html" class="group relative flex items-center justify-center w-14 h-14 bg-gradient-to-tr from-blue-700 to-red-600 rounded-full shadow-2xl text-white hover:shadow-blue-500/50 transition-all duration-300">
-                <span class="fab-pulse-ring"></span>
-                <i data-lucide="bot" class="w-7 h-7 animate-bounce"></i>
-                <span class="fab-tooltip">✨ Consulta con la IA SAMGP al 2030</span>
-            </a>
-        `;
-        document.body.appendChild(fab);
-        if (typeof lucide !== 'undefined') {
-            lucide.createIcons({ root: fab });
-        }
-    }
 });

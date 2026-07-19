@@ -6,6 +6,24 @@
     <title>Modernización del Estado - AGROIDEAS</title>
     <!-- Tailwind CSS para diseño moderno -->
     <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              primary: '#1A5336',
+              secondary: '#53A548',
+              accent: '#F1C40F',
+              bglight: '#F4F6F5',
+            },
+            fontFamily: {
+              sans: ['Inter', 'sans-serif'],
+              heading: ['Montserrat', 'sans-serif'],
+            }
+          }
+        }
+      }
+    </script>
     <!-- Lucide Icons -->
     <script src="https://unpkg.com/lucide@latest"></script>
     <!-- AOS para animaciones al hacer scroll -->
@@ -22,25 +40,25 @@
         <section class="hero-gradient relative overflow-hidden py-24 sm:py-32 lg:py-40">
             <!-- Blobs de fondo -->
             <div class="absolute inset-0 z-0">
-                <div class="absolute top-0 -left-10 w-96 h-96 bg-blue-600/20 rounded-full mix-blend-screen filter blur-[100px] animate-blob"></div>
+                <div class="absolute top-0 -left-10 w-96 h-96 bg-primary/20 rounded-full mix-blend-screen filter blur-[100px] animate-blob"></div>
                 <div class="absolute top-1/2 -right-10 w-96 h-96 bg-red-600/20 rounded-full mix-blend-screen filter blur-[100px] animate-blob animation-delay-2000"></div>
-                <div class="absolute -bottom-10 left-1/3 w-96 h-96 bg-emerald-600/10 rounded-full mix-blend-screen filter blur-[100px] animate-blob animation-delay-4000"></div>
+                <div class="absolute -bottom-10 left-1/3 w-96 h-96 bg-secondary/10 rounded-full mix-blend-screen filter blur-[100px] animate-blob animation-delay-4000"></div>
             </div>
 
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
                 <div class="text-center">
                     <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/10 backdrop-blur-md border border-white/20 text-white text-xs font-bold uppercase tracking-widest mb-8 animate-in fade-in slide-in-from-bottom-4">
-                        <span class="flex h-2 w-2 rounded-full bg-pcm-red animate-pulse"></span>
+                        <span class="flex h-2 w-2 rounded-full bg-secondary animate-pulse"></span>
                         Hacia un Estado Moderno 2030
                     </div>
                     <h1 class="text-5xl sm:text-7xl lg:text-8xl font-black text-white mb-8 tracking-tighter leading-[0.9] animate-in fade-in slide-in-from-bottom-6 duration-700">
-                        Las personas al centro de la <span class="bg-clip-text text-transparent bg-gradient-to-r from-red-500 via-rose-400 to-amber-400 italic">Modernización.</span>
+                        Las personas al centro de la <span class="bg-clip-text text-transparent bg-gradient-to-r from-primary via-secondary to-accent italic">Modernización.</span>
                     </h1>
                     <p class="text-xl sm:text-2xl text-slate-300 max-w-3xl mx-auto mb-12 leading-relaxed font-light px-4 animate-in fade-in slide-in-from-bottom-8 duration-700 delay-200">
                         Transformamos nuestra forma de gestionar para generar <strong>valor público</strong>, garantizando servicios eficientes, transparentes y centrados en las necesidades de todos los peruanos.
                     </p>
                     <div class="flex flex-wrap justify-center gap-6 animate-in fade-in slide-in-from-bottom-10 duration-700 delay-300">
-                        <a href="#pilares" class="group px-10 py-5 bg-pcm-red text-white rounded-2xl font-black text-lg shadow-2xl shadow-red-900/40 hover:bg-red-700 transition-all transform hover:scale-105 flex items-center gap-3">
+                        <a href="#pilares" class="group px-10 py-5 bg-secondary text-white rounded-2xl font-black text-lg shadow-2xl shadow-red-900/40 hover:bg-red-700 transition-all transform hover:scale-105 flex items-center gap-3">
                             Ver Pilares
                             <i data-lucide="arrow-right-circle" class="w-6 h-6 transform group-hover:translate-x-1 transition-transform"></i>
                         </a>
@@ -56,14 +74,14 @@
         <section class="py-24 sm:py-32 bg-white">
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div class="text-center mb-20" data-aos="fade-up">
-                    <h2 class="text-xs font-black text-agro-blue uppercase tracking-[0.3em] mb-4">Impacto Estratégico</h2>
+                    <h2 class="text-xs font-black text-primary uppercase tracking-[0.3em] mb-4">Impacto Estratégico</h2>
                     <h3 class="text-4xl sm:text-5xl font-black text-slate-900 tracking-tight leading-none">Objetivos Prioritarios al 2030</h3>
                 </div>
 
                 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
                     <!-- Tarjeta 1 -->
                     <div class="card-hover bg-slate-50 p-10 rounded-[2.5rem] border border-slate-100 flex flex-col items-center text-center" data-aos="fade-up" data-aos-delay="0">
-                        <div class="w-20 h-20 bg-blue-600/10 text-blue-600 rounded-3xl flex items-center justify-center mb-8">
+                        <div class="w-20 h-20 bg-primary/10 text-primary rounded-3xl flex items-center justify-center mb-8">
                             <i data-lucide="users" class="w-10 h-10"></i>
                         </div>
                         <h4 class="text-xl font-black text-slate-900 mb-4">Políticas centradas en las personas</h4>
@@ -71,7 +89,7 @@
                     </div>
                     <!-- Tarjeta 2 -->
                     <div class="card-hover bg-slate-50 p-10 rounded-[2.5rem] border border-slate-100 flex flex-col items-center text-center" data-aos="fade-up" data-aos-delay="100">
-                        <div class="w-20 h-20 bg-emerald-600/10 text-emerald-600 rounded-3xl flex items-center justify-center mb-8">
+                        <div class="w-20 h-20 bg-secondary/10 text-secondary rounded-3xl flex items-center justify-center mb-8">
                             <i data-lucide="cpu" class="w-10 h-10"></i>
                         </div>
                         <h4 class="text-xl font-black text-slate-900 mb-4">Gestión interna eficiente</h4>
@@ -79,7 +97,7 @@
                     </div>
                     <!-- Tarjeta 3 -->
                     <div class="card-hover bg-slate-50 p-10 rounded-[2.5rem] border border-slate-100 flex flex-col items-center text-center" data-aos="fade-up" data-aos-delay="200">
-                        <div class="w-20 h-20 bg-amber-600/10 text-amber-600 rounded-3xl flex items-center justify-center mb-8">
+                        <div class="w-20 h-20 bg-accent/10 text-accent rounded-3xl flex items-center justify-center mb-8">
                             <i data-lucide="rocket" class="w-10 h-10"></i>
                         </div>
                         <h4 class="text-xl font-black text-slate-900 mb-4">Mejora continua e Innovación</h4>
@@ -87,7 +105,7 @@
                     </div>
                     <!-- Tarjeta 4 -->
                     <div class="card-hover bg-slate-50 p-10 rounded-[2.5rem] border border-slate-100 flex flex-col items-center text-center" data-aos="fade-up" data-aos-delay="300">
-                        <div class="w-20 h-20 bg-purple-600/10 text-purple-600 rounded-3xl flex items-center justify-center mb-8">
+                        <div class="w-20 h-20 bg-primary/10 text-primary rounded-3xl flex items-center justify-center mb-8">
                             <i data-lucide="eye" class="w-10 h-10"></i>
                         </div>
                         <h4 class="text-xl font-black text-slate-900 mb-4">Estado Abierto</h4>
@@ -105,7 +123,7 @@
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
                 <div class="flex flex-col lg:flex-row lg:items-end justify-between mb-20 gap-8" data-aos="fade-right">
                     <div class="max-w-2xl">
-                        <h2 class="text-xs font-black text-red-500 uppercase tracking-[0.3em] mb-4">Motores del Cambio</h2>
+                        <h2 class="text-xs font-black text-accent uppercase tracking-[0.3em] mb-4">Motores del Cambio</h2>
                         <h3 class="text-4xl sm:text-6xl font-black text-white tracking-tight leading-[0.95]">Nuestros Ejes de Transformación</h3>
                     </div>
                     <p class="text-slate-400 text-lg font-medium max-w-sm">Cuatro enfoques articulados para modernizar la gestión agraria en AGROIDEAS.</p>
@@ -115,13 +133,13 @@
                     <!-- Gestión del Conocimiento -->
                     <div class="group relative bg-white/5 border border-white/10 p-12 rounded-[3rem] hover:bg-white/10 transition-all duration-500" data-aos="fade-up">
                         <div class="flex items-start gap-8">
-                            <div class="w-16 h-16 bg-blue-600 text-white rounded-2xl flex flex-shrink-0 items-center justify-center transform group-hover:scale-110 group-hover:rotate-6 transition-all">
+                            <div class="w-16 h-16 bg-primary text-white rounded-2xl flex flex-shrink-0 items-center justify-center transform group-hover:scale-110 group-hover:rotate-6 transition-all">
                                 <i data-lucide="brain" class="w-8 h-8"></i>
                             </div>
                             <div>
                                 <h4 class="text-3xl font-black text-white mb-4">Gestión del Conocimiento</h4>
                                 <p class="text-slate-400 font-medium leading-relaxed mb-8">Capitalizamos la experiencia de nuestros servidores para convertirla en activos institucionales que faciliten la toma de decisiones basada en evidencia.</p>
-                                <a href="gestion_conocimiento.html" class="inline-flex items-center gap-2 text-blue-400 font-black uppercase tracking-widest text-xs hover:text-white transition-colors">
+                                <a href="gestion_conocimiento.html" class="inline-flex items-center gap-2 text-secondary font-black uppercase tracking-widest text-xs hover:text-white transition-colors">
                                     Explorar Eje <i data-lucide="arrow-right" class="w-4 h-4"></i>
                                 </a>
                             </div>
@@ -131,13 +149,13 @@
                     <!-- Gestión por Procesos -->
                     <div class="group relative bg-white/5 border border-white/10 p-12 rounded-[3rem] hover:bg-white/10 transition-all duration-500" data-aos="fade-up" data-aos-delay="100">
                         <div class="flex items-start gap-8">
-                            <div class="w-16 h-16 bg-emerald-600 text-white rounded-2xl flex flex-shrink-0 items-center justify-center transform group-hover:scale-110 group-hover:rotate-6 transition-all">
+                            <div class="w-16 h-16 bg-secondary text-white rounded-2xl flex flex-shrink-0 items-center justify-center transform group-hover:scale-110 group-hover:rotate-6 transition-all">
                                 <i data-lucide="refresh-cw" class="w-8 h-8"></i>
                             </div>
                             <div>
                                 <h4 class="text-3xl font-black text-white mb-4">Gestión por Procesos</h4>
                                 <p class="text-slate-400 font-medium leading-relaxed mb-8">Optimizamos nuestra operatividad eliminando silos y burocracia innecesaria, asegurando que cada actividad agregue valor al ciudadano.</p>
-                                <a href="gestion_procesos.html" class="inline-flex items-center gap-2 text-emerald-400 font-black uppercase tracking-widest text-xs hover:text-white transition-colors">
+                                <a href="gestion_procesos.html" class="inline-flex items-center gap-2 text-accent font-black uppercase tracking-widest text-xs hover:text-white transition-colors">
                                     Explorar Eje <i data-lucide="arrow-right" class="w-4 h-4"></i>
                                 </a>
                             </div>
@@ -147,7 +165,7 @@
                     <!-- Gestión de la Calidad -->
                     <div class="group relative bg-white/5 border border-white/10 p-12 rounded-[3rem] hover:bg-white/10 transition-all duration-500" data-aos="fade-up" data-aos-delay="200">
                         <div class="flex items-start gap-8">
-                            <div class="w-16 h-16 bg-amber-500 text-white rounded-2xl flex flex-shrink-0 items-center justify-center transform group-hover:scale-110 group-hover:rotate-6 transition-all">
+                            <div class="w-16 h-16 bg-accent text-white rounded-2xl flex flex-shrink-0 items-center justify-center transform group-hover:scale-110 group-hover:rotate-6 transition-all">
                                 <i data-lucide="award" class="w-8 h-8"></i>
                             </div>
                             <div>
@@ -163,7 +181,7 @@
                     <!-- Innovación Pública -->
                     <div class="group relative bg-white/5 border border-white/10 p-12 rounded-[3rem] hover:bg-white/10 transition-all duration-500" data-aos="fade-up" data-aos-delay="300">
                         <div class="flex items-start gap-8">
-                            <div class="w-16 h-16 bg-purple-600 text-white rounded-2xl flex flex-shrink-0 items-center justify-center transform group-hover:scale-110 group-hover:rotate-6 transition-all">
+                            <div class="w-16 h-16 bg-primary text-white rounded-2xl flex flex-shrink-0 items-center justify-center transform group-hover:scale-110 group-hover:rotate-6 transition-all">
                                 <i data-lucide="lightbulb" class="w-8 h-8"></i>
                             </div>
                             <div>
@@ -191,14 +209,14 @@
                     <!-- Miniatura opcional del video de fondo -->
                     <div class="absolute inset-0 bg-slate-900/90 transition-colors group-hover:bg-slate-950 flex items-center justify-center z-10">
                         <div class="flex flex-col items-center gap-6">
-                            <div class="w-24 h-24 bg-pcm-red text-white rounded-full flex items-center justify-center shadow-2xl shadow-red-600/40 group-hover:scale-110 group-hover:bg-red-600 transition-all cursor-pointer">
+                            <div class="w-24 h-24 bg-secondary text-white rounded-full flex items-center justify-center shadow-2xl shadow-red-600/40 group-hover:scale-110 group-hover:bg-red-600 transition-all cursor-pointer">
                                 <i data-lucide="play" class="w-10 h-10 fill-current ml-2"></i>
                             </div>
                             <span class="text-white font-black uppercase tracking-widest text-sm group-hover:text-red-400 transition-colors">Reproducir Introducción</span>
                         </div>
                     </div>
                     <!-- Imagen de fondo que simula miniatura -->
-                    <div class="absolute inset-0 bg-gradient-to-tr from-blue-900 to-slate-900 opacity-50 group-hover:opacity-70 transition-opacity"></div>
+                    <div class="absolute inset-0 bg-gradient-to-tr from-primary to-primary opacity-50 group-hover:opacity-70 transition-opacity"></div>
                 </a>
             </div>
         </section>

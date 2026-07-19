@@ -6,6 +6,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contacto - AGROIDEAS</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              primary: '#1A5336',
+              secondary: '#53A548',
+              accent: '#F1C40F',
+              bglight: '#F4F6F5',
+            },
+            fontFamily: {
+              sans: ['Inter', 'sans-serif'],
+              heading: ['Montserrat', 'sans-serif'],
+            }
+          }
+        }
+      }
+    </script>
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <script src="https://unpkg.com/lucide@latest"></script>
     <link rel="stylesheet" href="css/modern-styles.css">
@@ -50,7 +68,7 @@
                         
                         <div class="space-y-6">
                             <div class="flex items-start gap-4 group">
-                                <div class="w-12 h-12 bg-blue-50 text-blue-600 rounded-2xl flex items-center justify-center shrink-0 group-hover:bg-blue-600 group-hover:text-white transition-all">
+                                <div class="w-12 h-12 bg-blue-50 text-primary rounded-2xl flex items-center justify-center shrink-0 group-hover:bg-primary group-hover:text-white transition-all">
                                     <i data-lucide="phone" class="w-6 h-6"></i>
                                 </div>
                                 <div>
@@ -70,7 +88,7 @@
                             </div>
                             
                             <div class="flex items-start gap-4 group">
-                                <div class="w-12 h-12 bg-amber-50 text-amber-600 rounded-2xl flex items-center justify-center shrink-0 group-hover:bg-amber-600 group-hover:text-white transition-all">
+                                <div class="w-12 h-12 bg-amber-50 text-accent rounded-2xl flex items-center justify-center shrink-0 group-hover:bg-accent group-hover:text-white transition-all">
                                     <i data-lucide="map-pin" class="w-6 h-6"></i>
                                 </div>
                                 <div>
@@ -82,11 +100,11 @@
                     </div>
 
                     <!-- Additional Support Card -->
-                    <div class="bg-blue-600 rounded-[2.5rem] p-8 text-white relative overflow-hidden group shadow-xl" data-aos="fade-up" data-aos-delay="100">
+                    <div class="bg-primary rounded-[2.5rem] p-8 text-white relative overflow-hidden group shadow-xl" data-aos="fade-up" data-aos-delay="100">
                         <div class="absolute -top-10 -right-10 w-32 h-32 bg-white/10 rounded-full blur-2xl group-hover:scale-150 transition-transform duration-700"></div>
                         <h4 class="text-xl font-bold mb-4 relative z-10">Mesa de Partes Virtual</h4>
                         <p class="text-blue-100 text-sm mb-6 relative z-10 font-light">Presenta tus documentos y solicitudes de manera 100% digital sin salir de tu región.</p>
-                        <a href="https://www.gob.pe/institucion/agroideas/contacto-y-numeros-de-emergencias" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 px-6 py-3 bg-white text-blue-600 rounded-xl font-bold text-sm hover:shadow-lg transition-all relative z-10">
+                        <a href="https://www.gob.pe/institucion/agroideas/contacto-y-numeros-de-emergencias" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 px-6 py-3 bg-white text-primary rounded-xl font-bold text-sm hover:shadow-lg transition-all relative z-10">
                             Ingresar ahora
                             <i data-lucide="arrow-right" class="w-4 h-4"></i>
                         </a>
@@ -136,7 +154,7 @@
                             </div>
 
                             <div class="pt-4">
-                                <button type="submit" class="w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-4 rounded-2xl shadow-lg shadow-blue-200 transition-all flex items-center justify-center gap-2 group">
+                                <button type="submit" class="w-full bg-primary hover:bg-blue-700 text-white font-bold py-4 rounded-2xl shadow-lg shadow-blue-200 transition-all flex items-center justify-center gap-2 group">
                                     <i data-lucide="send" class="w-5 h-5 group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform"></i>
                                     Enviar Mensaje
                                 </button>

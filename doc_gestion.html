@@ -6,6 +6,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Documentos de Gestión - AGROIDEAS</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              primary: '#1A5336',
+              secondary: '#53A548',
+              accent: '#F1C40F',
+              bglight: '#F4F6F5',
+            },
+            fontFamily: {
+              sans: ['Inter', 'sans-serif'],
+              heading: ['Montserrat', 'sans-serif'],
+            }
+          }
+        }
+      }
+    </script>
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <script src="https://unpkg.com/lucide@latest"></script>
     <link rel="stylesheet" href="css/modern-styles.css">
@@ -18,7 +36,7 @@
 
     <main class="pt-32 pb-20">
         <!-- Hero Section -->
-        <section class="relative py-16 bg-slate-900 text-white overflow-hidden mb-12 shadow-2xl">
+        <section class="relative py-16 bg-primary text-white overflow-hidden mb-12 shadow-2xl">
             <div class="absolute inset-0 opacity-20">
                 <div
                     class="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/carbon-fibre.png')] opacity-30">
@@ -33,7 +51,7 @@
                     <span>Repositorio Institucional</span>
                 </nav>
                 <h1 class="text-4xl md:text-5xl font-extrabold mb-4 tracking-tight">
-                    Documentos de <span class="text-blue-500">Gestión</span>
+                    Documentos de <span class="text-accent">Gestión</span>
                 </h1>
                 <p class="text-lg text-slate-400 max-w-2xl leading-relaxed">
                     Acceso transparente a la normativa y herramientas de gestión que rigen el funcionamiento del
@@ -48,7 +66,7 @@
 
                 <!-- Card 1: Gestión por Procesos -->
                 <div class="bg-white rounded-[2rem] p-8 border border-slate-200 shadow-sm hover:shadow-xl transition-all group" data-aos="fade-up">
-                    <div class="w-14 h-14 bg-emerald-50 text-emerald-600 rounded-2xl flex items-center justify-center mb-6 group-hover:bg-emerald-600 group-hover:text-white transition-colors">
+                    <div class="w-14 h-14 bg-emerald-50 text-secondary rounded-2xl flex items-center justify-center mb-6 group-hover:bg-secondary group-hover:text-white transition-colors">
                         <i data-lucide="refresh-cw" class="w-7 h-7"></i>
                     </div>
                     <h3 class="text-xl font-bold text-slate-900 mb-3">1. Gestión por Procesos</h3>
@@ -75,7 +93,7 @@
 
                 <!-- Card 2: Gestión del Conocimiento -->
                 <div class="bg-white rounded-[2rem] p-8 border border-slate-200 shadow-sm hover:shadow-xl transition-all group" data-aos="fade-up" data-aos-delay="100">
-                    <div class="w-14 h-14 bg-blue-50 text-blue-600 rounded-2xl flex items-center justify-center mb-6 group-hover:bg-blue-600 group-hover:text-white transition-colors">
+                    <div class="w-14 h-14 bg-blue-50 text-primary rounded-2xl flex items-center justify-center mb-6 group-hover:bg-primary group-hover:text-white transition-colors">
                         <i data-lucide="brain-circuit" class="w-7 h-7"></i>
                     </div>
                     <h3 class="text-xl font-bold text-slate-900 mb-3">2. Gestión del Conocimiento</h3>
@@ -102,22 +120,22 @@
 
                 <!-- Card 3: Calidad e Innovación -->
                 <div class="bg-white rounded-[2rem] p-8 border border-slate-200 shadow-sm hover:shadow-xl transition-all group" data-aos="fade-up" data-aos-delay="200">
-                    <div class="w-14 h-14 bg-amber-50 text-amber-600 rounded-2xl flex items-center justify-center mb-6 group-hover:bg-amber-600 group-hover:text-white transition-colors">
+                    <div class="w-14 h-14 bg-amber-50 text-accent rounded-2xl flex items-center justify-center mb-6 group-hover:bg-accent group-hover:text-white transition-colors">
                         <i data-lucide="award" class="w-7 h-7"></i>
                     </div>
                     <h3 class="text-xl font-bold text-slate-900 mb-3">3. Calidad e Innovación</h3>
                     <p class="text-xs text-slate-500 font-semibold uppercase tracking-wider mb-4">Mejora Continua</p>
                     <ul class="text-sm text-slate-600 mb-6 space-y-3">
                         <li class="flex items-start gap-2">
-                            <i data-lucide="check-circle-2" class="w-4 h-4 text-amber-500 shrink-0 mt-0.5"></i>
+                            <i data-lucide="check-circle-2" class="w-4 h-4 text-accent shrink-0 mt-0.5"></i>
                             <span><a href="#" class="hover:text-amber-700 hover:underline"><strong>Resultados de Encuestas de Satisfacción:</strong></a> Reportes visuales o dashboards que muestran qué opinan las OA de los servicios.</span>
                         </li>
                         <li class="flex items-start gap-2">
-                            <i data-lucide="check-circle-2" class="w-4 h-4 text-amber-500 shrink-0 mt-0.5"></i>
+                            <i data-lucide="check-circle-2" class="w-4 h-4 text-accent shrink-0 mt-0.5"></i>
                             <span><a href="#" class="hover:text-amber-700 hover:underline"><strong>Planes de Mejora Continua:</strong></a> Documentos que muestran qué procesos se están optimizando para reducir tiempos y simplificar trámites.</span>
                         </li>
                         <li class="flex items-start gap-2">
-                            <i data-lucide="check-circle-2" class="w-4 h-4 text-amber-500 shrink-0 mt-0.5"></i>
+                            <i data-lucide="check-circle-2" class="w-4 h-4 text-accent shrink-0 mt-0.5"></i>
                             <span><a href="#" class="hover:text-amber-700 hover:underline"><strong>Proyectos de Innovación o Pilotos:</strong></a> Documentación y resultados de la prueba de nuevas tecnologías (ej. drones o firmas digitales).</span>
                         </li>
                     </ul>
@@ -125,7 +143,7 @@
 
                 <!-- Card 4: Directivas -->
                 <div class="bg-white rounded-[2rem] p-8 border border-slate-200 shadow-sm hover:shadow-xl transition-all group" data-aos="fade-up" data-aos-delay="300">
-                    <div class="w-14 h-14 bg-purple-50 text-purple-600 rounded-2xl flex items-center justify-center mb-6 group-hover:bg-purple-600 group-hover:text-white transition-colors">
+                    <div class="w-14 h-14 bg-purple-50 text-primary rounded-2xl flex items-center justify-center mb-6 group-hover:bg-primary group-hover:text-white transition-colors">
                         <i data-lucide="gavel" class="w-7 h-7"></i>
                     </div>
                     <h3 class="text-xl font-bold text-slate-900 mb-3">4. Directivas y Lineamientos</h3>

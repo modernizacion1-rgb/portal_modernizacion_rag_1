@@ -6,6 +6,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Gestión por Procesos - AGROIDEAS</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              primary: '#1A5336',
+              secondary: '#53A548',
+              accent: '#F1C40F',
+              bglight: '#F4F6F5',
+            },
+            fontFamily: {
+              sans: ['Inter', 'sans-serif'],
+              heading: ['Montserrat', 'sans-serif'],
+            }
+          }
+        }
+      }
+    </script>
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <script src="https://unpkg.com/lucide@latest"></script>
     <link rel="stylesheet" href="css/modern-styles.css">
@@ -198,7 +216,7 @@
                             </div>
                             <div class="p-8">
                                 <div class="relative aspect-video bg-slate-900 rounded-3xl overflow-hidden group cursor-pointer border-4 border-slate-50">
-                                    <div class="absolute inset-0 bg-gradient-to-br from-slate-800 to-slate-900 flex items-center justify-center">
+                                    <div class="absolute inset-0 bg-gradient-to-br from-slate-800 to-primary flex items-center justify-center">
                                         <div class="text-center">
                                             <div class="w-20 h-20 bg-white/10 backdrop-blur-md rounded-full flex items-center justify-center text-white mb-4 group-hover:scale-110 group-hover:bg-red-600 transition-all duration-500">
                                                 <i data-lucide="play" class="w-10 h-10 fill-current ml-1"></i>

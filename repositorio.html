@@ -99,12 +99,19 @@
                  TAB 1: NORMATIVIDAD Y DIRECTIVAS
             =========================================== -->
             <div id="normatividad" class="tab-pane block space-y-8">
+                <p class="text-sm text-slate-500 mb-4 flex items-center gap-2">
+                    <i data-lucide="info" class="w-4 h-4 text-indigo-500"></i>
+                    Haz clic en cada título de sección para desplegar u ocultar su contenido.
+                </p>
                 <div class="divide-y divide-slate-100 bg-white rounded-[2rem] shadow-sm overflow-hidden border border-slate-100" id="accordion-normatividad">
                     <!-- 1.1 Lineamientos -->
                     <div class="accordion-item active">
                         <button class="w-full p-6 flex justify-between items-center focus:outline-none hover:bg-slate-50 transition-all group" onclick="toggleAccordion(this)">
                             <span class="font-bold text-slate-700 text-lg flex items-center gap-3"><i data-lucide="file-check" class="text-primary"></i> 1.1 Lineamientos para la formulación de Directivas</span>
-                            <i data-lucide="chevron-down" class="w-5 h-5 text-slate-400 transition-transform rotate-180 chevron-icon"></i>
+                            <div class="flex items-center gap-2 text-slate-400 group-hover:text-indigo-600 transition-colors">
+                                <span class="text-xs font-semibold uppercase tracking-wider opacity-0 group-hover:opacity-100 transition-opacity">Desplegar</span>
+                                <i data-lucide="chevron-down" class="w-5 h-5 transition-transform rotate-180 chevron-icon"></i>
+                            </div>
                         </button>
                         <div class="accordion-content" style="max-height: 2000px;">
                             <div class="p-6 bg-blue-50/50 text-slate-600 text-sm italic border-t border-slate-100">
@@ -137,7 +144,10 @@
                     <div class="accordion-item">
                         <button class="w-full p-6 flex justify-between items-center focus:outline-none hover:bg-slate-50 transition-all group" onclick="toggleAccordion(this)">
                             <span class="font-bold text-slate-700 text-lg flex items-center gap-3"><i data-lucide="list" class="text-primary"></i> 1.2 Buscador y Listado Oficial de Directivas</span>
-                            <i data-lucide="chevron-down" class="w-5 h-5 text-slate-400 transition-transform chevron-icon"></i>
+                            <div class="flex items-center gap-2 text-slate-400 group-hover:text-indigo-600 transition-colors">
+                                <span class="text-xs font-semibold uppercase tracking-wider opacity-0 group-hover:opacity-100 transition-opacity">Desplegar</span>
+                                <i data-lucide="chevron-down" class="w-5 h-5 transition-transform chevron-icon"></i>
+                            </div>
                         </button>
                         <div class="accordion-content">
                             <div class="p-6 bg-blue-50/50 text-slate-600 text-sm italic border-t border-slate-100">
@@ -155,12 +165,19 @@
                  TAB 2: GESTIÓN DEL CONOCIMIENTO
             =========================================== -->
             <div id="conocimiento" class="tab-pane hidden space-y-8">
+                <p class="text-sm text-slate-500 mb-4 flex items-center gap-2">
+                    <i data-lucide="info" class="w-4 h-4 text-indigo-500"></i>
+                    Haz clic en cada título de sección para desplegar u ocultar su contenido.
+                </p>
                 <div class="divide-y divide-slate-100 bg-white rounded-[2rem] shadow-sm overflow-hidden border border-slate-100" id="accordion-conocimiento">
                     <!-- 2.1 Fichas de Lecciones Aprendidas -->
                     <div class="accordion-item active">
                         <button class="w-full p-6 flex justify-between items-center focus:outline-none hover:bg-slate-50 transition-all group" onclick="toggleAccordion(this)">
                             <span class="font-bold text-slate-700 text-lg flex items-center gap-3"><i data-lucide="book-open-check" class="text-secondary"></i> 2.1 Fichas de Lecciones Aprendidas (Aprobadas por ETMC)</span>
-                            <i data-lucide="chevron-down" class="w-5 h-5 text-slate-400 transition-transform rotate-180 chevron-icon"></i>
+                            <div class="flex items-center gap-2 text-slate-400 group-hover:text-indigo-600 transition-colors">
+                                <span class="text-xs font-semibold uppercase tracking-wider opacity-0 group-hover:opacity-100 transition-opacity">Desplegar</span>
+                                <i data-lucide="chevron-down" class="w-5 h-5 transition-transform rotate-180 chevron-icon"></i>
+                            </div>
                         </button>
                         <div class="accordion-content" style="max-height: 2000px;">
                             <div class="p-6 bg-emerald-50/60 text-slate-700 text-sm border-t border-slate-100 flex items-start gap-3">
@@ -236,7 +253,10 @@
                     <div class="accordion-item">
                         <button class="w-full p-6 flex justify-between items-center focus:outline-none hover:bg-slate-50 transition-all group" onclick="toggleAccordion(this)">
                             <span class="font-bold text-slate-700 text-lg flex items-center gap-3"><i data-lucide="thumbs-up" class="text-accent"></i> 2.2 Fichas de Buenas Prácticas (Estandarización Nacional)</span>
-                            <i data-lucide="chevron-down" class="w-5 h-5 text-slate-400 transition-transform chevron-icon"></i>
+                            <div class="flex items-center gap-2 text-slate-400 group-hover:text-indigo-600 transition-colors">
+                                <span class="text-xs font-semibold uppercase tracking-wider opacity-0 group-hover:opacity-100 transition-opacity">Desplegar</span>
+                                <i data-lucide="chevron-down" class="w-5 h-5 transition-transform chevron-icon"></i>
+                            </div>
                         </button>
                         <div class="accordion-content">
                             <div class="p-6 bg-amber-50/60 text-slate-700 text-sm border-t border-slate-100 flex items-start gap-3">
@@ -312,7 +332,10 @@
                     <div class="accordion-item">
                         <button class="w-full p-6 flex justify-between items-center focus:outline-none hover:bg-slate-50 transition-all group" onclick="toggleAccordion(this)">
                             <span class="font-bold text-slate-700 text-lg flex items-center gap-3"><i data-lucide="graduation-cap" class="text-primary"></i> 2.3 Guías Técnicas de "Saber Hacer" (El Activo Maestro 5W+2H)</span>
-                            <i data-lucide="chevron-down" class="w-5 h-5 text-slate-400 transition-transform chevron-icon"></i>
+                            <div class="flex items-center gap-2 text-slate-400 group-hover:text-indigo-600 transition-colors">
+                                <span class="text-xs font-semibold uppercase tracking-wider opacity-0 group-hover:opacity-100 transition-opacity">Desplegar</span>
+                                <i data-lucide="chevron-down" class="w-5 h-5 transition-transform chevron-icon"></i>
+                            </div>
                         </button>
                         <div class="accordion-content">
                             <div class="p-6 bg-blue-50/60 text-slate-700 text-sm border-t border-slate-100 flex items-start gap-3">
@@ -388,7 +411,10 @@
                     <div class="accordion-item">
                         <button class="w-full p-6 flex justify-between items-center focus:outline-none hover:bg-slate-50 transition-all group" onclick="toggleAccordion(this)">
                             <span class="font-bold text-slate-700 text-lg flex items-center gap-3"><i data-lucide="folder-key" class="text-amber-600"></i> 2.4 Actas de Entrega de Conocimiento y Lecciones Aprendidas (Offboarding)</span>
-                            <i data-lucide="chevron-down" class="w-5 h-5 text-slate-400 transition-transform chevron-icon"></i>
+                            <div class="flex items-center gap-2 text-slate-400 group-hover:text-indigo-600 transition-colors">
+                                <span class="text-xs font-semibold uppercase tracking-wider opacity-0 group-hover:opacity-100 transition-opacity">Desplegar</span>
+                                <i data-lucide="chevron-down" class="w-5 h-5 transition-transform chevron-icon"></i>
+                            </div>
                         </button>
                         <div class="accordion-content">
                             <div class="p-6 bg-slate-100/80 text-slate-700 text-sm border-t border-slate-200 flex items-start gap-3">
@@ -464,7 +490,10 @@
                     <div class="accordion-item">
                         <button class="w-full p-6 flex justify-between items-center focus:outline-none hover:bg-slate-50 transition-all group" onclick="toggleAccordion(this)">
                             <span class="font-bold text-slate-700 text-lg flex items-center gap-3"><i data-lucide="monitor-play" class="text-secondary"></i> 2.5 Micro-Cursos (Fichas de Conocimiento)</span>
-                            <i data-lucide="chevron-down" class="w-5 h-5 text-slate-400 transition-transform chevron-icon"></i>
+                            <div class="flex items-center gap-2 text-slate-400 group-hover:text-indigo-600 transition-colors">
+                                <span class="text-xs font-semibold uppercase tracking-wider opacity-0 group-hover:opacity-100 transition-opacity">Desplegar</span>
+                                <i data-lucide="chevron-down" class="w-5 h-5 transition-transform chevron-icon"></i>
+                            </div>
                         </button>
                         <div class="accordion-content">
                             <div class="p-6 bg-emerald-50/50 text-slate-600 text-sm italic border-t border-slate-100">
@@ -536,13 +565,20 @@
                  TAB 3: INNOVACIÓN PÚBLICA
             =========================================== -->
             <div id="innovacion" class="tab-pane hidden space-y-8">
+                <p class="text-sm text-slate-500 mb-4 flex items-center gap-2">
+                    <i data-lucide="info" class="w-4 h-4 text-indigo-500"></i>
+                    Haz clic en cada título de sección para desplegar u ocultar su contenido.
+                </p>
                 <div class="divide-y divide-slate-100 bg-white rounded-[2rem] shadow-sm overflow-hidden border border-slate-100" id="accordion-innovacion">
                     
                     <!-- 3.1 Portafolio -->
                     <div class="accordion-item active">
                         <button class="w-full p-6 flex justify-between items-center focus:outline-none hover:bg-slate-50 transition-all group" onclick="toggleAccordion(this)">
                             <span class="font-bold text-slate-700 text-lg flex items-center gap-3"><i data-lucide="rocket" class="text-accent"></i> 3.1 Portafolio Institucional de Innovación Pública (FIIP)</span>
-                            <i data-lucide="chevron-down" class="w-5 h-5 text-slate-400 transition-transform rotate-180 chevron-icon"></i>
+                            <div class="flex items-center gap-2 text-slate-400 group-hover:text-indigo-600 transition-colors">
+                                <span class="text-xs font-semibold uppercase tracking-wider opacity-0 group-hover:opacity-100 transition-opacity">Desplegar</span>
+                                <i data-lucide="chevron-down" class="w-5 h-5 transition-transform rotate-180 chevron-icon"></i>
+                            </div>
                         </button>
                         <div class="accordion-content" style="max-height: 2000px;">
                             <div class="p-6 bg-amber-50/50 text-slate-600 text-sm italic border-t border-slate-100">
@@ -571,7 +607,10 @@
                     <div class="accordion-item">
                         <button class="w-full p-6 flex justify-between items-center focus:outline-none hover:bg-slate-50 transition-all group" onclick="toggleAccordion(this)">
                             <span class="font-bold text-slate-700 text-lg flex items-center gap-3"><i data-lucide="file-bar-chart" class="text-accent"></i> 3.2 Informes de Evaluación FIIP</span>
-                            <i data-lucide="chevron-down" class="w-5 h-5 text-slate-400 transition-transform chevron-icon"></i>
+                            <div class="flex items-center gap-2 text-slate-400 group-hover:text-indigo-600 transition-colors">
+                                <span class="text-xs font-semibold uppercase tracking-wider opacity-0 group-hover:opacity-100 transition-opacity">Desplegar</span>
+                                <i data-lucide="chevron-down" class="w-5 h-5 transition-transform chevron-icon"></i>
+                            </div>
                         </button>
                         <div class="accordion-content">
                             <div class="p-6 bg-amber-50/50 text-slate-600 text-sm italic border-t border-slate-100">
@@ -606,13 +645,20 @@
                  TAB 4: PUBLICACIONES Y PROCESOS
             =========================================== -->
             <div id="publicaciones" class="tab-pane hidden space-y-8">
+                <p class="text-sm text-slate-500 mb-4 flex items-center gap-2">
+                    <i data-lucide="info" class="w-4 h-4 text-indigo-500"></i>
+                    Haz clic en cada título de sección para desplegar u ocultar su contenido.
+                </p>
                 <div class="divide-y divide-slate-100 bg-white rounded-[2rem] shadow-sm overflow-hidden border border-slate-100" id="accordion-publicaciones">
                     
                     <!-- 4.1 Arquitectura -->
                     <div class="accordion-item active">
                         <button class="w-full p-6 flex justify-between items-center focus:outline-none hover:bg-slate-50 transition-all group" onclick="toggleAccordion(this)">
                             <span class="font-bold text-slate-700 text-lg flex items-center gap-3"><i data-lucide="network" class="text-indigo-600"></i> 4.1 Arquitectura de Procesos</span>
-                            <i data-lucide="chevron-down" class="w-5 h-5 text-slate-400 transition-transform rotate-180 chevron-icon"></i>
+                            <div class="flex items-center gap-2 text-slate-400 group-hover:text-indigo-600 transition-colors">
+                                <span class="text-xs font-semibold uppercase tracking-wider opacity-0 group-hover:opacity-100 transition-opacity">Desplegar</span>
+                                <i data-lucide="chevron-down" class="w-5 h-5 transition-transform rotate-180 chevron-icon"></i>
+                            </div>
                         </button>
                         <div class="accordion-content" style="max-height: 2000px;">
                             <div class="p-6 bg-indigo-50/50 text-slate-600 text-sm italic border-t border-slate-100">
@@ -641,7 +687,10 @@
                     <div class="accordion-item">
                         <button class="w-full p-6 flex justify-between items-center focus:outline-none hover:bg-slate-50 transition-all group" onclick="toggleAccordion(this)">
                             <span class="font-bold text-slate-700 text-lg flex items-center gap-3"><i data-lucide="clipboard-list" class="text-indigo-600"></i> 4.2 Documentos Operativos (MAPRO y BPMN)</span>
-                            <i data-lucide="chevron-down" class="w-5 h-5 text-slate-400 transition-transform chevron-icon"></i>
+                            <div class="flex items-center gap-2 text-slate-400 group-hover:text-indigo-600 transition-colors">
+                                <span class="text-xs font-semibold uppercase tracking-wider opacity-0 group-hover:opacity-100 transition-opacity">Desplegar</span>
+                                <i data-lucide="chevron-down" class="w-5 h-5 transition-transform chevron-icon"></i>
+                            </div>
                         </button>
                         <div class="accordion-content">
                             <div class="p-6 bg-indigo-50/50 text-slate-600 text-sm italic border-t border-slate-100">
@@ -674,7 +723,10 @@
                     <div class="accordion-item">
                         <button class="w-full p-6 flex justify-between items-center focus:outline-none hover:bg-slate-50 transition-all group" onclick="toggleAccordion(this)">
                             <span class="font-bold text-slate-700 text-lg flex items-center gap-3"><i data-lucide="book-copy" class="text-indigo-600"></i> 4.3 Biblioteca de Modernización</span>
-                            <i data-lucide="chevron-down" class="w-5 h-5 text-slate-400 transition-transform chevron-icon"></i>
+                            <div class="flex items-center gap-2 text-slate-400 group-hover:text-indigo-600 transition-colors">
+                                <span class="text-xs font-semibold uppercase tracking-wider opacity-0 group-hover:opacity-100 transition-opacity">Desplegar</span>
+                                <i data-lucide="chevron-down" class="w-5 h-5 transition-transform chevron-icon"></i>
+                            </div>
                         </button>
                         <div class="accordion-content">
                             <div class="p-6 bg-indigo-50/50 text-slate-600 text-sm italic border-t border-slate-100">

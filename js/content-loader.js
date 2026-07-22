@@ -72,6 +72,11 @@ const contentLoader = {
         // 4. Video
         const videoTitle = document.querySelector('#multimedia p.text-lg.font-bold');
         if (videoTitle) videoTitle.innerText = section.video_title || section.title;
+        const videoLink = document.querySelector('#multimedia a');
+        if (videoLink && section.video_url && section.video_url !== '#') {
+            videoLink.href = section.video_url;
+            videoLink.target = '_blank';
+        }
 
         // Re-inicializar iconos
         if (typeof lucide !== 'undefined') lucide.createIcons();

@@ -1,27 +1,43 @@
-# Integración con Sistemas Externos y Escalabilidad
+# Integración con Sistemas Externos y Escalabilidad Corporativa
 
-## 1. Integración Futura con SharePoint (Intranet GxP)
-El actual "Portal de Gestión del Conocimiento" está diseñado como una solución de Front-End ligera, con miras a ser integrada (o enlazada directamente) desde la futura Intranet Institucional (SharePoint u otra plataforma corporativa).
+## 1. Integración con la Intranet Institucional (SharePoint / Microsoft 365)
+El "Portal Web de Gestión y Modernización de AGROIDEAS" ha sido estructurado como una solución frontend ligera, altamente modular y ágil, pensada para poder conviver de forma independiente o ser incrustada directamente en el ecosistema digital corporativo de la institución (SharePoint Online / Intranet GxP).
 
-### Escenarios de Convivencia:
-- **IFrame o Web Part:** El portal puede ser incrustado directamente dentro de una página de SharePoint utilizando un componente *Page Viewer* o *Web Part* personalizado de SharePoint Framework (SPFx).
-- **Redirección Single Sign-On (SSO):** Al estar bajo el dominio `@agroideas.gob.pe`, se puede integrar el módulo de validación frontend actual con la API de Microsoft Graph o Azure AD para heredar la sesión del usuario logueado en Windows/Office 365.
+### Escenarios Técnicos de Convivencia e Interoperabilidad:
+- **Incrustación vía IFrame / Web Part SPFx:** Las páginas principales, el Hub de Documentos de Gestión (`doc_gestion.html`), la Estructura Orgánica (`estructura_organica.html`) o el propio Repositorio (`repositorio.html`) pueden ser incrustados dentro de páginas de SharePoint utilizando un componente *Page Viewer* o un *Web Part* personalizado desarrollado en **SharePoint Framework (SPFx)**. Su maquetación responsiva con Tailwind CSS se adapta automáticamente al ancho del contenedor en SharePoint sin cortar tablas ni deformar tarjetas.
+- **Redirección y Validación Single Sign-On (SSO):** Al estar bajo el dominio corporativo (`@agroideas.gob.pe`), la futura capa de autenticación para accesos restringidos o consultas internas puede integrarse de forma nativa con **Azure Active Directory (Entra ID)** o la **Microsoft Graph API**. Esto permite heredar la sesión activa de Windows/Office 365 del usuario del MIDAGRI sin requerir credenciales adicionales ni pantallas de login invasivas.
 
-## 2. API de Repositorio (Proyección Backend)
-Actualmente, el sistema consume un `content.json` local. La capa de acceso a datos (`content-loader.js`) está estructurada de forma modular. Para migrar a un backend real (ej. Node.js, Python/Django, o API de SharePoint List):
-1. **Endpoint REST:** Reemplazar la ruta `/data/content.json` por una llamada `fetch` a un endpoint REST (ej. `https://api.agroideas.gob.pe/v1/repositorio`).
-2. **CORS:** Configurar correctamente los encabezados CORS en el futuro servidor backend.
-3. **Paginación del Lado del Servidor:** La integración actual de DataTables soporta `serverSide: true`. Cuando el JSON exceda los 5,000 registros, la carga de datos deberá delegarse al servidor de base de datos para no penalizar el rendimiento del navegador.
+---
 
-## 3. Escalabilidad del Gestor de Contenidos
-El panel administrativo (Admin Dashboard) actual genera un JSON. Si se requiere un sistema más robusto:
-- El formulario de administración puede enviar un `POST` o `PUT` a una API, en lugar de descargar el archivo.
-- Incorporación de **Niveles de Aprobación**: Los cambios guardados pueden pasar a estado *Borrador* (Draft) y enviar un correo electrónico al coordinador GxP para ser pasados a estado *Publicado* (Published).
+## 2. Proyección Backend y REST APIs para el Repositorio
 
-## 4. Analítica Web y Monitoreo
-Para medir el éxito de la plataforma:
-- **Google Analytics / MS Clarity:** Los tags de seguimiento deben ser incrustados en `index.html` (dentro del `<head>`) y en todas las páginas de sección para medir:
-  - Búsquedas más frecuentes en el repositorio.
-  - Tiempo de permanencia por documento.
-  - Tasa de descarga de anexos.
-- **Auditoría de Errores:** Se recomienda integrar Sentry o equivalente en `main.js` para registrar errores de carga en dispositivos de usuarios finales bajo redes de oficinas remotas.
+Actualmente, el sistema consume archivos JSON estáticos en `/data` (`content.json` y `chatbot_knowledge.json`) leídos a través del navegador. Gracias al diseño desacoplado del motor (`js/content-loader.js`), la migración futura hacia un backend real (ej. Node.js, Python/FastAPI, .NET Core o conectores de SharePoint Lists) requiere cambios mínimos de infraestructura:
+
+1. **Sustitución de Endpoints REST:** Basta con reemplazar la ruta relativa `fetch('data/content.json')` dentro de `content-loader.js` por una llamada `fetch()` dirigida al endpoint REST institucional definitivo (por ejemplo: `https://api.agroideas.gob.pe/v1/repositorio`).
+2. **Configuración de Encabezados CORS:** El servidor de backend que sirva los documentos o directivas deberá habilitar las políticas CORS (*Cross-Origin Resource Sharing*) autorizando peticiones provenientes del dominio donde se aloje el frontend estático.
+3. **Paginación del Lado del Servidor (`serverSide: true`):** Las 4 pestañas del Repositorio (`normatividad`, `conocimiento`, `innovacion`, `publicaciones`) utilizan DataTables. Cuando el volumen de documentos supere los 5,000 registros históricos, se recomienda activar en la inicialización del script la opción `serverSide: true` de DataTables, delegando el filtrado, ordenamiento y paginación directamente al motor de base de datos en el servidor, garantizando que el navegador del usuario final continúe cargando en menos de 1 segundo.
+
+---
+
+## 3. Evolución y Escalabilidad del Asistente IA (`chatbot.html`)
+
+El actual Asistente IA (Chatbot GxP) funciona con un motor de coincidencias léxico-semánticas local (`js/chatbot-engine.js`) sobre `data/chatbot_knowledge.json`. Para escalar este módulo hacia inteligencia artificial generativa pura (LLM):
+
+- **Arquitectura RAG (*Retrieval-Augmented Generation*):** El archivo `chatbot_knowledge.json` y los anexos normativos de las 4 pestañas del Repositorio pueden ser indexados en una base de datos vectorial (ej. *Pinecone*, *ChromaDB* o *Azure AI Search*).
+- **Conexión a LLMs Cloud (Azure OpenAI / Google Gemini API):** Se puede sustituir la función de procesamiento local en `chatbot-engine.js` por una petición asíncrona hacia un microservicio backend (Python/LangChain) que conecte con modelos como **GPT-4o** o **Gemini Pro**. El microservicio consultará la base documental de AGROIDEAS y retornará respuestas citando la directiva legal exacta con el hipervínculo correspondiente al Repositorio o Google Drive.
+
+---
+
+## 4. Analítica Web, Monitoreo y Auditoría de Uso
+
+Para medir el impacto de la modernización institucional y optimizar continuamente la plataforma:
+
+- **Etiquetado Analytics (Google Analytics 4 / Microsoft Clarity):** Se recomienda incrustar los scripts de seguimiento corporativo en el `<head>` de `index.html` y dentro de `components.js` para registrar métricas clave:
+  - Términos de búsqueda más frecuentes en las 4 pestañas del Repositorio.
+  - Tasa de reproducción y tiempo de visualización del Video Explicativo en las páginas de ejes (`gestion_*.html`).
+  - Consultas e *intents* más populares solicitados al Asistente IA (`chatbot.html`).
+- **Monitoreo de Errores Frontend (Sentry):** Integrar una herramienta de monitoreo y reporte de excepciones JavaScript para detectar posibles caídas de red local, errores de carga de CDNs o bloqueos CORS en las computadoras de los coordinadores GxP dentro de la red corporativa del Estado.
+
+---
+
+*Unidad de Planeamiento y Presupuesto (UPP) - AGROIDEAS | Modernización del Estado 2026*

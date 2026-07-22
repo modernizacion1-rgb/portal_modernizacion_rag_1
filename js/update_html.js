@@ -1,6 +1,8 @@
 const fs = require('fs');
 const path = require('path');
 
+const rootDir = path.join(__dirname, '..');
+
 const tailwindConfig = `<script src="https://cdn.tailwindcss.com"></script>
     <script>
       tailwind.config = {
@@ -21,10 +23,10 @@ const tailwindConfig = `<script src="https://cdn.tailwindcss.com"></script>
       }
     </script>`;
 
-const files = fs.readdirSync(__dirname).filter(file => file.endsWith('.html'));
+const files = fs.readdirSync(rootDir).filter(file => file.endsWith('.html'));
 
 files.forEach(file => {
-    let content = fs.readFileSync(path.join(__dirname, file), 'utf8');
+    let content = fs.readFileSync(path.join(rootDir, file), 'utf8');
 
     // Inject Tailwind config
     if (content.includes('<script src="https://cdn.tailwindcss.com"></script>') && !content.includes('tailwind.config = {')) {
@@ -59,6 +61,6 @@ files.forEach(file => {
     content = content.replace(/from-blue-900/g, 'from-primary');
     content = content.replace(/to-slate-900/g, 'to-primary');
     
-    fs.writeFileSync(path.join(__dirname, file), content, 'utf8');
+    fs.writeFileSync(path.join(rootDir, file), content, 'utf8');
     console.log(`Updated ${file}`);
 });

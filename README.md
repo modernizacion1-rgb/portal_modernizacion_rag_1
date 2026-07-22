@@ -1,60 +1,73 @@
 # Portal Web de Modernización de la Gestión Pública - AGROIDEAS
 
-Este proyecto es una aplicación web estática diseñada para difundir e informar sobre el **Proceso de Modernización de la Gestión Pública** en el contexto de **AGROIDEAS** (Programa de Compensaciones para la Competitividad). La web proporciona información clara y estructurada sobre los pilares, lineamientos y herramientas relativas al desarrollo organizacional y la mejora continua del Estado.
+Este proyecto es una plataforma web estática de alto rendimiento desarrollada para difundir, gestionar e informar sobre el **Proceso de Modernización de la Gestión Pública** en el contexto de **AGROIDEAS** (Programa de Compensaciones para la Competitividad - MIDAGRI). La web proporciona un centro de conocimiento centralizado, normatividad, guías metodológicas, un organigrama interactivo y un **Asistente IA (Chatbot)** para optimizar la toma de decisiones y la mejora continua institucional.
+
+---
 
 ## 🚀 Características Principales
 
-- **Estructura Estática y Desacoplada:** Todo el contenido variable se gestiona a través de archivos de configuración JSON localizados en la carpeta `/data`.
-- **Diseño Premium y Moderno:** Interfaz de alto impacto visual utilizando **Tailwind CSS** para un diseño responsivo, limpio y estéticamente agradable.
-- **Arquitectura de Componentes Dinámicos:** Utilización de Vanilla JavaScript (`js/components.js`) para la inyección automática de elementos globales como el **Header** y el **Footer**.
-- **Interactividad Enriquecida:** 
-  - **AOS (Animate on Scroll):** Animaciones fluidas al navegar por el contenido.
-  - **Lucide Icons:** Iconografía vectorial moderna y consistente.
-  - **DataTables:** Tablas inteligentes con capacidades de búsqueda, paginación y exportación de datos en la sección de Repositorio.
-- **Tipografía y Estilo Institucional:** Uso de fuentes modernas (Inter/Outfit) y una paleta de colores institucional (Azul Agro, Verde Agro, Rojo PCM) definida mediante variables CSS.
-
-## 📁 Estructura del Proyecto
-
-El proyecto se organiza en torno a los ejes estratégicos de la modernización:
-
-* `index.html`: Página principal con el resumen de objetivos estratégicos y pilares de transformación.
-* `gestion_conocimiento.html`: Políticas y herramientas para la gestión del capital intelectual.
-* `gestion_procesos.html`: Directrices para la productividad y mejora de procesos institucionales.
-* `gestion_calidad.html`: Enfoque en la calidad de servicios y mejora regulatoria.
-* `gestion_innovacion.html`: Estrategias e iniciativas para el fomento de la innovación pública.
-* `repositorio.html`: Centro de documentación centralizado (Normatividad, Guías, Publicaciones) con tablas interactivas.
-* `estructura_organica.html`: Detalle de la organización funcional y jerárquica de la institución.
-* `doc_gestion.html`: Hub de acceso rápido a documentos de gestión (MOP, MAPRO, etc.).
-* `contacto.html`: Formulario de atención y contacto.
-
-> [!IMPORTANT]
-> Todas las páginas de "Ejes de Gestión" han sido estandarizadas en 5 secciones clave: **1. Definición**, **2. Finalidad**, **3. Fases/Actividades**, **4. Roles** y **5. Contenido Multimedia**.
-
-## 📚 Documentación Técnica
-
-Para un análisis profundo del sistema, consulte los siguientes manuales en la carpeta `/document`:
-
-1.  **[Arquitectura Estructural](document/1_Arquitectura_Estructural.md)**: Diseño jerárquico y organización de archivos.
-2.  **[Guía de Estilos UI](document/2_Guia_de_Estilos_UI.md)**: Estándares visuales, colores y componentes.
-3.  **[Manual de Despliegue](document/3_Manual_Despliegue_Mantenimiento.md)**: Guía paso a paso para actualización y mantenimiento.
-4.  **[Arquitectura de Datos y Flujos](document/4_Arquitectura_Datos_Interaccion.md)**: Detalle del motor dinámico JSON, seguridad y diagramas UML/Mermaid.
-
-## 🛠️ Tecnologías Utilizadas
-
-- **Frontend:** HTML5, JavaScript (ES6+), CSS3 (Modern Variables).
-- **Styling:** [Tailwind CSS](https://tailwindcss.com/) (vía CDN para desarrollo ágil).
-- **Iconografía:** [Lucide Icons](https://lucide.dev/).
-- **Animaciones:** [AOS Library](https://michalsnik.github.io/aos/).
-- **Tablas:** [DataTables.net](https://datatables.net/) (jQuery-based integration).
-
-## 💻 Instrucciones de Uso y Despliegue
-
-Al ser un sitio web estático, su despliegue es inmediato y no requiere backend:
-
-1. Descarga o clona el proyecto en tu entorno local.
-2. Abre cualquier archivo `.html` (se recomienda empezar por `index.html`) en un navegador moderno.
-3. Para realizar cambios globales en la navegación o el pie de página, edita el archivo `js/components.js`.
+- **Arquitectura Estática Desacoplada ("Backend-Less"):** Toda la información variable (textos de secciones, videos explicativos, directivas y base de conocimiento del chatbot) se gestiona de manera declarativa a través de archivos JSON localizados en `/data`.
+- **Diseño Premium y Responsivo:** Construido con **Tailwind CSS** (vía CDN) y variables CSS institucionales (`css/modern-styles.css`), implementando efectos de vanguardia como *Glassmorphism*, sombras de elevación multinivel y modo oscuro/claro contextual.
+- **Inyección Centralizada de Componentes:** Uso de Vanilla JavaScript (`js/components.js`) para la inyección automática del **Header Global**, **Footer**, menú móvil y la inicialización centralizada de íconos y animaciones.
+- **Asistente IA y Búsqueda Semántica (`chatbot.html`):** Módulo inteligente que consulta en tiempo real el archivo `data/chatbot_knowledge.json` mediante `js/chatbot-engine.js`, ofreciendo respuestas inmediatas sobre normatividad, flujos y lineamientos GxP.
+- **Repositorio Documental Interactivo (`repositorio.html`):** Catálogo centralizado estructurado en **4 Pestañas / Ejes Documentales** con tablas avanzadas **DataTables**. La pestaña **2. Gestión del Conocimiento** cuenta con un diseño jerárquico de **5 sub-acordeones** (Lecciones Aprendidas, Buenas Prácticas, Guías Técnicas 5W+2H, Actas de Entrega de Conocimiento y **5 Micro-Cursos** incluyendo *Uso de herramientas de IA en la AGROIDEAS*), todos validados por el **Equipo Técnico de Mejora Continua (ETMC)**.
+- **Contenido Multimedia Integrado:** Secciones audiovisuales con enlaces directos en alta definición (HD 1080p) vinculados a Google Drive y gestionados dinámicamente mediante `js/content-loader.js`.
 
 ---
-*Ultima actualización: Marzo 2026 - Modernización AGROIDEAS*
-"# portal_modernizacion"  
+
+## 📁 Estructura General del Proyecto y Páginas Web
+
+El portal está organizado en páginas núcleo especializadas que cubren los ejes de la modernización e información institucional:
+
+| Archivo HTML | Propósito y Descripción |
+| :--- | :--- |
+| **[`index.html`](file:///e:/AGROIDEAS%20GxP%20-%20Gestion%20Conocimiento/DOCUMENTOS%20DE%20GESTI%C3%93N/8.%20PROPUESTA%20DE%20REPOSITORIO%20CENTRAL/portal_modernizacion-main/index.html)** | **Página Principal (Inicio):** Presenta la visión, pilares de transformación GxP, accesos rápidos al repositorio y CTA de bienvenida. |
+| **[`gestion_procesos.html`](file:///e:/AGROIDEAS%20GxP%20-%20Gestion%20Conocimiento/DOCUMENTOS%20DE%20GESTI%C3%93N/8.%20PROPUESTA%20DE%20REPOSITORIO%20CENTRAL/portal_modernizacion-main/gestion_procesos.html)** | **Eje de Gestión por Procesos:** Cadena de valor, mapeo de procesos, roles, operadores y tutorial audiovisual (Sección 5). |
+| **[`gestion_conocimiento.html`](file:///e:/AGROIDEAS%20GxP%20-%20Gestion%20Conocimiento/DOCUMENTOS%20DE%20GESTI%C3%93N/8.%20PROPUESTA%20DE%20REPOSITORIO%20CENTRAL/portal_modernizacion-main/gestion_conocimiento.html)** | **Eje de Gestión del Conocimiento:** Políticas, captura, transferencia y retención del capital intelectual en AGROIDEAS. |
+| **[`gestion_calidad.html`](file:///e:/AGROIDEAS%20GxP%20-%20Gestion%20Conocimiento/DOCUMENTOS%20DE%20GESTI%C3%93N/8.%20PROPUESTA%20DE%20REPOSITORIO%20CENTRAL/portal_modernizacion-main/gestion_calidad.html)** | **Eje de Gestión de la Calidad:** Mejora regulatoria, estándares de servicio ciudadano y simplificación administrativa. |
+| **[`gestion_innovacion.html`](file:///e:/AGROIDEAS%20GxP%20-%20Gestion%20Conocimiento/DOCUMENTOS%20DE%20GESTI%C3%93N/8.%20PROPUESTA%20DE%20REPOSITORIO%20CENTRAL/portal_modernizacion-main/gestion_innovacion.html)** | **Eje de Innovación Pública:** Laboratorios de innovación, pilotos colaborativos y co-creación de soluciones agrarias. |
+| **[`repositorio.html`](file:///e:/AGROIDEAS%20GxP%20-%20Gestion%20Conocimiento/DOCUMENTOS%20DE%20GESTI%C3%93N/8.%20PROPUESTA%20DE%20REPOSITORIO%20CENTRAL/portal_modernizacion-main/repositorio.html)** | **Repositorio Institucional Centralizado:** Dividido en **4 Pestañas Oficiales**: *1. Normatividad y Directivas*, *2. Gestión del Conocimiento* (con sus 5 subsecciones validadas ETMC y 5 Micro-cursos formativos), *3. Innovación Pública* y *4. Publicaciones y Procesos*. |
+| **[`chatbot.html`](file:///e:/AGROIDEAS%20GxP%20-%20Gestion%20Conocimiento/DOCUMENTOS%20DE%20GESTI%C3%93N/8.%20PROPUESTA%20DE%20REPOSITORIO%20CENTRAL/portal_modernizacion-main/chatbot.html)** | **Asistente IA (Chatbot GxP):** Interfaz conversacional inteligente alimentada por la base de conocimiento institucional. |
+| **[`doc_gestion.html`](file:///e:/AGROIDEAS%20GxP%20-%20Gestion%20Conocimiento/DOCUMENTOS%20DE%20GESTI%C3%93N/8.%20PROPUESTA%20DE%20REPOSITORIO%20CENTRAL/portal_modernizacion-main/doc_gestion.html)** | **Hub de Documentos de Gestión:** Acceso rápido al MOP, MAPRO, ROF, PEI, POI y lineamientos estratégicos. |
+| **[`estructura_organica.html`](file:///e:/AGROIDEAS%20GxP%20-%20Gestion%20Conocimiento/DOCUMENTOS%20DE%20GESTI%C3%93N/8.%20PROPUESTA%20DE%20REPOSITORIO%20CENTRAL/portal_modernizacion-main/estructura_organica.html)** | **Estructura Orgánica Funcional:** Organigrama interactivo y detalle jerárquico de la Unidad de Planeamiento y Presupuesto (UPP). |
+| **[`contacto.html`](file:///e:/AGROIDEAS%20GxP%20-%20Gestion%20Conocimiento/DOCUMENTOS%20DE%20GESTI%C3%93N/8.%20PROPUESTA%20DE%20REPOSITORIO%20CENTRAL/portal_modernizacion-main/contacto.html)** | **Atención y Contacto:** Formulario de consultas, directorio de coordinadores GxP y soporte técnico. |
+
+> [!NOTE]
+> **Estandarización de Ejes de Gestión:** Las páginas de los 4 ejes (`gestion_*.html`) siguen un esquema uniforme de 5 secciones: **1. Definición / Marco Teórico**, **2. Finalidad / Cadena de Valor**, **3. Fases o Actividades**, **4. Roles y Operadores**, y **5. Contenido Multimedia (Video Explicativo)**.
+
+---
+
+## 📚 Documentación Técnica para Desarrolladores y Agentes IA
+
+Para conocer la arquitectura, patrones de diseño y guías de mantenimiento, consulte los manuales oficiales en el directorio [`/document`](file:///e:/AGROIDEAS%20GxP%20-%20Gestion%20Conocimiento/DOCUMENTOS%20DE%20GESTI%C3%93N/8.%20PROPUESTA%20DE%20REPOSITORIO%20CENTRAL/portal_modernizacion-main/document):
+
+1. **[Índice y Guía General de la Documentación](file:///e:/AGROIDEAS%20GxP%20-%20Gestion%20Conocimiento/DOCUMENTOS%20DE%20GESTI%C3%93N/8.%20PROPUESTA%20DE%20REPOSITORIO%20CENTRAL/portal_modernizacion-main/document/0_Indice_Documentacion.md)**: Introducción al ecosistema documental GxP.
+2. **[Arquitectura Estructural y Tecnológica](file:///e:/AGROIDEAS%20GxP%20-%20Gestion%20Conocimiento/DOCUMENTOS%20DE%20GESTI%C3%93N/8.%20PROPUESTA%20DE%20REPOSITORIO%20CENTRAL/portal_modernizacion-main/document/1_Arquitectura_Estructural.md)**: Estructura real de archivos, árbol de directorios y motor de inyección central (`components.js`).
+3. **[Guía de Estilos UI e Identidad Visual](file:///e:/AGROIDEAS%20GxP%20-%20Gestion%20Conocimiento/DOCUMENTOS%20DE%20GESTI%C3%93N/8.%20PROPUESTA%20DE%20REPOSITORIO%20CENTRAL/portal_modernizacion-main/document/2_Guia_de_Estilos_UI.md)**: Paleta de colores institucionales, variables CSS en `modern-styles.css`, tipografía y pautas de UI/UX.
+4. **[Manual de Despliegue y Mantenimiento](file:///e:/AGROIDEAS%20GxP%20-%20Gestion%20Conocimiento/DOCUMENTOS%20DE%20GESTI%C3%93N/8.%20PROPUESTA%20DE%20REPOSITORIO%20CENTRAL/portal_modernizacion-main/document/3_Manual_Despliegue_Mantenimiento.md)**: Instrucciones paso a paso para desplegar en servidores locales o producción web/intranet y actualización sin tocar código HTML.
+5. **[Arquitectura de Datos e Interacción Dinámica](file:///e:/AGROIDEAS%20GxP%20-%20Gestion%20Conocimiento/DOCUMENTOS%20DE%20GESTI%C3%93N/8.%20PROPUESTA%20DE%20REPOSITORIO%20CENTRAL/portal_modernizacion-main/document/4_Arquitectura_Datos_Interaccion.md)**: Funcionamiento detallado del cargador JSON (`content-loader.js`), Repositorio de 4 pestañas y el motor conversacional (`chatbot-engine.js`).
+6. **[Integración con Sistemas Externos y Escalabilidad](file:///e:/AGROIDEAS%20GxP%20-%20Gestion%20Conocimiento/DOCUMENTOS%20DE%20GESTI%C3%93N/8.%20PROPUESTA%20DE%20REPOSITORIO%20CENTRAL/portal_modernizacion-main/document/5_Integracion_Sistemas_Externos.md)**: Proyección futura hacia SharePoint (Intranet), consumo de REST APIs y evolución del Asistente IA.
+
+---
+
+## 🛠️ Stack Tecnológico
+
+- **Estructura Base:** HTML5 semántico, JavaScript Vanilla (ES6+).
+- **Estilos y Maquetación:** [Tailwind CSS](https://tailwindcss.com/) (CDN) + CSS3 Variables custom (`css/modern-styles.css`, `css/repositorio.css`, `css/chatbot.css`).
+- **Iconografía:** [Lucide Icons](https://lucide.dev/) (Vectoriales dinámicos e intuitivos).
+- **Animaciones e Interacción:** [AOS (Animate On Scroll)](https://michalsnik.github.io/aos/) y transiciones Tailwind.
+- **Tablas Avanzadas:** [DataTables.net](https://datatables.net/) (búsqueda multicampo y botones de exportación).
+
+---
+
+## 💻 Instrucciones Rápidas de Ejecución
+
+1. Clona o descarga el repositorio en tu computadora o servidor local.
+2. Asegúrate de contar con conexión a internet para la carga de bibliotecas de diseño e íconos (CDN de Tailwind, Lucide y AOS).
+3. Abre el archivo `index.html` en tu navegador web de preferencia (o utiliza la extensión *Live Server* / `npm run dev` en tu editor de código).
+4. Para realizar modificaciones sobre los menús superiores o el pie de página de toda la plataforma, edita un único archivo: **`js/components.js`**.
+5. Para actualizar textos, videos tutoriales y documentos de la biblioteca, edita los archivos **`data/content.json`** o **`data/chatbot_knowledge.json`**.
+
+---
+
+*Unidad de Planeamiento y Presupuesto (UPP) - AGROIDEAS | Modernización del Estado 2026*

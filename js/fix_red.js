@@ -1,7 +1,8 @@
 const fs = require('fs');
 const path = require('path');
 
-const file = path.join(__dirname, 'gestion_calidad.html');
+const rootDir = path.join(__dirname, '..');
+const file = path.join(rootDir, 'gestion_calidad.html');
 let content = fs.readFileSync(file, 'utf8');
 
 content = content.replace(/from-red-900/g, 'from-primary');

@@ -113,12 +113,12 @@
                                 <i data-lucide="chevron-down" class="w-5 h-5 transition-transform rotate-180 chevron-icon"></i>
                             </div>
                         </button>
-                        <div class="accordion-content" style="max-height: 2000px;">
+                        <div class="accordion-content">
                             <div class="p-6 bg-blue-50/50 text-slate-600 text-sm italic border-t border-slate-100">
                                 Espacio dedicado a estandarizar la creación de nuestros instrumentos normativos internos. Aquí encontrarás el flujograma oficial y la "norma madre" que rige cómo elaborar, revisar y aprobar directivas en la entidad, garantizando consistencia y calidad regulatoria.
                             </div>
                             <div class="p-6 grid md:grid-cols-2 gap-6 bg-slate-50/50 border-t border-slate-100">
-                                <a href="#" class="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm hover:shadow-md transition-all group">
+                                <a href="https://www.gob.pe/institucion/midagri/normas-legales/2997613-0187-2022-midagri" target="_blank" rel="noopener noreferrer" class="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm hover:shadow-md transition-all group">
                                     <div class="flex items-start gap-4">
                                         <div class="w-12 h-12 bg-red-50 text-red-600 rounded-xl flex items-center justify-center shrink-0"><i data-lucide="file-text" class="w-6 h-6"></i></div>
                                         <div>
@@ -127,7 +127,7 @@
                                         </div>
                                     </div>
                                 </a>
-                                <a href="#" class="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm hover:shadow-md transition-all group">
+                                <a href="https://docs.google.com/document/d/1pa5k9msLz7EBY1PYr1y78jd8sxG18nu_/edit?usp=sharing&ouid=117490016204520558433&rtpof=true&sd=true" target="_blank" rel="noopener noreferrer" class="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm hover:shadow-md transition-all group">
                                     <div class="flex items-start gap-4">
                                         <div class="w-12 h-12 bg-blue-50 text-primary rounded-xl flex items-center justify-center shrink-0"><i data-lucide="layout-template" class="w-6 h-6"></i></div>
                                         <div>
@@ -179,7 +179,7 @@
                                 <i data-lucide="chevron-down" class="w-5 h-5 transition-transform rotate-180 chevron-icon"></i>
                             </div>
                         </button>
-                        <div class="accordion-content" style="max-height: 2000px;">
+                        <div class="accordion-content">
                             <div class="p-6 bg-emerald-50/60 text-slate-700 text-sm border-t border-slate-100 flex items-start gap-3">
                                 <i data-lucide="shield-check" class="w-5 h-5 text-primary shrink-0 mt-0.5"></i>
                                 <div>
@@ -580,7 +580,7 @@
                                 <i data-lucide="chevron-down" class="w-5 h-5 transition-transform rotate-180 chevron-icon"></i>
                             </div>
                         </button>
-                        <div class="accordion-content" style="max-height: 2000px;">
+                        <div class="accordion-content">
                             <div class="p-6 bg-amber-50/50 text-slate-600 text-sm italic border-t border-slate-100">
                                 Vitrina de nuestras iniciativas disruptivas. Aquí monitoreamos los pilotos y proyectos de innovación que buscan resolver problemas públicos mediante nuevos enfoques, tecnologías o mejora radical de servicios.
                             </div>
@@ -660,7 +660,7 @@
                                 <i data-lucide="chevron-down" class="w-5 h-5 transition-transform rotate-180 chevron-icon"></i>
                             </div>
                         </button>
-                        <div class="accordion-content" style="max-height: 2000px;">
+                        <div class="accordion-content">
                             <div class="p-6 bg-indigo-50/50 text-slate-600 text-sm italic border-t border-slate-100">
                                 La radiografía operativa de la entidad. Documentos que estructuran nuestra cadena de valor, desde el Mapa de Procesos de nivel 0 hasta la caracterización detallada (fichas) de los procesos estratégicos, misionales y de apoyo.
                             </div>
@@ -895,25 +895,12 @@
             
             siblingItems.forEach(i => {
                 i.classList.remove('active');
-                const content = i.querySelector('.accordion-content');
-                if(content) content.style.maxHeight = '0';
                 const icon = i.querySelector('.chevron-icon');
                 if(icon) icon.classList.remove('rotate-180');
             });
 
             if (!isActive) {
                 item.classList.add('active');
-                const content = item.querySelector('.accordion-content');
-                // Al ser anidado, si abrimos uno hijo, debemos asegurar que el padre recalcule su altura
-                content.style.maxHeight = content.scrollHeight + "px";
-                
-                // Actualizar altura del padre si está dentro de otro accordion-content
-                let parentContent = item.closest('.accordion-content');
-                while(parentContent && parentContent !== content) {
-                    parentContent.style.maxHeight = (parentContent.scrollHeight + content.scrollHeight) + "px";
-                    parentContent = parentContent.parentElement.closest('.accordion-content');
-                }
-                
                 const icon = item.querySelector('.chevron-icon');
                 if(icon) icon.classList.add('rotate-180');
             }

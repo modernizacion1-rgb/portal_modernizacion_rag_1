@@ -138,7 +138,7 @@ const contentLoader = {
                         <span class="font-bold text-slate-700">${cat.title}</span>
                         <i data-lucide="chevron-down" class="w-5 h-5 text-slate-400 transition-transform ${idx === 0 ? 'rotate-180' : ''} chevron-icon"></i>
                     </button>
-                    <div class="accordion-content" style="${idx === 0 ? 'max-height: 2000px;' : ''}">
+                    <div class="accordion-content">
                         <div class="p-0 border-t border-slate-50">
                             ${cat.subsections.map(sub => `
                                 <div class="bg-slate-50 text-xs font-black text-slate-400 uppercase tracking-widest p-4 pb-2 border-t border-slate-100">${sub.title}</div>

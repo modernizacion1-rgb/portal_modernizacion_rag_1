@@ -12,8 +12,8 @@ Para evitar la redundancia de código en las múltiples páginas del sitio y gar
 ### El Motor Central: `js/components.js`
 Este script se ejecuta al final del cuerpo (`<body>`) de todas las páginas del portal para realizar las siguientes operaciones globales:
 
-- **Inyección y Sincronización del Header:** Ubica la etiqueta `<header>` vacía e inyecta dinámicamente la barra de navegación corporativa, resaltando automáticamente el ítem activo según el atributo `data-page-id` del `<body>`.
-- **Inyección del Footer:** Rellena el elemento `<footer>` con los enlaces legales, de contacto, créditos institucionales y accesos rápidos de la entidad.
+- **Inyección y Sincronización del Header:** Ubica la etiqueta `<header>` vacía e inyecta dinámicamente la barra de navegación corporativa de la **Unidad de Planeamiento y Presupuesto (UPP)**, incluyendo el menú desplegable **"Ejes de Gestión"** (Conocimiento, Procesos, Calidad, Innovación) y los accesos a Documentos, Contacto, Asistente IA y Repositorio.
+- **Inyección del Footer:** Rellena el elemento `<footer>` con los créditos institucionales, la fecha de última actualización dinámica (`#current-date-footer`) y los accesos rápidos de la entidad.
 - **Menú Móvil Interactivo:** Genera el botón hamburguesa en dispositivos móviles/tablets (`md:hidden`) y gestiona transiciones suaves de apertura y cierre.
 - **Inicialización de Bibliotecas Externas:** Renderiza los íconos de **Lucide Icons** (`lucide.createIcons()`) e inicializa **AOS (Animate On Scroll)** con parámetros de rendimiento afinados (`duration: 800`, `once: true`).
 - **Efecto de Navegación "Glassmorphism":** Captura el evento de scroll de la ventana y modifica las clases del Navbar para aplicar opacidad, sombra y desenfoque al desplazarse hacia abajo.
@@ -28,22 +28,33 @@ La estructura real del proyecto en el sistema de archivos obedece a la siguiente
 /portal_modernizacion-main/
 │
 ├── css/
-│   ├── modern-styles.css    # Variables globales institucionales, tipografía, glassmorphism y transiciones.
-│   ├── repositorio.css      # Estilos especializados para pestañas, filtros y tablas DataTables.
-│   └── text-colors.css / chatbot.css # Estilos complementarios para el módulo del Asistente IA.
+│   ├── modern-styles.css    # Variables globales institucionales (paleta "Impulsa Agroideas"), tipografía, glassmorphism y transiciones.
+│   ├── repositorio.css      # Estilos especializados para pestañas, filtros, acordeones y tablas DataTables.
+│   └── chatbot.css          # Estilos del Asistente IA (burbujas, sidebar, FAB flotante) y del widget global.
 │
 ├── js/
-│   ├── components.js       # Core de inyección de componentes globales (Header, Footer, Nav móvil).
-│   ├── content-loader.js   # Motor de carga asíncrona de contenidos, videos HD y tablas del repositorio.
-│   └── chatbot-engine.js   # Motor de procesamiento conversacional semántico para el Asistente IA.
+│   ├── components.js        # Core de inyección de componentes globales (Header, Footer, Nav móvil).
+│   ├── content-loader.js    # Motor de carga asíncrona de contenidos, videos HD y tablas del repositorio.
+│   ├── chatbot-engine.js    # Motor RAG local + TF-IDF + conector Gemini para el Asistente IA.
+│   ├── microcurso.js        # Lógica del Aula Virtual SPA (lee parámetros URL y renderiza el curso).
+│   ├── microcurso-modal.js  # Carga de datos y apertura del modal "Índice de Módulo" en el repositorio.
+│   ├── update_html.js       # Utilidad Node.js para inyectar la config. de Tailwind y migrar colores (mantenimiento).
+│   └── fix_red.js           # Utilidad Node.js de corrección de colores específica (mantenimiento).
 │
 ├── data/
 │   ├── content.json         # Base de contenidos estructurados (secciones de ejes, enlaces de video, catálogos).
-│   └── chatbot_knowledge.json # Base de conocimiento e historial de respuestas del Asistente IA.
+│   ├── chatbot_knowledge.json # Corpus normativo SAMGP (9 módulos) para el Asistente IA.
+│   └── cursos.json          # Currícula de Micro-Cursos (5 módulos, subtemas, videos y cuestionarios).
 │
 ├── images/                  # Activos gráficos corporativos, logos institucionales y diagramas.
 │
 ├── document/                # Documentación técnica corporativa en Markdown (Índice, UI, Arquitectura, etc.).
+│
+├── doc/                     # Planes de implementación y walkthroughs históricos del proyecto.
+│
+├── LineaGrafica/            # Piezas visuales y PDFs de la identidad "Impulsa Agroideas".
+│
+├── MARCO NORMATIVO SAMGP 2026/ # Repositorio normativo fuente (PDFs) referenciado por el chatbot.
 │
 ├── index.html               # Página Principal / Home del portal.
 ├── gestion_procesos.html    # Eje 1: Gestión por Procesos (y video explicativo en Google Drive).
@@ -51,7 +62,8 @@ La estructura real del proyecto en el sistema de archivos obedece a la siguiente
 ├── gestion_calidad.html     # Eje 3: Gestión de la Calidad y Mejora Regulatoria.
 ├── gestion_innovacion.html  # Eje 4: Innovación Pública y Co-creación.
 ├── repositorio.html         # Repositorio Institucional (4 pestañas activas con tablas interactivas).
-├── chatbot.html             # Interfaz del Asistente IA (Chatbot GxP).
+├── chatbot.html             # Interfaz del Asistente IA (Chatbot SAMGP).
+├── microcurso.html          # Aula Virtual SPA de Micro-Cursos (plantilla dinámica única).
 ├── doc_gestion.html         # Hub de Documentos de Gestión (MOP, MAPRO, ROF, POI).
 ├── estructura_organica.html # Organigrama interactivo y estructura jerárquica de la UPP.
 └── contacto.html            # Directorio de coordinadores GxP y formulario de consultas.
@@ -78,14 +90,17 @@ Diseñado modularmente en **4 Pestañas / Ejes Documentales** que se conmutan me
 *(Nota de Arquitectura: La pestaña de Planeamiento y Resultados fue eliminada del alcance de presentación para evitar redundancia con el Hub en `doc_gestion.html`).*
 
 ### C. Asistente IA (`chatbot.html`)
-Diseñado con una interfaz conversacional de doble panel (historial lateral y chat principal), vinculado directamente a `js/chatbot-engine.js` para procesar consultas sin latencia del lado del servidor.
+Diseñado con una interfaz conversacional de doble panel (historial lateral y chat principal), vinculado directamente a `js/chatbot-engine.js` para procesar consultas mediante **RAG local (TF-IDF)** sin latencia del lado del servidor, con un **conector opcional a Google Gemini** para generación en tiempo real.
+
+### D. Aula Virtual de Micro-Cursos (`microcurso.html`)
+Plantilla **SPA (Single Page Application)** única que reemplaza la creación de decenas de páginas HTML por curso. Mediante parámetros de URL (`?modulo=modulo1&subtema=A.1`), `js/microcurso.js` lee `data/cursos.json` y renderiza dinámicamente el título, el video, la ficha PDF y el cuestionario interactivo del subtema seleccionado. El acceso se origina desde el **Modal "Índice de Módulo"** (`js/microcurso-modal.js`) en la pestaña *2. Gestión del Conocimiento* del repositorio.
 
 ---
 
 ## 4. Beneficios de la Arquitectura para Humanos y Agentes IA
 
-1. **Cero Mantenimiento Duplicado:** Modificar un ítem del menú de navegación requiere editar únicamente `js/components.js`, propagándose de forma instantánea a las 10 páginas del portal.
-2. **Desacoplamiento de Contenido:** Agentes de IA o redactores de contenido pueden modificar directivas o cambiar el enlace de un video tutorial en `data/content.json` sin alterar la maquetación HTML ni correr riesgo de romper estilos Tailwind.
+1. **Cero Mantenimiento Duplicado:** Modificar un ítem del menú de navegación requiere editar únicamente `js/components.js`, propagándose de forma instantánea a las 11 páginas del portal.
+2. **Desacoplamiento de Contenido:** Agentes de IA o redactores de contenido pueden modificar directivas, cambiar el enlace de un video tutorial en `data/content.json` o actualizar un micro-curso en `data/cursos.json` sin alterar la maquetación HTML ni correr riesgo de romper estilos Tailwind.
 3. **Alto Rendimiento y Carga Asíncrona:** Al ejecutarse con scripts diferidos (`defer` o al final del `<body>`), el navegador renderiza el contenido HTML y estilos Tailwind de manera inmediata, alcanzando puntuaciones excelentes en métricas de *Core Web Vitals*.
 4. **Interoperabilidad:** La estructura limpia y basada en JSON facilita que en una fase posterior los motores locales (`content-loader.js` y `chatbot-engine.js`) sean redirigidos hacia APIs REST de SharePoint o servidores institucionales mediante una simple sustitución de URL `fetch()`.
 

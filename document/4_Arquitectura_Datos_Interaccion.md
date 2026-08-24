@@ -7,7 +7,7 @@ El portal opera bajo un enfoque modular de **datos declarativos desacoplados**. 
 
 ## 2. Estructura de las Bases de Datos JSON (`/data`)
 
-El sistema cuenta con dos archivos maestros en formato JSON:
+El sistema cuenta con tres archivos maestros en formato JSON:
 
 ### A. `data/content.json` (Contenidos Generales y Repositorio)
 Estructurado en tres ramas principales que alimentan las secciones informativas del portal:
@@ -15,11 +15,17 @@ Estructurado en tres ramas principales que alimentan las secciones informativas 
 - **`repository`:** Catálogo general de directivas, manuales y herramientas de la institución categorizados por las **4 Pestañas del Repositorio** (`normatividad`, `conocimiento`, `innovacion`, `publicaciones`).
 - **`updates` o `meta`:** Registro de auditoría y metadatos con fecha de última revisión oficial para control documental.
 
-### B. `data/chatbot_knowledge.json` (Base Semántica del Asistente IA)
+### B. `data/chatbot_knowledge.json` (Corpus Normativo del Asistente IA)
 Estructurado modularmente para el consumo veloz por el motor del chatbot:
-- **`intents` o Categorías de Consulta:** Mapeo de flujos conversacionales (saludos, consultas de MOP, cómo redactar una directiva, dónde encontrar plantillas Word).
-- **`keywords`:** Palabras clave asociadas para coincidencia léxica inteligente.
-- **`responses`:** Textos formateados en HTML o Markdown con enlaces directos hacia las directivas exactas en `repositorio.html`.
+- **`metadata`:** Título, versión (`2026.6`), fecha de última actualización y total de módulos (9).
+- **`categories`:** Lista de las **9 categorías normativas** filtrables en el sidebar (Marco General, Política 2030, Reglamento SAMGP, Gestión por Procesos, Calidad, Conocimiento, Innovación, Organización del Estado e **Instructivos Operativos**).
+- **`knowledge_nodes`:** Nodos de conocimiento con `id`, `category`, `title`, `source` (norma legal), `pdf_path` (ruta al PDF real en `MARCO NORMATIVO SAMGP 2026/`), `keywords`, `question_patterns`, `answer` (HTML) y `quick_prompt`.
+
+### C. `data/cursos.json` (Currícula de Micro-Cursos)
+Estructurado para alimentar el Aula Virtual SPA:
+- **`modulos`:** Arreglo de 5 módulos (`modulo1` a `modulo5`) con `id`, `titulo`, `eje` (A–E), `descripcion` y `subtemas`.
+- **`subtemas`:** Cada subtema (`A.1`, `A.2`, etc.) contiene `id`, `titulo`, `descripcion`, `video_url`, `pdf_url` y `preguntas`.
+- **`preguntas`:** Cuestionario interactivo con `pregunta`, `opciones` (arreglo) y `respuestaCorrecta` (índice).
 
 ---
 
@@ -63,21 +69,26 @@ El archivo **`content-loader.js`** es el encargado de enlazar la interfaz estát
 
 ## 5. Arquitectura del Asistente IA (`js/chatbot-engine.js`)
 
-El Asistente IA del portal opera bajo una arquitectura conversacional ligera sin latencia de red de servidores remotos:
+El Asistente IA del portal opera bajo una arquitectura **RAG local (Retrieval-Augmented Generation)** con búsqueda semántica TF-IDF, sin latencia de red de servidores remotos, y con un **conector opcional a Google Gemini**:
 
 ```mermaid
 graph TD
-    A[Entrada del Usuario / Input Texto] --> B[Normalización de String y Tokenización]
-    B --> C[Búsqueda de Coincidencia de Palabras Clave]
-    C --> D{¿Coincidencia con Intent en chatbot_knowledge.json?}
-    D -- Sí (Exacta o Parcial) --> E[Selección de Respuesta en Base GxP]
-    D -- No (Ambiguo) --> F[Respuesta de Fallback + Sugerencias Rápidas]
-    E --> G[Renderizado de Burbuja HTML + Píldoras de Enlace]
+    A[Entrada del Usuario / Input Texto o Voz] --> B[Normalización de String y Tokenización]
+    B --> C[Búsqueda Semántica TF-IDF + Keywords]
+    C --> D{¿Coincidencia con knowledge_nodes en chatbot_knowledge.json?}
+    D -- Sí (Score >= umbral) --> E[Selección de Respuesta en Base SAMGP]
+    D -- No (Ambiguo / Out of Scope) --> F[Respuesta de Fallback + Guardrail + Sugerencias Rápidas]
+    E --> G[Renderizado de Burbuja HTML + Píldoras de Enlace + Botón PDF]
     F --> G
-    G --> H[Actualización del Historial de Scroll en Panel de Chat]
+    G --> H[Actualización del Historial en LocalStorage y Scroll del Panel]
+    E -. Conector Gemini activo .-> I[Generación en vivo con In-Context Grounding]
+    I --> G
 ```
 
-- **Cero Dependencia de Servidores Remotos:** Al procesar la búsqueda léxica y semántica del lado del cliente (`client-side`) sobre `chatbot_knowledge.json`, el asistente responde en milisegundos y funciona sin problemas incluso bajo firewalls restrictivos de oficinas gubernamentales.
+- **Cero Dependencia de Servidores Remotos (modo por defecto):** Al procesar la búsqueda léxica y semántica del lado del cliente (`client-side`) sobre `chatbot_knowledge.json`, el asistente responde en milisegundos y funciona sin problemas incluso bajo firewalls restrictivos de oficinas gubernamentales.
+- **Persistencia en LocalStorage:** El corpus se indexa en `samgp_knowledge_base`, el historial en `samgp_chat_history` y los ajustes (incluida la API Key de Gemini) en `samgp_chatbot_settings`.
+- **Guardrail Fuera de Alcance (Out of Scope):** Si la consulta es ajena al SAMGP o el puntaje de similitud es insuficiente, el motor responde con una salvaguarda institucional delimitando su alcance legal.
+- **Dictado por Voz:** Integración nativa con `webkitSpeechRecognition` para consultas dictadas desde el micrófono.
 
 ---
 
@@ -86,3 +97,32 @@ graph TD
 - **Estructura en 4 Pestañas (`normatividad`, `conocimiento`, `innovacion`, `publicaciones`):** Cada pestaña cuenta con su propia organización documental. Específicamente, **`conocimiento`** despliega una jerarquía de **5 sub-acordeones** con tablas estandarizadas de registros validados por el **ETMC** (Lecciones Aprendidas, Buenas Prácticas, Guías Técnicas 5W+2H, Actas Offboarding) y una cuadrícula responsiva de **5 Micro-Cursos** de autoaprendizaje (incluyendo Inteligencia Artificial).
 - **Búsqueda Instantánea Multi-columna:** El buscador de DataTables filtra en milisegundos por título de directiva, año, código o descripción.
 - **Botones de Exportación (`pdfMake`, `JSZip`):** Integración nativa de botones para exportar el listado oficial a **Excel (.xlsx)**, **PDF corporativo** o mandar directo a **Impresión (`print`)** con formato optimizado.
+
+---
+
+## 7. Flujo SPA de los Micro-Cursos (`microcurso.js` + `microcurso-modal.js`)
+
+El módulo de Micro-Cursos implementa una arquitectura **SPA (Single Page Application)** con dos puntos de entrada:
+
+```mermaid
+sequenceDiagram
+    participant R as repositorio.html
+    participant M as microcurso-modal.js
+    participant C as cursos.json
+    participant A as microcurso.html
+    participant J as microcurso.js
+
+    R->>M: Clic en tarjeta de Módulo (1-5)
+    M->>C: fetch('data/cursos.json')
+    C-->>M: Devuelve módulo y subtemas
+    M->>R: Abre Modal "Índice de Módulo" con subtemas
+    R->>A: Clic "Iniciar" -> microcurso.html?modulo=X&subtema=Y
+    A->>J: Lee parámetros de URL (modulo, subtema)
+    J->>C: fetch('data/cursos.json')
+    C-->>J: Devuelve subtema (título, video, PDF, preguntas)
+    J->>A: Renderiza video, ficha PDF y cuestionario
+    J->>A: Actualiza barra de progreso al responder
+```
+
+- **`microcurso-modal.js`:** Carga la data en el modal de la pantalla principal y gestiona la apertura/cierre con transiciones (`opacity-0`, `scale-95`). También soporta el parámetro `?openModal=moduloX` para deep-linking directo.
+- **`microcurso.js`:** Lee los parámetros de URL, inyecta los datos del subtema y procesa la interactividad del cuestionario (validación de radios, barra de progreso y habilitación del botón "Finalizar").

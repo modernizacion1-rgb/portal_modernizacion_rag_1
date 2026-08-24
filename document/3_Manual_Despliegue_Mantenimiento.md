@@ -49,7 +49,7 @@ Si la Unidad de Planeamiento y Presupuesto (UPP) requiere añadir un nuevo enlac
 1. Abre el archivo **`js/components.js`** en tu editor de código.
 2. Para cambiar el encabezado o menú superior, modifica la cadena HTML o la lista de hipervínculos dentro de la constante o método `components.header`.
 3. Para cambiar los créditos institucionales o enlaces rápidos del pie de página, modifica el bloque `components.footer`.
-4. Al guardar el archivo en el servidor, el cambio se replicará al instante y de manera homogénea en absolutamente todas las páginas (`index.html`, los 4 ejes, `repositorio.html`, `chatbot.html`, `doc_gestion.html`, `estructura_organica.html` y `contacto.html`).
+4. Al guardar el archivo en el servidor, el cambio se replicará al instante y de manera homogénea en absolutamente todas las páginas (`index.html`, los 4 ejes, `repositorio.html`, `chatbot.html`, `microcurso.html`, `doc_gestion.html`, `estructura_organica.html` y `contacto.html`).
 
 ### B. Actualización de Secciones y Videos Tutoriales (`data/content.json`)
 Para cambiar el texto de un eje de gestión, agregar un paso en una fase, o reemplazar la URL del video tutorial de un eje:
@@ -74,11 +74,20 @@ Para agregar un nuevo documento legal o guía a estas tablas sin tocar código H
 - Edita el bloque `"repository"` en **`data/content.json`** y agrega un nuevo objeto con los campos: `"title"` (Nombre del documento), `"code"` (Código normativo / Año), `"category"` (Pestaña a la que pertenece: `normatividad`, `conocimiento`, etc.), `"date"` y `"file_url"`. El script `content-loader.js` creará la fila en la tabla de forma automática.
 
 ### D. Actualización de la Base de Conocimiento del Asistente IA (`data/chatbot_knowledge.json`)
-El Chatbot GxP (`chatbot.html`) no requiere reprogramar código complejo de inteligencia artificial cuando cambia una norma o lineamiento GxP:
+El Chatbot SAMGP (`chatbot.html`) no requiere reprogramar código complejo de inteligencia artificial cuando cambia una norma o lineamiento GxP:
 
 1. Abre el archivo especializado **`data/chatbot_knowledge.json`**.
-2. Agrega o actualiza las entradas de conocimiento (`intents`, `keywords`, o banco de preguntas y respuestas institucionales).
+2. Agrega o actualiza las entradas de conocimiento (`knowledge_nodes`, `keywords`, `question_patterns` o banco de preguntas y respuestas institucionales), organizadas en **9 categorías normativas** (incluyendo *8. Instructivos Operativos*).
 3. El motor de procesamiento local (`js/chatbot-engine.js`) leerá las nuevas definiciones inmediatamente para responder con precisión las consultas del usuario en la interfaz del asistente.
+4. **Conector Gemini (opcional):** Para habilitar generación en tiempo real, el usuario puede ingresar una API Key de Google Gemini desde el panel de configuración del chatbot; esta se almacena en `LocalStorage` y activa el modo *In-Context Grounding* sobre el corpus JSON.
+
+### E. Actualización de los Micro-Cursos (`data/cursos.json`)
+El Aula Virtual (`microcurso.html`) es una plantilla SPA única; **no se crean páginas HTML por curso**:
+
+1. Abre el archivo **`data/cursos.json`**.
+2. Localiza el módulo (`modulos`) y el subtema (`subtemas`) a modificar.
+3. Actualiza los campos `titulo`, `descripcion`, `video_url`, `pdf_url` o el arreglo `preguntas` (con `opciones` y `respuestaCorrecta`).
+4. Al guardar, `js/microcurso.js` y `js/microcurso-modal.js` reflejarán los cambios automáticamente en el modal del repositorio y en el Aula Virtual.
 
 ---
 

@@ -21,10 +21,11 @@ Actualmente, el sistema consume archivos JSON estáticos en `/data` (`content.js
 
 ## 3. Evolución y Escalabilidad del Asistente IA (`chatbot.html`)
 
-El actual Asistente IA (Chatbot GxP) funciona con un motor de coincidencias léxico-semánticas local (`js/chatbot-engine.js`) sobre `data/chatbot_knowledge.json`. Para escalar este módulo hacia inteligencia artificial generativa pura (LLM):
+El actual Asistente IA (Chatbot SAMGP) funciona con un motor **RAG local (TF-IDF)** sobre `data/chatbot_knowledge.json`, y ya incorpora un **conector opcional a Google Gemini** que el usuario puede activar ingresando una API Key desde el panel de configuración (almacenada en `LocalStorage`). Para escalar este módulo hacia inteligencia artificial generativa pura (LLM) a nivel institucional:
 
 - **Arquitectura RAG (*Retrieval-Augmented Generation*):** El archivo `chatbot_knowledge.json` y los anexos normativos de las 4 pestañas del Repositorio pueden ser indexados en una base de datos vectorial (ej. *Pinecone*, *ChromaDB* o *Azure AI Search*).
 - **Conexión a LLMs Cloud (Azure OpenAI / Google Gemini API):** Se puede sustituir la función de procesamiento local en `chatbot-engine.js` por una petición asíncrona hacia un microservicio backend (Python/LangChain) que conecte con modelos como **GPT-4o** o **Gemini Pro**. El microservicio consultará la base documental de AGROIDEAS y retornará respuestas citando la directiva legal exacta con el hipervínculo correspondiente al Repositorio o Google Drive.
+- **Ecosistema ESV / SIPA (Espacios Seguros Virtuales):** El portal comparte visión con la plataforma ESV (ciclo SIPA dual GC/GIP), que ya integra **Google Gemini 1.5 Flash** como motor de mentoría con lógica de *Veto DI NO* y un editor BPMN 2.0 en el navegador. Esta arquitectura *Zero-Setup* (Vanilla JS + Tailwind + LocalStorage) es un referente de escalabilidad para futuras integraciones del Asistente IA con flujos de prototipado agéntico.
 
 ---
 

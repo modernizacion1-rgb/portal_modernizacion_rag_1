@@ -14,19 +14,25 @@ El sitio utiliza **Tailwind CSS** (inyectado vía CDN de desarrollo o empaquetad
 ---
 
 ## 2. Sistema de Variables Institucionales (`css/modern-styles.css`)
-Los colores clave del branding institucional han sido definidos como variables CSS raiz (`:root`) dentro de `css/modern-styles.css` y extendidos en la configuración local de Tailwind en el `<head>` de cada documento:
+Los colores clave del branding institucional han sido definidos como variables CSS raiz (`:root`) dentro de `css/modern-styles.css`, siguiendo la línea gráfica **"Impulsa Agroideas"** (Verde Principal, Verde Activo y Acento Amarillo), y extendidos en la configuración local de Tailwind en el `<head>` de cada documento:
 
 ```css
 :root {
-    --agro-blue: #0b4b8a;      /* Azul Profundo AGROIDEAS / Liderazgo y Confianza */
-    --agro-green: #6aa84f;     /* Verde Agro / Competitividad y Crecimiento Agrario */
-    --pcm-red: #e30613;        /* Rojo PCM / Identidad Nacional y Atención al Ciudadano */
-    --glass-bg: rgba(255, 255, 255, 0.84); /* Fondo translúcido para barras y tarjetas espejo */
-    --glass-border: rgba(255, 255, 255, 0.3);
+    --color-primary: #1A5336;   /* Verde Principal (Oscuro) / Solidez institucional */
+    --color-secondary: #53A548; /* Verde Activo (Claro) / Botones, iconos e interactividad */
+    --color-accent: #F1C40F;    /* Acento Amarillo/Dorado / Resaltado crítico y etiquetas */
+    --color-bg-light: #F4F6F5;  /* Fondo secundario claro */
+    --color-text-main: #333333; /* Texto de párrafos y lectura prolongada */
+    --color-text-inverse: #FFFFFF;
 }
 ```
 
-En la configuración de Tailwind, estos tokens se mapean como `primary: '#1A5336'`, `secondary: '#53A548'`, y tonos esmeralda o pizarra (`bg-slate-50`, `text-slate-900`), garantizando contraste WCAG AAA para accesibilidad web.
+En la configuración de Tailwind, estos tokens se mapean como `primary: '#1A5336'`, `secondary: '#53A548'`, `accent: '#F1C40F'` y `bglight: '#F4F6F5'`, junto con las fuentes `sans` (Inter) y `heading` (Montserrat), garantizando contraste WCAG AAA para accesibilidad web.
+
+### Tipografía Institucional
+- **Títulos y Encabezados (H1–H6):** **Montserrat** (Bold / ExtraBold), para peso e impacto institucional moderno.
+- **Cuerpo de Texto y Párrafos:** **Inter** (Regular / Medium), para lectura cómoda en documentos y descripciones.
+- Ambas fuentes se importan vía Google Fonts en `css/modern-styles.css`.
 
 ---
 
@@ -41,18 +47,22 @@ Los módulos de los ejes estratégicos, las tarjetas de roles y los bloques info
 ### C. Contenedores de Video Tutorial (Sección 5 Multimedia)
 Para la presentación audiovisual en las páginas de ejes (`gestion_*.html`), se ha establecido el siguiente patrón visual obligatorio para el contenedor multimedia:
 - **Estructura HTML (`<a>` interactivo):** El reproductor se encapsula en una etiqueta `<a>` con `target="_blank" rel="noopener noreferrer"` y clases de contenedor `block relative aspect-video bg-slate-900 rounded-3xl overflow-hidden group cursor-pointer border-4 border-slate-50 shadow-lg`.
-- **Overlay de Reproducción:** Capa degradada (`absolute inset-0 bg-gradient-to-br from-slate-800 to-primary flex items-center justify-center`) con un botón central animado (`w-20 h-20 bg-white/10 backdrop-blur-md rounded-full text-white group-hover:scale-110 group-hover:bg-red-600 transition-all duration-500`).
-- **Etiqueta HD:** Distintivo superior que resalta la calidad (`span` con clases `px-3 py-1 bg-red-100 text-red-700 text-[10px] font-black rounded-full uppercase`).
+- **Overlay de Reproducción:** Capa degradada (`absolute inset-0 bg-gradient-to-br from-slate-800 to-primary flex items-center justify-center`) con un botón central animado (`w-20 h-20 bg-white/10 backdrop-blur-md rounded-full text-white group-hover:scale-110 group-hover:bg-secondary transition-all duration-500`).
+- **Etiqueta HD:** Distintivo superior que resalta la calidad (`span` con clases `px-3 py-1 bg-accent/20 text-accent text-[10px] font-black rounded-full uppercase`).
 
 ### D. Pestañas y Tablas Interactivas del Repositorio (`css/repositorio.css`)
 En la página `repositorio.html`, la navegación documental se divide en **4 pestañas corporativas** (`normatividad`, `conocimiento`, `innovacion`, `publicaciones`):
 - **Botones de Pestaña:** Emplean tarjetas con iconos vectoriales y cambio de fondo al activarse (`tab-link min-w-[150px] p-4 rounded-xl font-bold flex flex-col items-center gap-2`).
-- **Tablas DataTables:** Cabeceras limpias con tipografía mayúscula de espaciado ancho (`text-[10px] uppercase font-black tracking-widest text-slate-500 bg-slate-50`), filas con resaltado flotante al pasar el mouse (`hover:bg-blue-50/50`) y botones de descarga en formato ícono (`w-8 h-8 rounded-lg bg-red-50 text-red-600 hover:bg-red-600 hover:text-white`).
+- **Tablas DataTables:** Cabeceras limpias con tipografía mayúscula de espaciado ancho (`text-[10px] uppercase font-black tracking-widest text-slate-500 bg-slate-50`), filas con resaltado flotante al pasar el mouse (`hover:bg-secondary/10`) y botones de descarga en formato ícono (`w-8 h-8 rounded-lg bg-secondary/10 text-secondary hover:bg-secondary hover:text-white`).
 
 ### E. Interfaz del Asistente IA (`chatbot.html` / `css/chatbot.css`)
 El módulo conversacional utiliza un diseño tipo consola ejecutiva de doble panel:
-- Panel lateral izquierdo para historial de consultas frecuentes y sugerencias rápidas.
+- Panel lateral izquierdo para historial de consultas frecuentes, filtros temáticos (9 categorías normativas) y sugerencias rápidas.
 - Panel central derecho para la burbuja de chat con avatares institucionales (logo AGROIDEAS para la IA y avatar ciudadano para las consultas), indicadores de tipeo (*typing indicator*) y resaltado de enlaces normativos en formato *pill*.
+- **Widget Flotante Global (FAB):** Botón circular con resplandor inyectado en la esquina inferior derecha de todas las páginas para acceder al asistente de forma inmediata.
+
+### F. Aula Virtual de Micro-Cursos (`microcurso.html`)
+El entorno de aprendizaje SPA presenta un **visualizador de video** (iframe de YouTube/Google Vids), una **sección de descarga de fichas PDF**, un **panel lateral de Check de Aprendizaje (quiz interactivo)** y una **barra de progreso** que avanza conforme el usuario responde. El **Modal "Índice de Módulo"** en el repositorio lista los subtemas con numeración secuencial y botones "Iniciar" que enlazan al Aula Virtual.
 
 ---
 
@@ -78,4 +88,4 @@ El portal está optimizado para funcionar sin degradación visual desde smartpho
 - **Tablets y Móviles (`< md`):** Colapso automático de grillas a 1 sola columna vertical (`grid-cols-1`), menú superior reemplazado por botón hamburguesa con cajón retráctil, y contenedores de tablas con desbordamiento horizontal controlado (`overflow-x-auto`) para permitir desplazamiento táctil sin romper el contenedor padre.
 
 > [!TIP]
-> **Regla para Agentes IA:** Al generar nuevos botones de llamada a la acción principal (CTA), utiliza invariablemente el patrón institucional de Tailwind: `inline-flex items-center gap-2 px-6 py-3 bg-blue-600 text-white rounded-xl font-bold shadow-md hover:bg-blue-700 hover:shadow-lg hover:scale-[1.02] transition-all duration-300`.
+> **Regla para Agentes IA:** Al generar nuevos botones de llamada a la acción principal (CTA), utiliza invariablemente el patrón institucional de Tailwind: `inline-flex items-center gap-2 px-6 py-3 bg-primary text-white rounded-xl font-bold shadow-md hover:bg-secondary hover:shadow-lg hover:scale-[1.02] transition-all duration-300`.

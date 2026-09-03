@@ -13,7 +13,8 @@ document.addEventListener("DOMContentLoaded", async () => {
     }
 
     try {
-        const response = await fetch(`Documentos_Captura_del_Conocimiento/${fichaId}.json`);
+        const cleanFichaId = fichaId.replace(/\.json$/i, '');
+        const response = await fetch(`data/${cleanFichaId}.json`);
         
         if (!response.ok) {
             throw new Error(`Error HTTP: ${response.status}`);

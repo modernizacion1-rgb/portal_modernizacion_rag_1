@@ -1,0 +1,47 @@
+[
+  {
+    "MetadatosTrazabilidad": {
+      "CodigoUnicoRegistro": "BP-UA-002-2026",
+      "TituloBuenaPractica": "Validación digital preventiva y asincrónica para la reducción de tiempos en la rendición de cuentas por viáticos en comisiones de servicio.",
+      "InformacionInicial": "Equipo Diseñador: Lic. María Vargas (Analista Financiera - Tesorería) e Ing. Pedro Linares (Especialista en Monitoreo - UR Junín).\nUnidad Orgánica: Unidad de Administración (Sede Central)",
+      "Territorio": "Sede Central (San Isidro) articulada con las 25 Unidades Regionales.",
+      "ProcesoInstitucionalVinculado": "[X] Soporte: S.02 Gestión de recursos financieros.",
+      "Servicio": "Trámite interno de revisión y aprobación de rendiciones de cuentas por viáticos y asignaciones por comisión de servicio."
+    },
+    "JustificacionDiagnostico": {
+      "ProblemaOperativo": "Retrasos superiores a 10 días hábiles en la Unidad de Administración (Sede Central) para la revisión, subsanación y aprobación de rendiciones de viáticos del personal de campo de las 25 Unidades Regionales. La deficiencia se originaba por la presentación física (vía courier o correo certificado) de planillas con errores de cálculo aritmético, falta de firmas en las declaraciones juradas o adjunción de comprobantes no válidos según la directiva. La devolución física de los expedientes observados a las regiones generaba un elevado costo de mensajería y la inmovilización de fondos de los servidores.",
+      "IdeaInnovadora": "Implementación de un \"Checklist de Pre-rendición Digital\" en Google Sheets con fórmulas de validación automática. Este archivo, compartido en la nube institucional, permite al analista financiero en Lima pre-revisar los montos y la legalidad de los comprobantes escaneados por el especialista de campo antes de que este envíe la documentación física, garantizando ingresos a Mesa de Partes con \"cero observaciones\"."
+    },
+    "DesarrolloExperiencia": {
+      "ExperienciaJustificacion": "Fase 1 (Vaciado Digital): Al concluir la comisión, el servidor regional ingresa los montos de sus facturas/boletas en una plantilla preconfigurada en Google Sheets compartida con Tesorería. La plantilla contiene fórmulas bloqueadas que alertan en rojo si se supera el tope máximo diario o si hay errores de suma.\nFase 2 (Validación Asincrónica): El servidor carga fotos o escaneos legibles de los comprobantes en una subcarpeta de Google Drive vinculada a su plantilla.\nFase 3 (Control Concurrente): El Analista Financiero en Sede Central revisa el Sheets. Si detecta un comprobante no válido (ej. consumo de alcohol no reconocido por la Directiva de Viáticos), marca la celda en rojo con un comentario.\nFase 4 (Subsanación Inmediata): El servidor regional visualiza la alerta, corrige la planilla digital e imprime la versión final sin errores. Solo entonces remite el expediente físico consolidado a Lima para la visación final y archivo.\nSustento Legal: Alineado con las facultades de control interno de la UA establecidas en el MOP (RM N° 0188-2025-MIDAGRI) y el D.Leg. N° 1441 del Sistema Nacional de Tesorería, fomentando el principio de presunción de veracidad y digitalización.\nPermanencia: 5 meses de ejecución ininterrumpida.",
+      "ActoresInvolucrados": "Especialistas de las 25 Unidades Regionales, Analistas Financieros de la Unidad de Administración y la UPP (Modernización).",
+      "ObstaculosRiesgos": "Resistencia inicial al uso de Google Sheets por parte del personal de campo. Se superó mediante la grabación de un \"Micro-Curso\" tutorial (Actividad GC-A04) que enseña a llenar la matriz desde el teléfono celular."
+    },
+    "EvidenciasDocumentacion": {
+      "EnlacesEvidencias": "Carpeta en Drive con la plantilla matriz formulada (Sheets) y gráfico de Looker Studio demostrando la caída de la curva de expedientes de viáticos observados en Mesa de Partes: https://drive.google.com/drive/folders/ua_tesoreria_prerendicion_2026"
+    },
+    "ValidacionCalidad": [
+      {
+        "Criterio": "Eficacia y Beneficio Medible",
+        "Cumple": true,
+        "Sustento": "Reducción comprobada del tiempo de procesamiento y aprobación de rendiciones de viáticos de 10 días a 3 días hábiles."
+      },
+      {
+        "Criterio": "Viabilidad Legal",
+        "Cumple": true,
+        "Sustento": "No modifica los topes legales de viáticos establecidos en el D.Leg. 1441; solo optimiza el control de calidad previo a la impresión."
+      },
+      {
+        "Criterio": "Sostenibilidad y Austeridad",
+        "Cumple": true,
+        "Sustento": "Se utiliza únicamente la cuota de almacenamiento de Google Workspace existente en la entidad (Costo S/. 0.00)."
+      },
+      {
+        "Criterio": "Replicabilidad",
+        "Cumple": true,
+        "Sustento": "El formato en Sheets es universalmente aplicable a todas las unidades funcionales de la entidad que generen comisiones de servicio."
+      }
+    ],
+    "EstadoAprobacion": "[ X ] APROBADO / PUBLICADO"
+  }
+]

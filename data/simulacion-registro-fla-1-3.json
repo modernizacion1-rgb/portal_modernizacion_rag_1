@@ -1,0 +1,49 @@
+[
+  {
+    "MetadatosTrazabilidad": {
+      "CodigoUnicoRegistro": "LA-UPDC-001-2026",
+      "TituloLeccionAprendida": "Metodología de adaptación de talleres de gestión empresarial asociativa para productores rurales monolingües en zonas altoandinas (quechua/aimara).",
+      "ProcesoMisionalVinculado": "PM01: Promoción y Desarrollo de Capacidades de Organizaciones Agrarias.",
+      "UnidadOrganizacionalOrigen": "Unidad de Promoción y Desarrollo de Capacidades (Sede Central) con incidencia en las Unidades Regionales de Puno, Apurímac y Cusco.",
+      "AutorEspecialista": "Equipo de Promoción y Desarrollo de Capacidades (UPDC).",
+      "FechaRegistro": "27 de Agosto de 2026"
+    },
+    "DescripcionIncidente": {
+      "EtapaHito": "Fase de ejecución de talleres de capacitación y asistencia técnica para el fortalecimiento de capacidades asociativas y de gestión empresarial (Actividad clave del PM01).",
+      "ProblemaOdesviacion": "Se detectó una alta tasa de deserción (superior al 40%) y bajos niveles de comprensión en los talleres de fortalecimiento de capacidades asociativas impartidos a organizaciones agrarias ubicadas en zonas altoandinas de Puno y Apurímac. El problema se evidenció cuando las organizaciones no lograban aplicar los conceptos de gestión empresarial básica, limitando su capacidad para postular a los incentivos de AGROIDEAS.",
+      "AnalisisCausaRaiz": "La causa raíz fue la estandarización centralizada de materiales didácticos y metodología. El uso de diapositivas densas y terminología complejo en castellano para poblaciones monolingües o con preferencia por quechua/aimara generó barreras. La normativa no contemplaba la obligatoriedad de adecuación cultural y lingüística en el territorio."
+    },
+    "AccionMitigadora": {
+      "ProcedimientoSolucion": "Para mitigar la deserción y mejorar la comprensión, se implementó el siguiente protocolo:\n\n1) **Diagnóstico Rápido Participativo:** Antes del taller, el especialista de campo identifica el perfil lingüístico de la organización.\n\n2) **Rediseño de Materiales:** Reemplazo de diapositivas con texto por infografías visuales de campo (dibujos, diagramas) que explican conceptos asociativos de forma gráfica.\n\n3) **Incorporación de Facilitadores Bilingües:** Integración de promotores locales pares (líderes comunitarios) que traducen simultáneamente y adaptan los ejemplos a la realidad agroecológica local.\n\n4) **Dinámicas Prácticas:** Sustitución de la \"clase magistral\" por talleres participativos basados en el aprendizaje experiencial (\"aprender haciendo\").",
+      "CriteriosExitoSolucion": "Incremento sustancial en la participación activa de los productores durante las sesiones. Retención de los conceptos clave de asociatividad comprobada mediante simulaciones prácticas al final del taller. Reducción de la tasa de deserción a niveles inferiores al 5%.",
+      "ImpactoEstimadoSolucion": "Aumento del 60% en el número de organizaciones de estas regiones que logran conformarse legalmente y presentar expresiones de interés válidas para el PM02. El costo de implementación fue S/. 0.00, ya que se basó en el rediseño de metodologías por el propio personal y la colaboración voluntaria de líderes locales."
+    },
+    "LeccionAprendida": {
+      "SintesisLeccionAprendida": "La simplificación gráfica de los contenidos formativos y la inclusión de facilitadores locales bilingües elevan la retención del conocimiento asociativo y aseguran el éxito de los talleres de capacitación en comunidades altoandinas.",
+      "RecomendacionOperativaColegas": "Todo especialista de promoción que intervenga en zonas rurales debe evaluar previamente el perfil cultural de la organización. Si se detectan barreras idiomáticas o bajo nivel de escolaridad, es imperativo priorizar el uso de herramientas visuales (infografías) y coordinar con un líder local que actúe como puente de comunicación, evitando el uso de lenguaje técnico y presentaciones estáticas.",
+      "RecomendacionEntidad": "Se recomienda a la UPP y a la Jefatura de la UPDC actualizar la directiva y los instructivos operativos del PM01 para incorporar como requisito metodológico obligatorio la adecuación cultural y lingüística de los materiales de capacitación y asistencia técnica, estandarizando el uso de formatos infográficos visuales para zonas de intervención priorizadas."
+    },
+    "ValidacionCalidad": [
+      {
+        "Criterio": "Eficacia y Beneficio Medible",
+        "Cumple": true,
+        "Sustento": "La lección aprendida mejora directamente la eficacia de las capacitaciones del PM01, reduciendo la deserción del 40% a menos del 5% y aumentando las organizaciones aptas para postular al PM02."
+      },
+      {
+        "Criterio": "Viabilidad Legal",
+        "Cumple": true,
+        "Sustento": "La adaptación metodológica se alinea plenamente con las funciones de fomento y promoción establecidas en el MOP de AGROIDEAS."
+      },
+      {
+        "Criterio": "Sostenibilidad y Austeridad",
+        "Cumple": true,
+        "Sustento": "Declaramos que la solución no requiere contratación de traductores externos ni licencias adicionales, ya que se apoya en el rediseño interno de materiales y alianzas locales (Costo Cero)."
+      },
+      {
+        "Criterio": "Replicabilidad",
+        "Cumple": true,
+        "Sustento": "La estrategia es 100% replicable en cualquier Unidad Regional con población bilingüe o comunidades nativas (ej. zonas amazónicas)."
+      }
+    ]
+  }
+]

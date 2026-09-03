@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ficha de Lección Aprendida - AGROIDEAS</title>
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              primary: '#1A5336',
+              secondary: '#53A548',
+              accent: '#F1C40F',
+              bglight: '#F4F6F5',
+            },
+            fontFamily: {
+              sans: ['Inter', 'sans-serif'],
+              heading: ['Montserrat', 'sans-serif'],
+            }
+          }
+        }
+      }
+    </script>
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <!-- AOS Animations -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    
+    <!-- Custom Styles -->
+    <link rel="stylesheet" href="css/repositorio.css">
+    <link rel="stylesheet" href="css/modern-styles.css">
+</head>
+<body class="bg-slate-50 min-h-screen flex flex-col">
+
+    <header></header>
+
+    <main class="pt-32 pb-12 flex-1 transition-opacity duration-700">
+        <!-- Encabezado de Ficha -->
+        <section class="header-section text-center py-12 px-4 bg-primary text-white mb-8">
+            <div class="max-w-4xl mx-auto">
+                <nav class="flex items-center justify-center space-x-2 text-blue-200/50 text-xs mb-6 uppercase tracking-[0.2em] font-bold">
+                    <a href="index.html" class="hover:text-white transition-colors">Inicio</a>
+                    <i data-lucide="chevron-right" class="w-4 h-4 text-secondary"></i>
+                    <a href="repositorio.html" class="hover:text-white transition-colors">Repositorio Institucional</a>
+                    <i data-lucide="chevron-right" class="w-4 h-4 text-secondary"></i>
+                    <span class="text-white">Lección Aprendida</span>
+                </nav>
+                <div class="flex justify-center mb-4">
+                    <span class="px-3 py-1 bg-white/20 rounded-full text-xs font-bold tracking-wider" id="ficha-codigo">Cargando...</span>
+                </div>
+                <h1 class="text-2xl md:text-3xl font-bold mb-4" id="ficha-titulo">
+                    Cargando Título de la Ficha...
+                </h1>
+                <p class="text-blue-100/80 font-medium text-sm flex justify-center items-center gap-2">
+                    <i data-lucide="calendar" class="w-4 h-4"></i> Fecha de Registro: <span id="ficha-fecha">--/--/----</span>
+                </p>
+            </div>
+        </section>
+        
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            
+            <div id="loader" class="flex justify-center py-20">
+                <div class="animate-spin rounded-full h-12 w-12 border-b-2 border-primary"></div>
+            </div>
+
+            <div id="ficha-contenido" class="hidden space-y-6">
+                <!-- I. METADATOS DE TRAZABILIDAD -->
+                <div class="bg-white p-6 rounded-2xl shadow-sm border border-slate-100">
+                    <h2 class="text-lg font-bold text-slate-800 mb-4 flex items-center gap-2 border-b border-slate-100 pb-3">
+                        <i data-lucide="info" class="w-5 h-5 text-primary"></i> I. Metadatos de Trazabilidad
+                    </h2>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-sm">
+                        <div>
+                            <p class="text-slate-500 font-semibold mb-1">Proceso Misional Vinculado:</p>
+                            <p class="text-slate-700 bg-slate-50 p-3 rounded-lg border border-slate-100" id="meta-proceso"></p>
+                        </div>
+                        <div>
+                            <p class="text-slate-500 font-semibold mb-1">Unidad Organizacional Origen:</p>
+                            <p class="text-slate-700 bg-slate-50 p-3 rounded-lg border border-slate-100" id="meta-unidad"></p>
+                        </div>
+                        <div class="md:col-span-2">
+                            <p class="text-slate-500 font-semibold mb-1">Autor / Especialista:</p>
+                            <p class="text-slate-700 bg-slate-50 p-3 rounded-lg border border-slate-100" id="meta-autor"></p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- II. DESCRIPCIÓN DEL INCIDENTE / DESVIACIÓN -->
+                <div class="bg-white p-6 rounded-2xl shadow-sm border border-slate-100">
+                    <h2 class="text-lg font-bold text-slate-800 mb-4 flex items-center gap-2 border-b border-slate-100 pb-3">
+                        <i data-lucide="alert-triangle" class="w-5 h-5 text-amber-500"></i> II. Descripción del Incidente o Desviación
+                    </h2>
+                    <div class="space-y-4 text-sm">
+                        <div>
+                            <p class="text-slate-500 font-semibold mb-1">Etapa / Hito:</p>
+                            <p class="text-slate-700" id="desc-etapa"></p>
+                        </div>
+                        <div>
+                            <p class="text-slate-500 font-semibold mb-1">Problema o Desviación detectada:</p>
+                            <div class="text-slate-700 whitespace-pre-line bg-red-50/50 p-4 rounded-lg border border-red-100" id="desc-problema"></div>
+                        </div>
+                        <div>
+                            <p class="text-slate-500 font-semibold mb-1">Análisis de Causa Raíz:</p>
+                            <div class="text-slate-700 whitespace-pre-line" id="desc-causa"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- III. ACCIÓN MITIGADORA APLICADA -->
+                <div class="bg-white p-6 rounded-2xl shadow-sm border border-slate-100">
+                    <h2 class="text-lg font-bold text-slate-800 mb-4 flex items-center gap-2 border-b border-slate-100 pb-3">
+                        <i data-lucide="check-circle" class="w-5 h-5 text-emerald-500"></i> III. Acción Mitigadora Aplicada (Solución)
+                    </h2>
+                    <div class="space-y-4 text-sm">
+                        <div>
+                            <p class="text-slate-500 font-semibold mb-1">Procedimiento de Solución:</p>
+                            <div class="text-slate-700 whitespace-pre-line bg-emerald-50/50 p-4 rounded-lg border border-emerald-100" id="accion-procedimiento"></div>
+                        </div>
+                        <div>
+                            <p class="text-slate-500 font-semibold mb-1">Criterios de Éxito:</p>
+                            <div class="text-slate-700 whitespace-pre-line" id="accion-exito"></div>
+                        </div>
+                        <div>
+                            <p class="text-slate-500 font-semibold mb-1">Impacto Estimado:</p>
+                            <div class="text-slate-700 whitespace-pre-line" id="accion-impacto"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- IV. DECLARACIÓN DE LA LECCIÓN APRENDIDA -->
+                <div class="bg-white p-6 rounded-2xl shadow-sm border border-slate-100">
+                    <h2 class="text-lg font-bold text-slate-800 mb-4 flex items-center gap-2 border-b border-slate-100 pb-3">
+                        <i data-lucide="book-open" class="w-5 h-5 text-indigo-500"></i> IV. Declaración de la Lección Aprendida
+                    </h2>
+                    <div class="space-y-4 text-sm">
+                        <div>
+                            <p class="text-slate-500 font-semibold mb-1">Síntesis de la Lección:</p>
+                            <div class="text-slate-800 font-medium italic bg-indigo-50 p-4 rounded-lg border-l-4 border-indigo-500" id="leccion-sintesis"></div>
+                        </div>
+                        <div>
+                            <p class="text-slate-500 font-semibold mb-1">Recomendación Operativa a Colegas:</p>
+                            <div class="text-slate-700 whitespace-pre-line" id="leccion-colegas"></div>
+                        </div>
+                        <div>
+                            <p class="text-slate-500 font-semibold mb-1">Recomendación a la Entidad (Estandarización):</p>
+                            <div class="text-slate-700 whitespace-pre-line" id="leccion-entidad"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- V. VALIDACIÓN DE CALIDAD -->
+                <div class="bg-white p-6 rounded-2xl shadow-sm border border-slate-100">
+                    <h2 class="text-lg font-bold text-slate-800 mb-4 flex items-center gap-2 border-b border-slate-100 pb-3">
+                        <i data-lucide="shield-check" class="w-5 h-5 text-secondary"></i> V. Validación de Calidad (Comité)
+                    </h2>
+                    <div class="overflow-x-auto">
+                        <table class="w-full text-left border-collapse text-sm">
+                            <thead>
+                                <tr class="bg-slate-50 text-slate-500 text-xs font-bold uppercase border-b border-slate-200">
+                                    <th class="py-3 px-4 w-1/4">Criterio</th>
+                                    <th class="py-3 px-4 w-16 text-center">Cumple</th>
+                                    <th class="py-3 px-4">Sustento</th>
+                                </tr>
+                            </thead>
+                            <tbody id="validacion-tbody" class="divide-y divide-slate-100 text-slate-600">
+                                <!-- Filas de validación -->
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <!-- Botón Volver -->
+                <div class="text-center pt-8">
+                    <a href="repositorio.html" class="inline-flex items-center gap-2 px-6 py-3 bg-slate-200 text-slate-700 font-bold rounded-lg hover:bg-slate-300 transition-colors">
+                        <i data-lucide="arrow-left" class="w-4 h-4"></i> Volver al Repositorio
+                    </a>
+                </div>
+            </div>
+            
+            <div id="error-message" class="hidden text-center py-20">
+                <i data-lucide="x-circle" class="w-16 h-16 text-red-400 mx-auto mb-4"></i>
+                <h3 class="text-xl font-bold text-slate-800 mb-2">Error al cargar la ficha</h3>
+                <p class="text-slate-500" id="error-text">No se pudo encontrar el documento solicitado.</p>
+                <a href="repositorio.html" class="inline-flex items-center gap-2 mt-6 px-6 py-3 bg-primary text-white font-bold rounded-lg hover:bg-primary/90 transition-colors">
+                    Volver al Repositorio
+                </a>
+            </div>
+
+        </div>
+    </main>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({ once: true, offset: 50 });
+        lucide.createIcons();
+    </script>
+    <script src="js/detalle_ficha.js"></script>
+</body>
+</html>

@@ -1,0 +1,57 @@
+[
+  {
+    "MetadatosTrazabilidad": {
+      "CodigoGuiaTecnica": "GT-SH-NEG-001-2026 / V.01",
+      "TituloDescriptivo": "Guía Técnica para la Pre-evaluación Express y Control Documental de Expedientes de Planes de Negocio mediante Mesas de Ayuda Virtuales (Proceso PM02).",
+      "ProcesoVinculado": "[X] PM02: Gestión de Incentivos para la Adopción de Tecnología y Planes de Negocio (Unidad de Negocios).",
+      "UnidadOrganicaOrigen": "Unidad de Negocios (Sede Central) en coordinación técnica con la Unidad Regional Arequipa.",
+      "AutorMentor": "Ing. Julia Torres Castro (Especialista Evaluadora de UR Arequipa) y Especialista en Modernización de la UPP",
+      "MetodologiaOrigen": "[X] Sistematización y Maduración de Fichas de Buenas Prácticas (FBP). (Elevación del activo BP-UR_AREQUIPA-001-2026)",
+      "FechaAprobacion": "17 de agosto de 2026"
+    },
+    "PropositoValorPublico": {
+      "ObjetivoGuia": "Estandarizar el procedimiento técnico de acompañamiento y pre-chequeo documental virtual ex-ante al ingreso físico de solicitudes de incentivos por Mesa de Partes, unificando criterios de evaluación entre Sede Central y las Unidades Regionales para garantizar expedientes con cero observaciones formales",
+      "BrechaOperativa": "Elimina el cuello de botella administrativo generado por la alta tasa de rechazo inicial de expedientes (históricamente superior al 48%), motivado por errores subsanables de forma (declaraciones mal redactadas, firmas omitidas o vigencias de poder de registros públicos desactualizadas). Resuelve la demora de hasta 25 días hábiles que consumía la notificación formal tradicional en papel de estas observaciones de forma.",
+      "ValorPublicoGenerado": "Para el Productor Agrario: Brinda predictibilidad, transparencia y celeridad, asegurando que su expediente ingrese limpio, recortando la elegibilidad de 25 días a solo 48 horas de forma segura. Para la Gestión Interna: Optimiza el uso de la capacidad instalada a costo cero, reduce la acumulación física de expedientes rechazados (Cero Papel) y optimiza el tiempo de los evaluadores técnicos en territorio",
+      "PublicoObjetivo": "Especialistas evaluadores de las 25 Unidades Regionales de AGROIDEAS, analistas de promoción de Sede Central, y servidores que ingresen al Programa mediante Onboarding"
+    },
+    "DesarrolloTecnicoPasoAPaso": {
+      "FasePreparacion": "Para ejecutar correctamente la pre-evaluación express, el evaluador debe contar ex-ante con: Acceso activo al SharePoint de la Unidad Regional y a la plataforma institucional de Google Workspace (Meet y Drive). Enlace directo a la carpeta maestra de la organización en Google Drive con permisos de edición restrictivos al correo del directivo acreditado. La Lista de Verificación de Requisitos de Elegibilidad basada en los instructivos oficiales actualizados de la Unidad de Negocios. Acceso en tiempo real a las consultas virtuales públicas del MIDAGRI (Catastro Rural, SERFOR) y SUNARP en línea para validaciones ex-ante",
+      "EjecucionSecuencial": "Estructurar la Nube de Trabajo: Crear una carpeta en el Drive de la Unidad Regional utilizando la nomenclatura oficial: [AÑO] - UR_[REGIONAL] - OA_[SIGLAS DE LA ORGANIZACIÓN]. Compartir el acceso únicamente con el correo oficial del representante legal de la OA. Cargar los Requisitos: Instruir al directivo de la OA para que suba de manera asincrónica la documentación crítica escaneada en formato PDF (DNI de socios, copia literal de SUNARP, solicitud de incentivo firmada y padrón de beneficiarios). Ejecutar la Pre-revisión Asincrónica: Ingresar a la carpeta y contrastar cada documento contra el checklist de control de calidad documental formal. Anotar las inconsistencias en un archivo temporal de Sheets denominado \"Borrador de Subsanación\". Desplegar la Mesa de Ayuda Express: Si se detectan observaciones menores, agendar una sesión síncrona virtual de máximo 15 minutos vía Google Meet con el representante legal. Compartir pantalla para mostrar de forma didáctica el error (ej. firma fuera de recuadro) y solicitar que reemplace el PDF observado en la carpeta Drive en tiempo real. Emitir Alerta de Aptitud Formal: Una vez verificado que el expediente virtual cumple con el 100% de la suficiencia documental de forma, autorizar formalmente a la OA la presentación del expediente físico por Mesa de Partes, registrando el visto bueno en el log institucional.",
+      "CriteriosExitoTarea": "El expediente ingresa formalmente por Mesa de Partes con cero (0) observaciones formales o de trámite. Todas las declaraciones juradas y padrones del expediente virtual coinciden matemáticamente en firmas y RUC con los ingresados de forma física. Se emite un acta de pre-conformidad en PDF que se asocia como evidencia en el Sheets maestro de la UPP de forma asincrónica."
+    },
+    "ToqueExpertoTácito": {
+      "AlertasRiesgo": "**Alerta Roja SUNARP**: Verifica con especial cuidado la Vigencia de Poder del representante legal. Si tiene una antigüedad mayor a 30 días calendarios al momento de la pre-revisión, el sistema de evaluación del MIDAGRI lo observará automáticamente en Mesa de Partes. Exige su actualización inmediata antes de dar el apto. \n\n**Alerta de Firmas Cropped**: Desconfía de firmas pegadas digitalmente (\"cropeadas\") en las declaraciones juradas del padrón de socios. El ETMC invalidará el expediente completo si detecta manipulación de imágenes de firmas en la validación concurrente.",
+      "AtajosLicitosTips": "**Tip del WhatsApp Business institucional**: Configura respuestas rápidas predeterminadas (shortcuts) en el teléfono de la Unidad Regional con el texto del checklist de elegibilidad. Esto permite enviar pautas directas y aclaraciones de formato a los directivos de las OA en segundos, acelerando la carga del Drive en campo.\n\n**Tip del Historial de Versiones**: Si el directivo de la OA te indica que ya reemplazó un documento observado en Drive, no vuelvas a leer todo el documento; haz clic derecho sobre el archivo en Google Drive, selecciona \"Historial de versiones\" y verifica de inmediato la hora de carga y qué cambios específicos se realizaron de forma asincrónica.",
+      "ManejoImprevistos": "**Imprevisto de Conectividad de la OA**: Si la organización agraria se ubica en una zona de nula señal en Caylloma o Castilla y no puede subir los PDFs al Drive, coordina de forma inmediata su traslado al Tambo del MIDAGRI (Plataforma PAIS) más cercano para que usen su internet satelital, o autoriza de forma excepcional el envío de fotografías nítidas de los documentos físicos vía WhatsApp Web para validar la forma de los campos críticos."
+    },
+    "RecursosSostenibilidad": {
+      "RecursosHabilitadores": "Se garantiza que el costo total de la implementación de la guía es de S/. 0.00 (gasto cero). No se autoriza la compra de softwares de mesa de ayuda propietarios. El workflow y almacenamiento se despliegan de forma exclusiva sobre la suite preexistente licenciada de Google Workspace (Drive, Meet, Sheets y Gmail) de AGROIDEAS",
+      "PeriodicidadActualizacion": "La guía técnica tendrá una vigencia máxima de dos (02) años o se actualizará de forma inmediata ante la aprobación de una nueva Ficha de Lección Aprendida (FLA) que modifique o mejore el procedimiento o ante cambios en la directiva del PM02. El responsable de la actualización es el Jefe de la Unidad de Negocios.",
+      "SeguridadAccesibilidad": "El archivo digital de la guía se almacena de forma segura encriptado en el SharePoint de Modernización, con permisos de solo lectura para el personal operativo regional y respaldo automatizado en la nube corporativa administrada por el Área de TI de AGROIDEAS"
+    },
+    "ValidacionCalidad": [
+      {
+        "Criterio": "Eficacia y Beneficio Medible",
+        "Cumple": true,
+        "Sustento": "Reduce el tiempo de elegibilidad del PM02 de 25 días a solo 48 horas de manera comprobable, estandarizando un flujo nacional con cero observaciones formales."
+      },
+      {
+        "Criterio": "Replicabilidad (Escalabilidad)",
+        "Cumple": true,
+        "Sustento": "El protocolo se sostiene sobre Google Workspace, suite idéntica disponible y estandarizada en las 25 Unidades Regionales de la entidad."
+      },
+      {
+        "Criterio": "Austeridad (Costo S/. 0.00)",
+        "Cumple": true,
+        "Sustento": "Declaramos bajo juramento técnico que no se requiere presupuesto extra. La guía se operativiza con el personal y plataformas preexistentes de la entidad."
+      },
+      {
+        "Criterio": "Viabilidad Legal",
+        "Cumple": true,
+        "Sustento": "El acompañamiento preventivo virtual es conforme con el MOP de AGROIDEAS y la Ley N° 27658 de Modernización del Estado."
+      }
+    ],
+    "EstadoAprobacion": "[ X ] APROBADO / VIGENTE"
+  }
+]

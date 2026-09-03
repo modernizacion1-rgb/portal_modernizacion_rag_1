@@ -1,0 +1,140 @@
+[
+  {
+    "codigo": "E.01",
+    "nombre_proceso": "Gestión estratégica",
+    "dueno_proceso": "Unidad de Planeamiento y Presupuesto",
+    "objetivo": "Formular y aprobar el planeamiento de corto y mediano plazo de AGROIDEAS, la programación, formulación, ejecución y evaluación de su presupuesto para el cumplimiento de la finalidad institucional, esto se realiza a través de las unidades funcionales de manera articulada con la normativa, lineamientos generales y demás disposiciones que establezca el MIDAGRI.",
+    "productos": [
+      "Programación operativa institucional multianual",
+      "Seguimiento y evaluación de la ejecución del POI",
+      "Memoria Anual de AGROIDEAS",
+      "Programación multianual presupuestaria",
+      "Ejecución presupuestaria",
+      "Seguimiento y evaluación de la ejecución presupuestal institucional"
+    ]
+  },
+  {
+    "codigo": "E.02",
+    "nombre_proceso": "Gestión del fortalecimiento institucional",
+    "dueno_proceso": "Unidad de Planeamiento y Presupuesto",
+    "objetivo": "Desarrollar y gestionar acciones para el desarrollo organizacional, a través de la elaboración de instrumentos que permiten optimizar la operación de AGROIDEAS, con el objeto de mejorar su eficiencia y eficacia, comprende las actividades propias de modernización de la gestión pública en el marco de la Política Nacional de Modernización de la Gestión Pública.",
+    "productos": [
+      "Manual de operaciones",
+      "Documentos normativos institucionales",
+      "Mapa de procesos institucional",
+      "Documentación de procesos",
+      "Repositorio institucional de conocimiento",
+      "Sistema de control interno",
+      "Modelo de integridad institucional"
+    ]
+  },
+  {
+    "codigo": "E.03",
+    "nombre_proceso": "Gestión del seguimiento y evaluación",
+    "dueno_proceso": "Unidad de Seguimiento y Evaluación",
+    "objetivo": "Asesorar, conducir y coordinar los procesos vinculados al seguimiento, evaluación y gestión de la evidencia de los servicios que brinda AGROIDEAS de los planes de negocios, programas o proyectos de reconversión productiva agropecuaria, planes de trabajo u otros instrumentos equivalentes, y demás incentivos, hasta su respectivo cierre.",
+    "productos": ["Seguimiento y evaluación de los servicios de AGROIDEAS"]
+  },
+  {
+    "codigo": "M.01",
+    "nombre_proceso": "Promoción y fortalecimiento de capacidades asociativas y empresariales",
+    "dueno_proceso": "Unidad de Promoción y Desarrollo de Capacidades",
+    "objetivo": "Promover y difundir oportunamente los servicios e instrumentos de AGROIDEAS y ejecutar acciones para el fortalecimiento de las capacidades empresariales, asociativas y productivas de los pequeños y medianos productores agrarios, a fin de optimizar su participación y el acceso a los incentivos del Programa.",
+    "productos": [
+      "Capacitación para fortalecimiento de capacidades empresariales productivas, asociativas y de posicionamiento al mercado",
+      "Asistencia técnica para la mejora de capacidades empresariales productivas, asociativas y de posicionamiento al mercado",
+      "Servicios e instrumentos de AGROIDEAS difundidos"
+    ]
+  },
+  {
+    "codigo": "M.02",
+    "nombre_proceso": "Gestión de incentivos",
+    "dueno_proceso": "Unidad de Negocios",
+    "objetivo": "Gestionar, implementar y cofinanciar de manera eficiente y transparente los planes de negocio (asociatividad, gestión empresarial, formas asociativas, adopción de tecnología, e incentivos de eco y bio negocios) aprobados, a través de los diferentes incentivos que ofrece el Programa de Compensaciones para la Competitividad - AGROIDEAS.",
+    "productos": [
+      "Cofinanciamiento de incentivos a las organizaciones agrarias"
+    ]
+  },
+  {
+    "codigo": "M.03",
+    "nombre_proceso": "Gestión de la reconversión e intervenciones especiales",
+    "dueno_proceso": "Unidad de Reconversión e Intervenciones Especiales",
+    "objetivo": "Diseñar y ejecutar intervenciones especializadas y estratégicas que aborden desafios complejos en el sector agrario, enfocados en la gestión de la reconversión productiva en zonas vulnerables, así como en el desarrollo de intervenciones puntuales que respondan a situaciones no contempladas en los incentivos tradicionales del Programa.",
+    "productos": [
+      "Cofinanciamiento de programas y proyectos de reconversión productiva agropecuaria e intervenciones especiales"
+    ]
+  },
+  {
+    "codigo": "S.01",
+    "nombre_proceso": "Gestión administrativa",
+    "dueno_proceso": "Unidad de Administración",
+    "objetivo": "Planificar y gestionar las actividades orientadas a la adecuada administración de los recursos financieros de AGROIDEAS y la implementación de sistema de control interno e integridad institucional, garantizando el cumplimiento de las obligaciones institucionales y el uso eficiente y transparente de los fondos públicos. De igual manera, este proceso incluye la generación de información oportuna y confiable para la rendición de cuentas y la toma de decisiones.",
+    "productos": [
+      "Bienes, servicios u obras provistos",
+      "Bienes patrimoniales registrados y controlados",
+      "Mantenimiento de bienes patrimoniales y ambientes institucionales"
+    ]
+  },
+  {
+    "codigo": "S.02",
+    "nombre_proceso": "Gestión de recursos financieros",
+    "dueno_proceso": "Unidad de Administración",
+    "objetivo": "Planificar y gestionar las actividades orientadas a la adecuada administración de los recursos financieros de AGROIDEAS y la implementación de sistema de control interno e integridad institucional, garantizando el cumplimiento de las obligaciones institucionales y el uso eficiente y transparente de los fondos públicos. De igual manera, este proceso incluye la generación de información oportuna y confiable para la rendición de cuentas y la toma de decisiones.",
+    "productos": [
+      "Obligaciones financieras institucionales devengadas",
+      "Pagos efectuados e ingresos percibidos",
+      "Información de tesorería actualizada",
+      "Valores financieros institucionales administrados",
+      "Viáticos otorgados y rendidos",
+      "Fondos en modalidad de encargo otorgados y rendidos",
+      "Estados financieros y presupuestales presentados"
+    ]
+  },
+  {
+    "codigo": "S.03",
+    "nombre_proceso": "Gestión de recursos humanos",
+    "dueno_proceso": "Unidad de Administración",
+    "objetivo": "Planificar, organizar y gestionar las actividades vinculadas a la administración de los recursos humanos en AGROIDEAS, con el propósito de garantizar la oportuna provisión de personal, promover el desarrollo de competencias, y fortalecer las capacidades, asegurando el cumplimiento eficiente de las funciones y la adecuada ejecución de los procesos institucionales.",
+    "productos": [
+      "Reglamento interno de servidores civiles",
+      "Diseño de puestos de la entidad",
+      "Contratación de servidores civiles",
+      "Legajos de personal actualizado",
+      "Evaluación de rendimiento",
+      "Compensaciones económicas y previsionales",
+      "Capacitaciones para servidores civiles",
+      "Sistema de seguridad y salud en el trabajo"
+    ]
+  },
+  {
+    "codigo": "S.04",
+    "nombre_proceso": "Gestión de tecnologías de la información",
+    "dueno_proceso": "Unidad de Administración",
+    "objetivo": "Planificación e implementación de los sistemas de información, innovación, desarrollo y soporte de la infraestructura tecnológica de AGROIDEAS.",
+    "productos": [
+      "Soluciones y servicios tecnológicos institucionales",
+      "Infraestructura tecnológica y conectividad"
+    ]
+  },
+  {
+    "codigo": "S.05",
+    "nombre_proceso": "Gestión documentaria y atención ciudadana",
+    "dueno_proceso": "Unidad de Administración",
+    "objetivo": "Conducir y supervisar la atención a los usuarios de AGROIDEAS sobre los servicios que brinda y actividades que desarrolla; así como la adecuada y oportuna gestión documental (recepción, derivación y/o archivamiento).",
+    "productos": [
+      "Atención de documentos administrativos",
+      "Atención de consultas, reclamos y visitas de la ciudadanía",
+      "Acervo documental institucional organizado, conservado y disponible"
+    ]
+  },
+  {
+    "codigo": "S.06",
+    "nombre_proceso": "Gestión de la imagen y comunicación",
+    "dueno_proceso": "Dirección Ejecutiva",
+    "objetivo": "Planificar y ejecutar las actividades relacionadas a la conducción de estrategias de comunicación interna y externa de AGROIDEAS y la promoción de los servicios que brinda a los usuarios, con el fin de fortalecer una adecuada comunicación e imagen de AGROIDEAS.",
+    "productos": [
+      "Campañas de comunicación",
+      "Comunicaciones estratégicas oficiales"
+    ]
+  }
+]

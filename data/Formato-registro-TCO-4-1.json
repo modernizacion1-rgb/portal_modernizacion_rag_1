@@ -1,0 +1,113 @@
+[
+  {
+    "DatosGeneralesPuesto": {
+      "CodigoUnicoRegistro": "EC-UR_PUNO-001-2026",
+      "CircunstanciaAplicacion": "Rotación de servidores civiles",
+      "NombresApellidos": "Ing. Marcos Díaz Vega",
+      "PuestoDesempenado": "Especialista Regional en Negocios Agrarios y Adopción de Tecnología",
+      "UnidadFuncional": "Unidad Regional Puno - Sede Juliaca",
+      "FechaInicioPuesto": "01 de febrero de 2024",
+      "FechaTerminoPuesto": "31 de agosto de 2026",
+      "FuncionesPrincipales": [
+        "Evaluación técnica de campo y emisión de Informes de Elegibilidad Técnica de Planes de Negocio (PM02).",
+        "Acompañamiento técnico y supervisión in-situ de la ejecución de incentivos de Adopción de Tecnología.",
+        "Verificación de especificaciones técnicas y conformidad física de bienes e infraestructura agropecuaria adquirida por las Organizaciones Agrarias (OA).",
+        "Liquidación técnica y cierre operativo de planes de negocio cofinanciados."
+      ]
+    },
+    "ConocimientoOrganizacionalCritico": {
+      "ProcesosActividadesCriticas": [
+        {
+          "Numero": 1,
+          "ProcesoActividadCritica": "Evaluación técnica in-situ de linderos y georreferenciación de parcelas (PM02)",
+          "AspectosRelevantesEjecucion": "Verificar siempre de forma previa la zona UTM correspondiente (faja de transición 18S / 19S) en el Geoportal de SERFOR/MIDAGRI para descartar falsos positivos de superposición con comunidades campesinas o zonas de amortiguamiento."
+        },
+        {
+          "Numero": 2,
+          "ProcesoActividadCritica": "Supervisión de adquisiciones y pruebas de operatividad de módulos de procesamiento agroindustrial",
+          "AspectosRelevantesEjecucion": "Exigir los certificados de calidad de materiales (acero inoxidable 304/316) antes de autorizar el desembolso final al proveedor y verificar el encendido en vacío y con carga de la maquinaria en campo."
+        },
+        {
+          "Numero": 3,
+          "ProcesoActividadCritica": "Liquidación técnica y financiera de planes de negocio culminados",
+          "AspectosRelevantesEjecucion": "Cruzar de forma concurrente los saldos bancarios de la cuenta corriente mancomunada de la OA con el módulo SIAF-MIDAGRI, asegurando que no existan retenciones fiscales pendientes antes de emitir el Informe Final."
+        }
+      ],
+      "AspectosPendientesAlertasRelevantes": "Quedan pendientes de visita de post-conformidad 3 planes de negocio de quinua en los distritos de Cabanillas y Taraco (Expedientes PN-2025-045, PN-2025-062 y PN-2025-088), cuyas maquinarias llegaron al almacén comunal el 20 de agosto de 2026. Alerta crítica: El representante legal de la Cooperativa Agroindustrial San Román cesa en su mandato registral el 15 de septiembre de 2026; se debe exigir la actualización de la vigencia de poder en SUNARP antes de tramitar el último desembolso."
+    },
+    "ConocimientoTacito": {
+      "CasuisticaFrecuente": [
+        {
+          "Numero": 1,
+          "Casuistica": "Inconsistencias entre el padrón de socios impreso y la base digital de SUNARP durante el chequeo previo",
+          "CriterioAtencionAplicada": "Se aplica verificación por cruce de DNI en tiempo real utilizando la consulta en línea de RENIEC/PIDE. Si la discrepancia obedece a cambio de estado civil o segundo apellido, se redacta un acta aclaratoria simple suscrita por el presidente comunal en lugar de observar formalmente el expediente.",
+          "Recomendaciones": "No devolver el expediente a Mesa de Partes por errores mecanográficos en padrones de más de 40 socios; solicitar la fe de erratas suscrita en asamblea comunal para evitar dilaciones de 25 días hábiles."
+        },
+        {
+          "Numero": 2,
+          "Casuistica": "Dificultad de conectividad en zonas de selva alta (Sandia y Carabaya) al levantar fichas de campo",
+          "CriterioAtencionAplicada": "Uso de la herramienta móvil en modo offline con guardado en caché local (LocalStorage) y descarga previa de ortofotos en Google Earth.",
+          "Recomendaciones": "Sincronizar las encuestas y coordenadas únicamente al llegar al Tambo MIDAGRI más cercano o a la sede de Juliaca con conexión Wi-Fi estable."
+        }
+      ],
+      "ConocimientoTecnicoIndispensableTransferir": "En la cuenca lechera de Melgar y Huancané, los comités de compras suelen cotizar calderas y tanques de enfriamiento con proveedores locales que no cuentan con homologación de SENASA/DIGESA. El evaluador sucesor debe contrastar siempre el RUC del fabricante con el Registro de Proveedores Homologados antes de visar la cotización proforma, lo que previene observaciones de auditoría en la etapa de rendición de cuentas."
+    },
+    "BuenasPracticasYLeccionesAprendidas": {
+      "EstrategiaEstandarizar": "Implementación de mesas de ayuda virtuales express de 15 minutos vía Google Meet con los directivos comunales y técnicos formuladores, previa al ingreso físico del expediente en Mesa de Partes, reduciendo las observaciones formales del 48% al 6%.",
+      "AccionEvitarFuturo": "Aceptar planos topográficos físicos sin firma del ingeniero colegiado habilitado o sin coordenadas geográficas en formato digital shapefile (.shp) o .kml, ya que genera reprocesos insubsanables en la fase de evaluación legal.",
+      "RecomendacionesCurvaAprendizajeSucesor": "Revisar en el Repositorio de Modernización la Guía Técnica GT-SH-NEG-001-2026 sobre pre-evaluación express y consultar el histórico de actas de supervisión de la carpeta compartida en Drive de la UR Puno antes de salir a comisiones de campo en las provincias del norte del departamento."
+    },
+    "MarcoNormativoAplicacionPractica": {
+      "DocumentosNormativos": [
+        {
+          "Numero": 1,
+          "DocumentoNormativo": "Manual de Operaciones (MOP) de AGROIDEAS - RM N° 0188-2025-MIDAGRI",
+          "TramiteEvaluacionAplica": "Determinación de competencias territoriales, admisibilidad y requisitos de elegibilidad de organizaciones agrarias."
+        },
+        {
+          "Numero": 2,
+          "DocumentoNormativo": "Directiva de Evaluación de Planes de Negocio PM02 vigente",
+          "TramiteEvaluacionAplica": "Emisión del Informe de Elegibilidad Técnica y evaluación de viabilidad comercial, técnica y financiera."
+        },
+        {
+          "Numero": 3,
+          "DocumentoNormativo": "Directiva General DI N° 001-2026-MIDAGRI-AGROIDEAS-UA (Transferencia del Conocimiento)",
+          "TramiteEvaluacionAplica": "Procedimiento de entrega de cartera, casuística crítica y empalme operativo ante rotaciones o ceses."
+        }
+      ]
+    },
+    "RedCoordinacion": {
+      "ContactosClave": [
+        {
+          "Numero": 1,
+          "Entidad": "MIDAGRI - Plataforma PAIS (Tambos)",
+          "Nombre": "Ing. Hernán Quispe Mamani",
+          "FinalidadCoordinacion": "Acceso a internet satelital y salas de reunión comunal para pre-evaluaciones en distritos alejados de Sandia y Carabaya.",
+          "CorreoInstitucional": "hquispe@pais.gob.pe"
+        },
+        {
+          "Numero": 2,
+          "Entidad": "SUNARP - Zona Registral N° XIII (Sede Juliaca)",
+          "Nombre": "Abg. Carmen Flores Apaza",
+          "FinalidadCoordinacion": "Consulta rápida y validación registral de vigencias de poder de cooperativas y comunidades campesinas.",
+          "CorreoInstitucional": "cflores@sunarp.gob.pe"
+        },
+        {
+          "Numero": 3,
+          "Entidad": "AGROIDEAS - Sede Central (Unidad de Negocios)",
+          "Nombre": "Coordinador Nacional de Evaluación PM02",
+          "FinalidadCoordinacion": "Consultas normativas y desempate de criterios técnicos en la visación de comités de elegibilidad.",
+          "CorreoInstitucional": "evaluacion_negocios@agroideas.gob.pe"
+        }
+      ]
+    },
+    "FormalizacionCierre": {
+      "Lugar": "Juliaca, Puno",
+      "Fecha": "31 de agosto de 2026",
+      "FirmaServidor": "Ing. Marcos Díaz Vega (Servidor Saliente / Rotado)",
+      "FirmaJefeSupervisor": "Jefe de la Unidad Regional Puno (Conformidad de Contenido)",
+      "RecepcionRecursosHumanos": "Equipo de Recursos Humanos - Unidad de Administración (Validado para Onboarding)",
+      "EstadoRegistro": "[ X ] APROBADO / ARCHIVADO EN REPOSITORIO"
+    }
+  }
+]

@@ -1,0 +1,123 @@
+{
+  "DatosGeneralesPuesto": {
+    "CodigoUnicoRegistro": "EC-UPDC-003-2026",
+    "CircunstanciaAplicacion": "Licencias o ausencias temporales continuas iguales o mayores a treinta (30) días calendario",
+    "NombresApellidos": "Lic. Elena Rocío Salcedo Cornejo",
+    "PuestoDesempenado": "Especialista en Fortalecimiento de Capacidades Asociativas y Gestión Empresarial",
+    "UnidadFuncional": "Unidad de Promoción y Desarrollo de Capacidades (UPDC) - Sede Central articulada con Unidades Regionales de Cusco, Puno y Ayacucho",
+    "FechaInicioPuesto": "01 de marzo de 2023",
+    "FechaTerminoPuesto": "15 de septiembre de 2026 (Inicio de licencia temporal por capacitación técnica oficial de 60 días calendario)",
+    "FuncionesPrincipales": [
+      "Planificación, diseño pedagógico y ejecución del Programa Anual de Capacitación y Asistencia Técnica para organizaciones de pequeños y medianos productores agrarios (Proceso Misional M.01).",
+      "Diseño e implementación de metodologías e instrumentos didácticos con enfoque territorial e intercultural para el fortalecimiento del modelo cooperativo agrario (Ley N° 31335).",
+      "Coordinación y supervisión técnica de las jornadas de promoción asociativa ejecutadas por los Especialistas en Promoción (CTR) de las 25 Unidades Regionales.",
+      "Evaluación y emisión de conformidad técnica a los convenios de colaboración interinstitucional con Gobiernos Regionales, Gobiernos Locales y entidades cooperantes."
+    ]
+  },
+  "ConocimientoOrganizacionalCritico": {
+    "ProcesosActividadesCriticas": [
+      {
+        "Numero": 1,
+        "ProcesoActividadCritica": "Diseño y ejecución de talleres de capacitación en asociatividad y gestión empresarial (Subproceso M.01.01)",
+        "AspectosRelevantesEjecucion": "Asegurar que los contenidos formativos incorporen matrices visuales e infografías de campo en lenguas originarias (quechua/aimara en sierra sur). Coordinar ex-ante con los promotores comunales bilingües para adaptar los módulos de costos de producción y contabilidad asociativa básica antes de iniciar el ciclo de talleres."
+      },
+      {
+        "Numero": 2,
+        "ProcesoActividadCritica": "Asistencia técnica para la adecuación de organizaciones agrarias al régimen de Cooperativas Agrarias (Subproceso M.01.02)",
+        "AspectosRelevantesEjecucion": "Validar que los estatutos sociales de las asociaciones postulantes se adecúen estrictamente a los beneficios tributarios y organizacionales de la Ley N° 31335. Verificar que el padrón de socios cuente con DNI validados en RENIEC y títulos o constancias de posesión comunal antes de orientar la solicitud formal hacia Mesa de Partes."
+      },
+      {
+        "Numero": 3,
+        "ProcesoActividadCritica": "Difusión estratégica y posicionamiento de los incentivos del Programa (Subproceso M.01.03)",
+        "AspectosRelevantesEjecucion": "Gestionar la pauta de difusión radial comunal y ferias agropecuarias macrorregionales en coordinación con la Dirección Ejecutiva (S.06), asegurando la entrega de folletería simplificada y formularios digitales descargables."
+      }
+    ],
+    "AspectosPendientesAlertasRelevantes": "Queda programado para la primera semana de octubre de 2026 el 'Taller Macrorregional Sur de Fortalecimiento Asociativo' en la provincia de Andahuaylas (Apurímac), con 35 organizaciones convocadas; la logística de traslados y materiales impresos ya cuenta con certificación presupuestal aprobada por la UPP. Alerta crítica: Está pendiente la suscripción de la adenda del convenio marco con la Mancomunidad Municipal del Valle de La Convención (Cusco); el documento se encuentra en la Unidad de Asesoría Jurídica (UAJ) con plazo perentorio de visación hasta el 20 de septiembre de 2026."
+  },
+  "ConocimientoTacito": {
+    "CasuisticaFrecuente": [
+      {
+        "Numero": 1,
+        "Casuistica": "Resistencia comunal y baja asistencia en talleres tradicionales de aula magistral en comunidades altoandinas",
+        "CriterioAtencionAplicada": "Sustitución de presentaciones teóricas en diapositivas por dinámicas vivenciales basadas en 'casos de negocio de la comunidad' y simulaciones lúdicas de asambleas de socios, empleando papelógrafos con gráficos y monedas didácticas para explicar la distribución de excedentes cooperativos.",
+        "Recomendaciones": "No programar talleres en días festivos comunales ni en faenas de siembra o cosecha; coordinar los horarios exclusivamente en asamblea previa con las autoridades comunales comuneros líderes."
+      },
+      {
+        "Numero": 2,
+        "Casuistica": "Directivos comunales con dificultad para distinguir entre el Incentivo de Asociatividad y el Incentivo de Gestión Empresarial (PM02)",
+        "CriterioAtencionAplicada": "Uso de la 'Ficha de Autodiagnóstico Express de la Organización', mediante la cual los directivos identifican en 10 minutos si su debilidad es formalización jurídica inicial o contratación de un gerente profesional.",
+        "Recomendaciones": "Entregar a los directivos la tabla comparativa de incentivos aprobada en el MOP para orientar expectativas y evitar formulación de expedientes fallidos."
+      }
+    ],
+    "ConocimientoTecnicoIndispensableTransferir": "Al asesorar la transformación de una asociación simple en cooperativa agraria bajo la Ley N° 31335, los directivos suelen omitir la inscripción de la reserva cooperativa irrepartible en sus balances de apertura, lo que causa observaciones registrales en SUNARP. El especialista suplente debe instruir al contador de la organización para que adjunte la constancia de asamblea de regularización patrimonial, evitando que la organización pierda la calificación de aptitud para postular a los incentivos de AGROIDEAS."
+  },
+  "BuenasPracticasYLeccionesAprendidas": {
+    "EstrategiaEstandarizar": "La metodología de promotores pares bilingües sistematizada en la Lección Aprendida LA-UPDC-001-2026, la cual logró reducir la tasa de deserción de los participantes de un 40% a menos del 5% en los distritos de Azángaro (Puno) y Anta (Cusco).",
+    "AccionEvitarFuturo": "Distribuir cartillas informativas con tecnicismos legales densos en castellano sin validación pedagógica previa por el equipo de campo, ya que genera desconfianza y abandono de las organizaciones agrarias.",
+    "RecomendacionesCurvaAprendizajeSucesor": "Revisar en el Repositorio Central de Modernización el Micro-Curso MC-UPDC-001-2026 sobre interculturalidad aplicada a la promoción agraria y coordinar semanalmente los avances de la mesa de ayuda con los analistas de promoción de las sedes de Cusco y Puno."
+  },
+  "MarcoNormativoAplicacionPractica": {
+    "DocumentosNormativos": [
+      {
+        "Numero": 1,
+        "DocumentoNormativo": "Manual de Operaciones (MOP) de AGROIDEAS - RM N° 0188-2025-MIDAGRI (Art. 23 y 24: Funciones de la UPDC)",
+        "TramiteEvaluacionAplica": "Marco de competencias para la formulación de planes de capacitación, alianzas estratégicas y fomento de capacidades empresariales y asociativas."
+      },
+      {
+        "Numero": 2,
+        "DocumentoNormativo": "Ley N° 31335 (Ley de perfeccionamiento de la asociatividad de los productores agrarios en cooperativas agrarias)",
+        "TramiteEvaluacionAplica": "Estructuración técnica de los módulos formativos sobre gobernanza cooperativa, modelo de negocios y régimen tributario especial."
+      },
+      {
+        "Numero": 3,
+        "DocumentoNormativo": "Ley N° 32434 (Ley que promueve la transformación productiva, competitiva y sostenible del Sector Agrario)",
+        "TramiteEvaluacionAplica": "Alineación de las metas de capacitación con los lineamientos de agricultura moderna y protección social agraria."
+      },
+      {
+        "Numero": 4,
+        "DocumentoNormativo": "Directiva General DI N° 001-2026-MIDAGRI-AGROIDEAS-UA (Transferencia del Conocimiento Organizacional)",
+        "TramiteEvaluacionAplica": "Formalización de la entrega temporal de cartera operativa y red de articulación ante licencias continuas mayores a 30 días."
+      }
+    ]
+  },
+  "RedCoordinacion": {
+    "ContactosClave": [
+      {
+        "Numero": 1,
+        "Entidad": "MIDAGRI - Dirección General de Asociatividad, Servicios Financieros y Seguros (DGASFS)",
+        "Nombre": "Lic. Martín Benavides Loayza",
+        "FinalidadCoordinacion": "Articulación sectorial y padrón oficial de cooperativas agrarias inscritas en el Registro Nacional de Cooperativas Agrarias (RNCA).",
+        "CorreoInstitucional": "mbenavides@midagri.gob.pe"
+      },
+      {
+        "Numero": 2,
+        "Entidad": "Gobierno Regional de Cusco - Gerencia Regional de Agricultura (GERAGRI)",
+        "Nombre": "Ing. Walter Huamán Cárdenas",
+        "FinalidadCoordinacion": "Coordinación de locales comunales y convocatoria territorial para talleres en las provincias de Canchis, Anta y Quispicanchi.",
+        "CorreoInstitucional": "agricultura@regioncusco.gob.pe"
+      },
+      {
+        "Numero": 3,
+        "Entidad": "AGROIDEAS - Unidad de Planeamiento y Presupuesto (UPP)",
+        "Nombre": "Especialista en Modernización de la Gestión Pública",
+        "FinalidadCoordinacion": "Validación de evidencias pedagógicas e incorporación de nuevas buenas prácticas al Repositorio Central de Modernización.",
+        "CorreoInstitucional": "modernizacion_upp@agroideas.gob.pe"
+      },
+      {
+        "Numero": 4,
+        "Entidad": "AGROIDEAS - Unidad Regional Cusco (Sede Desconcentrada)",
+        "Nombre": "Coordinador de la Unidad Regional Cusco",
+        "FinalidadCoordinacion": "Monitoreo del cronograma de asistencia técnica en campo y apoyo vehicular para comisiones en provincias altas.",
+        "CorreoInstitucional": "ur_cusco@agroideas.gob.pe"
+      }
+    ]
+  },
+  "FormalizacionCierre": {
+    "Lugar": "San Isidro, Lima",
+    "Fecha": "02 de septiembre de 2026",
+    "FirmaServidor": "Lic. Elena Rocío Salcedo Cornejo (Servidora Saliente por Licencia Temporal)",
+    "FirmaJefeSupervisor": "Jefe de la Unidad de Promoción y Desarrollo de Capacidades (Conformidad de Contenido)",
+    "RecepcionRecursosHumanos": "Equipo de Recursos Humanos - Unidad de Administración (Validado para Reemplazo Temporal / Inducción)",
+    "EstadoRegistro": "[ X ] APROBADO / ARCHIVADO EN REPOSITORIO"
+  }
+}

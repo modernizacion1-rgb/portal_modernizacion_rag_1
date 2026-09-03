@@ -1,0 +1,49 @@
+[
+  {
+    "MetadatosTrazabilidad": {
+      "CodigoUnicoRegistro": "LA-USE-003-2026",
+      "TituloLeccionAprendida": "Metodología ágil y segura para la recopilación de datos de monitoreo en territorios rurales sin conectividad a internet (zonas off-grid).",
+      "ProcesoMisionalVinculado": "[X] Soporte/Estratégico: E.03 Gestión del Seguimiento y Evaluación.",
+      "UnidadOrganizacionalOrigen": "Unidad de Seguimiento y Evaluación (USE) - Sede Central, en coordinación con las Unidades Regionales de Amazonas y Loreto.",
+      "AutorEspecialista": "Ing. Raúl Castro, Especialista en Monitoreo y Evaluación (USE).",
+      "FechaRegistro": "28 de agosto de 2026"
+    },
+    "DescripcionIncidente": {
+      "EtapaHito": "Ejecución del trabajo de campo para el levantamiento de información de encuestas de línea de base y medición de indicadores de impacto de los Planes de Negocio ejecutados (PM02).",
+      "ProblemaDesviacion": "Durante el primer trimestre de 2026, se registró una alarmante pérdida de datos cercana al 20% en las encuestas de impacto aplicadas a organizaciones agrarias ubicadas en zonas rurales profundas (selva y sierra alta). Los especialistas de la USE utilizaban formularios en línea estándar (Google Forms nativo web) cargados en sus dispositivos móviles. Al perder la señal de datos móviles o Wi-Fi durante la entrevista en la parcela, el formulario no lograba realizar el comando \"Submit\", borrando toda la información ingresada al recargar la página, lo que obligaba a los evaluadores a registrar en cuadernos físicos de papel, generando posterior doble digitación, errores de transcripción y retrasos en la consolidación de la base de datos nacional.",
+      "AnalisisCausaRaiz": "Dependencia tecnológica absoluta de la conectividad en tiempo real. La directiva de monitoreo vigente de la USE instruía el uso de herramientas en la nube sin prever un protocolo de contingencia tecnológica (modo offline) para territorios sin infraestructura de telecomunicaciones."
+    },
+    "AccionMitigadora": {
+      "ProcedimientoSolucion": "\n**Fase 1 (Vaciado Digital)**: Al concluir la comisión, el servidor regional ingresa los montos de sus facturas/boletas en una plantilla preconfigurada en Google Sheets compartida con Tesorería. La plantilla contiene fórmulas bloqueadas que alertan en rojo si se supera el tope máximo diario o si hay errores de suma.\n\n**Fase 2 (Validación Asincrónica)**: El servidor carga fotos o escaneos legibles de los comprobantes en una subcarpeta de Google Drive vinculada a su plantilla.\n\n**Fase 3 (Control Concurrente)**: El Analista Financiero en Sede Central revisa el Sheets. Si detecta un comprobante no válido (ej. consumo de alcohol no reconocido por la Directiva de Viáticos), marca la celda en rojo con un comentario.\n\n**Fase 4 (Subsanación Inmediata)**: El servidor regional visualiza la alerta, corrige la planilla digital e imprime la versión final sin errores. Solo entonces remite el expediente físico consolidado a Lima para la visación final y archivo.\n\n- Sustento Legal: Alineado con las facultades de control interno de la UA establecidas en el MOP (RM N° 0188-2025-MIDAGRI) y el D.Leg. N° 1441 del Sistema Nacional de Tesorería, fomentando el principio de presunción de veracidad y digitalización.  Permanencia: 5 meses de ejecución ininterrumpida.",
+      "CriteriosExitoSolucion": "Reducción de la pérdida de datos de campo a un margen de 0%. Eliminación del uso de papel y de la doble digitación manual en oficinas.",
+      "ImpactoEstimadoSolucion": " El tiempo de consolidación de la base de datos nacional de monitoreo se redujo de 3 semanas (esperando que lleguen y se digiten las fichas de papel) a sincronización en tiempo real al finalizar la jornada del evaluador. Costo S/. 0.00 al emplear aplicaciones gratuitas del ecosistema Google o KoboToolbox."
+    },
+    "LeccionAprendida": {
+      "SintesisLeccionAprendida": "El uso obligatorio de aplicaciones o formularios con capacidades de almacenamiento local offline (caché) en dispositivos móviles asegura el 100% de la recolección de evidencia empírica en el territorio, sincronizando los datos automáticamente sin pérdida de información al recuperar la conexión.",
+      "RecomendacionOperativaColegas": "Todo especialista de seguimiento o de línea (PM01, PM02) que programe salidas a zonas de extrema pobreza o rurales profundas debe descargar los formatos de evaluación en su dispositivo móvil habilitando explícitamente la opción \"Disponible sin conexión\" antes de abandonar la cobertura de red.",
+      "RecomendacionEntidad": "Se propone a la UPP y a la USE actualizar el Instructivo de Seguimiento y Monitoreo de Planes de Negocio, insertando un acápite técnico obligatorio sobre el uso de tecnologías de captura offline (PWA) para el personal desplazado a las regiones de la Amazonía y Sierra Sur."
+    },
+    "ValidacionCalidad": [
+      {
+        "Criterio": "Eficacia y Beneficio Medible",
+        "Cumple": true,
+        "Sustento": "SÍ. Garantiza la integridad estadística de las muestras de evaluación de impacto."
+      },
+      {
+        "Criterio": "Viabilidad Legal",
+        "Cumple": true,
+        "Sustento": "SÍ. Alineado con la función de monitoreo del MOP."
+      },
+      {
+        "Criterio": "Sostenibilidad y Austeridad",
+        "Cumple": true,
+        "Sustento": "SÍ. Emplea herramientas open-source o del ecosistema existente (Costo S/. 0.00)."
+      },
+      {
+        "Criterio": "Replicabilidad",
+        "Cumple": true,
+        "Sustento": "SÍ. La lección técnica es aplicable a los evaluadores de campo de adopción de tecnología (PM02) que realizan visitas de pre-evaluación en las mismas zonas."
+      }
+    ]
+  }
+]

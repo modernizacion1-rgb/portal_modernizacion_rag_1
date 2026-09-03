@@ -1,0 +1,125 @@
+[
+  {
+    "DatosGeneralesPuesto": {
+      "CodigoUnicoRegistro": "EC-URIE-002-2026",
+      "CircunstanciaAplicacion": "Desvinculación de servidores civiles o culminación de las modalidades formativas",
+      "NombresApellidos": "Ing. Carlos Mendoza Alva",
+      "PuestoDesempenado": "Coordinador de Evaluación de Proyectos de Reconversión Productiva Agropecuaria",
+      "UnidadFuncional": "Unidad de Reconversión e Intervenciones Especiales (URIE) - Sede Central articulada con Unidades Regionales de San Martín y Junín",
+      "FechaInicioPuesto": "15 de enero de 2024",
+      "FechaTerminoPuesto": "02 de septiembre de 2026",
+      "FuncionesPrincipales": [
+        "Conducción y control de calidad de la evaluación técnica de solicitudes y expedientes de Proyectos de Reconversión Productiva Agropecuaria (PRPA) en el marco de la Ley N° 29736 y su Reglamento (Proceso Misional M.03).",
+        "Formulación de proyectos de convenios de cofinanciamiento no reembolsable y planes operativos anuales (POA) para organizaciones de productores beneficiarias.",
+        "Supervisión y control concurrente de hitos de entrega de hijuelas, plantas clonales, sistemas de fertirriego y maquinaria agroindustrial.",
+        "Articulación técnica con SERFOR, MIDAGRI y Gobiernos Regionales para la verificación de aptitud agroecológica de predios sujetos a sustitución de cultivos ilícitos o de baja rentabilidad."
+      ]
+    },
+    "ConocimientoOrganizacionalCritico": {
+      "ProcesosActividadesCriticas": [
+        {
+          "Numero": 1,
+          "ProcesoActividadCritica": "Evaluación técnica de elegibilidad y aptitud agroecológica de solicitudes de reconversión productiva (Subproceso M.03.01)",
+          "AspectosRelevantesEjecucion": "Revisar minuciosamente la correspondencia del cultivo propuesto con la lista autorizada en el D.S. N° 019-2017-MINAGRI (cacao, café, palma aceitera, banano orgánico, cítricos). Validar en gabinete que las coordenadas UTM no presenten superposición con concesiones forestales o zonas de amortiguamiento mediante cruce con el Geoportal de SERFOR y Catastro Rural del MIDAGRI."
+        },
+        {
+          "Numero": 2,
+          "ProcesoActividadCritica": "Monitoreo y gestión de desembolsos de subvención económica no reembolsable (Subproceso M.03.02)",
+          "AspectosRelevantesEjecucion": "Verificar en campo la supervivencia de plantas fijadas en parcela (mínimo 90% prendimiento) previo a visar la solicitud de segundo desembolso para insumos de abonamiento y manejo fitosanitario."
+        },
+        {
+          "Numero": 3,
+          "ProcesoActividadCritica": "Cierre operativo y liquidación técnica de intervenciones especiales",
+          "AspectosRelevantesEjecucion": "Exigir el Acta de Conformidad de Entrega suscrita por el comité comunal de adquisiciones y la rendición de cuentas financiera visada por la Unidad de Administración (S.02) antes de elevar el proyecto de informe final a la Dirección Ejecutiva."
+        }
+      ],
+      "AspectosPendientesAlertasRelevantes": "Se deja en trámite prioritario el expediente PRPA-2025-018 (Cooperativa Agraria Cacaotera del Valle del Huallaga, 120 hectáreas), cuya adenda de ampliación de plazo vence el 30 de septiembre de 2026; la propuesta técnica cuenta con visto bueno de la URIE y solo requiere informe legal de la UAJ. Alerta roja: Existen 4 planes en San Martín donde los plantones de café injertado están programados para entrega el 15 de septiembre de 2026; se debe coordinar de inmediato con el CTR de Tarapoto para inspeccionar la calidad biológica en vivero antes del traslado a parcela."
+    },
+    "ConocimientoTacito": {
+      "CasuisticaFrecuente": [
+        {
+          "Numero": 1,
+          "Casuistica": "Renuncia o reemplazo imprevisto de socios directivos dentro de la Organización Agraria durante la ejecución del PRPA",
+          "CriterioAtencionAplicada": "Aplicar de forma directa la Resolución Ministerial N° 0358-2017-MINAGRI (facultades delegadas para reemplazo de socios). Solicitar copia certificada del Acta de Asamblea General Extraordinaria y verificar que el nuevo socio cumpla idénticos requisitos de posesión legítima del predio, evitando paralizar las adquisiciones de la organización.",
+          "Recomendaciones": "No derivar el caso como modificación contractual compleja a la Dirección Ejecutiva; tramitar la regularización mediante resolución jefatural de URIE en un plazo máximo de 5 días hábiles para evitar pérdida de época de siembra."
+        },
+        {
+          "Numero": 2,
+          "Casuistica": "Retraso en la entrega de maquinaria pesada importada (tractores y desgranadoras) por demoras aduaneras",
+          "CriterioAtencionAplicada": "Autorizar prórroga provisional de recepción física previa carta fianza bancaria extendida por el proveedor, solicitando informe técnico de campo que acredite avance en zanjas de drenaje y preparación de camas de siembra.",
+          "Recomendaciones": "Monitorear semanalmente el estatus aduanero en el portal de SUNAT (DUA de importación) en coordinación con el proveedor acreditado para anticipar cualquier contingencia cambiaria."
+        }
+      ],
+      "ConocimientoTecnicoIndispensableTransferir": "Para proyectos de reconversión en selva alta (palma aceitera y cacao), los comités de compras frecuentemente cotizan fertilizantes y enmiendas con comercializadores locales que no cuentan con registro vigente ante SENASA. El especialista sucesor debe ingresar al Registro Oficial de Insumos Agrícolas de SENASA y validar el lote antes de emitir la no objeción a las órdenes de compra de la organización agraria, previniendo observaciones insubsanables en la liquidación técnica."
+    },
+    "BuenasPracticasYLeccionesAprendidas": {
+      "EstrategiaEstandarizar": "Uso de la lista de verificación previa digital en Google Sheets compartida en línea entre los especialistas evaluadores de URIE en Lima y los evaluadores de campo en Unidades Regionales, estandarizando el levantamiento de observaciones ex-ante y recortando el plazo de aprobación de elegibilidad de 30 a 8 días hábiles.",
+      "AccionEvitarFuturo": "Aceptar padrones parcelarios con linderos descritos únicamente de forma literal sin polígono georreferenciado en formato shapefile (.shp) o archivo KML con zona UTM (18S o 19S) debidamente configurada, ya que provoca falsos positivos de superposición con bosques de protección.",
+      "RecomendacionesCurvaAprendizajeSucesor": "Revisar en el Repositorio Central de Modernización la Ficha de Buena Práctica BP-UA-002-2026 sobre control preventivo y consultar el tablero de Looker Studio de la URIE para monitorear el avance físico-financiero de los 25 proyectos de reconversión en ejecución nacional."
+    },
+    "MarcoNormativoAplicacionPractica": {
+      "DocumentosNormativos": [
+        {
+          "Numero": 1,
+          "DocumentoNormativo": "Manual de Operaciones (MOP) de AGROIDEAS - RM N° 0188-2025-MIDAGRI (Art. 27 y 28: Funciones de la URIE)",
+          "TramiteEvaluacionAplica": "Sustento de facultades para evaluación, monitoreo, gestión de desembolsos y cierre técnico de programas y proyectos de reconversión productiva."
+        },
+        {
+          "Numero": 2,
+          "DocumentoNormativo": "Ley N° 29736 (Ley de Reconversión Productiva Agropecuaria) y su Reglamento aprobado por D.S. N° 019-2014-MINAGRI y modificatorias",
+          "TramiteEvaluacionAplica": "Definición del marco legal de beneficiarios, cadenas productivas priorizadas, transferencias financieras y condiciones de sostenibilidad."
+        },
+        {
+          "Numero": 3,
+          "DocumentoNormativo": "Resolución Directoral Ejecutiva N° 237-2023-MIDAGRI-AGROIDEAS (Instructivo para Proyectos de Reconversión Productiva Agropecuaria - PRPA)",
+          "TramiteEvaluacionAplica": "Guía procedimental paso a paso para la formulación, evaluación técnica de planes operativos y rendición de cuentas de compras comunales."
+        },
+        {
+          "Numero": 4,
+          "DocumentoNormativo": "Directiva General DI N° 001-2026-MIDAGRI-AGROIDEAS-UA (Directiva para la Gestión y Transferencia del Conocimiento)",
+          "TramiteEvaluacionAplica": "Cumplimiento obligatorio de transferencia de cartera, casuística crítica y entrega de credenciales previo a la suscripción del cese."
+        }
+      ]
+    },
+    "RedCoordinacion": {
+      "ContactosClave": [
+        {
+          "Numero": 1,
+          "Entidad": "MIDAGRI - Dirección General de Desarrollo Agrícola y Agroecología (DGDAA)",
+          "Nombre": "Ing. Roberto Solís Pinedo",
+          "FinalidadCoordinacion": "Validación sectorial de paquetes tecnológicos y fitosanitarios para cultivos de reconversión en selva y ceja de selva.",
+          "CorreoInstitucional": "rsolis@midagri.gob.pe"
+        },
+        {
+          "Numero": 2,
+          "Entidad": "SERFOR - Dirección de Información y Registro Forestal y de Fauna Silvestre",
+          "Nombre": "Ing. Patricia Vega Ramos",
+          "FinalidadCoordinacion": "Cruce catastral y emisión de opinión rápida sobre ausencia de superposición con bosques de producción permanente o áreas protegidas.",
+          "CorreoInstitucional": "pvega@serfor.gob.pe"
+        },
+        {
+          "Numero": 3,
+          "Entidad": "AGROIDEAS - Unidad Regional San Martín (Oficina Desconcentrada Tarapoto)",
+          "Nombre": "Coordinador de la Unidad Regional San Martín",
+          "FinalidadCoordinacion": "Coordinación operativa territorial para inspecciones in-situ de campo y entrega de bienes a organizaciones beneficiarias.",
+          "CorreoInstitucional": "ur_sanmartin@agroideas.gob.pe"
+        },
+        {
+          "Numero": 4,
+          "Entidad": "AGROIDEAS - Unidad de Administración (Tesorería / Finanzas S.02)",
+          "Nombre": "Lic. María Vargas (Analista Financiera)",
+          "FinalidadCoordinacion": "Verificación y programación de giros de desembolsos no reembolsables a cuentas mancomunadas de productores en el Banco de la Nación.",
+          "CorreoInstitucional": "mvargas@agroideas.gob.pe"
+        }
+      ]
+    },
+    "FormalizacionCierre": {
+      "Lugar": "San Isidro, Lima",
+      "Fecha": "02 de septiembre de 2026",
+      "FirmaServidor": "Ing. Carlos Mendoza Alva (Servidor Saliente - Coordinador URIE)",
+      "FirmaJefeSupervisor": "Jefe de la Unidad de Reconversión e Intervenciones Especiales (Conformidad de Contenido)",
+      "RecepcionRecursosHumanos": "Equipo de Recursos Humanos - Unidad de Administración (Validado para Onboarding del sucesor)",
+      "EstadoRegistro": "[ X ] APROBADO / ARCHIVADO EN REPOSITORIO"
+    }
+  }
+]

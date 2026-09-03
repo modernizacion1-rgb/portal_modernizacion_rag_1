@@ -1,0 +1,47 @@
+[
+  {
+    "MetadatosTrazabilidad": {
+      "CodigoUnicoRegistro": "BP-UR_AREQUIPA-001-2026",
+      "TituloBuenaPractica": "Pre-evaluación express mediante mesa de ayuda regional virtual para la reducción de observaciones documentales en expedientes de elegibilidad de planes de negocio (PM02) en la Unidad Regional Arequipa.",
+      "InformacionInicial": "Equipo Diseñador: Ing. Julia Torres Castro (Especialista en Evaluación de Proyectos) y Lic. Marcos Díaz Vega (Analista de Promoción y Desarrollo de Capacidades).\nUnidad Orgánica de Origen: Unidad Regional Arequipa (Sede Desconcentrada Caylloma).\nContacto: jtorres@agroideas.gob.pe | Telf. (511) 219 7000 Anexo 7240.",
+      "Territorio": "Ámbito de intervención de la Unidad Regional Arequipa, con énfasis piloto en los distritos altoandinos de la provincia de Caylloma, Condesuyos y Castilla.",
+      "ProcesoInstitucionalVinculado": "PM02: Gestión de Incentivos para la Adopción de Tecnología y Planes de Negocio.",
+      "Servicio": "Evaluación y emisión del Informe de Elegibilidad Técnica para la Adopción de Tecnología de Planes de Negocio de Organizaciones Agraria."
+    },
+    "JustificacionDiagnostico": {
+      "ProblemaOperativo": "La desaprobación y devolución de expedientes de elegibilidad técnica de planes de negocio en su fase inicial de Mesa de Partes superaba históricamente el 48% en la Unidad Regional Arequipa. Esta deficiencia se originaba por errores subsanables de forma (declaraciones juradas incompletas, copias literales de registros públicos desactualizadas o padrones de socios con firmas faltantes). Debido a que el manual de procedimientos exigía que las observaciones se notificaran únicamente mediante conductos administrativos formales una vez ingresado el expediente físico, el trámite se paralizaba sistemáticamente por un lapso promedio de 25 días hábiles, incrementando los tiempos de atención, acumulando carpetas de trabajo innecesarias y desgastando la confianza de las Organizaciones Agrarias (OA) en el Programa.",
+      "IdeaInnovadora": "La práctica rompe el paradigma de la revisión reactiva de escritorio e implementa una Mesa de Ayuda Regional Virtual interactiva y preventiva ex-ante al ingreso formal del documento físico. A través de un espacio compartido digital en Google Drive y sesiones síncronas rápidas (express) de 15 minutos en Google Meet, el evaluador revisa en línea la suficiencia de los documentos críticos junto a los directivos de la OA, resolviendo dudas de forma directa y asincrónica, asegurando que el expediente físico ingrese al sistema con \"cero observaciones formales\"."
+    },
+    "DesarrolloExperiencia": {
+      "ExperienciaJustificacion": "La Buena Práctica se desarrolla sistemáticamente a través de tres (03) fases de control:\n\n- **Fase de Convocatoria y Vinculación Digital:** Al declararse el interés de fomento de una OA (PM01), el analista de promoción crea una carpeta temporal en la nube de Google Drive de la Unidad Regional y comparte el acceso al directivo de la OA, capacitándolo brevemente vía WhatsApp sobre cómo cargar los requisitos de elegibilidad escaneados.\n\n- **Fase de Pre-revisión Asincrónica (Checklist de Control):** El evaluador técnico de la Unidad Regional ingresa de manera asincrónica a la carpeta y verifica mediante una lista de chequeo digital simplificada si los documentos cumplen con los estándares formales del sector.\n\n- **Fase de Sesión Express de Subsanación Directiva (Meet):** Si se detectan omisiones, se agenda una reunión express de 15 minutos vía Google Meet. En pantalla compartida, el evaluador muestra el error puntual al directivo de la OA (ej. renglón de firma incompleto), logrando que la organización subsane y reemplace el documento digital en pocas horas de manera asincrónica.\n\n**Sustento Legal:** Esta solución metodológica se enmarca estrictamente en las facultades de simplificación administrativa y digitalización de la Ley N° 27658 (Ley Marco de Modernización de la Gestión del Estado), y se alinea con las atribuciones de asistencia técnica territorial del Manual de Operaciones (MOP) de AGROIDEAS.\n\n**Tiempo de Permanencia y Sostenibilidad:** La práctica se ha ejecutado de forma continua y exitosa durante cuatro (04) meses consecutivos (de abril a julio de 2026), habiendo acompañado a 55 organizaciones de productores de quinua, ajo y fibra de alpaca, logrando consolidar la sostenibilidad del método de forma repetitiva y estandarizable.",
+      "ActoresInvolucrados": "Especialistas evaluadores y analistas de promoción de la Unidad Regional Arequipa (conductores de la práctica); directivos y comités de compras de las Organizaciones Agrarias (OA); y la Unidad de Planeamiento y Presupuesto (UPP) como órgano metodológico de control de modernización.",
+      "ObstaculosRiesgos": "El principal obstáculo identificado fue la brecha digital y la conectividad deficiente de las organizaciones agrarias en zonas altoandinas de Caylloma. Esto se mitigó de forma estratégica coordinando con la red territorial de Tambos del MIDAGRI (Plataforma PAIS) para facilitar el acceso físico a internet, y simplificando el flujo de pre-revisión para que las imágenes y documentos puedan ser enviados por los productores mediante flujos livianos y adaptados de WhatsApp Web, eliminando cualquier limitación tecnológica."
+    },
+    "EvidenciasDocumentacion": {
+      "EnlacesEvidencias": "Carpeta que resguarda el registro en Sheets de las 55 organizaciones atendidas, actas de pre-conformidad virtual y encuestas de satisfacción con un índice favorable superior al 92%:\nhttps://drive.google.com/drive/folders/ur_arequipa_mesa_virtual_evidencias_2026"
+    },
+    "ValidacionCalidad": [
+      {
+        "Criterio": "Eficacia y Beneficio Medible",
+        "Cumple": true,
+        "Sustento": "La buena práctica reduce el plazo de desaprobación de expedientes del 48% al 6% en la Unidad Regional Arequipa, y disminuye el tiempo de trámite de elegibilidad de 25 días a solo 48 horas."
+      },
+      {
+        "Criterio": "Viabilidad Legal",
+        "Cumple": true,
+        "Sustento": "Se ajusta plenamente a las competencias de acompañamiento técnico del MOP de AGROIDEAS y a las directrices de celeridad de la Ley de Modernización del Estado."
+      },
+      {
+        "Criterio": "Sostenibilidad y Austeridad",
+        "Cumple": true,
+        "Sustento": "Declaramos bajo juramento técnico que no se requiere presupuesto extra. Se ejecuta a Costo S/. 0.00 utilizando licencias preexistentes de Google Workspace de la entidad."
+      },
+      {
+        "Criterio": "Replicabilidad",
+        "Cumple": true,
+        "Sustento": "La metodología y la lista de chequeo digital en la nube son perfectamente adaptables y listas para ser transferidas a las otras 24 Unidades Regionales del país."
+      }
+    ],
+    "EstadoAprobacion": "APROBADO / PUBLICADO"
+  }
+]

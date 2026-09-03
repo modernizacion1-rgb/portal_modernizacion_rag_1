@@ -1,0 +1,49 @@
+[
+  {
+    "MetadatosTrazabilidad":{
+    "CodigoUnicoRegistro": "LA-UR_SAN_MARTIN-004-2026",
+    "TituloLeccionAprendida": "Estandarización de criterios de georreferenciación parcelaria y alineación de zonas UTM para evitar falsas observaciones de superposición en el proceso de elegibilidad del PM02.",
+    "ProcesoMisionalVinculado": "PM02: Gestión de Incentivos para la Adopción de Tecnología y Planes de Negocio.",
+    "UnidadOrganizacionalOrigen": "Unidad Regional San Martín - Oficina Desconcentrada Tarapoto.",
+    "AutorEspecialista": "Ing. Carlos Mendoza Alva, Evaluador Técnico de Proyectos de la UR San Martín, en coordinación con la Unidad de Planeamiento y Presupuesto.",
+    "FechaRegistro": "17 de agosto de 2026"
+  },
+    "DescripcionIncidente": {
+      "EtapaHito": "Fase de evaluación técnica in-situ de parcelas y emisión del Informe de Elegibilidad Técnica del Plan de Negocios en el marco del proceso misional PM02.",
+      "ProblemaDesviacion": "Durante la validación de expedientes de elegibilidad de planes de negocio agrícolas en la Unidad Regional San Martín, se detectó que más del 35% de los polígonos parcelarios cargados en Google Earth mostraban una superposición espacial incorrecta (\"falso positivo\") con áreas naturales protegidas (como la zona de amortiguamiento de la cordillera azul) o con predios estatales. Esta desviación generaba la paralización automática y la observación formal del expediente, forzando a la organización de productores a contratar servicios privados de topografía externa para rectificar los planos. Este retrabajo innecesario dilataba el proceso evaluativo por más de 15 días hábiles, provocando una alta ineficiencia administrativa, acumulación de expedientes \"cuello de botella\" y quejas de los administrados agrarios por demoras injustificadas..",
+      "AnalisisCausaRaiz": "La causa raíz de esta desviación es de carácter estrictamente técnico-metodológico y procedimental:\n\n**Falta de concordancia en el uso de zonas UTM (Universal Transversal de Mercator):** El territorio de la Región San Martín se encuentra dividido geográficamente entre la Zona 18 Sur y la Zona 19 Sur. Los especialistas de campo, al levantar las coordenadas GPS utilizando dispositivos móviles sin configurar, registraban los datos bajo una zona predeterminada (por defecto, Zona 18 Sur), induciendo un desplazamiento cartográfico (desfase métrico) al importar las coordenadas a Google Earth.\n\n**Omisión de verificación en fuentes secundarias oficiales de la PCM/MIDAGRI:** La directiva estándar vigente de AGROIDEAS no contemplaba la obligación ni el procedimiento rápido de cruzar la información parcelaria con el Catastro Rural del MIDAGRI o la plataforma pública de SUNARP de forma previa a la emisión de observaciones. Los evaluadores aplicaban linealmente el manual de escritorio sin realizar un análisis preventivo de error cartográfico."
+    },
+    "AccionMitigadora": {
+      "ProcedimientoSolucion": "Para mitigar la desviación sin generar sobrecostos ni paralizaciones burocráticas, se estableció un protocolo de verificación asincrónica y ágil de 4 pasos:\n\n- **Ajuste de Parámetros de Zona UTM:** Antes de importar los polígonos parcelarios a la plataforma interactiva, el evaluador técnico regional debe contrastar la ubicación geográfica de la parcela en la base de datos oficial del MIDAGRI, identificando si pertenece a la faja de transición de la Zona 18 Sur o Zona 19 Sur, y parametrizar correctamente el sistema de coordenadas en Google Earth para corregir desplazamientos espaciales erróneos.\n\n- **Cruce Virtual Ex-Ante con SUNARP y MIDAGRI:** Utilizando las herramientas interoperables geoespaciales públicas del MIDAGRI (como el geoportal del SERFOR o el catastro rural) y la consulta rápida predial en SUNARP, el evaluador realiza una pre-revisión en línea de los linderos reales y el estado de titulación.\n\n- **Uso de la Macro de Control Cartográfico:** Se carga la planilla Excel automatizada GenerarMuestra_V27_TopeEstricto alojada en la nube institucional. Al pegar las coordenadas UTM en ella, la macro identifica anomalías de formato, errores de llave cartográfica y asocia automáticamente la zona correspondiente de manera asincrónica.\n\n- **Emisión de Pre-Informe:** Si se confirma que el error es de desfase UTM y no una superposición física real, el evaluador realiza la corrección en la base de datos institucional sin emitir observaciones que dilaten el expediente, dejando constancia del ajuste en el log de incidencias técnicas del proceso.",
+      "CriteriosExitoSolucion": "- **Reducción a 0%** de las observaciones erróneas emitidas a los productores agrarios por desplazamientos de zonas UTM.\n\n-Validación de polígonos parcelarios estadísticamente correcta y auditable mediante el log automático de la macro.\n\n-**Continuidad del flujo de elegibilidad técnica** del expediente sin requerir re-visitas de campo o rectificación manual de planos topográficos por parte de la organización agraria.",
+      "ImpactoEstimadoSolucion": "- **Eficiencia en Plazos:** El tiempo promedio de absolución de dudas cartográficas y emisión del informe de elegibilidad se redujo de **15 días hábiles a solo 24 horas**.\n\n- **Austeridad y Costo Cero:** Implementación a **Costo S/. 0.00**. La solución se sostiene exclusivamente sobre las capacidades del personal propio y la suite de software preexistente y licenciada de la entidad (Excel/VBA, Google Suite y portales geográficos públicos de administración del Estado)."
+    },
+    "LeccionAprendida": {
+      "SintesisLeccionAprendida": "La verificación previa de la correspondencia de la zona UTM (18 o 19 Sur) en las bases geográficas sectoriales del MIDAGRI, de forma previa a la validación cartográfica en Google Earth, previene falsas alertas de superposición de predios, evitando retrasos innecesarios en la elegibilidad y reduciendo los tiempos de evaluación del Plan de Negocios (PM02) de 15 días a 24 horas",
+      "RecomendacionOperativaColegas": "Se recomienda a todos los evaluadores técnicos a nivel nacional que, antes de formular una observación o emitir un informe técnico con observaciones por superposición espacial, utilicen la macro automatizada de control cartográfico disponible en el repositorio central de la UPP. Asimismo, deben realizar siempre el cruce de información ex-ante con el Geoportal de SERFOR/MIDAGRI y SUNARP. No se debe rechazar ningún expediente basándose únicamente en el borrador cartográfico digital sin haber validado primero la correcta parametrización de la zona UTM (18 o 19).",
+      "RecomendacionEntidad": "Se propone formalmente a la Unidad de Planeamiento y Presupuesto (UPP) la modificación de la directiva y del manual de procedimientos operativos del PM02 (evaluación de planes de negocio), incorporando como obligatorio el uso del protocolo de verificación asincrónica UTM y el uso de la macro de control georreferenciado en el flujo regular de trabajo de los evaluadores, estandarizando de esta forma la mejora e institucionalizando la lección aprendida como nueva regla de negocio pública."
+    },
+    "ValidacionCalidad": [
+      {
+        "Criterio": "Eficacia y Beneficio Medible",
+        "Cumple": true,
+        "Sustento": "La lección reduce el tiempo de absolución cartográfica de 15 días a 24 horas en la Unidad Regional de San Martín, destrabando el flujo de elegibilidad de los Planes de Negocio (PM02)."
+      },
+      {
+        "Criterio": "Viabilidad Legal",
+        "Cumple": true,
+        "Sustento": "Cumple estrictamente con el Manual de Operaciones (MOP) de AGROIDEAS y no vulnera el marco normativo del MIDAGRI ni de la Ley de Modernización del Estado."
+      },
+      {
+        "Criterio": "Sostenibilidad y Austeridad",
+        "Cumple": true,
+        "Sustento": "Declaramos bajo juramento técnico que no se requiere la contratación de software, consultores externos ni licencias adicionales. Se sostiene sobre Google Suite y bases de datos públicas."
+      },
+      {
+        "Criterio": "Replicabilidad",
+        "Cumple": true,
+        "Sustento": "El método y el uso de la macro es 100% replicable y exportable de inmediato a las otras 24 Unidades Regionales que manejan Planes de Negocio de fomento productivo."
+      }
+    ]
+  }
+]

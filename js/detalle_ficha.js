@@ -43,56 +43,77 @@ document.addEventListener("DOMContentLoaded", async () => {
     }
 
     function popularFicha(ficha) {
-        // Cabecera
-        document.getElementById('ficha-codigo').textContent = ficha.MetadatosTrazabilidad.CodigoUnicoRegistro || 'N/A';
-        document.getElementById('ficha-titulo').textContent = ficha.MetadatosTrazabilidad.TituloLeccionAprendida || 'Sin Título';
-        document.getElementById('ficha-fecha').textContent = ficha.MetadatosTrazabilidad.FechaRegistro || '--/--/----';
+        const meta = ficha.MetadatosTrazabilidad || {};
+        const desc = ficha.DescripcionIncidente || {};
+        const acc = ficha.AccionMitigadora || {};
+        const lec = ficha.LeccionAprendida || {};
 
-        // I. Metadatos
-        document.getElementById('meta-proceso').textContent = ficha.MetadatosTrazabilidad.ProcesoMisionalVinculado || 'No especificado';
-        document.getElementById('meta-unidad').textContent = ficha.MetadatosTrazabilidad.UnidadOrganizacionalOrigen || 'No especificado';
-        document.getElementById('meta-autor').textContent = ficha.MetadatosTrazabilidad.AutorEspecialista || 'No especificado';
+        // Hero & Cabecera
+        const codigo = meta.CodigoUnicoRegistro || 'N/A';
+        const titulo = meta.TituloLeccionAprendida || 'Sin Título';
+        const fecha = meta.FechaRegistro || '--/--/----';
+        const unidad = meta.UnidadOrganizacionalOrigen || 'AGROIDEAS';
 
-        // II. Descripción del Incidente
-        document.getElementById('desc-etapa').textContent = ficha.DescripcionIncidente.EtapaHito || 'No especificada';
-        document.getElementById('desc-problema').textContent = ficha.DescripcionIncidente.ProblemaDesviacion || ficha.DescripcionIncidente.ProblemaOdesviacion || 'No especificada';
-        document.getElementById('desc-causa').textContent = ficha.DescripcionIncidente.AnalisisCausaRaiz || 'No especificado';
+        document.getElementById('ficha-codigo').textContent = codigo;
+        document.getElementById('ficha-titulo').textContent = titulo;
+        document.getElementById('ficha-fecha').textContent = fecha;
+        document.getElementById('hero-unidad').textContent = unidad;
 
-        // III. Acción Mitigadora
-        document.getElementById('accion-procedimiento').textContent = ficha.AccionMitigadora.ProcedimientoSolucion || 'No especificado';
-        document.getElementById('accion-exito').textContent = ficha.AccionMitigadora.CriteriosExitoSolucion || 'No especificado';
-        document.getElementById('accion-impacto').textContent = ficha.AccionMitigadora.ImpactoEstimadoSolucion || 'No especificado';
+        // SECCIÓN I: Metadatos y Trazabilidad (Campos 1 a 6)
+        if(document.getElementById('meta-codigo')) document.getElementById('meta-codigo').textContent = codigo;
+        if(document.getElementById('meta-fecha-cuerpo')) document.getElementById('meta-fecha-cuerpo').textContent = fecha;
+        if(document.getElementById('meta-titulo')) document.getElementById('meta-titulo').textContent = titulo;
+        if(document.getElementById('meta-proceso')) document.getElementById('meta-proceso').textContent = meta.ProcesoMisionalVinculado || 'No especificado';
+        if(document.getElementById('meta-unidad')) document.getElementById('meta-unidad').textContent = unidad;
+        if(document.getElementById('meta-autor')) document.getElementById('meta-autor').textContent = meta.AutorEspecialista || 'No especificado';
 
-        // IV. Lección Aprendida
-        document.getElementById('leccion-sintesis').textContent = ficha.LeccionAprendida.SintesisLeccionAprendida || 'No especificado';
-        document.getElementById('leccion-colegas').textContent = ficha.LeccionAprendida.RecomendacionOperativaColegas || 'No especificado';
-        document.getElementById('leccion-entidad').textContent = ficha.LeccionAprendida.RecomendacionEntidad || 'No especificado';
+        // SECCIÓN II: Descripción del Incidente o Desviación (Campos 7 a 9)
+        if(document.getElementById('desc-etapa')) document.getElementById('desc-etapa').textContent = desc.EtapaHito || 'No especificada';
+        if(document.getElementById('desc-problema')) document.getElementById('desc-problema').textContent = desc.ProblemaDesviacion || desc.ProblemaOdesviacion || 'No especificada';
+        if(document.getElementById('desc-causa')) document.getElementById('desc-causa').textContent = desc.AnalisisCausaRaiz || 'No especificado';
 
-        // V. Validación de Calidad
+        // SECCIÓN III: Acción Mitigadora Aplicada (Campos 10 a 12)
+        if(document.getElementById('accion-procedimiento')) document.getElementById('accion-procedimiento').textContent = acc.ProcedimientoSolucion || 'No especificado';
+        if(document.getElementById('accion-exito')) document.getElementById('accion-exito').textContent = acc.CriteriosExitoSolucion || 'No especificado';
+        if(document.getElementById('accion-impacto')) document.getElementById('accion-impacto').textContent = acc.ImpactoEstimadoSolucion || 'No especificado';
+
+        // SECCIÓN IV: Declaración de la Lección Aprendida (Campos 13 a 15)
+        if(document.getElementById('leccion-sintesis')) document.getElementById('leccion-sintesis').textContent = lec.SintesisLeccionAprendida || 'No especificado';
+        if(document.getElementById('leccion-colegas')) document.getElementById('leccion-colegas').textContent = lec.RecomendacionOperativaColegas || 'No especificado';
+        if(document.getElementById('leccion-entidad')) document.getElementById('leccion-entidad').textContent = lec.RecomendacionEntidad || 'No especificado';
+
+        // SECCIÓN V: Validación de Calidad (Campos 16 y 17)
         const tbody = document.getElementById('validacion-tbody');
-        tbody.innerHTML = ''; // Limpiar filas previas
-        
-        if (ficha.ValidacionCalidad && Array.isArray(ficha.ValidacionCalidad)) {
-            ficha.ValidacionCalidad.forEach(item => {
-                const tr = document.createElement('tr');
-                tr.className = "hover:bg-slate-50 transition-colors";
-                
-                const icon = item.Cumple 
-                    ? `<i data-lucide="check" class="w-5 h-5 text-emerald-500 mx-auto"></i>` 
-                    : `<i data-lucide="x" class="w-5 h-5 text-red-500 mx-auto"></i>`;
+        if (tbody) {
+            tbody.innerHTML = ''; // Limpiar filas previas
+            
+            if (ficha.ValidacionCalidad && Array.isArray(ficha.ValidacionCalidad)) {
+                ficha.ValidacionCalidad.forEach(item => {
+                    const tr = document.createElement('tr');
+                    tr.className = "hover:bg-slate-50 transition-colors";
+                    
+                    const icon = item.Cumple 
+                        ? `<i data-lucide="check-circle-2" class="w-5 h-5 text-emerald-600 mx-auto"></i>` 
+                        : `<i data-lucide="x-circle" class="w-5 h-5 text-rose-500 mx-auto"></i>`;
 
-                tr.innerHTML = `
-                    <td class="py-4 px-4 font-semibold text-slate-800 border-r border-slate-100">${item.Criterio}</td>
-                    <td class="py-4 px-4 text-center border-r border-slate-100">${icon}</td>
-                    <td class="py-4 px-4 text-xs leading-relaxed text-slate-600">${item.Sustento}</td>
-                `;
-                tbody.appendChild(tr);
-            });
-        } else {
-            tbody.innerHTML = `<tr><td colspan="3" class="py-4 text-center text-slate-500">No hay datos de validación</td></tr>`;
+                    tr.innerHTML = `
+                        <td class="py-4 px-4 font-semibold text-slate-800 border-r border-slate-100">${item.Criterio}</td>
+                        <td class="py-4 px-4 text-center border-r border-slate-100">${icon}</td>
+                        <td class="py-4 px-4 text-xs leading-relaxed text-slate-600">${item.Sustento}</td>
+                    `;
+                    tbody.appendChild(tr);
+                });
+            } else {
+                tbody.innerHTML = `<tr><td colspan="3" class="py-4 text-center text-slate-500">No hay datos de validación registrados</td></tr>`;
+            }
+        }
+
+        // Estado Badge
+        if (document.getElementById('estado-texto')) {
+            document.getElementById('estado-texto').textContent = ficha.EstadoAprobacion || 'APROBADO / VIGENTE';
         }
         
-        // Re-inicializar iconos de Lucide para los nuevos elementos insertados
+        // Re-inicializar iconos de Lucide
         if (window.lucide) {
             window.lucide.createIcons();
         }

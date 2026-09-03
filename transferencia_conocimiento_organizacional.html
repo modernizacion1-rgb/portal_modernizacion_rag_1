@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Acta de Transferencia del Conocimiento Organizacional (TCO) - AGROIDEAS</title>
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              primary: '#1A5336',
+              secondary: '#53A548',
+              accent: '#F1C40F',
+              bglight: '#F4F6F5',
+            },
+            fontFamily: {
+              sans: ['Inter', 'sans-serif'],
+              heading: ['Montserrat', 'sans-serif'],
+            }
+          }
+        }
+      }
+    </script>
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <!-- AOS Animations -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    
+    <!-- Custom Styles -->
+    <link rel="stylesheet" href="css/repositorio.css">
+    <link rel="stylesheet" href="css/modern-styles.css">
+</head>
+<body class="bg-slate-50 min-h-screen flex flex-col font-sans text-slate-700">
+
+    <!-- Header inyectado por components.js -->
+    <header></header>
+
+    <main class="pt-28 pb-16 flex-1 transition-opacity duration-700">
+        <!-- Encabezado de Ficha / Hero -->
+        <section class="header-section text-center py-12 px-4 bg-gradient-to-r from-primary via-emerald-900 to-primary text-white mb-8 shadow-md">
+            <div class="max-w-5xl mx-auto">
+                <nav class="flex items-center justify-center space-x-2 text-emerald-200/70 text-xs mb-6 uppercase tracking-[0.2em] font-bold">
+                    <a href="index.html" class="hover:text-white transition-colors">Inicio</a>
+                    <i data-lucide="chevron-right" class="w-4 h-4 text-accent"></i>
+                    <a href="repositorio.html" class="hover:text-white transition-colors">Repositorio Institucional</a>
+                    <i data-lucide="chevron-right" class="w-4 h-4 text-accent"></i>
+                    <span class="text-white">Transferencia de Conocimiento (TCO)</span>
+                </nav>
+
+                <div class="flex flex-wrap justify-center items-center gap-2 mb-4">
+                    <span class="px-3.5 py-1 bg-white/20 backdrop-blur-md rounded-full text-xs font-black tracking-wider uppercase border border-white/30 text-amber-300" id="ficha-codigo">
+                        Cargando Código...
+                    </span>
+                    <span class="px-3 py-1 bg-amber-400/20 text-amber-200 rounded-full text-[11px] font-semibold tracking-wide border border-amber-400/30">
+                        Código Formato: FO-TCO-2026 | Versión: 02 (Offboarding)
+                    </span>
+                </div>
+
+                <h1 class="text-2xl md:text-3xl lg:text-4xl font-black mb-4 leading-tight text-white max-w-4xl mx-auto" id="ficha-titulo">
+                    Cargando Acta de Transferencia del Conocimiento...
+                </h1>
+
+                <div class="flex flex-wrap justify-center items-center gap-4 text-emerald-100/90 text-sm font-medium">
+                    <span class="flex items-center gap-1.5 bg-black/20 px-3 py-1 rounded-lg">
+                        <i data-lucide="user" class="w-4 h-4 text-accent"></i> <span id="hero-servidor">Servidor Civil Saliente</span>
+                    </span>
+                    <span class="flex items-center gap-1.5 bg-black/20 px-3 py-1 rounded-lg">
+                        <i data-lucide="building" class="w-4 h-4 text-accent"></i> <span id="hero-unidad">MIDAGRI - AGROIDEAS</span>
+                    </span>
+                </div>
+            </div>
+        </section>
+        
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+            
+            <!-- LOADER -->
+            <div id="loader" class="flex flex-col items-center justify-center py-24 space-y-4">
+                <div class="animate-spin rounded-full h-14 w-14 border-4 border-slate-200 border-t-primary"></div>
+                <p class="text-sm font-semibold text-slate-500 tracking-wide">Cargando Acta de Transferencia de Conocimiento...</p>
+            </div>
+
+            <!-- CONTENIDO DE LA FICHA -->
+            <div id="ficha-contenido" class="hidden space-y-8">
+                
+                <!-- REGLA GENERAL / INSTRUCCIONES DEL FORMATO -->
+                <div class="bg-amber-50/70 border border-amber-200/80 rounded-2xl p-5 shadow-sm flex items-start gap-4">
+                    <div class="p-2.5 bg-amber-100 text-amber-800 rounded-xl shrink-0 mt-0.5">
+                        <i data-lucide="shield-alert" class="w-5 h-5"></i>
+                    </div>
+                    <div class="text-xs leading-relaxed text-amber-900">
+                        <h3 class="font-bold text-amber-950 text-sm mb-1 uppercase tracking-wide flex items-center gap-2">
+                            Blindaje contra la Fuga de Capital Intelectual (Offboarding Institucional - Directiva General)
+                        </h3>
+                        <p>
+                            El presente formato tiene por finalidad documentar y transferir el conocimiento organizacional generado durante el ejercicio de las funciones del puesto. La información consignada es objetiva, suficiente y orientada a facilitar la continuidad de la gestión institucional en <strong>AGROIDEAS</strong> ante situaciones de rotación, cese o culminación de servicios.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- SECCIÓN I: DATOS GENERALES E INFORMACIÓN GENERAL DEL PUESTO -->
+                <div class="bg-white p-6 sm:p-8 rounded-3xl shadow-sm border border-slate-100 space-y-6">
+                    <div class="flex items-center justify-between border-b border-slate-100 pb-4">
+                        <h2 class="text-lg sm:text-xl font-black text-slate-900 flex items-center gap-3">
+                            <span class="p-2 bg-primary/10 text-primary rounded-xl">
+                                <i data-lucide="user-check" class="w-5 h-5"></i>
+                            </span>
+                            SECCIÓN I: Datos Generales e Información General del Puesto
+                        </h2>
+                        <span class="text-xs font-bold uppercase tracking-wider text-slate-400 hidden sm:inline">Puesto & Datos</span>
+                    </div>
+
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-5 text-sm">
+                        <div>
+                            <span class="block text-xs font-bold uppercase tracking-wider text-slate-400 mb-1">1. Código Único / Circunstancia</span>
+                            <div class="p-3 bg-slate-50 rounded-xl border border-slate-200 font-mono font-bold text-slate-800 text-base" id="meta-codigo"></div>
+                        </div>
+                        <div>
+                            <span class="block text-xs font-bold uppercase tracking-wider text-slate-400 mb-1">2. Servidor Civil Saliente</span>
+                            <div class="p-3 bg-emerald-50/50 rounded-xl border border-emerald-100 text-slate-900 font-bold text-base" id="meta-nombres"></div>
+                        </div>
+
+                        <div>
+                            <span class="block text-xs font-bold uppercase tracking-wider text-slate-400 mb-1">3. Puesto Desempeñado</span>
+                            <div class="p-3 bg-slate-50 rounded-xl border border-slate-200 text-slate-800 font-semibold" id="meta-puesto"></div>
+                        </div>
+                        <div>
+                            <span class="block text-xs font-bold uppercase tracking-wider text-slate-400 mb-1">Unidad Funcional / Orgánica</span>
+                            <div class="p-3 bg-slate-50 rounded-xl border border-slate-200 text-slate-800 font-medium" id="meta-unidad"></div>
+                        </div>
+
+                        <div class="md:col-span-2">
+                            <span class="block text-xs font-bold uppercase tracking-wider text-slate-400 mb-1">4. Periodo en el Puesto (Vigencia)</span>
+                            <div class="p-3 bg-slate-50 rounded-xl border border-slate-200 text-slate-800 font-medium flex flex-wrap gap-4" id="meta-periodo"></div>
+                        </div>
+
+                        <div class="md:col-span-2">
+                            <span class="block text-xs font-bold uppercase tracking-wider text-slate-400 mb-1.5">5. Funciones Principales del Puesto</span>
+                            <div class="p-4 bg-slate-50 rounded-2xl border border-slate-200 text-slate-800">
+                                <ul class="space-y-2 list-disc list-inside leading-relaxed text-slate-700" id="meta-funciones"></ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- SECCIÓN II: CONOCIMIENTO ORGANIZACIONAL CRÍTICO DEL PUESTO -->
+                <div class="bg-white p-6 sm:p-8 rounded-3xl shadow-sm border border-slate-100 space-y-6">
+                    <div class="flex items-center justify-between border-b border-slate-100 pb-4">
+                        <h2 class="text-lg sm:text-xl font-black text-slate-900 flex items-center gap-3">
+                            <span class="p-2 bg-amber-500/10 text-amber-600 rounded-xl">
+                                <i data-lucide="activity" class="w-5 h-5"></i>
+                            </span>
+                            SECCIÓN II: Conocimiento Organizacional Crítico del Puesto
+                        </h2>
+                        <span class="text-xs font-bold uppercase tracking-wider text-slate-400 hidden sm:inline">Critical Tasks & Alerts</span>
+                    </div>
+
+                    <div class="space-y-6 text-sm">
+                        <div>
+                            <span class="block text-xs font-bold uppercase tracking-wider text-slate-400 mb-2">6. Procesos o Actividades Críticas del Puesto</span>
+                            <div class="overflow-x-auto rounded-2xl border border-slate-200">
+                                <table class="w-full text-left border-collapse text-sm">
+                                    <thead>
+                                        <tr class="bg-primary text-white text-xs font-bold uppercase tracking-wider">
+                                            <th class="py-3.5 px-4 w-12 text-center">Nº</th>
+                                            <th class="py-3.5 px-4 w-1/3">Proceso o Actividad Crítica</th>
+                                            <th class="py-3.5 px-4">Aspectos Relevantes para su Ejecución</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody id="tabla-procesos-criticos" class="divide-y divide-slate-100 text-slate-700 bg-white">
+                                        <!-- Generado dinámicamente -->
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+
+                        <div>
+                            <span class="block text-xs font-bold uppercase tracking-wider text-slate-400 mb-1.5">7. Aspectos Pendientes de Atención o Alertas Relevantes</span>
+                            <div class="p-5 bg-rose-50/80 rounded-2xl border border-rose-200 text-slate-800 leading-relaxed whitespace-pre-line text-justify shadow-sm" id="desc-alertas-pendientes"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- SECCIÓN III: CONOCIMIENTO TÁCITO -->
+                <div class="bg-white p-6 sm:p-8 rounded-3xl shadow-sm border border-slate-100 space-y-6">
+                    <div class="flex items-center justify-between border-b border-slate-100 pb-4">
+                        <h2 class="text-lg sm:text-xl font-black text-slate-900 flex items-center gap-3">
+                            <span class="p-2 bg-indigo-500/10 text-indigo-600 rounded-xl">
+                                <i data-lucide="brain-circuit" class="w-5 h-5"></i>
+                            </span>
+                            SECCIÓN III: Conocimiento Tácito (Experiencia y Criterio)
+                        </h2>
+                        <span class="text-xs font-bold uppercase tracking-wider text-slate-400 hidden sm:inline">Tacit Knowledge</span>
+                    </div>
+
+                    <div class="space-y-6 text-sm">
+                        <div>
+                            <span class="block text-xs font-bold uppercase tracking-wider text-slate-400 mb-2">8. Casuística Frecuente y Criterios de Atención</span>
+                            <div class="overflow-x-auto rounded-2xl border border-slate-200">
+                                <table class="w-full text-left border-collapse text-sm">
+                                    <thead>
+                                        <tr class="bg-slate-800 text-white text-xs font-bold uppercase tracking-wider">
+                                            <th class="py-3.5 px-4 w-12 text-center">Nº</th>
+                                            <th class="py-3.5 px-4 w-1/4">Casuística Frecuente</th>
+                                            <th class="py-3.5 px-4 w-1/3">Criterio o Forma de Atención Aplicada</th>
+                                            <th class="py-3.5 px-4">Recomendaciones Específicas</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody id="tabla-casuistica-frecuente" class="divide-y divide-slate-100 text-slate-700 bg-white">
+                                        <!-- Generado dinámicamente -->
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+
+                        <div>
+                            <span class="block text-xs font-bold uppercase tracking-wider text-slate-400 mb-1.5">9. Conocimiento Técnico Indispensable a Transferir</span>
+                            <div class="p-5 bg-emerald-50/70 rounded-2xl border border-emerald-200 text-slate-800 leading-relaxed whitespace-pre-line text-justify shadow-sm font-medium" id="desc-conocimiento-indispensable"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- SECCIÓN IV: BUENAS PRÁCTICAS Y LECCIONES APRENDIDAS -->
+                <div class="bg-white p-6 sm:p-8 rounded-3xl shadow-sm border border-slate-100 space-y-6">
+                    <div class="flex items-center justify-between border-b border-slate-100 pb-4">
+                        <h2 class="text-lg sm:text-xl font-black text-slate-900 flex items-center gap-3">
+                            <span class="p-2 bg-emerald-500/10 text-emerald-600 rounded-xl">
+                                <i data-lucide="award" class="w-5 h-5"></i>
+                            </span>
+                            SECCIÓN IV: Buenas Prácticas y Lecciones Aprendidas
+                        </h2>
+                        <span class="text-xs font-bold uppercase tracking-wider text-slate-400 hidden sm:inline">Best Practices & Lessons</span>
+                    </div>
+
+                    <div class="space-y-5 text-sm">
+                        <div>
+                            <span class="block text-xs font-bold uppercase tracking-wider text-slate-400 mb-1.5">10. Estrategia que Funcionó y se Recomienda Estandarizar</span>
+                            <div class="p-4 sm:p-5 bg-emerald-50/60 rounded-2xl border border-emerald-100 text-slate-800 leading-relaxed whitespace-pre-line font-medium" id="desc-estrategia-estandarizar"></div>
+                        </div>
+                        <div>
+                            <span class="block text-xs font-bold uppercase tracking-wider text-slate-400 mb-1.5">11. Acción que NO Funcionó y se Recomienda Evitar en el Futuro</span>
+                            <div class="p-4 sm:p-5 bg-rose-50/60 rounded-2xl border border-rose-100 text-slate-800 leading-relaxed whitespace-pre-line" id="desc-accion-evitar"></div>
+                        </div>
+                        <div>
+                            <span class="block text-xs font-bold uppercase tracking-wider text-slate-400 mb-1.5">12. Recomendaciones para Facilitar la Curva de Aprendizaje del Sucesor</span>
+                            <div class="p-4 sm:p-5 bg-indigo-50/60 rounded-2xl border border-indigo-100 text-slate-800 leading-relaxed whitespace-pre-line" id="desc-curva-aprendizaje"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- SECCIÓN V: CONOCIMIENTO ORGANIZACIONAL: MARCO NORMATIVO DE APLICACIÓN PRÁCTICA -->
+                <div class="bg-white p-6 sm:p-8 rounded-3xl shadow-sm border border-slate-100 space-y-6">
+                    <div class="flex items-center justify-between border-b border-slate-100 pb-4">
+                        <h2 class="text-lg sm:text-xl font-black text-slate-900 flex items-center gap-3">
+                            <span class="p-2 bg-blue-500/10 text-blue-600 rounded-xl">
+                                <i data-lucide="book-marked" class="w-5 h-5"></i>
+                            </span>
+                            SECCIÓN V: Marco Normativo de Aplicación Práctica
+                        </h2>
+                        <span class="text-xs font-bold uppercase tracking-wider text-slate-400 hidden sm:inline">Legal & Directives</span>
+                    </div>
+
+                    <div class="text-sm">
+                        <span class="block text-xs font-bold uppercase tracking-wider text-slate-400 mb-2">13. Documentos Normativos y Directivas de Aplicación Frecuente</span>
+                        <div class="overflow-x-auto rounded-2xl border border-slate-200">
+                            <table class="w-full text-left border-collapse text-sm">
+                                <thead>
+                                    <tr class="bg-slate-700 text-white text-xs font-bold uppercase tracking-wider">
+                                        <th class="py-3.5 px-4 w-12 text-center">Nº</th>
+                                        <th class="py-3.5 px-4 w-1/2">Documento Normativo de Aplicación Frecuente</th>
+                                        <th class="py-3.5 px-4">¿En qué tipo de trámite o evaluación se aplica?</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="tabla-marco-normativo" class="divide-y divide-slate-100 text-slate-700 bg-white">
+                                    <!-- Generado dinámicamente -->
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- SECCIÓN VI: RED DE COORDINACIÓN -->
+                <div class="bg-white p-6 sm:p-8 rounded-3xl shadow-sm border border-slate-100 space-y-6">
+                    <div class="flex items-center justify-between border-b border-slate-100 pb-4">
+                        <h2 class="text-lg sm:text-xl font-black text-slate-900 flex items-center gap-3">
+                            <span class="p-2 bg-emerald-500/10 text-emerald-600 rounded-xl">
+                                <i data-lucide="users" class="w-5 h-5"></i>
+                            </span>
+                            SECCIÓN VI: Red de Coordinación (Contactos Clave)
+                        </h2>
+                        <span class="text-xs font-bold uppercase tracking-wider text-slate-400 hidden sm:inline">Stakeholders & Contacts</span>
+                    </div>
+
+                    <div class="text-sm">
+                        <span class="block text-xs font-bold uppercase tracking-wider text-slate-400 mb-2">14. Matriz de Contactos Institucionales e Interinstitucionales</span>
+                        <div class="overflow-x-auto rounded-2xl border border-slate-200">
+                            <table class="w-full text-left border-collapse text-sm">
+                                <thead>
+                                    <tr class="bg-primary text-white text-xs font-bold uppercase tracking-wider">
+                                        <th class="py-3.5 px-4 w-12 text-center">Nº</th>
+                                        <th class="py-3.5 px-4 w-1/4">Entidad / Institución</th>
+                                        <th class="py-3.5 px-4 w-1/4">Nombre del Contacto Clave</th>
+                                        <th class="py-3.5 px-4">Finalidad de la Coordinación</th>
+                                        <th class="py-3.5 px-4 w-1/4">Correo Institucional</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="tabla-red-coordinacion" class="divide-y divide-slate-100 text-slate-700 bg-white">
+                                    <!-- Generado dinámicamente -->
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- SECCIÓN VII: FORMALIZACIÓN Y FIRMAS DE CIERRE -->
+                <div class="bg-white p-6 sm:p-8 rounded-3xl shadow-sm border border-slate-100 space-y-6">
+                    <div class="flex flex-wrap items-center justify-between border-b border-slate-100 pb-4 gap-2">
+                        <h2 class="text-lg sm:text-xl font-black text-slate-900 flex items-center gap-3">
+                            <span class="p-2 bg-secondary/15 text-primary rounded-xl">
+                                <i data-lucide="file-check-2" class="w-5 h-5"></i>
+                            </span>
+                            SECCIÓN VII: Formalización y Cierre del Acta
+                        </h2>
+                        <div class="flex items-center gap-2">
+                            <span class="px-3 py-1 bg-emerald-100 text-emerald-800 rounded-full text-xs font-black tracking-wider uppercase flex items-center gap-1.5" id="estado-badge">
+                                <i data-lucide="shield-check" class="w-4 h-4"></i>
+                                <span id="estado-texto">APROBADO / ARCHIVADO</span>
+                            </span>
+                        </div>
+                    </div>
+
+                    <div class="space-y-6 text-sm">
+                        <div class="flex flex-wrap items-center justify-between gap-4 p-4 bg-slate-50 rounded-xl border border-slate-200">
+                            <div>
+                                <span class="text-xs font-bold uppercase tracking-wider text-slate-400 block mb-0.5">Lugar y Fecha de Emisión:</span>
+                                <span class="font-bold text-slate-800" id="cierre-lugar-fecha">--</span>
+                            </div>
+                            <div>
+                                <span class="text-xs font-bold uppercase tracking-wider text-slate-400 block mb-0.5">Recepción Recursos Humanos:</span>
+                                <span class="text-xs font-semibold text-slate-700" id="cierre-rrhh">Unidad de Administración - RRHH</span>
+                            </div>
+                        </div>
+
+                        <!-- 15. Firmas de Formalización -->
+                        <div class="pt-4 border-t border-slate-100">
+                            <h3 class="text-xs font-bold uppercase tracking-widest text-slate-400 mb-6 text-center">
+                                15. Firmas de Formalización del Acta de Entrega de Conocimiento (Offboarding)
+                            </h3>
+                            <div class="grid grid-cols-1 sm:grid-cols-3 gap-6 text-center">
+                                <div class="p-5 rounded-2xl border border-slate-200 bg-slate-50/50 flex flex-col justify-end min-h-[140px]">
+                                    <div class="w-32 h-0.5 bg-slate-300 mx-auto mb-3"></div>
+                                    <span class="text-xs font-bold text-slate-900 block" id="firma-servidor-nombre">Firma del Servidor Civil Saliente</span>
+                                    <span class="text-[11px] text-slate-500 mt-1">(Servidor que entrega el conocimiento)</span>
+                                </div>
+                                <div class="p-5 rounded-2xl border border-slate-200 bg-slate-50/50 flex flex-col justify-end min-h-[140px]">
+                                    <div class="w-32 h-0.5 bg-slate-300 mx-auto mb-3"></div>
+                                    <span class="text-xs font-bold text-slate-900 block" id="firma-jefe-nombre">Firma del Jefe / Supervisor Directo</span>
+                                    <span class="text-[11px] text-slate-500 mt-1">(Conformidad de Contenido de la Unidad)</span>
+                                </div>
+                                <div class="p-5 rounded-2xl border border-slate-200 bg-slate-50/50 flex flex-col justify-end min-h-[140px]">
+                                    <div class="w-32 h-0.5 bg-slate-300 mx-auto mb-3"></div>
+                                    <span class="text-xs font-bold text-slate-900 block">Unidad de Administración</span>
+                                    <span class="text-[11px] text-slate-500 mt-1">(Recursos Humanos / Registro Onboarding)</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Botones de Navegación -->
+                <div class="flex flex-wrap items-center justify-between gap-4 pt-6">
+                    <a href="repositorio.html" class="inline-flex items-center gap-2 px-6 py-3 bg-slate-200 text-slate-700 font-bold text-sm rounded-xl hover:bg-slate-300 transition-colors shadow-sm">
+                        <i data-lucide="arrow-left" class="w-4 h-4"></i> Volver al Repositorio
+                    </a>
+                    <button onclick="window.print()" class="inline-flex items-center gap-2 px-6 py-3 bg-primary text-white font-bold text-sm rounded-xl hover:bg-primary/90 transition-all shadow-sm">
+                        <i data-lucide="printer" class="w-4 h-4"></i> Imprimir Acta Oficial (PDF)
+                    </button>
+                </div>
+            </div>
+            
+            <!-- MENSAJE DE ERROR -->
+            <div id="error-message" class="hidden text-center py-20 bg-white rounded-3xl border border-slate-100 p-8 shadow-sm">
+                <div class="w-16 h-16 bg-rose-100 text-rose-600 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <i data-lucide="alert-triangle" class="w-8 h-8"></i>
+                </div>
+                <h3 class="text-2xl font-bold text-slate-800 mb-2">Error al cargar el Acta de Transferencia</h3>
+                <p class="text-slate-500 max-w-md mx-auto mb-6" id="error-text">No se pudo encontrar el documento de simulación solicitado.</p>
+                <a href="repositorio.html" class="inline-flex items-center gap-2 px-6 py-3 bg-primary text-white font-bold text-sm rounded-xl hover:bg-primary/90 transition-colors shadow-sm">
+                    <i data-lucide="arrow-left" class="w-4 h-4"></i> Regresar al Catálogo
+                </a>
+            </div>
+
+        </div>
+    </main>
+
+    <!-- Footer inyectado por components.js -->
+    <footer></footer>
+
+    <!-- Scripts de la plataforma -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="js/components.js"></script>
+    <script src="js/detalle_transferencia.js"></script>
+</body>
+</html>

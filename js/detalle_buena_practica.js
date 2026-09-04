@@ -161,7 +161,7 @@ document.addEventListener("DOMContentLoaded", async () => {
         // Configuración de Botón de Descarga / Impresión Oficial (PDF en Google Drive)
         const btnPdf = document.getElementById('btn-imprimir-pdf');
         if (btnPdf) {
-            const linkPdf = ficha.Link || (meta && meta.Link);
+            const linkPdf = fbp.Link || (meta && meta.Link);
             btnPdf.onclick = (e) => {
                 e.preventDefault();
                 if (linkPdf) {

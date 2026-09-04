@@ -6,7 +6,8 @@
       "InformacionInicial": "Equipo Diseñador: Lic. María Vargas (Analista Financiera - Tesorería) e Ing. Pedro Linares (Especialista en Monitoreo - UR Junín).\nUnidad Orgánica: Unidad de Administración (Sede Central)",
       "Territorio": "Sede Central (San Isidro) articulada con las 25 Unidades Regionales.",
       "ProcesoInstitucionalVinculado": "[X] Soporte: S.02 Gestión de recursos financieros.",
-      "Servicio": "Trámite interno de revisión y aprobación de rendiciones de cuentas por viáticos y asignaciones por comisión de servicio."
+      "Servicio": "Trámite interno de revisión y aprobación de rendiciones de cuentas por viáticos y asignaciones por comisión de servicio.",
+      "Link": "https://drive.google.com/file/d/1gnHxRdW5mfx_KrD8qD94HnPOT7KWcYOW/view?usp=sharing"
     },
     "JustificacionDiagnostico": {
       "ProblemaOperativo": "Retrasos superiores a 10 días hábiles en la Unidad de Administración (Sede Central) para la revisión, subsanación y aprobación de rendiciones de viáticos del personal de campo de las 25 Unidades Regionales. La deficiencia se originaba por la presentación física (vía courier o correo certificado) de planillas con errores de cálculo aritmético, falta de firmas en las declaraciones juradas o adjunción de comprobantes no válidos según la directiva. La devolución física de los expedientes observados a las regiones generaba un elevado costo de mensajería y la inmovilización de fondos de los servidores.",
@@ -42,6 +43,7 @@
         "Sustento": "El formato en Sheets es universalmente aplicable a todas las unidades funcionales de la entidad que generen comisiones de servicio."
       }
     ],
-    "EstadoAprobacion": "[ X ] APROBADO / PUBLICADO"
+    "EstadoAprobacion": "[ X ] APROBADO / PUBLICADO",
+    "Link": "https://drive.google.com/file/d/1gnHxRdW5mfx_KrD8qD94HnPOT7KWcYOW/view?usp=sharing"
   }
 ]

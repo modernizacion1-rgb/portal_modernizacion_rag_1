@@ -120,6 +120,20 @@ document.addEventListener("DOMContentLoaded", async () => {
         if (document.getElementById('estado-texto')) {
             document.getElementById('estado-texto').textContent = guia.EstadoAprobacion || '[ X ] APROBADO / VIGENTE';
         }
+
+        // Configuración de Botón de Descarga / Impresión Oficial (PDF en Google Drive)
+        const btnPdf = document.getElementById('btn-imprimir-pdf');
+        if (btnPdf) {
+            const linkPdf = guia.Link || (meta && meta.Link);
+            btnPdf.onclick = (e) => {
+                e.preventDefault();
+                if (linkPdf) {
+                    window.open(linkPdf, '_blank', 'noopener,noreferrer');
+                } else {
+                    window.print();
+                }
+            };
+        }
         
         // Re-inicializar iconos de Lucide
         if (window.lucide) {

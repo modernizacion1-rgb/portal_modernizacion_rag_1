@@ -1,13 +1,14 @@
 [
   {
-    "MetadatosTrazabilidad":{
-    "CodigoUnicoRegistro": "LA-UR_SAN_MARTIN-004-2026",
-    "TituloLeccionAprendida": "Estandarización de criterios de georreferenciación parcelaria y alineación de zonas UTM para evitar falsas observaciones de superposición en el proceso de elegibilidad del PM02.",
-    "ProcesoMisionalVinculado": "PM02: Gestión de Incentivos para la Adopción de Tecnología y Planes de Negocio.",
-    "UnidadOrganizacionalOrigen": "Unidad Regional San Martín - Oficina Desconcentrada Tarapoto.",
-    "AutorEspecialista": "Ing. Carlos Mendoza Alva, Evaluador Técnico de Proyectos de la UR San Martín, en coordinación con la Unidad de Planeamiento y Presupuesto.",
-    "FechaRegistro": "17 de agosto de 2026"
-  },
+    "MetadatosTrazabilidad": {
+      "CodigoUnicoRegistro": "LA-UR_SAN_MARTIN-004-2026",
+      "TituloLeccionAprendida": "Estandarización de criterios de georreferenciación parcelaria y alineación de zonas UTM para evitar falsas observaciones de superposición en el proceso de elegibilidad del PM02.",
+      "ProcesoMisionalVinculado": "PM02: Gestión de Incentivos para la Adopción de Tecnología y Planes de Negocio.",
+      "UnidadOrganizacionalOrigen": "Unidad Regional San Martín - Oficina Desconcentrada Tarapoto.",
+      "AutorEspecialista": "Ing. Carlos Mendoza Alva, Evaluador Técnico de Proyectos de la UR San Martín, en coordinación con la Unidad de Planeamiento y Presupuesto.",
+      "FechaRegistro": "17 de agosto de 2026",
+      "Link": "https://drive.google.com/file/d/1zxT8KWYA2z-HXQigZh6OaC4okgh8TVvg/view?usp=sharing"
+    },
     "DescripcionIncidente": {
       "EtapaHito": "Fase de evaluación técnica in-situ de parcelas y emisión del Informe de Elegibilidad Técnica del Plan de Negocios en el marco del proceso misional PM02.",
       "ProblemaDesviacion": "Durante la validación de expedientes de elegibilidad de planes de negocio agrícolas en la Unidad Regional San Martín, se detectó que más del 35% de los polígonos parcelarios cargados en Google Earth mostraban una superposición espacial incorrecta (\"falso positivo\") con áreas naturales protegidas (como la zona de amortiguamiento de la cordillera azul) o con predios estatales. Esta desviación generaba la paralización automática y la observación formal del expediente, forzando a la organización de productores a contratar servicios privados de topografía externa para rectificar los planos. Este retrabajo innecesario dilataba el proceso evaluativo por más de 15 días hábiles, provocando una alta ineficiencia administrativa, acumulación de expedientes \"cuello de botella\" y quejas de los administrados agrarios por demoras injustificadas..",
@@ -44,6 +45,7 @@
         "Cumple": true,
         "Sustento": "El método y el uso de la macro es 100% replicable y exportable de inmediato a las otras 24 Unidades Regionales que manejan Planes de Negocio de fomento productivo."
       }
-    ]
+    ],
+    "Link": "https://drive.google.com/file/d/1zxT8KWYA2z-HXQigZh6OaC4okgh8TVvg/view?usp=sharing"
   }
 ]

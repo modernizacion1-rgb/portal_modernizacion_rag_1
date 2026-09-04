@@ -157,6 +157,20 @@ document.addEventListener("DOMContentLoaded", async () => {
         } else {
             tbody.innerHTML = `<tr><td colspan="3" class="py-6 text-center text-slate-400">No se encontraron registros de validación técnica.</td></tr>`;
         }
+
+        // Configuración de Botón de Descarga / Impresión Oficial (PDF en Google Drive)
+        const btnPdf = document.getElementById('btn-imprimir-pdf');
+        if (btnPdf) {
+            const linkPdf = ficha.Link || (meta && meta.Link);
+            btnPdf.onclick = (e) => {
+                e.preventDefault();
+                if (linkPdf) {
+                    window.open(linkPdf, '_blank', 'noopener,noreferrer');
+                } else {
+                    window.print();
+                }
+            };
+        }
     }
 
     /**

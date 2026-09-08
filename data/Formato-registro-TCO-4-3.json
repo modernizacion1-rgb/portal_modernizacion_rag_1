@@ -1,6 +1,9 @@
-{
-  "DatosGeneralesPuesto": {
-    "CodigoUnicoRegistro": "EC-UPDC-003-2026",
+[
+  {
+    "Link": "https://drive.google.com/file/d/1Ow9lEy4S5qvdT1NE1d31GLr_E39hzD2O/view?usp=sharing",
+    "DatosGeneralesPuesto": {
+      "CodigoUnicoRegistro": "EC-UPDC-003-2026",
+      "Link": "https://drive.google.com/file/d/1Ow9lEy4S5qvdT1NE1d31GLr_E39hzD2O/view?usp=sharing",
     "CircunstanciaAplicacion": "Licencias o ausencias temporales continuas iguales o mayores a treinta (30) días calendario",
     "NombresApellidos": "Lic. Elena Rocío Salcedo Cornejo",
     "PuestoDesempenado": "Especialista en Fortalecimiento de Capacidades Asociativas y Gestión Empresarial",
@@ -120,4 +123,5 @@
     "RecepcionRecursosHumanos": "Equipo de Recursos Humanos - Unidad de Administración (Validado para Reemplazo Temporal / Inducción)",
     "EstadoRegistro": "[ X ] APROBADO / ARCHIVADO EN REPOSITORIO"
   }
-}
+  }
+]

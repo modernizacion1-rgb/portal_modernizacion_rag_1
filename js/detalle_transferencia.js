@@ -25,7 +25,10 @@ document.addEventListener("DOMContentLoaded", async () => {
             throw new Error("El archivo JSON está vacío o tiene un formato incorrecto.");
         }
 
-        const tco = dataArray[0];
+        const tco = Array.isArray(dataArray) ? dataArray[0] : dataArray;
+        if (!tco) {
+            throw new Error("No se encontraron datos en el archivo JSON.");
+        }
         popularTransferencia(tco);
 
         loader.classList.add('hidden');
@@ -218,6 +221,20 @@ document.addEventListener("DOMContentLoaded", async () => {
         // Estado Badge
         if (document.getElementById('estado-texto')) {
             document.getElementById('estado-texto').textContent = cierre.EstadoRegistro || '[ X ] APROBADO / ARCHIVADO EN REPOSITORIO';
+        }
+
+        // Configuración de Botón de Descarga / Impresión Oficial (PDF en Google Drive)
+        const btnPdf = document.getElementById('btn-imprimir-pdf');
+        if (btnPdf) {
+            const linkPdf = tco.Link || (datosGen && datosGen.Link);
+            btnPdf.onclick = (e) => {
+                e.preventDefault();
+                if (linkPdf) {
+                    window.open(linkPdf, '_blank', 'noopener,noreferrer');
+                } else {
+                    window.print();
+                }
+            };
         }
 
         // Re-inicializar iconos de Lucide

@@ -25,7 +25,10 @@ document.addEventListener("DOMContentLoaded", async () => {
             throw new Error("El archivo JSON está vacío o tiene un formato incorrecto.");
         }
 
-        const ficha = dataArray[0];
+        const ficha = Array.isArray(dataArray) ? dataArray[0] : dataArray;
+        if (!ficha) {
+            throw new Error("No se encontraron datos en el archivo JSON.");
+        }
         popularFicha(ficha);
 
         loader.classList.add('hidden');

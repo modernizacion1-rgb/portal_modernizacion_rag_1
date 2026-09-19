@@ -2,6 +2,95 @@
   "modulos": [
     {
       "id": "modulo1",
+      "titulo": "Inducción en Modernización de la Gestión Pública",
+      "eje": "EJE TRANSVERSAL / SAMGP",
+      "descripcion": "Fundamentos del Sistema Administrativo de Modernización y la PNMGP al 2030 orientados a la generación de valor público en el sector agrario.",
+      "subtemas": [
+        {
+          "id": "M1.1",
+          "titulo": "Finalidad y Principios de la Ley Marco de Modernización",
+          "descripcion": "Principios rectores de la Ley N° 27658 y D.S. N° 030-2002-PCM: enfoque centrado en las personas, valor público, eficiencia, articulación y rendición de cuentas.",
+          "video_url": "https://www.youtube.com/embed/dQw4w9WgXcQ",
+          "pdf_url": "#",
+          "preguntas": [
+            {
+              "pregunta": "¿Cuál es el fin primordial de la Ley Marco de Modernización de la Gestión del Estado (Ley N° 27658)?",
+              "opciones": [
+                "Alcanzar un Estado transparente, eficiente, descentralizado y al servicio exclusivo del ciudadano",
+                "Incrementar el número de trámites y niveles jerárquicos",
+                "Reducir las facultades fiscalizadoras de las entidades públicas"
+              ],
+              "respuestaCorrecta": 0
+            },
+            {
+              "pregunta": "En el marco de la modernización pública, ¿qué se entiende por 'Valor Público'?",
+              "opciones": [
+                "El monto monetario recaudado anualmente por tributos",
+                "Los cambios positivos y mejoras reales y sostenibles en el bienestar y condiciones de vida de la ciudadanía",
+                "El valor patrimonial de los edificios y activos físicos del Estado"
+              ],
+              "respuestaCorrecta": 1
+            }
+          ]
+        },
+        {
+          "id": "M1.2",
+          "titulo": "La Política Nacional de Modernización de la Gestión Pública (PNMGP al 2030)",
+          "descripcion": "Modelo conceptual de la PNMGP (D.S. N° 103-2022-PCM), objetivos prioritarios, gobernanza pública orientada a resultados y cadena de valor hacia el productor agrario.",
+          "video_url": "https://www.youtube.com/embed/dQw4w9WgXcQ",
+          "pdf_url": "#",
+          "preguntas": [
+            {
+              "pregunta": "¿Cuál es el horizonte temporal y la norma de aprobación de la actual Política Nacional de Modernización?",
+              "opciones": [
+                "Al 2025 mediante D.S. N° 004-2013-PCM",
+                "Al 2030 aprobada mediante Decreto Supremo N° 103-2022-PCM",
+                "Al 2040 mediante Ley Orgánica del Poder Ejecutivo"
+              ],
+              "respuestaCorrecta": 1
+            },
+            {
+              "pregunta": "El modelo conceptual de la PNMGP al 2030 articula la gestión pública a través de:",
+              "opciones": [
+                "Decisiones aisladas por cada oficina sin coordinación",
+                "Una cadena de valor público centrada en bienes, servicios y regulaciones de calidad para las personas",
+                "Sistemas manuales y archivísticos desconectados"
+              ],
+              "respuestaCorrecta": 1
+            }
+          ]
+        },
+        {
+          "id": "M1.3",
+          "titulo": "El Sistema Administrativo de Modernización (SAMGP) en AGROIDEAS",
+          "descripcion": "Aplicación del D.S. N° 123-2018-PCM: rectoría de la PCM/SGP, articulación con la Unidad de Planeamiento y Presupuesto (UPP) y despliegue institucional de procesos, calidad, conocimiento e innovación.",
+          "video_url": "https://www.youtube.com/embed/dQw4w9WgXcQ",
+          "pdf_url": "#",
+          "preguntas": [
+            {
+              "pregunta": "¿Qué entidad actúa como Ente Rector del Sistema Administrativo de Modernización de la Gestión Pública?",
+              "opciones": [
+                "La Secretaría de Gestión Pública (SGP) de la Presidencia del Consejo de Ministros (PCM)",
+                "El Ministerio de Economía y Finanzas (MEF)",
+                "La Contraloría General de la República"
+              ],
+              "respuestaCorrecta": 0
+            },
+            {
+              "pregunta": "En AGROIDEAS, ¿cuál es el rol de los servidores respecto al SAMGP?",
+              "opciones": [
+                "Aplicar únicamente normas financieras",
+                "Participar activamente en la mejora de procesos, aseguramiento de la calidad, capitalización del conocimiento e innovación en favor de las organizaciones agrarias",
+                "Delegar todas las tareas operativas a entidades externas"
+              ],
+              "respuestaCorrecta": 1
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "modulo2",
       "titulo": "Implementación de Gestión por Procesos",
       "eje": "EJE A",
       "descripcion": "Diseño Transversal de Flujos de Valor",
@@ -61,7 +150,7 @@
       ]
     },
     {
-      "id": "modulo2",
+      "id": "modulo3",
       "titulo": "Implementación de Gestión del Conocimiento",
       "eje": "EJE B",
       "descripcion": "Resguardo del Capital Intelectual",
@@ -111,7 +200,7 @@
       ]
     },
     {
-      "id": "modulo3",
+      "id": "modulo4",
       "titulo": "Implementación de Gestión de Innovación",
       "eje": "EJE C",
       "descripcion": "Prototipado e Iteración Ágil",
@@ -171,46 +260,10 @@
       ]
     },
     {
-      "id": "modulo4",
-      "titulo": "Calidad de Servicios",
-      "eje": "EJE D",
-      "descripcion": "Pertinencia Territorial y Uso de TICs",
-      "subtemas": [
-        {
-          "id": "D.1",
-          "titulo": "Criterios de Verificación de Campo para Elegibilidad",
-          "descripcion": "Estandarización de las directivas institucionales de evaluación.",
-          "video_url": "https://www.youtube.com/embed/dQw4w9WgXcQ",
-          "pdf_url": "#",
-          "preguntas": [
-            {
-              "pregunta": "La verificación de campo busca garantizar:",
-              "opciones": ["Que el personal tenga viáticos asignados", "La elegibilidad basada en criterios técnicos y estandarizados", "Que se aprueben los proyectos sin evaluación previa"],
-              "respuestaCorrecta": 1
-            }
-          ]
-        },
-        {
-          "id": "D.2",
-          "titulo": "Herramientas Tecnológicas y Seguridad de Información",
-          "descripcion": "Uso práctico de aplicativos móviles institucionales.",
-          "video_url": "https://www.youtube.com/embed/dQw4w9WgXcQ",
-          "pdf_url": "#",
-          "preguntas": [
-            {
-              "pregunta": "Al usar aplicativos móviles institucionales en campo, es fundamental:",
-              "opciones": ["Compartir las credenciales de acceso con terceros", "Asegurar la veracidad y protección de la información recopilada", "Usar dispositivos personales sin medidas de seguridad"],
-              "respuestaCorrecta": 1
-            }
-          ]
-        }
-      ]
-    },
-    {
       "id": "modulo5",
-      "titulo": "Uso de herramientas de IA",
-      "eje": "EJE E",
-      "descripcion": "Inteligencia Artificial en AGROIDEAS",
+      "titulo": "Uso de herramientas de IA en la AGROIDEAS",
+      "eje": "EJE TECNOLOGÍA E IA",
+      "descripcion": "Inteligencia Artificial y Eficiencia Pública",
       "subtemas": [
         {
           "id": "E.1",
@@ -256,6 +309,69 @@
               "pregunta": "El uso de agentes y automatización en la gestión pública permite:",
               "opciones": ["Aumentar la carga de trabajo repetitiva", "Reemplazar completamente el juicio profesional humano", "Optimizar tiempos y reducir errores en procesos repetitivos, liberando tiempo para análisis estratégico"],
               "respuestaCorrecta": 2
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "modulo6",
+      "titulo": "Calidad de los Servicios",
+      "eje": "EJE D",
+      "descripcion": "Pertinencia Territorial, Estándares de Servicio y Satisfacción Ciudadana",
+      "subtemas": [
+        {
+          "id": "D.1",
+          "titulo": "Criterios de Verificación de Campo para Elegibilidad",
+          "descripcion": "Estandarización de las directivas institucionales de evaluación técnica en campo.",
+          "video_url": "https://www.youtube.com/embed/dQw4w9WgXcQ",
+          "pdf_url": "#",
+          "preguntas": [
+            {
+              "pregunta": "La verificación de campo busca garantizar:",
+              "opciones": ["Que el personal tenga viáticos asignados", "La elegibilidad basada en criterios técnicos y estandarizados", "Que se aprueben los proyectos sin evaluación previa"],
+              "respuestaCorrecta": 1
+            }
+          ]
+        },
+        {
+          "id": "D.2",
+          "titulo": "Herramientas Tecnológicas y Seguridad de Información",
+          "descripcion": "Uso práctico y seguro de aplicativos móviles institucionales.",
+          "video_url": "https://www.youtube.com/embed/dQw4w9WgXcQ",
+          "pdf_url": "#",
+          "preguntas": [
+            {
+              "pregunta": "Al usar aplicativos móviles institucionales en campo, es fundamental:",
+              "opciones": ["Compartir las credenciales de acceso con terceros", "Asegurar la veracidad y protección de la información recopilada", "Usar dispositivos personales sin medidas de seguridad"],
+              "respuestaCorrecta": 1
+            }
+          ]
+        },
+        {
+          "id": "D.3",
+          "titulo": "Estándares de Calidad y Medición de Satisfacción Ciudadana",
+          "descripcion": "Aplicación de la NT N° 001-2022-PCM/SGP para la evaluación del servicio al productor agrario.",
+          "video_url": "https://www.youtube.com/embed/dQw4w9WgXcQ",
+          "pdf_url": "#",
+          "preguntas": [
+            {
+              "pregunta": "¿Qué persigue principalmente la Norma Técnica de Gestión de la Calidad del Servicio (NT N° 001-2022-PCM/SGP)?",
+              "opciones": [
+                "Asegurar que los bienes y servicios públicos satisfagan las necesidades y expectativas de las personas con atributos de calidad y trato digno",
+                "Aumentar los requisitos burocráticos para acceder a los programas del Estado",
+                "Eliminar los canales presenciales de atención"
+              ],
+              "respuestaCorrecta": 0
+            },
+            {
+              "pregunta": "¿Cómo se retroalimenta la calidad del servicio en las organizaciones de productores atendidas por AGROIDEAS?",
+              "opciones": [
+                "Ignorando las opiniones de campo",
+                "A través de la medición periódica de la satisfacción, buzón de consultas y evaluación de tiempos de respuesta",
+                "Publicando solo informes favorables"
+              ],
+              "respuestaCorrecta": 1
             }
           ]
         }

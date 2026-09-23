@@ -14,7 +14,7 @@ El sitio utiliza **Tailwind CSS** (inyectado vía CDN de desarrollo o empaquetad
 ---
 
 ## 2. Sistema de Variables Institucionales (`css/modern-styles.css`)
-Los colores clave del branding institucional han sido definidos como variables CSS raiz (`:root`) dentro de `css/modern-styles.css`, siguiendo la línea gráfica **"Impulsa Agroideas"** (Verde Principal, Verde Activo y Acento Amarillo), y extendidos en la configuración local de Tailwind en el `<head>` de cada documento:
+Los colores clave del branding institucional han sido definidos como variables CSS raíz (`:root`) dentro de `css/modern-styles.css`, siguiendo la línea gráfica **"Impulsa Agroideas"** (Verde Principal, Verde Activo y Acento Amarillo), y extendidos en la configuración local de Tailwind en el `<head>` de cada documento:
 
 ```css
 :root {
@@ -45,8 +45,8 @@ La barra de navegación fija (`<header>`) emplea un fondo semitransparente combi
 Los módulos de los ejes estratégicos, las tarjetas de roles y los bloques informativos utilizan radios de curvatura pronunciados (`rounded-3xl` o `rounded-[2.5rem]`) combinados con bordes finos (`border border-slate-100`). Al posicionar el cursor sobre ellos, experimentan transiciones de elevación (`hover:-translate-y-1 hover:shadow-xl transition-all duration-300`).
 
 ### C. Contenedores de Video Tutorial (Sección 5 Multimedia)
-Para la presentación audiovisual en las páginas de ejes (`gestion_*.html`), se ha establecido el siguiente patrón visual obligatorio para el contenedor multimedia:
-- **Estructura HTML (`<a>` interactivo):** El reproductor se encapsula en una etiqueta `<a>` con `target="_blank" rel="noopener noreferrer"` y clases de contenedor `block relative aspect-video bg-slate-900 rounded-3xl overflow-hidden group cursor-pointer border-4 border-slate-50 shadow-lg`.
+Para la presentación audiovisual en las páginas de ejes (`gestion_*.html`), se ha establecido el siguiente patrón visual obligatorio:
+- **Estructura HTML (`<a>` interactivo):** El reproductor se encapsula en una etiqueta `<a>` con `target="_blank" rel="noopener noreferrer"` y clases `block relative aspect-video bg-slate-900 rounded-3xl overflow-hidden group cursor-pointer border-4 border-slate-50 shadow-lg`.
 - **Overlay de Reproducción:** Capa degradada (`absolute inset-0 bg-gradient-to-br from-slate-800 to-primary flex items-center justify-center`) con un botón central animado (`w-20 h-20 bg-white/10 backdrop-blur-md rounded-full text-white group-hover:scale-110 group-hover:bg-secondary transition-all duration-500`).
 - **Etiqueta HD:** Distintivo superior que resalta la calidad (`span` con clases `px-3 py-1 bg-accent/20 text-accent text-[10px] font-black rounded-full uppercase`).
 
@@ -63,6 +63,37 @@ El módulo conversacional utiliza un diseño tipo consola ejecutiva de doble pan
 
 ### F. Aula Virtual de Micro-Cursos (`microcurso.html`)
 El entorno de aprendizaje SPA presenta un **visualizador de video** (iframe de YouTube/Google Vids), una **sección de descarga de fichas PDF**, un **panel lateral de Check de Aprendizaje (quiz interactivo)** y una **barra de progreso** que avanza conforme el usuario responde. El **Modal "Índice de Módulo"** en el repositorio lista los subtemas con numeración secuencial y botones "Iniciar" que enlazan al Aula Virtual.
+
+### G. Patrones de Componentes de Fichas Técnicas ETMC (`ficha_*.html`, `guia_*.html`, `transferencia_*.html`)
+Para garantizar rigurosidad técnica y uniformidad visual con los formularios impresos oficiales (Anexos 01 al 04 de la SGP-PCM), los 4 visores de conocimiento incorporan los siguientes componentes de diseño:
+
+1. **Hero Banner Institucional:**
+   - Fondo con degradado oficial: `bg-gradient-to-r from-primary to-primary/90 text-white rounded-3xl p-6 md:p-8 shadow-lg`.
+   - Badges de Metadatos y Trazabilidad: Píldoras traslúcidas (`px-3 py-1 bg-white/15 backdrop-blur-md rounded-full text-xs font-bold tracking-wider`).
+   - Botón de retorno al catálogo: `inline-flex items-center gap-2 px-4 py-2 bg-white/10 hover:bg-white/20 text-white rounded-xl text-xs font-bold transition-all`.
+
+2. **Jerarquía Estructural (Secciones Romanas y Campos Arábigos):**
+   - **Títulos de Sección (I, II, III...):** Bloques destacados con numeración Romana, tipografía `font-heading font-black text-primary text-xl` y barras divisorias de acento (`w-12 h-1 bg-secondary rounded-full`).
+   - **Campos de Información (1, 2, 3...):** Tarjetas con fondo blanco y bordes ligeros (`bg-white rounded-2xl p-5 border border-slate-100 shadow-sm`), donde las etiquetas emplean `text-xs font-black text-slate-400 uppercase tracking-wider` y los datos adoptan `text-sm text-slate-700 leading-relaxed`.
+
+3. **Cajas de Alerta Técnica y "Toque del Experto":**
+   - **Alerta Roja (Riesgo Crítico):** `border-l-4 border-red-500 bg-red-50/70 p-4 rounded-r-2xl text-red-900 text-sm` con icono `alert-triangle`.
+   - **Atajo Lícito / Tip de Eficiencia:** `border-l-4 border-secondary bg-emerald-50/70 p-4 rounded-r-2xl text-emerald-900 text-sm` con icono `zap` o `lightbulb`.
+   - **Solución a Problemas (Troubleshooting):** `border-l-4 border-blue-500 bg-blue-50/70 p-4 rounded-r-2xl text-blue-900 text-sm` con icono `wrench`.
+
+4. **Bloque de Validación y Conformidad del ETMC:**
+   - Tabla de Criterios SGP-PCM con badges de estado: `px-3 py-1 bg-emerald-100 text-emerald-800 rounded-full text-xs font-bold`.
+   - Grilla de Firmas y Validación: Tarjetas con simulación de sello institucional y firma del Equipo Técnico de Mejora Continua.
+
+5. **Botón Oficial de Impresión / PDF (`#btn-imprimir-pdf`):**
+   - Estilo institucional: `inline-flex items-center gap-2 px-6 py-3 bg-primary text-white font-bold text-sm rounded-xl hover:bg-secondary hover:shadow-lg transition-all duration-300 shadow-sm`.
+   - Acción dinámica: Invoca el enlace de Google Drive del documento oficial vía `window.open()` con fallback a `window.print()`.
+
+### H. Tabla de Normatividad Institucional (`directivas-table.js`)
+- Renderiza las directivas institucionales contenidas en `data/normativas_agroideas.json`.
+- Badges por tipo de norma: `RDE` (Verde institucional), `DIRECTIVA` (Azul corporativo), `GUÍA` (Ámbar/Dorado).
+- Botón de enlace directo a Google Drive: Ícono vectorial `external-link` con hover interactivo.
+- Ordenamiento cronológico predeterminado descendente por fecha de emisión.
 
 ---
 
@@ -89,3 +120,7 @@ El portal está optimizado para funcionar sin degradación visual desde smartpho
 
 > [!TIP]
 > **Regla para Agentes IA:** Al generar nuevos botones de llamada a la acción principal (CTA), utiliza invariablemente el patrón institucional de Tailwind: `inline-flex items-center gap-2 px-6 py-3 bg-primary text-white rounded-xl font-bold shadow-md hover:bg-secondary hover:shadow-lg hover:scale-[1.02] transition-all duration-300`.
+
+---
+
+*Unidad de Planeamiento y Presupuesto (UPP) - AGROIDEAS | Modernización del Estado 2026*

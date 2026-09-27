@@ -1,0 +1,95 @@
+{
+  "$schema": "./schemas/far-mc-v2.json",
+  "NavegacionYTrazabilidad": {
+    "ModuloNumero": 6,
+    "ModuloNombre": "Módulo 6: Calidad de los Servicios",
+    "EjeTematico": "EJE F: Pertinencia Territorial, Estándares de Servicio y Satisfacción Ciudadana",
+    "SubtemaCodigo": "D.1",
+    "SubtemaTitulo": "Criterios de Verificación de Campo para Elegibilidad",
+    "PosicionEnModulo": {
+      "ParteActual": 1,
+      "TotalPartesModulo": 3,
+      "EtiquetaSecuencia": "1 de 3",
+      "SubtemaAnteriorCodigo": null,
+      "SubtemaSiguienteCodigo": "D.2"
+    },
+    "EcosistemaDigital": {
+      "Plataforma": "Portal de Modernización y Repositorio Central AGROIDEAS",
+      "ArchivoVista": "repositorio.html",
+      "NumeralSeccion": "2.5 Micro-Cursos (Fichas de Conocimiento)",
+      "FormatoNombre": "Ficha de Aprendizaje Rápido de Micro-Curso",
+      "FormatoVersion": "FAR-MC V2.0",
+      "OrigenNormativo": "INFORME EJECUTIVO Nº 023-UPP-WVP.docx"
+    }
+  },
+  "MetadatosFicha": {
+    "CodigoReferencia": "FAR-MC-MOD-06-SD.1",
+    "ProcesoVinculado": "Misional: PM01 / PM02 - Evaluación Técnica de Campo e Inspección de Elegibilidad",
+    "TiempoLecturaMinutos": 3,
+    "PublicoObjetivo": "Personal de la Sede Central y de las 25 Unidades Regionales, evaluadores técnicos de campo, especialistas misionales y el ETMC."
+  },
+  "SintesisEjecutiva": {
+    "ContextoYDolorInstitucional": "Esta ficha aborda los criterios estandarizados de verificación técnica de campo para determinar la elegibilidad de las Organizaciones Agrarias (OA) en AGROIDEAS. Resuelve el problema de la disparidad de criterios entre las 25 Unidades Regionales durante las inspecciones in situ, estableciendo pautas objetivas para la validación de predios, asociatividad real, padrón de socios y viabilidad técnico-agronómica."
+  },
+  "NucleoSaberYMarcoNormativo": {
+    "PilarLegalFundacional": [
+      {
+        "Norma": "R.S.G.P. N° 001-2022-PCM/SGP",
+        "Nombre": "Norma Técnica para la Gestión de la Calidad de Servicio en las Entidades Públicas",
+        "Descripcion": "Establece las pautas para asegurar la pertinencia territorial, la estandarización de procesos y la excelencia operacional en la entrega de servicios públicos."
+      },
+      {
+        "Norma": "R.M. N° 0188-2025-MIDAGRI",
+        "Nombre": "Manual de Operaciones (MOP) de AGROIDEAS",
+        "Descripcion": "Regula el funcionamiento de la Unidad de Promoción y Desarrollo de Capacidades (UPDC / PM01) y la Unidad de Gestión de Incentivos (UGIA / PM02) en la evaluación de la elegibilidad."
+      },
+      {
+        "Norma": "Directivas Operativas PM01 y PM02 de AGROIDEAS",
+        "Nombre": "Directivas para la Evaluación de Solicitudes de Acreditación de Elegibilidad y Planes de Negocio",
+        "Descripcion": "Dispositivos institucionales específicos que establecen las listas de chequeo y actas de verificación técnica en campo."
+      },
+      {
+        "Norma": "R.D.E. N° D000106-2026-MIDAGRI-AGROIDEAS-DE",
+        "Nombre": "Plan de Gestión del Conocimiento 2026-2027 de AGROIDEAS",
+        "Descripcion": "Promueve la estandarización de guías y lecciones aprendidas para homogenizar los criterios de evaluación de campo en todo el país."
+      }
+    ],
+    "AplicacionPracticaAgroideas": {
+      "2.1_Objetivo": {
+        "Pregunta": "¿Qué es lo que se está desarrollando?",
+        "Respuesta": "Estandarizar la aplicación de las listas de chequeo y pautas técnicas de inspección de campo para la verificación de elegibilidad de Organizaciones Agrarias, asegurando el contraste riguroso de la posesión/propiedad de predios, la actividad agrícola/pecuaria efectiva y la veracidad del padrón de socios."
+      },
+      "2.2_Finalidad": {
+        "Pregunta": "¿Para qué se está desarrollando?",
+        "Respuesta": "Garantizar la equidad, transparencia y predictibilidad en la calificación de elegibilidad a nivel nacional, previniendo observaciones posteriores, descartando 'asociaciones fantasma' o requisitos arbitrarios y protegiendo el uso eficiente de los recursos públicos a Costo S/. 0.00."
+      },
+      "2.3_Actores": {
+        "Pregunta": "¿Quién o quiénes desarrollan esta(s) actividad(es)?",
+        "LideresEstrategicos": "Unidades de Línea (Promoción UPDC y Negocios UGIA) y la UPP/ETMC, encargadas de supervisar la homogeneidad de los criterios de campo.",
+        "EjecutoresOperativos": "Evaluadores y especialistas técnicos de las 25 Unidades Regionales que realizan las visitas de inspección in situ y suscriben las Actas de Verificación de Campo.",
+        "Beneficiarios": "Organizaciones Agrarias (OA) y pequeños y medianos productores que reciben una evaluación técnica justa, transparente e imparcial."
+      },
+      "2.4_MomentoFase": {
+        "Pregunta": "¿Cuándo se debe desarrollar?",
+        "Respuesta": "Corresponde a la Fase 1: Inducción e Hito de Entrada (Onboarding / Capacitación en Verificación Técnica de Elegibilidad). Se ejecuta de manera obligatoria durante el hito de inspección in situ previo a la emisión del Informe de Elegibilidad."
+      }
+    }
+  },
+  "ToqueDelExpertoYAlertasCampo": {
+    "AlertaRojaPeligroAEvitar": "¡Nunca des por elegible una Organización Agraria sin verificar personalmente en campo la actividad productiva de los socios del padrón! Confiar únicamente en declaraciones juradas en papel sin comprobación física genera riesgos de reversión de incentivos.",
+    "TipPracticoDelExperto": "¡Aplica la verificación georreferenciada y cruzada de predios! Durante la visita de campo, utiliza aplicaciones móviles con GPS para fotografiar las parcelas y contrastar inmediatamente las coordenadas con los registros públicos y padrones antes de firmar el acta."
+  },
+  "CierreOperativoYAutoevaluacion": {
+    "ReglaDeOroOperativa": "'En AGROIDEAS, la elegibilidad se consolida en el surco: una verificación de campo rigurosa es la garantía de un incentivo seguro y transparente a Costo S/. 0.00.'",
+    "PreguntaAutoevaluacion": {
+      "Pregunta": "¿Cuál es el objetivo principal de estandarizar los criterios de verificación técnica de campo en la evaluación de elegibilidad de AGROIDEAS?",
+      "Opciones": {
+        "a": "Aumentar el cobro de tasas administrativas a las Organizaciones Agrarias.",
+        "b": "Eliminar la discrecionalidad y asegurar criterios objetivos e imparciales de calificación en las 25 Unidades Regionales.",
+        "c": "Eximir a los evaluadores de realizar inspecciones físicas en el territorio."
+      },
+      "RespuestaCorrecta": "b",
+      "SustentoPedagogico": "La estandarización de criterios en las inspecciones de campo busca eliminar la discrecionalidad individual o regional, asegurando que todas las Organizaciones Agrarias del país sean evaluadas bajo las mismas pautas técnicas, transparentes y predecibles."
+    }
+  }
+}

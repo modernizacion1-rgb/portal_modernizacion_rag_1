@@ -1,0 +1,95 @@
+{
+  "$schema": "./schemas/far-mc-v2.json",
+  "NavegacionYTrazabilidad": {
+    "ModuloNumero": 1,
+    "ModuloNombre": "Módulo 1: Inducción en Modernización de la Gestión Pública",
+    "EjeTematico": "EJE A: Inducción en Modernización de la Gestión Pública",
+    "SubtemaCodigo": "M1.2",
+    "SubtemaTitulo": "La Política Nacional de Modernización de la Gestión Pública (PNMGP al 2030)",
+    "PosicionEnModulo": {
+      "ParteActual": 2,
+      "TotalPartesModulo": 3,
+      "EtiquetaSecuencia": "2 de 3",
+      "SubtemaAnteriorCodigo": "M1.1",
+      "SubtemaSiguienteCodigo": "M1.3"
+    },
+    "EcosistemaDigital": {
+      "Plataforma": "Portal de Modernización y Repositorio Central AGROIDEAS",
+      "ArchivoVista": "repositorio.html",
+      "NumeralSeccion": "2.5 Micro-Cursos (Fichas de Conocimiento)",
+      "FormatoNombre": "Ficha de Aprendizaje Rápido de Micro-Curso",
+      "FormatoVersion": "FAR-MC V2.0",
+      "OrigenNormativo": "INFORME EJECUTIVO Nº 023-UPP-WVP.docx"
+    }
+  },
+  "MetadatosFicha": {
+    "CodigoReferencia": "FAR-MC-MOD-01-S1.2",
+    "ProcesoVinculado": "Soporte / Estratégico: SAMGP - Modernización de la Gestión Pública",
+    "TiempoLecturaMinutos": 3,
+    "PublicoObjetivo": "Personal de la Sede Central y de las 25 Unidades Regionales, nuevos ingresantes (Onboarding) y colaboradores del sector agrario."
+  },
+  "SintesisEjecutiva": {
+    "ContextoYDolorInstitucional": "Esta ficha desarrolla la aplicación de la Política Nacional de Modernización de la Gestión Pública al 2030 (D.S. N° 103-2022-PCM) en AGROIDEAS. Resuelve la desconexión entre los objetivos estratégicos nacionales y la gestión operativa en el territorio, orientando la cadena de valor público de la entidad hacia la entrega oportuna de incentivos cofinanciados a los pequeños y medianos productores agrarios organizados."
+  },
+  "NucleoSaberYMarcoNormativo": {
+    "PilarLegalFundacional": [
+      {
+        "Norma": "D.S. N° 103-2022-PCM",
+        "Nombre": "Política Nacional de Modernización de la Gestión Pública al 2030",
+        "Descripcion": "Aprueba el marco ordenador de las intervenciones públicas centrado en las personas y los territorios, definiendo la cadena de valor público y sus 4 ejes transversales."
+      },
+      {
+        "Norma": "Ley N° 27658",
+        "Nombre": "Ley Marco de Modernización de la Gestión del Estado",
+        "Descripcion": "Sustenta la orientación de las entidades públicas hacia la generación de valor público, la eficiencia y el servicio a la ciudadanía."
+      },
+      {
+        "Norma": "D.S. N° 123-2018-PCM",
+        "Nombre": "Reglamento del Sistema Administrativo de Modernización de la Gestión Pública",
+        "Descripcion": "Establece los principios para la gestión por procesos, la simplificación administrativa, la estructura organizacional y la gestión del conocimiento."
+      },
+      {
+        "Norma": "R.D.E. N° D000106-2026-MIDAGRI-AGROIDEAS-DE",
+        "Nombre": "Plan de Gestión del Conocimiento 2026-2027",
+        "Descripcion": "Alinea las actividades de aprendizaje organizacional y transferencia con los objetivos estratégicos de la PNMGP al 2030."
+      }
+    ],
+    "AplicacionPracticaAgroideas": {
+      "2.1_Objetivo": {
+        "Pregunta": "¿Qué es lo que se está desarrollando?",
+        "Respuesta": "Codificar y aplicar la arquitectura conceptual de la PNMGP al 2030 (sus 5 componentes clave de la cadena de valor público y sus 4 ejes transversales) en las intervenciones de AGROIDEAS, alineando la planificación estratégica con los servicios entregados a las Organizaciones Agrarias (OA)."
+      },
+      "2.2_Finalidad": {
+        "Pregunta": "¿Para qué se está desarrollando?",
+        "Respuesta": "Garantizar que los servicios de fomento y cofinanciamiento de AGROIDEAS (PM01 y PM02) generen impactos positivos medibles en la competitividad y calidad de vida del productor agrario, cerrando brechas territoriales y eliminando ineficiencias o cuellos de botella en la tramitación."
+      },
+      "2.3_Actores": {
+        "Pregunta": "¿Quién o quiénes desarrollan esta(s) actividad(es)?",
+        "LideresEstrategicos": "Dirección Ejecutiva, Unidad de Planeamiento y Presupuesto (UPP) y el Equipo Técnico de Mejora Continua (ETMC), encargados de la formulación estratégica y monitoreo de la cadena de valor.",
+        "EjecutoresOperativos": "Especialistas y evaluadores de las Unidades de Línea (Promoción - PM01, Gestión de Incentivos - PM02, Seguimiento - USE) y de las 25 Unidades Regionales, encargados de ejecutar los procedimientos operativos alineados a los estándares de calidad.",
+        "Beneficiarios": "Organizaciones Agrarias (OA) cofinanciadas, pequeños y medianos productores agrarios a nivel nacional."
+      },
+      "2.4_MomentoFase": {
+        "Pregunta": "¿Cuándo se debe desarrollar?",
+        "Respuesta": "Corresponde a la Fase 1: Inducción e Hito de Entrada (Onboarding Automatizado / Día 1 al 5) dentro del arco de aprendizaje integral de Modernización. Constituye una pauta metodológica transversal aplicable durante todo el ciclo de diseño, evaluación y seguimiento de Planes de Negocio."
+      }
+    }
+  },
+  "ToqueDelExpertoYAlertasCampo": {
+    "AlertaRojaPeligroAEvitar": "¡Cuidado con perder de vista la cadena de valor público! Evaluar expedientes como tareas aisladas o meros trámites de control documental sin medir su impacto final en el productor distorsiona el propósito de la PNMGP al 2030.",
+    "TipPracticoDelExperto": "¡Enfócate en los resultados finales del productor! Revisa siempre que las actividades de tu proceso (PM01 o PM02) tengan una relación directa y causal con la mejora en la productividad, asociatividad o acceso a mercados de la Organización Agraria beneficiaria."
+  },
+  "CierreOperativoYAutoevaluacion": {
+    "ReglaDeOroOperativa": "'En AGROIDEAS, la cadena de valor público se consolida cuando cada evaluación técnica y administrativa se traduce en un incentivo oportuno que transforma la vida del productor agrario.'",
+    "PreguntaAutoevaluacion": {
+      "Pregunta": "¿Cuáles son los componentes clave que integran la Cadena de Valor Público según la PNMGP al 2030 (D.S. N° 103-2022-PCM)?",
+      "Opciones": {
+        "a": "Solo el presupuesto institucional y el número de expedientes archivados físicamente.",
+        "b": "Políticas públicas, estrategia territorial, gestión interna/procesos, bienes/servicios y evaluación de resultados.",
+        "c": "Únicamente la adquisición de insumos agrícolas y la contratación de personal administrativo."
+      },
+      "RespuestaCorrecta": "b",
+      "SustentoPedagogico": "La PNMGP al 2030 concibe la cadena de valor público como una secuencia articulada de 5 componentes que van desde la definición de políticas públicas y estrategia territorial hasta la entrega de bienes/servicios de calidad y la medición de sus resultados e impactos reales en los ciudadanos."
+    }
+  }
+}

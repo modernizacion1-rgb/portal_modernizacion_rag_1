@@ -1,0 +1,95 @@
+{
+  "$schema": "./schemas/far-mc-v2.json",
+  "NavegacionYTrazabilidad": {
+    "ModuloNumero": 5,
+    "ModuloNombre": "Módulo 5: Uso de Herramientas de IA en AGROIDEAS",
+    "EjeTematico": "EJE E: Inteligencia Artificial y Eficiencia Pública",
+    "SubtemaCodigo": "E.2",
+    "SubtemaTitulo": "Asistencia Inteligente y Prompting",
+    "PosicionEnModulo": {
+      "ParteActual": 2,
+      "TotalPartesModulo": 3,
+      "EtiquetaSecuencia": "2 de 3",
+      "SubtemaAnteriorCodigo": "E.1",
+      "SubtemaSiguienteCodigo": "E.3"
+    },
+    "EcosistemaDigital": {
+      "Plataforma": "Portal de Modernización y Repositorio Central AGROIDEAS",
+      "ArchivoVista": "repositorio.html",
+      "NumeralSeccion": "2.5 Micro-Cursos (Fichas de Conocimiento)",
+      "FormatoNombre": "Ficha de Aprendizaje Rápido de Micro-Curso",
+      "FormatoVersion": "FAR-MC V2.0",
+      "OrigenNormativo": "INFORME EJECUTIVO Nº 023-UPP-WVP.docx"
+    }
+  },
+  "MetadatosFicha": {
+    "CodigoReferencia": "FAR-MC-MOD-05-SE.2",
+    "ProcesoVinculado": "Soporte / Estratégico: SAMGP - Formulación de Instrucciones y Prompting Operativo",
+    "TiempoLecturaMinutos": 3,
+    "PublicoObjetivo": "Personal de la Sede Central y de las 25 Unidades Regionales, especialistas en evaluación, legal y enlaces del ETMC."
+  },
+  "SintesisEjecutiva": {
+    "ContextoYDolorInstitucional": "Esta ficha desarrolla la técnica de ingeniería de instrucciones (Prompting Operativo) para la interacción efectiva con herramientas de Inteligencia Artificial en AGROIDEAS. Resuelve el problema de respuestas vagas, irrelevantes o desestructuradas al realizar consultas a modelos de lenguaje, enseñando a formular instrucciones precisas basadas en la estructura ROL + CONTEXTO + TAREA + RESTRICCIONES + FORMATO para optimizar el trabajo cotidiano."
+  },
+  "NucleoSaberYMarcoNormativo": {
+    "PilarLegalFundacional": [
+      {
+        "Norma": "Ley N° 31814",
+        "Nombre": "Ley que promueve el uso de la Inteligencia Artificial en favor del desarrollo económico y social del país",
+        "Descripcion": "Promueve la alfabetización digital y el desarrollo de competencias tecnológicas en los servidores públicos para el uso ético y eficiente de la IA."
+      },
+      {
+        "Norma": "D.S. N° 103-2022-PCM",
+        "Nombre": "Política Nacional de Modernización de la Gestión Pública al 2030",
+        "Descripcion": "Fomenta la simplificación de actividades administrativas y el incremento de la productividad mediante herramientas digitales avanzadas."
+      },
+      {
+        "Norma": "R.M. N° 0188-2025-MIDAGRI",
+        "Nombre": "Manual de Operaciones (MOP) de AGROIDEAS",
+        "Descripcion": "Establece los procedimientos estandarizados de las unidades organizativas sobre los cuales se formulan los prompts de asistencia técnica."
+      },
+      {
+        "Norma": "R.D.E. N° D000106-2026-MIDAGRI-AGROIDEAS-DE",
+        "Nombre": "Plan de Gestión del Conocimiento 2026-2027 de AGROIDEAS",
+        "Descripcion": "Impulsa la adopción de buenas prácticas de redacción e instrucción automatizada para agilizar la producción documental institucional."
+      }
+    ],
+    "AplicacionPracticaAgroideas": {
+      "2.1_Objetivo": {
+        "Pregunta": "¿Qué es lo que se está desarrollando?",
+        "Respuesta": "Capacitar en la formulación de 'Prompts Estructurados' para asistentes de IA, aplicando el pentágono de instrucción: 1. Asignación de Rol (ej. Especialista Evaluador), 2. Contexto Institucional, 3. Tarea Específica, 4. Restricciones Negativas (ej. 'no inventes requisitos') y 5. Formato de Salida (ej. Tabla, Lista o Párrafo)."
+      },
+      "2.2_Finalidad": {
+        "Pregunta": "¿Para qué se está desarrollando?",
+        "Respuesta": "Aumentar la velocidad de procesamiento de expedientes, sistematizar informes técnicos de evaluación (PM01/PM02), generar resúmenes ejecutivos predecibles y reducir en un 70% el tiempo dedicado a la redacción burocrática repetitiva a Costo S/. 0.00."
+      },
+      "2.3_Actores": {
+        "Pregunta": "¿Quién o quiénes desarrollan esta(s) actividad(es)?",
+        "LideresEstrategicos": "Unidad de Planeamiento y Presupuesto (UPP) y el Equipo Técnico de Mejora Continua (ETMC), encargados de validar las plantillas de prompts institucionalizadas.",
+        "EjecutoresOperativos": "Especialistas y evaluadores de la Sede Central (Promoción PM01, Negocios PM02, Monitoreo USE, UA, UAJ) y las 25 Unidades Regionales que interactúan con herramientas de IA.",
+        "Beneficiarios": "Servidores públicos de AGROIDEAS (que ganan eficiencia) y Organizaciones Agrarias (que reciben resoluciones e informes en menor tiempo)."
+      },
+      "2.4_MomentoFase": {
+        "Pregunta": "¿Cuándo se debe desarrollar?",
+        "Respuesta": "Corresponde a la Fase 1: Inducción e Hito de Entrada (Onboarding / Capacitación en Prompting Operativo). Se aplica diariamente durante el análisis de textos, elaboración de borradores de memorandos y síntesis de casuísticas de campo."
+      }
+    }
+  },
+  "ToqueDelExpertoYAlertasCampo": {
+    "AlertaRojaPeligroAEvitar": "¡Evita prompts vagos de una sola línea como 'resume este documento' o 'analiza este plan'! Las instrucciones genéricas producen respuestas imprecisas; especifica siempre el rol, la tarea exacta y el formato de entrega esperado.",
+    "TipPracticoDelExperto": "¡Usa restricciones negativas y delimitadores de formato! Incluye en tus instrucciones frases como: 'Usa únicamente la información del texto adjunto', 'No agregues contexto externo' y 'Presenta el resultado en una tabla de 3 columnas: Requisito, Estado, Observación'."
+  },
+  "CierreOperativoYAutoevaluacion": {
+    "ReglaDeOroOperativa": "'En AGROIDEAS, la calidad de la respuesta de la Inteligencia Artificial depende 100% de la precisión y estructura de tu prompt a Costo S/. 0.00.'",
+    "PreguntaAutoevaluacion": {
+      "Pregunta": "¿Cuáles son los 5 elementos clave que deben integrar un Prompt Estructurado para garantizar respuestas precisas en la gestión pública?",
+      "Opciones": {
+        "a": "Título, Saludo, Firma, Sello y Anexo.",
+        "b": "Rol asignado, Contexto institucional, Tarea específica, Restricciones de seguridad y Formato de salida deseado.",
+        "c": "Nombre de usuario, Contraseña, Dirección IP, Código de área y Enlace web."
+      },
+      "RespuestaCorrecta": "b",
+      "SustentoPedagogico": "Un prompt estructurado de alta efectividad requiere definir el Rol que asumirá la IA, el Contexto del problema, la Tarea exacta a ejecutar, las Restricciones que limitan la alucinación y el Formato específico de presentación del resultado."
+    }
+  }
+}

@@ -1,0 +1,95 @@
+{
+  "$schema": "./schemas/far-mc-v2.json",
+  "NavegacionYTrazabilidad": {
+    "ModuloNumero": 1,
+    "ModuloNombre": "Módulo 1: Inducción en Modernización de la Gestión Pública",
+    "EjeTematico": "EJE A: Inducción en Modernización de la Gestión Pública",
+    "SubtemaCodigo": "M1.1",
+    "SubtemaTitulo": "Finalidad y Principios de la Ley Marco de Modernización",
+    "PosicionEnModulo": {
+      "ParteActual": 1,
+      "TotalPartesModulo": 3,
+      "EtiquetaSecuencia": "1 de 3",
+      "SubtemaAnteriorCodigo": null,
+      "SubtemaSiguienteCodigo": "M1.2"
+    },
+    "EcosistemaDigital": {
+      "Plataforma": "Portal de Modernización y Repositorio Central AGROIDEAS",
+      "ArchivoVista": "repositorio.html",
+      "NumeralSeccion": "2.5 Micro-Cursos (Fichas de Conocimiento)",
+      "FormatoNombre": "Ficha de Aprendizaje Rápido de Micro-Curso",
+      "FormatoVersion": "FAR-MC V2.0",
+      "OrigenNormativo": "INFORME EJECUTIVO Nº 023-UPP-WVP.docx"
+    }
+  },
+  "MetadatosFicha": {
+    "CodigoReferencia": "FAR-MC-MOD-01-M1.1",
+    "ProcesoVinculado": "Soporte / Estratégico: SAMGP - Modernización de la Gestión Pública",
+    "TiempoLecturaMinutos": 3,
+    "PublicoObjetivo": "Personal de la Sede Central y de las 25 Unidades Regionales, nuevos ingresantes (Onboarding) y colaboradores del sector agrario."
+  },
+  "SintesisEjecutiva": {
+    "ContextoYDolorInstitucional": "Esta ficha aborda la transición obligatoria desde un modelo tradicional centrado en burocracia y trámites hacia una gestión pública orientada a resultados y generación de valor público. Resuelve la falta de alineamiento normativo y el aislamiento de las Unidades Regionales ('islas de conocimiento'), garantizando que cada servidor de AGROIDEAS comprenda los principios rectores que rigen la modernización estatal."
+  },
+  "NucleoSaberYMarcoNormativo": {
+    "PilarLegalFundacional": [
+      {
+        "Norma": "Ley N° 27658",
+        "Nombre": "Ley Marco de Modernización de la Gestión del Estado",
+        "Descripcion": "Establece los principios rectores del proceso de modernización, declarando al Estado en reestructuración permanente para servir mejor al ciudadano con eficiencia, transparencia y neutralidad."
+      },
+      {
+        "Norma": "D.S. N° 030-2002-PCM",
+        "Nombre": "Reglamento de la Ley Marco de Modernización",
+        "Descripcion": "Regula los criterios para la simplificación administrativa, descentralización funcional y optimización en el uso de los recursos públicos."
+      },
+      {
+        "Norma": "D.S. N° 103-2022-PCM",
+        "Nombre": "Política Nacional de Modernización de la Gestión Pública al 2030",
+        "Descripcion": "Define el marco estratégico nacional centrado en las personas y los territorios, exigiendo bienes y servicios públicos de calidad que resuelvan problemas reales."
+      },
+      {
+        "Norma": "R.D.E. N° D000106-2026-MIDAGRI-AGROIDEAS-DE",
+        "Nombre": "Plan de Gestión del Conocimiento 2026-2027",
+        "Descripcion": "Instrumento institucional que operativiza la modernización interna, la retención de talento y la preservación de la memoria técnica de AGROIDEAS."
+      }
+    ],
+    "AplicacionPracticaAgroideas": {
+      "2.1_Objetivo": {
+        "Pregunta": "¿Qué es lo que se está desarrollando?",
+        "Respuesta": "Desarrollar la comprensión e institucionalización de la finalidad y los principios rectores de la Ley N° 27658 y su Reglamento en la gestión diaria de AGROIDEAS, asegurando que las intervenciones de fomento agrario prioricen el valor público, la orientación al ciudadano y la optimización de recursos."
+      },
+      "2.2_Finalidad": {
+        "Pregunta": "¿Para qué se está desarrollando?",
+        "Respuesta": "Erradicar la burocracia documental innecesaria y el aislamiento de las Unidades Regionales, asegurando que las evaluaciones técnicas y administrativas (PM01 y PM02) reduzcan los plazos de atención a las Organizaciones Agrarias (OA), garanticen la predictibilidad y maximicen la transparencia a Costo S/. 0.00."
+      },
+      "2.3_Actores": {
+        "Pregunta": "¿Quién o quiénes desarrollan esta(s) actividad(es)?",
+        "LideresEstrategicos": "Alta Dirección (Dirección Ejecutiva) y la Unidad de Planeamiento y Presupuesto (UPP) a través del Equipo Técnico de Mejora Continua (ETMC), quienes aprueban las políticas e instrumentos de modernización.",
+        "EjecutoresOperativos": "Especialistas y evaluadores de las Unidades de Línea (Promoción - PM01, Gestión de Incentivos - PM02, Seguimiento - USE) en la Sede Central y las 25 Unidades Regionales.",
+        "Beneficiarios": "Organizaciones Agrarias (OA) y pequeños y medianos productores agrarios cofinanciados."
+      },
+      "2.4_MomentoFase": {
+        "Pregunta": "¿Cuándo se debe desarrollar?",
+        "Respuesta": "Corresponde a la Fase 1: Inducción e Hito de Entrada (Onboarding Automatizado / Día 1 al 5) dentro del arco de aprendizaje integral de Modernización. Constituye un marco de cumplimiento permanente que debe aplicarse durante toda la evaluación de expedientes y acompañamiento técnico en el territorio."
+      }
+    }
+  },
+  "ToqueDelExpertoYAlertasCampo": {
+    "AlertaRojaPeligroAEvitar": "¡No confundas modernización con el aumento de requisitos o trámites en papel! Exigir firmas o documentos no contemplados en las directivas frena el cofinanciamiento y vulnera el principio de eficiencia de la Ley N° 27658.",
+    "TipPracticoDelExperto": "¡Aplica el principio de presunción de veracidad y consulta interoperable! Ante dudas sobre predios u organizaciones, utiliza los portales geográficos públicos (SUNARP, MIDAGRI, SERFOR) para validar información en minutos, evitando observaciones que paralicen los expedientes por semanas."
+  },
+  "CierreOperativoYAutoevaluacion": {
+    "ReglaDeOroOperativa": "'En AGROIDEAS, la modernización de la gestión pública consiste en simplificar procedimientos y adaptar la norma para resolver los problemas reales del productor agrario a Costo S/. 0.00.'",
+    "PreguntaAutoevaluacion": {
+      "Pregunta": "¿Cuál es el principio rector primordial de la Ley Marco de Modernización (Ley N° 27658) en el diseño de los servicios y trámites estatales?",
+      "Opciones": {
+        "a": "Aumentar la cantidad de requisitos y firmas físicas para garantizar el control administrativo.",
+        "b": "Obtener mayores niveles de eficiencia del aparato estatal para servir mejor al ciudadano y generar valor público.",
+        "c": "Centralizar la toma de decisiones únicamente en la Sede Central sin participación de las Unidades Regionales."
+      },
+      "RespuestaCorrecta": "b",
+      "SustentoPedagogico": "El artículo 1° de la Ley N° 27658 establece que el proceso de modernización tiene como fin fundamental alcanzar un Estado eficiente, transparente y al servicio de la ciudadanía, orientando la gestión hacia la obtención de resultados que beneficien al administrado."
+    }
+  }
+}

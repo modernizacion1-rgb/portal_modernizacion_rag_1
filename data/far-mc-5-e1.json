@@ -1,0 +1,95 @@
+{
+  "$schema": "./schemas/far-mc-v2.json",
+  "NavegacionYTrazabilidad": {
+    "ModuloNumero": 5,
+    "ModuloNombre": "Módulo 5: Uso de Herramientas de IA en AGROIDEAS",
+    "EjeTematico": "EJE E: Inteligencia Artificial y Eficiencia Pública",
+    "SubtemaCodigo": "E.1",
+    "SubtemaTitulo": "Fundamentos de IA y 'Grounding' Normativo",
+    "PosicionEnModulo": {
+      "ParteActual": 1,
+      "TotalPartesModulo": 3,
+      "EtiquetaSecuencia": "1 de 3",
+      "SubtemaAnteriorCodigo": null,
+      "SubtemaSiguienteCodigo": "E.2"
+    },
+    "EcosistemaDigital": {
+      "Plataforma": "Portal de Modernización y Repositorio Central AGROIDEAS",
+      "ArchivoVista": "repositorio.html",
+      "NumeralSeccion": "2.5 Micro-Cursos (Fichas de Conocimiento)",
+      "FormatoNombre": "Ficha de Aprendizaje Rápido de Micro-Curso",
+      "FormatoVersion": "FAR-MC V2.0",
+      "OrigenNormativo": "INFORME EJECUTIVO Nº 023-UPP-WVP.docx"
+    }
+  },
+  "MetadatosFicha": {
+    "CodigoReferencia": "FAR-MC-MOD-05-SE.1",
+    "ProcesoVinculado": "Soporte / Estratégico: SAMGP - Inteligencia Artificial Aplicada a la Gestión Pública",
+    "TiempoLecturaMinutos": 3,
+    "PublicoObjetivo": "Personal de la Sede Central y de las 25 Unidades Regionales, especialistas en evaluación, legal y enlaces del ETMC."
+  },
+  "SintesisEjecutiva": {
+    "ContextoYDolorInstitucional": "Esta ficha aborda los principios fundamentales de la Inteligencia Artificial (IA) en la administración pública y la técnica crítica de 'Grounding' (anclaje normativo y documental estricto) en AGROIDEAS. Resuelve el riesgo de 'alucinación' o imprecisión en respuestas generadas por modelos de lenguaje, asegurando que cualquier asistencia automatizada se fundamente exclusivamente en la normativa vigente del programa (MOP, directivas de incentivos, NT-PCM) sin inventar requisitos ni distorsionar criterios técnicos."
+  },
+  "NucleoSaberYMarcoNormativo": {
+    "PilarLegalFundacional": [
+      {
+        "Norma": "Ley N° 31814",
+        "Nombre": "Ley que promueve el uso de la Inteligencia Artificial en favor del desarrollo económico y social del país",
+        "Descripcion": "Establece el marco ético y principista para el uso seguro, transparente, responsable y centrado en las personas de las tecnologías de IA en el Perú."
+      },
+      {
+        "Norma": "D.S. N° 103-2022-PCM",
+        "Nombre": "Política Nacional de Modernización de la Gestión Pública al 2030",
+        "Descripcion": "Impulsa la transformación digital y el uso de tecnologías emergentes para incrementar la eficiencia pública y la calidad en la atención al ciudadano."
+      },
+      {
+        "Norma": "R.M. N° 0188-2025-MIDAGRI",
+        "Nombre": "Manual de Operaciones (MOP) de AGROIDEAS",
+        "Descripcion": "Constituye el cuerpo normativo de arquitectura funcional que delimita las competencias y reglas de negocio del programa que deben anclar el uso de IA."
+      },
+      {
+        "Norma": "R.D.E. N° D000106-2026-MIDAGRI-AGROIDEAS-DE",
+        "Nombre": "Plan de Gestión del Conocimiento 2026-2027 de AGROIDEAS",
+        "Descripcion": "Promueve la integración de soluciones analíticas e inteligencia artificial a Costo S/. 0.00 para la retención y consulta del capital intelectual institucional."
+      }
+    ],
+    "AplicacionPracticaAgroideas": {
+      "2.1_Objetivo": {
+        "Pregunta": "¿Qué es lo que se está desarrollando?",
+        "Respuesta": "Comprender los conceptos clave de la Inteligencia Artificial Generativa y la arquitectura RAG (Retrieval-Augmented Generation / Generación Aumentada por Recuperación) para aplicar el 'Grounding' documental estricto en las consultas sobre incentivos agrarios (PM01 y PM02)."
+      },
+      "2.2_Finalidad": {
+        "Pregunta": "¿Para qué se está desarrollando?",
+        "Respuesta": "Asegurar que el uso de asistentes inteligentes en AGROIDEAS entregue respuestas 100% trazables, confiables y respaldadas por dispositivos legales oficiales, acelerando la revisión de expedientes, eliminando observaciones subjetivas y garantizando la seguridad jurídica a Costo S/. 0.00."
+      },
+      "2.3_Actores": {
+        "Pregunta": "¿Quién o quiénes desarrollan esta(s) actividad(es)?",
+        "LideresEstrategicos": "Unidad de Planeamiento y Presupuesto (UPP) y el Equipo Técnico de Mejora Continua (ETMC), encargados de auditar y validar los repositorios y corpus normativos de anclaje.",
+        "EjecutoresOperativos": "Especialistas y evaluadores de las Unidades de Línea (Promoción PM01 UPDC, Negocios PM02 UGIA, Monitoreo USE) y de las 25 Unidades Regionales que consultan herramientas de IA ancladas.",
+        "Beneficiarios": "Organizaciones Agrarias (OA) que reciben atención con criterios homogéneos, predecibles y jurídicamente sólidos a nivel nacional."
+      },
+      "2.4_MomentoFase": {
+        "Pregunta": "¿Cuándo se debe desarrollar?",
+        "Respuesta": "Corresponde a la Fase 1: Inducción e Hito de Entrada (Onboarding / Capacitación en Herramientas Digitales e IA). Es una norma técnica de actuación que rige de forma transversal cada interacción con modelos de lenguaje durante el análisis documental."
+      }
+    }
+  },
+  "ToqueDelExpertoYAlertasCampo": {
+    "AlertaRojaPeligroAEvitar": "¡Jamás confíes en una respuesta de IA que no cite explícitamente la norma o directiva institucional! Usar IA 'abierta' sin anclaje (Grounding) sobre repositorios oficiales de AGROIDEAS puede provocar que el modelo invente requisitos o plazos inexistentes.",
+    "TipPracticoDelExperto": "¡Aplica la regla de oro del anclaje: 'Si no está en el documento, no existe'! Configura o exige siempre al sistema de IA que restrinja su alcance únicamente al texto de los PDF/Word subidos en el repositorio institucional, instruyéndole decir 'No encontrado en las fuentes' en lugar de adivinar."
+  },
+  "CierreOperativoYAutoevaluacion": {
+    "ReglaDeOroOperativa": "'En AGROIDEAS, la Inteligencia Artificial solo genera valor público cuando sus respuestas están 100% ancladas en la normativa oficial del Programa a Costo S/. 0.00.'",
+    "PreguntaAutoevaluacion": {
+      "Pregunta": "¿En qué consiste la técnica de 'Grounding' (Anclaje Normativo) al utilizar herramientas de Inteligencia Artificial en la gestión pública?",
+      "Opciones": {
+        "a": "En permitir que la IA invente soluciones creativas sin restricciones legales.",
+        "b": "En restringir y respaldar las respuestas del modelo de IA exclusivamente en fuentes documentales y normativas oficiales verificables.",
+        "c": "En apagar las computadoras durante la revisión de expedientes."
+      },
+      "RespuestaCorrecta": "b",
+      "SustentoPedagogico": "El 'Grounding' o anclaje documental es el proceso mediante el cual se condiciona a la Inteligencia Artificial a extraer y fundamentar sus respuestas únicamente de un cuerpo de conocimiento específico y verificado (como las directivas de AGROIDEAS), evitando la generación de información falsa o alucinada."
+    }
+  }
+}

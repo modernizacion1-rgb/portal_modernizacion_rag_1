@@ -1,0 +1,95 @@
+{
+  "$schema": "./schemas/far-mc-v2.json",
+  "NavegacionYTrazabilidad": {
+    "ModuloNumero": 3,
+    "ModuloNombre": "Módulo 3: Implementación de Gestión del Conocimiento",
+    "EjeTematico": "EJE C: Implementación de Gestión del Conocimiento",
+    "SubtemaCodigo": "B.3",
+    "SubtemaTitulo": "Protección de la Memoria: El Offboarding",
+    "PosicionEnModulo": {
+      "ParteActual": 3,
+      "TotalPartesModulo": 3,
+      "EtiquetaSecuencia": "3 de 3",
+      "SubtemaAnteriorCodigo": "B.2",
+      "SubtemaSiguienteCodigo": null
+    },
+    "EcosistemaDigital": {
+      "Plataforma": "Portal de Modernización y Repositorio Central AGROIDEAS",
+      "ArchivoVista": "repositorio.html",
+      "NumeralSeccion": "2.5 Micro-Cursos (Fichas de Conocimiento)",
+      "FormatoNombre": "Ficha de Aprendizaje Rápido de Micro-Curso",
+      "FormatoVersion": "FAR-MC V2.0",
+      "OrigenNormativo": "INFORME EJECUTIVO Nº 023-UPP-WVP.docx"
+    }
+  },
+  "MetadatosFicha": {
+    "CodigoReferencia": "FAR-MC-MOD-03-SB.3",
+    "ProcesoVinculado": "Soporte / Estratégico: SAMGP - Transferencia de Conocimiento y Offboarding (DI N° 001-2026-MIDAGRI-AGROIDEAS-UA)",
+    "TiempoLecturaMinutos": 3,
+    "PublicoObjetivo": "Personal de la Sede Central y de las 25 Unidades Regionales, personal en proceso de cese o rotación, Recursos Humanos y el ETMC."
+  },
+  "SintesisEjecutiva": {
+    "ContextoYDolorInstitucional": "Esta ficha aborda el protocolo obligatorio de transferencia de conocimiento durante la desvinculación o rotación de personal (Offboarding) en AGROIDEAS, mediante el Anexo 01 ('Acta de Entrega de Conocimiento y Lecciones Aprendidas'). Resuelve el problema crítico de la pérdida de capital intelectual ('fuga de talento') generada por la alta rotación (Factor 6), asegurando que la memoria técnica, la red de contactos y el know-how operativo se traspasen de forma ágil y estructurada antes de la salida del servidor."
+  },
+  "NucleoSaberYMarcoNormativo": {
+    "PilarLegalFundacional": [
+      {
+        "Norma": "Directiva DI N° 001-2026-MIDAGRI-AGROIDEAS-UA",
+        "Nombre": "Directiva de Disposiciones para la Transferencia de Conocimiento Organizacional ante Rotación y Desvinculación",
+        "Descripcion": "Establece la obligatoriedad, plazos y procedimiento formal del uso del Anexo 01 como requisito indispensable para la conformidad de liquidación de salida."
+      },
+      {
+        "Norma": "Anexo 01 - DI N° 001-2026-MIDAGRI-AGROIDEAS-UA",
+        "Nombre": "Acta de Entrega de Conocimiento y Lecciones Aprendidas",
+        "Descripcion": "Formato estandarizado que captura el estado situacional de expedientes críticos, conocimiento tácito de casuística frecuente, directivas de uso diario y red de coordinación clave."
+      },
+      {
+        "Norma": "R.S.G.P. N° 001-2025-PCM/SGP",
+        "Nombre": "Norma Técnica para la Gestión del Conocimiento en las Entidades Públicas",
+        "Descripcion": "Norma marco sectorial que regula la retención del conocimiento ante el cese o desplazamiento de servidores civiles."
+      },
+      {
+        "Norma": "R.D.E. N° D000106-2026-MIDAGRI-AGROIDEAS-DE",
+        "Nombre": "Plan de Gestión del Conocimiento 2026-2027 de AGROIDEAS",
+        "Descripcion": "Institucionaliza la actividad estratégica GC-A07 para la transferencia obligatoria de conocimiento en la Sede Central y las 25 Unidades Regionales."
+      }
+    ],
+    "AplicacionPracticaAgroideas": {
+      "2.1_Objetivo": {
+        "Pregunta": "¿Qué es lo que se está desarrollando?",
+        "Respuesta": "Institucionalizar la ejecución del protocolo de Offboarding mediante el llenado, validación y carga del Anexo 01 (Acta de Entrega de Conocimiento), asegurando que ningún servidor se desvincule o rote de puesto sin haber transferido de manera documentada sus activos cognitivos, expedientes en curso y recomendaciones operativas."
+      },
+      "2.2_Finalidad": {
+        "Pregunta": "¿Para qué se está desarrollando?",
+        "Respuesta": "Proteger la memoria institucional de AGROIDEAS, evitar la paralización de expedientes de cofinanciamiento (PM01 y PM02), reducir a cero el tiempo de vacancia cognitiva y alimentar de forma automática el módulo de Onboarding para los nuevos ingresantes a Costo S/. 0.00."
+      },
+      "2.3_Actores": {
+        "Pregunta": "¿Quién o quiénes desarrollan esta(s) actividad(es)?",
+        "LideresEstrategicos": "Unidad de Administración (Recursos Humanos) que notifica la desvinculación, y la UPP/ETMC que califica e indexa los activos en el Repositorio Central.",
+        "EjecutoresOperativos": "El Servidor Saliente (que completa el Anexo 01 en máximo 2 días de notificado) y el Jefe Inmediato Superior (que valida la consistencia técnica en 2 días).",
+        "Beneficiarios": "El Servidor Ingresante (que recibe el acta en su Día 1) y la organización (que garantiza la continuidad del servicio al productor agrario)."
+      },
+      "2.4_MomentoFase": {
+        "Pregunta": "¿Cuándo se debe desarrollar?",
+        "Respuesta": "Corresponde a la Fase 1: Inducción e Hito de Entrada (Onboarding / Conocimiento Normativo del Proceso de Salida). Se activa de forma imperativa e ineludible cada vez que se notifica un cese, renuncia, no renovación de contrato, rotación interna o licencia prolongada (>= 30 días)."
+      }
+    }
+  },
+  "ToqueDelExpertoYAlertasCampo": {
+    "AlertaRojaPeligroAEvitar": "¡No consideres el Acta de Entrega como un trámite formalista de último minuto! Omitir el detalle del conocimiento tácito (trucos del oficio, alertas de riesgo normativo o contactos clave de campo) condena al nuevo servidor a repetir errores y paralizar trámites por semanas.",
+    "TipPracticoDelExperto": "¡Completa el Anexo 01 de forma progresiva durante tu gestión! Mantén actualizado tu borrador de proyectos en curso y casuísticas frecuentes; así, al momento de rotar o cesar, la transferencia tomará solo minutos y dejará un legado impecable en la entidad."
+  },
+  "CierreOperativoYAutoevaluacion": {
+    "ReglaDeOroOperativa": "'En AGROIDEAS, la desvinculación formal culmina únicamente cuando el conocimiento del servidor saliente queda protegido e indexado para las futuras generaciones.'",
+    "PreguntaAutoevaluacion": {
+      "Pregunta": "¿Cuál es el documento normativo estandarizado de uso obligatorio en AGROIDEAS para la transferencia de conocimiento en el proceso de Offboarding?",
+      "Opciones": {
+        "a": "El Anexo 01 (Acta de Entrega de Conocimiento y Lecciones Aprendidas) de la Directiva DI N° 001-2026-MIDAGRI-AGROIDEAS-UA.",
+        "b": "El comprobante de pago de liquidación emitido por Tesorería.",
+        "c": "El Curriculum Vitae descriptivo del nuevo ingresante."
+      },
+      "RespuestaCorrecta": "a",
+      "SustentoPedagogico": "La Directiva DI N° 001-2026-MIDAGRI-AGROIDEAS-UA aprueba el Anexo 01 como el instrumento obligatorio mediante el cual todo servidor transferirá su conocimiento explícito e implícito antes de hacer efectiva su desvinculación o desplazamiento."
+    }
+  }
+}

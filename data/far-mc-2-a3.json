@@ -1,0 +1,95 @@
+{
+  "$schema": "./schemas/far-mc-v2.json",
+  "NavegacionYTrazabilidad": {
+    "ModuloNumero": 2,
+    "ModuloNombre": "Módulo 2: Implementación de Gestión por Procesos",
+    "EjeTematico": "EJE B: Implementación de Gestión por Procesos",
+    "SubtemaCodigo": "A.3",
+    "SubtemaTitulo": "Metodología para el Llenado de la Ficha de Producto y Proceso (FPP)",
+    "PosicionEnModulo": {
+      "ParteActual": 3,
+      "TotalPartesModulo": 3,
+      "EtiquetaSecuencia": "3 de 3",
+      "SubtemaAnteriorCodigo": "A.2",
+      "SubtemaSiguienteCodigo": null
+    },
+    "EcosistemaDigital": {
+      "Plataforma": "Portal de Modernización y Repositorio Central AGROIDEAS",
+      "ArchivoVista": "repositorio.html",
+      "NumeralSeccion": "2.5 Micro-Cursos (Fichas de Conocimiento)",
+      "FormatoNombre": "Ficha de Aprendizaje Rápido de Micro-Curso",
+      "FormatoVersion": "FAR-MC V2.0",
+      "OrigenNormativo": "INFORME EJECUTIVO Nº 023-UPP-WVP.docx"
+    }
+  },
+  "MetadatosFicha": {
+    "CodigoReferencia": "FAR-MC-MOD-02-SA.3",
+    "ProcesoVinculado": "Soporte / Estratégico: SAMGP - Caracterización de Procesos (NT N° 002-2025-PCM/SGP - Anexo 7)",
+    "TiempoLecturaMinutos": 3,
+    "PublicoObjetivo": "Personal de la Sede Central y de las 25 Unidades Regionales, dueños de proceso, evaluadores de expedientes y enlaces del ETMC."
+  },
+  "SintesisEjecutiva": {
+    "ContextoYDolorInstitucional": "Esta ficha aborda la metodología técnica para el correcto llenado y estandarización de la Ficha de Producto y Proceso (FPP) en AGROIDEAS, conforme al Anexo 7 de la Norma Técnica N° 002-2025-PCM/SGP. Resuelve la imprecisión en la delimitación de insumos, proveedores, actividades ordenadas, salidas, destinatarios e indicadores de desempeño, asegurando que cada proceso de la entidad cuente con su documento descriptivo estandarizado."
+  },
+  "NucleoSaberYMarcoNormativo": {
+    "PilarLegalFundacional": [
+      {
+        "Norma": "R.S.G.P. N° 002-2025-PCM/SGP (Anexo 7)",
+        "Nombre": "Norma Técnica para la Gestión por Procesos - Modelo Estandarizado de Ficha de Producto y Proceso (FPP)",
+        "Descripcion": "Establece la estructura técnica obligatoria para caracterizar cada proceso: datos generales, elementos de la cadena de valor (SIPOC), actividades secuenciales, controles e indicadores de rendimiento."
+      },
+      {
+        "Norma": "R.M. N° 0188-2025-MIDAGRI",
+        "Nombre": "Manual de Operaciones (MOP) de AGROIDEAS",
+        "Descripcion": "Asigna a la UPP la responsabilidad de orientar metodológicamente el levantamiento, caracterización y aprobación de las Fichas de Producto y Proceso."
+      },
+      {
+        "Norma": "R.D.E. N° D000137-2026-MIDAGRI-AGROIDEAS-DE",
+        "Nombre": "Consolidación del Equipo Técnico de Mejora Continua (ETMC)",
+        "Descripcion": "Encarga al ETMC la revisión, validación técnica y aprobación de las FPP elaboradas por los dueños de proceso."
+      },
+      {
+        "Norma": "D.S. N° 123-2018-PCM",
+        "Nombre": "Reglamento del Sistema Administrativo de Modernización de la Gestión Pública",
+        "Descripcion": "Establece la obligatoriedad de la caracterización de procesos como requisito técnico para la simplificación administrativa y la mejora de la calidad."
+      }
+    ],
+    "AplicacionPracticaAgroideas": {
+      "2.1_Objetivo": {
+        "Pregunta": "¿Qué es lo que se está desarrollando?",
+        "Respuesta": "Capacitar en la metodología estandarizada para el llenado y actualización de la Ficha de Producto y Proceso (FPP - Anexo 7), definiendo con exactitud las entradas, proveedores, secuencia lógica de actividades, salidas, destinatarios, controles de calidad e indicadores de eficacia del proceso."
+      },
+      "2.2_Finalidad": {
+        "Pregunta": "¿Para qué se está desarrollando?",
+        "Respuesta": "Garantizar la estandarización operativa entre Lima y las 25 Unidades Regionales, asegurando que cualquier servidor pueda ejecutar el procedimiento con los mismos criterios de calidad, eliminar la discrecionalidad y facilitar la automatización digital de expedientes a Costo S/. 0.00."
+      },
+      "2.3_Actores": {
+        "Pregunta": "¿Quién o quiénes desarrollan esta(s) actividad(es)?",
+        "LideresEstrategicos": "Unidad de Planeamiento y Presupuesto (UPP) y el Equipo Técnico de Mejora Continua (ETMC), quienes brindan asistencia técnica, revisan y validan las FPP.",
+        "EjecutoresOperativos": "Dueños de Proceso y Especialistas de las Unidades de Línea (Promoción PM01 UPDC, Negocios PM02 UGIA, Monitoreo USE) y de Soporte (UA, UAJ) encargados del llenado práctico de la FPP de su competencia.",
+        "Beneficiarios": "Servidores de AGROIDEAS (que cuentan con claridad operativa) y Organizaciones Agrarias (que reciben servicios predecibles)."
+      },
+      "2.4_MomentoFase": {
+        "Pregunta": "¿Cuándo se debe desarrollar?",
+        "Respuesta": "Corresponde a la Fase 1: Inducción e Hito de Entrada (Onboarding / Capacitación en Caracterización de Procesos). Se activa siempre que se diseñe un nuevo proceso, se modifique una directiva o se identifique una oportunidad de mejora en los flujos de trabajo."
+      }
+    }
+  },
+  "ToqueDelExpertoYAlertasCampo": {
+    "AlertaRojaPeligroAEvitar": "¡No llenes la Ficha FPP desde el escritorio sin consultar al personal que ejecuta la tarea en campo! Una caracterización teórica desconectada de la realidad operativa en las Unidades Regionales genera cuellos de botella e ineficiencias.",
+    "TipPracticoDelExperto": "¡Aplica la lógica SIPAC/SIPOC secuencial! Al llenar el Anexo 7, empieza definiendo claramente la Salida (Producto) y el Destinatario (Usuario/OA); luego retrocede hacia las Actividades, Entradas y Proveedores para asegurar la coherencia lógica del flujo."
+  },
+  "CierreOperativoYAutoevaluacion": {
+    "ReglaDeOroOperativa": "'En AGROIDEAS, la Ficha FPP es el DNI del proceso: si está bien caracterizado, su ejecución es fluida, predecible y transparente en todo el territorio nacional.'",
+    "PreguntaAutoevaluacion": {
+      "Pregunta": "¿Cuál es el anexo de la Norma Técnica N° 002-2025-PCM/SGP que contiene el formato estandarizado para la caracterización de los procesos en las entidades públicas?",
+      "Opciones": {
+        "a": "El Anexo 1 sobre el Formulario de Innovación.",
+        "b": "El Anexo 7, denominado Ficha de Producto y Proceso (FPP).",
+        "c": "El Anexo 6 referente al Registro de Lecciones Aprendidas."
+      },
+      "RespuestaCorrecta": "b",
+      "SustentoPedagogico": "El Anexo 7 de la NT N° 002-2025-PCM/SGP constituye la Ficha de Producto y Proceso (FPP), documento estandarizado mediante el cual las entidades caracterizan y detallan los componentes, secuencia de actividades e indicadores de cada proceso."
+    }
+  }
+}

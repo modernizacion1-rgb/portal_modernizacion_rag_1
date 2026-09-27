@@ -1,0 +1,95 @@
+{
+  "$schema": "./schemas/far-mc-v2.json",
+  "NavegacionYTrazabilidad": {
+    "ModuloNumero": 4,
+    "ModuloNombre": "Módulo 4: Implementación de Gestión de Innovación",
+    "EjeTematico": "EJE D: Implementación de Gestión de Innovación",
+    "SubtemaCodigo": "C.1",
+    "SubtemaTitulo": "Formulación de la Ficha FIIP (Formulario de Idea Innovadora Pública)",
+    "PosicionEnModulo": {
+      "ParteActual": 1,
+      "TotalPartesModulo": 3,
+      "EtiquetaSecuencia": "1 de 3",
+      "SubtemaAnteriorCodigo": null,
+      "SubtemaSiguienteCodigo": "C.2"
+    },
+    "EcosistemaDigital": {
+      "Plataforma": "Portal de Modernización y Repositorio Central AGROIDEAS",
+      "ArchivoVista": "repositorio.html",
+      "NumeralSeccion": "2.5 Micro-Cursos (Fichas de Conocimiento)",
+      "FormatoNombre": "Ficha de Aprendizaje Rápido de Micro-Curso",
+      "FormatoVersion": "FAR-MC V2.0",
+      "OrigenNormativo": "INFORME EJECUTIVO Nº 023-UPP-WVP.docx"
+    }
+  },
+  "MetadatosFicha": {
+    "CodigoReferencia": "FAR-MC-MOD-04-SC.1",
+    "ProcesoVinculado": "Soporte / Estratégico: SAMGP - Gestión de la Innovación (NT N° 003-2025-PCM/SGP - Anexo 1)",
+    "TiempoLecturaMinutos": 3,
+    "PublicoObjetivo": "Personal de la Sede Central y de las 25 Unidades Regionales, innovadores públicos, evaluadores y enlaces del ETMC."
+  },
+  "SintesisEjecutiva": {
+    "ContextoYDolorInstitucional": "Esta ficha aborda la metodología para la identificación y formulación de la Ficha FIIP (Formulario de Idea Innovadora Pública) en AGROIDEAS, conforme al Anexo 1 de la Norma Técnica N° 003-2025-PCM/SGP. Resuelve la falta de canales formales y metodológicos para canalizar la creatividad de los servidores en el campo, estructurando problemas públicos específicos y propuestas de solución creativas de alto impacto a costo cero."
+  },
+  "NucleoSaberYMarcoNormativo": {
+    "PilarLegalFundacional": [
+      {
+        "Norma": "R.S.G.P. N° 003-2025-PCM/SGP (Anexo 1)",
+        "Nombre": "Norma Técnica para la Gestión de la Innovación en las Entidades Públicas - Ficha FIIP",
+        "Descripcion": "Establece los criterios y el formato estandarizado (Anexo 1) para la postulación, caracterización, evaluación y selección de propuestas de innovación pública en las entidades del Estado."
+      },
+      {
+        "Norma": "D.S. N° 123-2018-PCM",
+        "Nombre": "Reglamento del Sistema Administrativo de Modernización de la Gestión Pública",
+        "Descripcion": "Consagra la Innovación Pública como pilar para la transformación estatal, promoviendo la experimentación y la generación de valor público."
+      },
+      {
+        "Norma": "R.M. N° 0188-2025-MIDAGRI",
+        "Nombre": "Manual de Operaciones (MOP) de AGROIDEAS",
+        "Descripcion": "Asigna a la UPP la conducción de los mecanismos de modernización e innovación institucional en articulación con las unidades operativas y regionales."
+      },
+      {
+        "Norma": "R.D.E. N° D000137-2026-MIDAGRI-AGROIDEAS-DE",
+        "Nombre": "Consolidación del Equipo Técnico de Mejora Continua (ETMC)",
+        "Descripcion": "Otorga al ETMC la competencia técnica para evaluar, priorizar y dar viabilidad a las Fichas FIIP presentadas por los servidores civiles."
+      }
+    ],
+    "AplicacionPracticaAgroideas": {
+      "2.1_Objetivo": {
+        "Pregunta": "¿Qué es lo que se está desarrollando?",
+        "Respuesta": "Estandarizar la técnica de formulación de la Ficha FIIP (Anexo 1), definiendo con claridad el problema público focalizado en la atención al productor agrario, los usuarios afectados, la idea innovadora propuesta, el grado de novedad (incremental o radical) y la factibilidad de ejecución a Costo S/. 0.00."
+      },
+      "2.2_Finalidad": {
+        "Pregunta": "¿Para qué se está desarrollando?",
+        "Respuesta": "Transformar la creatividad dispersa de los servidores de Sede Central y Unidades Regionales en proyectos de innovación viables, orientados a simplificar los procesos PM01 y PM02, reducir cuellos de botella y maximizar el valor público entregado a las Organizaciones Agrarias."
+      },
+      "2.3_Actores": {
+        "Pregunta": "¿Quién o quiénes desarrollan esta(s) actividad(es)?",
+        "LideresEstrategicos": "Unidad de Planeamiento y Presupuesto (UPP) y el Equipo Técnico de Mejora Continua (ETMC), encargados de calificar y priorizar los formularios FIIP.",
+        "EjecutoresOperativos": "Cualquier servidor civil o equipo multidisciplinario de la Sede Central y de las 25 Unidades Regionales que postule una solución innovadora.",
+        "Beneficiarios": "Organizaciones Agrarias (OA) y productores beneficiados con procedimientos más ágiles, sencillos e innovadores."
+      },
+      "2.4_MomentoFase": {
+        "Pregunta": "¿Cuándo se debe desarrollar?",
+        "Respuesta": "Corresponde a la Fase 1: Inducción e Hito de Entrada (Onboarding / Capacitación Básica en Innovación Pública). Se activa en cualquier momento en que un servidor o equipo identifique un problema recurrente y conciba una solución novedosa aplicable a su proceso."
+      }
+    }
+  },
+  "ToqueDelExpertoYAlertasCampo": {
+    "AlertaRojaPeligroAEvitar": "¡No confundas una idea innovadora con la compra de tecnología costosa! La verdadera innovación pública en AGROIDEAS radica en rediseñar la forma de hacer las cosas a Costo S/. 0.00, aprovechando recursos existentes de forma creativa y simplificada.",
+    "TipPracticoDelExperto": "¡Focaliza bien el problema antes de proponer la solución! En la Ficha FIIP, dedica el 80% del análisis a caracterizar con evidencias reales el dolor o cuello de botella del usuario; un problema bien definido hace que la solución innovadora sea evidente y fácil de evaluar por el ETMC."
+  },
+  "CierreOperativoYAutoevaluacion": {
+    "ReglaDeOroOperativa": "'En AGROIDEAS, la Ficha FIIP es el puente que convierte las buenas ideas de campo en proyectos de innovación pública instituidos a Costo S/. 0.00.'",
+    "PreguntaAutoevaluacion": {
+      "Pregunta": "¿Cuál es el anexo de la Norma Técnica N° 003-2025-PCM/SGP que contiene el Formulario de Idea Innovadora Pública (FIIP)?",
+      "Opciones": {
+        "a": "El Anexo 1, denominado Ficha FIIP (Formulario de Idea Innovadora Pública).",
+        "b": "El Anexo 7 sobre Ficha de Producto y Proceso.",
+        "c": "El Anexo 01 de Transferencia de Conocimiento."
+      },
+      "RespuestaCorrecta": "a",
+      "SustentoPedagogico": "El Anexo 1 de la NT N° 003-2025-PCM/SGP es el instrumento oficial para registrar y postular ideas innovadoras públicas en las entidades del Estado."
+    }
+  }
+}

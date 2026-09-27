@@ -1,0 +1,95 @@
+{
+  "$schema": "./schemas/far-mc-v2.json",
+  "NavegacionYTrazabilidad": {
+    "ModuloNumero": 3,
+    "ModuloNombre": "Módulo 3: Implementación de Gestión del Conocimiento",
+    "EjeTematico": "EJE C: Implementación de Gestión del Conocimiento",
+    "SubtemaCodigo": "B.1",
+    "SubtemaTitulo": "Introducción a la GC y la Técnica 5W+2H",
+    "PosicionEnModulo": {
+      "ParteActual": 1,
+      "TotalPartesModulo": 3,
+      "EtiquetaSecuencia": "1 de 3",
+      "SubtemaAnteriorCodigo": null,
+      "SubtemaSiguienteCodigo": "B.2"
+    },
+    "EcosistemaDigital": {
+      "Plataforma": "Portal de Modernización y Repositorio Central AGROIDEAS",
+      "ArchivoVista": "repositorio.html",
+      "NumeralSeccion": "2.5 Micro-Cursos (Fichas de Conocimiento)",
+      "FormatoNombre": "Ficha de Aprendizaje Rápido de Micro-Curso",
+      "FormatoVersion": "FAR-MC V2.0",
+      "OrigenNormativo": "INFORME EJECUTIVO Nº 023-UPP-WVP.docx"
+    }
+  },
+  "MetadatosFicha": {
+    "CodigoReferencia": "FAR-MC-MOD-03-SB.1",
+    "ProcesoVinculado": "Soporte / Estratégico: SAMGP - Gestión del Conocimiento (NT N° 001-2025-PCM/SGP)",
+    "TiempoLecturaMinutos": 3,
+    "PublicoObjetivo": "Personal de la Sede Central y de las 25 Unidades Regionales, gestores del conocimiento y enlaces del ETMC."
+  },
+  "SintesisEjecutiva": {
+    "ContextoYDolorInstitucional": "Esta ficha aborda los fundamentos de la Gestión del Conocimiento (GC) en AGROIDEAS conforme a la Norma Técnica N° 001-2025-PCM/SGP y la aplicación práctica de la técnica 5W+2H (Who, What, Where, When, Why, How, How much). Resuelve la pérdida del saber hacer de campo ('Know-How') por la alta rotación de personal (Factor 6) y la falta de sistematización (Factor 3), permitiendo estructurar el conocimiento tácito en activos de aprendizaje reutilizables."
+  },
+  "NucleoSaberYMarcoNormativo": {
+    "PilarLegalFundacional": [
+      {
+        "Norma": "R.S.G.P. N° 001-2025-PCM/SGP",
+        "Nombre": "Norma Técnica para la Gestión del Conocimiento en las Entidades Públicas",
+        "Descripcion": "Establece las disposiciones técnicas y las 5 etapas del ciclo vital del conocimiento: Producción, Calificación, Almacenamiento y Actualización, Difusión y Medición."
+      },
+      {
+        "Norma": "R.D.E. N° D000106-2026-MIDAGRI-AGROIDEAS-DE",
+        "Nombre": "Plan de Gestión del Conocimiento 2026-2027 de AGROIDEAS",
+        "Descripcion": "Aprueba las actividades estratégicas de gestión del conocimiento en la entidad para resguardar el capital intelectual y fortalecer las capacidades de las 25 Unidades Regionales."
+      },
+      {
+        "Norma": "R.M. N° 0188-2025-MIDAGRI",
+        "Nombre": "Manual de Operaciones (MOP) de AGROIDEAS",
+        "Descripcion": "Asigna a la UPP la conducción técnica de la gestión del conocimiento y la articulación de la mejora continua institucional."
+      },
+      {
+        "Norma": "R.D.E. N° D000137-2026-MIDAGRI-AGROIDEAS-DE",
+        "Nombre": "Consolidación del Equipo Técnico de Mejora Continua (ETMC)",
+        "Descripcion": "Encarga al ETMC la calificación, aprobación e indexación oficial de los activos de conocimiento capturados en la entidad."
+      }
+    ],
+    "AplicacionPracticaAgroideas": {
+      "2.1_Objetivo": {
+        "Pregunta": "¿Qué es lo que se está desarrollando?",
+        "Respuesta": "Comprender el Ciclo Vital del Conocimiento y dominar la técnica de interrogación estructurada 5W+2H (Quién, Qué, Dónde, Cuándo, Por qué, Cómo, Cuánto) para registrar, codificar y estandarizar la experiencia y los procedimientos de los especialistas en el territorio."
+      },
+      "2.2_Finalidad": {
+        "Pregunta": "¿Para qué se está desarrollando?",
+        "Respuesta": "Evitar la 'fuga de talento', acelerar el proceso de inducción de nuevos ingresantes (Onboarding), asegurar que las soluciones de campo exitosas se repliquen a escala nacional y reducir errores recurrentes en los procesos PM01 y PM02 a Costo S/. 0.00."
+      },
+      "2.3_Actores": {
+        "Pregunta": "¿Quién o quiénes desarrollan esta(s) actividad(es)?",
+        "LideresEstrategicos": "Unidad de Planeamiento y Presupuesto (UPP) y el Equipo Técnico de Mejora Continua (ETMC) como validadores y custodiadores del repositorio central.",
+        "EjecutoresOperativos": "Poseedores del conocimiento (Especialistas de la Sede Central y de las 25 Unidades Regionales) que capturan sus aprendizajes mediante la técnica 5W+2H en formularios digitales.",
+        "Beneficiarios": "Nuevos servidores (que reducen su curva de aprendizaje) y la organización en su conjunto (que preserva su memoria técnica)."
+      },
+      "2.4_MomentoFase": {
+        "Pregunta": "¿Cuándo se debe desarrollar?",
+        "Respuesta": "Corresponde a la Fase 1: Inducción e Hito de Entrada (Onboarding / Capacitación Básica en Gestión del Conocimiento). Se activa de manera continua cada vez que se identifique una solución a un problema operativo, una lección aprendida o una buena práctica de campo."
+      }
+    }
+  },
+  "ToqueDelExpertoYAlertasCampo": {
+    "AlertaRojaPeligroAEvitar": "¡No dejes que el conocimiento crítico se quede solo en la cabeza del especialista! Si una solución técnica exitosa no se documenta bajo el esquema 5W+2H, se perderá indefectiblemente cuando el servidor rotate o se desvincule de la entidad.",
+    "TipPracticoDelExperto": "¡Al usar 5W+2H, enfatiza el 'CÓMO' (How) y las 'ALERTAS DE CAMPO'! El valor real del conocimiento tácito radica en detallar los pasos exactos sin omitir detalles prácticos ni los imprevistos no contemplados en el papel."
+  },
+  "CierreOperativoYAutoevaluacion": {
+    "ReglaDeOroOperativa": "'En AGROIDEAS, el conocimiento individual solo genera valor público cuando se sintetiza con la técnica 5W+2H y se comparte con todo el equipo nacional.'",
+    "PreguntaAutoevaluacion": {
+      "Pregunta": "¿Qué significan las siglas de la herramienta 5W+2H utilizada para la captura del conocimiento tácito en la Norma Técnica N° 001-2025-PCM/SGP?",
+      "Opciones": {
+        "a": "5 Palabras Clave y 2 Hipótesis de Trabajo.",
+        "b": "Who (Quién), What (Qué), Where (Dónde), When (Cuándo), Why (Por qué), How (Cómo) y How much (Cuánto/Costo).",
+        "c": "5 Módulos Web y 2 Herramientas de Inteligencia Artificial."
+      },
+      "RespuestaCorrecta": "b",
+      "SustentoPedagogico": "La técnica 5W+2H proviene de la metodología de calidad y responde a 7 preguntas clave (5 con W y 2 con H) que permiten caracterizar exhaustivamente cualquier hecho, proceso o lección aprendida de forma completa y ordenada."
+    }
+  }
+}

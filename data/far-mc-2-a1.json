@@ -1,0 +1,95 @@
+{
+  "$schema": "./schemas/far-mc-v2.json",
+  "NavegacionYTrazabilidad": {
+    "ModuloNumero": 2,
+    "ModuloNombre": "Módulo 2: Implementación de Gestión por Procesos",
+    "EjeTematico": "EJE B: Implementación de Gestión por Procesos",
+    "SubtemaCodigo": "A.1",
+    "SubtemaTitulo": "Conceptos Fundamentales y el Ciclo de la Gestión por Procesos",
+    "PosicionEnModulo": {
+      "ParteActual": 1,
+      "TotalPartesModulo": 3,
+      "EtiquetaSecuencia": "1 de 3",
+      "SubtemaAnteriorCodigo": null,
+      "SubtemaSiguienteCodigo": "A.2"
+    },
+    "EcosistemaDigital": {
+      "Plataforma": "Portal de Modernización y Repositorio Central AGROIDEAS",
+      "ArchivoVista": "repositorio.html",
+      "NumeralSeccion": "2.5 Micro-Cursos (Fichas de Conocimiento)",
+      "FormatoNombre": "Ficha de Aprendizaje Rápido de Micro-Curso",
+      "FormatoVersion": "FAR-MC V2.0",
+      "OrigenNormativo": "INFORME EJECUTIVO Nº 023-UPP-WVP.docx"
+    }
+  },
+  "MetadatosFicha": {
+    "CodigoReferencia": "FAR-MC-MOD-02-SA.1",
+    "ProcesoVinculado": "Soporte / Estratégico: SAMGP - Gestión por Procesos (NT N° 002-2025-PCM/SGP)",
+    "TiempoLecturaMinutos": 3,
+    "PublicoObjetivo": "Personal de la Sede Central y de las 25 Unidades Regionales, evaluadores de procesos y enlaces del ETMC."
+  },
+  "SintesisEjecutiva": {
+    "ContextoYDolorInstitucional": "Esta ficha aborda la adopción de la Gestión por Procesos en AGROIDEAS conforme a la Norma Técnica N° 002-2025-PCM/SGP. Resuelve el dolor institucional de la fragmentación operativa ('islas informáticas/funcionales'), permitiendo sustituir la visión estanca de áreas por un flujo transversal centrado en la creación de valor público para el productor agrario."
+  },
+  "NucleoSaberYMarcoNormativo": {
+    "PilarLegalFundacional": [
+      {
+        "Norma": "R.S.G.P. N° 002-2025-PCM/SGP",
+        "Nombre": "Norma Técnica para la Gestión por Procesos en las Entidades Públicas",
+        "Descripcion": "Establece las disposiciones técnicas obligatorias para la determinación, caracterización, simplificación, evaluación y mejora continua de los procesos en el sector público."
+      },
+      {
+        "Norma": "D.S. N° 123-2018-PCM",
+        "Nombre": "Reglamento del Sistema Administrativo de Modernización de la Gestión Pública",
+        "Descripcion": "Consagra la Gestión por Procesos como uno de los medios fundamentales para lograr la eficiencia, la simplificación y la calidad en los servicios del Estado."
+      },
+      {
+        "Norma": "R.M. N° 0188-2025-MIDAGRI",
+        "Nombre": "Manual de Operaciones (MOP) de AGROIDEAS",
+        "Descripcion": "Define la estructura funcional del Programa y asigna a la UPP la conducción técnica de la gestión por procesos y la optimización de la cadena de valor."
+      },
+      {
+        "Norma": "R.D.E. N° D000137-2026-MIDAGRI-AGROIDEAS-DE",
+        "Nombre": "Consolidación del Equipo Técnico de Mejora Continua (ETMC)",
+        "Descripcion": "Formaliza el rol del ETMC en la revisión, validación y formalización de la arquitectura de procesos y fichas de caracterización de AGROIDEAS."
+      }
+    ],
+    "AplicacionPracticaAgroideas": {
+      "2.1_Objetivo": {
+        "Pregunta": "¿Qué es lo que se está desarrollando?",
+        "Respuesta": "Comprender los conceptos fundamentales de la Gestión por Procesos (elementos de la cadena de valor, ciclo PHVA: Planificar, Hacer, Verificar, Actuar) y su aplicación para rediseñar flujos de trabajo eficientes en AGROIDEAS."
+      },
+      "2.2_Finalidad": {
+        "Pregunta": "¿Para qué se está desarrollando?",
+        "Respuesta": "Eliminar actividades redundantes, reducir los tiempos del ciclo de atención de incentivos (PM01 y PM02) y garantizar la estandarización de criterios entre la Sede Central y las 25 Unidades Regionales a Costo S/. 0.00."
+      },
+      "2.3_Actores": {
+        "Pregunta": "¿Quién o quiénes desarrollan esta(s) actividad(es)?",
+        "LideresEstrategicos": "Unidad de Planeamiento y Presupuesto (UPP) y el Equipo Técnico de Mejora Continua (ETMC) como conductores y validadores metodológicos de los procesos.",
+        "EjecutoresOperativos": "Dueños de proceso y especialistas de las Unidades de Línea (Promoción PM01, Negocios PM02, Seguimiento USE, Administración UA) en Lima y Unidades Regionales.",
+        "Beneficiarios": "Organizaciones Agrarias (OA) que reciben bienes y servicios cofinanciados de forma predecible y oportuna."
+      },
+      "2.4_MomentoFase": {
+        "Pregunta": "¿Cuándo se debe desarrollar?",
+        "Respuesta": "Corresponde a la Fase 1: Inducción e Hito de Entrada (Onboarding / Capacitación Básica en Procesos). Es un marco de actuación permanente durante el diseño, ejecución y evaluación de cualquier procedimiento operativo."
+      }
+    }
+  },
+  "ToqueDelExpertoYAlertasCampo": {
+    "AlertaRojaPeligroAEvitar": "¡No confundas gestionar procesos con dibujar flujogramas estáticos en papel! Un proceso solo está gestionado cuando sus actividades se ejecutan de forma estandarizada, se miden con indicadores y se mejoran continuamente.",
+    "TipPracticoDelExperto": "¡Identifica siempre al cliente/destinatario final de tu salida! Cada tarea que realizas en AGROIDEAS debe entregar un insumo útil para la siguiente etapa del flujo o un bien/servicio directo para la Organización Agraria."
+  },
+  "CierreOperativoYAutoevaluacion": {
+    "ReglaDeOroOperativa": "'En AGROIDEAS, la gestión por procesos transforma tareas aisladas en flujos continuos de valor que garantizan la competitividad del productor agrario.'",
+    "PreguntaAutoevaluacion": {
+      "Pregunta": "¿Cuál es la norma técnica de la Secretaría de Gestión Pública (PCM) que establece el marco vinculante para la Gestión por Procesos en las entidades públicas?",
+      "Opciones": {
+        "a": "La Norma Técnica N° 001-2022-PCM/SGP sobre calidad de servicios.",
+        "b": "La Norma Técnica N° 002-2025-PCM/SGP aprobada mediante RSGP N° 002-2025-PCM/SGP.",
+        "c": "El Decreto Legislativo N° 1440 del Sistema Nacional de Presupuesto Público."
+      },
+      "RespuestaCorrecta": "b",
+      "SustentoPedagogico": "La RSGP N° 002-2025-PCM/SGP aprobó la Norma Técnica N° 002-2025-PCM/SGP, la cual constituye el estándar oficial y vinculante para la determinación, caracterización y evaluación de procesos en el Estado Peruano."
+    }
+  }
+}

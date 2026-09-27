@@ -1,0 +1,95 @@
+{
+  "$schema": "./schemas/far-mc-v2.json",
+  "NavegacionYTrazabilidad": {
+    "ModuloNumero": 1,
+    "ModuloNombre": "Módulo 1: Inducción en Modernización de la Gestión Pública",
+    "EjeTematico": "EJE A: Inducción en Modernización de la Gestión Pública",
+    "SubtemaCodigo": "M1.3",
+    "SubtemaTitulo": "El Sistema Administrativo de Modernización (SAMGP) en AGROIDEAS",
+    "PosicionEnModulo": {
+      "ParteActual": 3,
+      "TotalPartesModulo": 3,
+      "EtiquetaSecuencia": "3 de 3",
+      "SubtemaAnteriorCodigo": "M1.2",
+      "SubtemaSiguienteCodigo": null
+    },
+    "EcosistemaDigital": {
+      "Plataforma": "Portal de Modernización y Repositorio Central AGROIDEAS",
+      "ArchivoVista": "repositorio.html",
+      "NumeralSeccion": "2.5 Micro-Cursos (Fichas de Conocimiento)",
+      "FormatoNombre": "Ficha de Aprendizaje Rápido de Micro-Curso",
+      "FormatoVersion": "FAR-MC V2.0",
+      "OrigenNormativo": "INFORME EJECUTIVO Nº 023-UPP-WVP.docx"
+    }
+  },
+  "MetadatosFicha": {
+    "CodigoReferencia": "FAR-MC-MOD-01-S1.3",
+    "ProcesoVinculado": "Soporte / Estratégico: SAMGP - Modernización de la Gestión Pública",
+    "TiempoLecturaMinutos": 3,
+    "PublicoObjetivo": "Personal de la Sede Central y de las 25 Unidades Regionales, nuevos ingresantes (Onboarding) y colaboradores del sector agrario."
+  },
+  "SintesisEjecutiva": {
+    "ContextoYDolorInstitucional": "Esta ficha aborda la estructuración y funcionamiento del Sistema Administrativo de Modernización de la Gestión Pública (SAMGP) en AGROIDEAS conforme al D.S. N° 123-2018-PCM. Resuelve la falta de articulación entre los componentes de modernización (procesos, estructura, simplificación, gestión del conocimiento e innovación) y la operación diaria, estableciendo la rectoría de la PCM/SGP y el rol articulador de la Unidad de Planeamiento y Presupuesto (UPP) a través del Equipo Técnico de Mejora Continua (ETMC)."
+  },
+  "NucleoSaberYMarcoNormativo": {
+    "PilarLegalFundacional": [
+      {
+        "Norma": "D.S. N° 123-2018-PCM",
+        "Nombre": "Reglamento del Sistema Administrativo de Modernización de la Gestión Pública",
+        "Descripcion": "Establece los principios, marco institucional y medios del SAMGP, definiendo las funciones de la SGP-PCM como ente rector y de las oficinas de planeamiento/modernización como autoridades operativas."
+      },
+      {
+        "Norma": "Ley N° 27658",
+        "Nombre": "Ley Marco de Modernización de la Gestión del Estado",
+        "Descripcion": "Marco legal supremo que sustenta la reestructuración permanente del Estado para la eficiencia, transparencia y valor público."
+      },
+      {
+        "Norma": "R.M. N° 0188-2025-MIDAGRI",
+        "Nombre": "Manual de Operaciones (MOP) de AGROIDEAS",
+        "Descripcion": "Establece las funciones de la Unidad de Planeamiento y Presupuesto (UPP) como órgano de asesoramiento encargado de conducir los procesos de modernización institucional."
+      },
+      {
+        "Norma": "R.D.E. N° D000137-2026-MIDAGRI-AGROIDEAS-DE",
+        "Nombre": "Constitución y Consolidación del Equipo Técnico de Mejora Continua (ETMC)",
+        "Descripcion": "Formaliza el órgano colegiado multidisciplinario encargado de evaluar, calificar e impulsar las iniciativas de modernización, procesos, gestión del conocimiento e innovación."
+      }
+    ],
+    "AplicacionPracticaAgroideas": {
+      "2.1_Objetivo": {
+        "Pregunta": "¿Qué es lo que se está desarrollando?",
+        "Respuesta": "Comprender y desplegar la estructura operativa del Sistema Administrativo de Modernización (SAMGP) en AGROIDEAS, articulando las acciones de la UPP y del ETMC con los entes de línea y Unidades Regionales para institucionalizar la gestión por procesos, simplificación, gestión del conocimiento e innovación."
+      },
+      "2.2_Finalidad": {
+        "Pregunta": "¿Para qué se está desarrollando?",
+        "Respuesta": "Asegurar el cumplimiento estricto de los lineamientos del ente rector (PCM/SGP) y optimizar el funcionamiento interno del Programa, garantizando que las iniciativas de mejora se canalicen, validen e implementen formalmente a Costo S/. 0.00 en beneficio de las Organizaciones Agrarias."
+      },
+      "2.3_Actores": {
+        "Pregunta": "¿Quién o quiénes desarrollan esta(s) actividad(es)?",
+        "LideresEstrategicos": "Ente Rector (PCM/SGP) en el nivel nacional; Dirección Ejecutiva y Unidad de Planeamiento y Presupuesto (UPP) como autoridad técnica conducida por el Equipo Técnico de Mejora Continua (ETMC).",
+        "EjecutoresOperativos": "Unidades Funcionales de la Sede Central (UA, UAJ, Promoción PM01, Negocios PM02, Seguimiento USE) y los Enlaces de Modernización en las 25 Unidades Regionales.",
+        "Beneficiarios": "Servidores públicos de AGROIDEAS (mediante procedimientos claros) y Organizaciones Agrarias (mediante servicios eficientes y predecibles)."
+      },
+      "2.4_MomentoFase": {
+        "Pregunta": "¿Cuándo se debe desarrollar?",
+        "Respuesta": "Corresponde a la Fase 1: Inducción e Hito de Entrada (Onboarding Automatizado / Día 1 al 5) dentro del arco de aprendizaje integral de Modernización. Representa la gobernanza institucional que canaliza continuamente las propuestas de mejora y formalización de activos de conocimiento."
+      }
+    }
+  },
+  "ToqueDelExpertoYAlertasCampo": {
+    "AlertaRojaPeligroAEvitar": "¡No intentes implementar cambios metodológicos o procedimentales de forma aislada! Cualquier modificación de flujos o formatos debe canalizarse a través de la UPP y el ETMC para garantizar su legalidad, alineamiento con la PCM y visación técnica.",
+    "TipPracticoDelExperto": "¡Utiliza al ETMC como aliado de innovación! Si en tu Unidad Regional o de Línea identificas un cuello de botella o una buena práctica, documentala mediante el formato ágil correspondiente (FLA o FBP); el ETMC evaluará y formalizará tu propuesta para escalarla a nivel nacional."
+  },
+  "CierreOperativoYAutoevaluacion": {
+    "ReglaDeOroOperativa": "'En AGROIDEAS, el Sistema Administrativo de Modernización cobra vida cuando la UPP y el ETMC transforman las iniciativas de los servidores en estándares nacionales instituidos.'",
+    "PreguntaAutoevaluacion": {
+      "Pregunta": "¿Cuál es la unidad orgánica en AGROIDEAS encargada de conducir técnicamente el Sistema Administrativo de Modernización de la Gestión Pública conforme al MOP?",
+      "Opciones": {
+        "a": "La Unidad de Asesoría Jurídica (UAJ).",
+        "b": "La Unidad de Planeamiento y Presupuesto (UPP), articulada con el Equipo Técnico de Mejora Continua (ETMC).",
+        "c": "La Unidad de Administración exclusivamente a través del Área de Tesorería."
+      },
+      "RespuestaCorrecta": "b",
+      "SustentoPedagogico": "Conforme al Manual de Operaciones (MOP) y el D.S. N° 123-2018-PCM, la Oficina de Planeamiento y Presupuesto (o la que haga sus veces, en este caso la UPP) es la autoridad operativa del Sistema Administrativo de Modernización en la entidad, liderando los esfuerzos junto al ETMC."
+    }
+  }
+}

@@ -37,6 +37,13 @@ document.addEventListener('DOMContentLoaded', async () => {
             backBtn.href = `repositorio.html?openModal=${module.id}`;
         }
 
+        // Configurar botón a la Ficha Oficial FAR-MC
+        const btnFicha = document.getElementById('btnDescargarFicha');
+        if (btnFicha) {
+            const farMcId = resolverFarMcId(module.id, subtema.id);
+            btnFicha.href = `ficha_microcurso.html?id=${encodeURIComponent(farMcId)}`;
+        }
+
         // Renderizar Cuestionario
         renderQuiz(subtema.preguntas);
 
@@ -109,4 +116,33 @@ function checkQuizCompletion(totalQuestions) {
         btn.classList.remove('bg-slate-200', 'text-slate-400', 'cursor-not-allowed');
         btn.classList.add('bg-primary', 'text-white', 'hover:bg-secondary');
     }
+}
+
+function resolverFarMcId(moduleId, subtemaId) {
+    const mapa = {
+        'modulo1-M1.1': 'far-mc-1-m1',
+        'modulo1-M1.2': 'far-mc-1-m2',
+        'modulo1-M1.3': 'far-mc-1-m3',
+        'modulo2-A.1': 'far-mc-2-a1',
+        'modulo2-A.2': 'far-mc-2-a2',
+        'modulo2-A.3': 'far-mc-2-a3',
+        'modulo3-B.1': 'far-mc-3-b1',
+        'modulo3-B.2': 'far-mc-3-b2',
+        'modulo3-B.3': 'far-mc-3-b3',
+        'modulo4-C.1': 'far-mc-4-c1',
+        'modulo4-C.2': 'far-mc-4-c2',
+        'modulo4-C.3': 'far-mc-4-c3',
+        'modulo5-E.1': 'far-mc-5-e1',
+        'modulo5-E.2': 'far-mc-5-e2',
+        'modulo5-E.3': 'far-mc-5-e3',
+        'modulo6-D.1': 'far-mc-6-d1',
+        'modulo6-D.2': 'far-mc-6-d2',
+        'modulo6-D.3': 'far-mc-6-d3'
+    };
+    const key = `${moduleId}-${subtemaId}`;
+    if (mapa[key]) return mapa[key];
+
+    const num = moduleId.replace(/\D/g, '') || '1';
+    const cleanSub = subtemaId.toLowerCase().replace(/[^a-z0-9]/g, '');
+    return `far-mc-${num}-${cleanSub}`;
 }

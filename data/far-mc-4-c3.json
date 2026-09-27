@@ -1,0 +1,95 @@
+{
+  "$schema": "./schemas/far-mc-v2.json",
+  "NavegacionYTrazabilidad": {
+    "ModuloNumero": 4,
+    "ModuloNombre": "Módulo 4: Implementación de Gestión de Innovación",
+    "EjeTematico": "EJE D: Implementación de Gestión de Innovación",
+    "SubtemaCodigo": "C.3",
+    "SubtemaTitulo": "Diseño de PMV en Espacios Seguros",
+    "PosicionEnModulo": {
+      "ParteActual": 3,
+      "TotalPartesModulo": 3,
+      "EtiquetaSecuencia": "3 de 3",
+      "SubtemaAnteriorCodigo": "C.2",
+      "SubtemaSiguienteCodigo": null
+    },
+    "EcosistemaDigital": {
+      "Plataforma": "Portal de Modernización y Repositorio Central AGROIDEAS",
+      "ArchivoVista": "repositorio.html",
+      "NumeralSeccion": "2.5 Micro-Cursos (Fichas de Conocimiento)",
+      "FormatoNombre": "Ficha de Aprendizaje Rápido de Micro-Curso",
+      "FormatoVersion": "FAR-MC V2.0",
+      "OrigenNormativo": "INFORME EJECUTIVO Nº 023-UPP-WVP.docx"
+    }
+  },
+  "MetadatosFicha": {
+    "CodigoReferencia": "FAR-MC-MOD-04-SC.3",
+    "ProcesoVinculado": "Soporte / Estratégico: SAMGP - Prototipado y Experimentación Ágil (NT N° 003-2025-PCM/SGP)",
+    "TiempoLecturaMinutos": 3,
+    "PublicoObjetivo": "Personal de la Sede Central y de las 25 Unidades Regionales, innovadores públicos, evaluadores y enlaces del ETMC."
+  },
+  "SintesisEjecutiva": {
+    "ContextoYDolorInstitucional": "Esta ficha desarrolla la metodología para el diseño y prueba de Productos Mínimos Viables (PMV) en Espacios Seguros de experimentación dentro de AGROIDEAS, conforme a la Norma Técnica N° 003-2025-PCM/SGP. Resuelve el temor al error y la aversión al riesgo en la administración pública, permitiendo probar soluciones innovadoras a escala reducida, sin costo presupuestal adicional y en un entorno protegido antes de su formalización y despliegue masivo."
+  },
+  "NucleoSaberYMarcoNormativo": {
+    "PilarLegalFundacional": [
+      {
+        "Norma": "R.S.G.P. N° 003-2025-PCM/SGP",
+        "Nombre": "Norma Técnica para la Gestión de la Innovación en las Entidades Públicas - Prototipado y Espacios Seguros",
+        "Descripcion": "Regula el marco para la experimentación ágil, estableciendo que las entidades pueden crear entornos controlados ('Sandbox') para probar prototipos con usuarios reales de forma segura."
+      },
+      {
+        "Norma": "D.S. N° 123-2018-PCM",
+        "Nombre": "Reglamento del Sistema Administrativo de Modernización de la Gestión Pública",
+        "Descripcion": "Respalda los mecanismos de flexibilidad y mejora continua para promover la prueba de soluciones que incrementen el valor público."
+      },
+      {
+        "Norma": "R.M. N° 0188-2025-MIDAGRI",
+        "Nombre": "Manual de Operaciones (MOP) de AGROIDEAS",
+        "Descripcion": "Asigna a la UPP la conducción técnica de los procesos de innovación y modernización en la Sede Central y las 25 Unidades Regionales."
+      },
+      {
+        "Norma": "R.D.E. N° D000137-2026-MIDAGRI-AGROIDEAS-DE",
+        "Nombre": "Consolidación del Equipo Técnico de Mejora Continua (ETMC)",
+        "Descripcion": "Encarga al ETMC la definición del alcance de los Espacios Seguros, así como la evaluación e informe técnico final de los pilotos."
+      }
+    ],
+    "AplicacionPracticaAgroideas": {
+      "2.1_Objetivo": {
+        "Pregunta": "¿Qué es lo que se está desarrollando?",
+        "Respuesta": "Estructurar el diseño de Productos Mínimos Viables (PMV) —prototipos ágiles, de bajo costo y rápida implementación— para evaluar hipótesis operativas en Espacios Seguros de experimentación, midiendo resultados cuantitativos y cualitativos antes de modificar directivas formales."
+      },
+      "2.2_Finalidad": {
+        "Pregunta": "¿Para qué se está desarrollando?",
+        "Respuesta": "Minimizar los riesgos de implementación, validar la aceptación de las mejoras por parte de los evaluadores y Organizaciones Agrarias (OA), y corregir fallas a Costo S/. 0.00 antes de escalar la solución a las 25 Unidades Regionales."
+      },
+      "2.3_Actores": {
+        "Pregunta": "¿Quién o quiénes desarrollan esta(s) actividad(es)?",
+        "LideresEstrategicos": "Unidad de Planeamiento y Presupuesto (UPP) y el Equipo Técnico de Mejora Continua (ETMC), encargados de delimitar los parámetros del Espacio Seguro de experimentación.",
+        "EjecutoresOperativos": "Equipos de innovación de las Unidades de Línea (Promoción PM01 UPDC, Negocios PM02 UGIA, Monitoreo USE) y las Unidades Regionales seleccionadas para el piloto.",
+        "Beneficiarios": "Organizaciones Agrarias (OA) participantes en la muestra de prueba que reciben y evalúan los prototipos de servicio."
+      },
+      "2.4_MomentoFase": {
+        "Pregunta": "¿Cuándo se debe desarrollar?",
+        "Respuesta": "Corresponde a la Fase 1: Inducción e Hito de Entrada (Onboarding / Capacitación en Experimentación y PMV). Se activa tras la priorización de una Ficha FIIP y el diseño conceptual de la solución mediante el Doble Diamante."
+      }
+    }
+  },
+  "ToqueDelExpertoYAlertasCampo": {
+    "AlertaRojaPeligroAEvitar": "¡No intentes escalar una innovación a nivel nacional sin haber probado primero un PMV en un Espacio Seguro! Desplegar cambios procedimentales no validados en las 25 Unidades Regionales puede generar fricciones y paralizar la atención de incentivos.",
+    "TipPracticoDelExperto": "¡Haz tu PMV lo más simple, rápido y barato posible! Un PMV puede ser un formulario dinámico de prueba, una plantilla simplificada o un piloto de 5 días con 2 Organizaciones Agrarias; el objetivo primario no es la perfección estética, sino aprender e iterar rápidamente."
+  },
+  "CierreOperativoYAutoevaluacion": {
+    "ReglaDeOroOperativa": "'En AGROIDEAS, el PMV nos permite aprender y ajustar rápido en un Espacio Seguro para acertar en grande con el productor agrario a Costo S/. 0.00.'",
+    "PreguntaAutoevaluacion": {
+      "Pregunta": "¿Qué es un Producto Mínimo Viable (PMV) en el marco de la Norma Técnica N° 003-2025-PCM/SGP de Innovación Pública?",
+      "Opciones": {
+        "a": "Un sistema informático complejo y definitivo contratado mediante licitación pública nacional.",
+        "b": "Una versión simplificada de una solución que permite probar hipótesis operativas reales con el mínimo de recursos y tiempo.",
+        "c": "Un manual de procedimientos de 100 páginas aprobado formalmente por resolución ministerial."
+      },
+      "RespuestaCorrecta": "b",
+      "SustentoPedagogico": "Un PMV es una versión inicial e introductoria de una solución que reúne únicamente las características indispensables para ser probada en un entorno real, permitiendo recopilar retroalimentación valiosa e iterar sin comprometer grandes recursos."
+    }
+  }
+}

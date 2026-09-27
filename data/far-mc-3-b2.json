@@ -1,0 +1,95 @@
+{
+  "$schema": "./schemas/far-mc-v2.json",
+  "NavegacionYTrazabilidad": {
+    "ModuloNumero": 3,
+    "ModuloNombre": "Módulo 3: Implementación de Gestión del Conocimiento",
+    "EjeTematico": "EJE C: Implementación de Gestión del Conocimiento",
+    "SubtemaCodigo": "B.2",
+    "SubtemaTitulo": "Cultura de Mejora: Las Fichas de Lecciones Aprendidas (FLA)",
+    "PosicionEnModulo": {
+      "ParteActual": 2,
+      "TotalPartesModulo": 3,
+      "EtiquetaSecuencia": "2 de 3",
+      "SubtemaAnteriorCodigo": "B.1",
+      "SubtemaSiguienteCodigo": "B.3"
+    },
+    "EcosistemaDigital": {
+      "Plataforma": "Portal de Modernización y Repositorio Central AGROIDEAS",
+      "ArchivoVista": "repositorio.html",
+      "NumeralSeccion": "2.5 Micro-Cursos (Fichas de Conocimiento)",
+      "FormatoNombre": "Ficha de Aprendizaje Rápido de Micro-Curso",
+      "FormatoVersion": "FAR-MC V2.0",
+      "OrigenNormativo": "INFORME EJECUTIVO Nº 023-UPP-WVP.docx"
+    }
+  },
+  "MetadatosFicha": {
+    "CodigoReferencia": "FAR-MC-MOD-03-SB.2",
+    "ProcesoVinculado": "Soporte / Estratégico: SAMGP - Captura de Lecciones Aprendidas (NT N° 001-2025-PCM/SGP)",
+    "TiempoLecturaMinutos": 3,
+    "PublicoObjetivo": "Personal de la Sede Central y de las 25 Unidades Regionales, evaluadores de expedientes y enlaces del ETMC."
+  },
+  "SintesisEjecutiva": {
+    "ContextoYDolorInstitucional": "Esta ficha aborda la metodología y aplicación práctica de las Fichas de Lecciones Aprendidas (FLA) como instrumento sensor ágil en AGROIDEAS. Resuelve el dolor de la repetición sistemática de errores operativos y cuellos de botella en el campo (Factor 3: Falta de sistematización), transformando las experiencias (positivas o negativas) en activos preventivos formalizados y accesibles para toda la organización."
+  },
+  "NucleoSaberYMarcoNormativo": {
+    "PilarLegalFundacional": [
+      {
+        "Norma": "R.S.G.P. N° 001-2025-PCM/SGP",
+        "Nombre": "Norma Técnica para la Gestión del Conocimiento en las Entidades Públicas",
+        "Descripcion": "Define las lecciones aprendidas como el conocimiento obtenido a través de la reflexión sobre una experiencia o resultado (exitoso o no), estableciendo el flujo para su registro y difusión."
+      },
+      {
+        "Norma": "R.D.E. N° D000106-2026-MIDAGRI-AGROIDEAS-DE",
+        "Nombre": "Plan de Gestión del Conocimiento 2026-2027 de AGROIDEAS",
+        "Descripcion": "Establece el uso generalizado de formularios digitales de captura de lecciones aprendidas en las 25 Unidades Regionales y áreas misionales."
+      },
+      {
+        "Norma": "R.M. N° 0188-2025-MIDAGRI",
+        "Nombre": "Manual de Operaciones (MOP) de AGROIDEAS",
+        "Descripcion": "Asigna a la UPP la conducción técnica para la sistematización y formalización de lecciones aprendidas en la entidad."
+      },
+      {
+        "Norma": "R.D.E. N° D000137-2026-MIDAGRI-AGROIDEAS-DE",
+        "Nombre": "Consolidación del Equipo Técnico de Mejora Continua (ETMC)",
+        "Descripcion": "Encarga al ETMC la evaluación, validación y aprobación de las Fichas FLA presentadas por los servidores de la entidad."
+      }
+    ],
+    "AplicacionPracticaAgroideas": {
+      "2.1_Objetivo": {
+        "Pregunta": "¿Qué es lo que se está desarrollando?",
+        "Respuesta": "Estandarizar y aplicar el uso de la Ficha de Lección Aprendida (FLA) en formato digital dinámico (Google Forms/Drive), capturando la brecha entre la situación planificada y la situación suscitada en campo, el aprendizaje cognitivo (qué funcionó, qué falló, qué se haría diferente) y la recomendación preventiva."
+      },
+      "2.2_Finalidad": {
+        "Pregunta": "¿Para qué se está desarrollando?",
+        "Respuesta": "Promover una cultura de mejora continua sin sesgo punitivo, evitando que otros especialistas cometan los mismos errores en la evaluación de expedientes (PM01/PM02), reduciendo observaciones legales y acelerando la entrega de incentivos a las Organizaciones Agrarias a Costo S/. 0.00."
+      },
+      "2.3_Actores": {
+        "Pregunta": "¿Quién o quiénes desarrollan esta(s) actividad(es)?",
+        "LideresEstrategicos": "Unidad de Planeamiento y Presupuesto (UPP) y el Equipo Técnico de Mejora Continua (ETMC), encargados de calificar, visar e indexar las FLA en el Repositorio Central.",
+        "EjecutoresOperativos": "Todos los servidores civiles y especialistas de la Sede Central y de las 25 Unidades Regionales que identifiquen una casuística relevante en el ejercicio de sus funciones.",
+        "Beneficiarios": "Servidores de AGROIDEAS (que previenen contingencias) y Organizaciones Agrarias (que reciben servicios oportunos e idóneos)."
+      },
+      "2.4_MomentoFase": {
+        "Pregunta": "¿Cuándo se debe desarrollar?",
+        "Respuesta": "Corresponde a la Fase 1: Inducción e Hito de Entrada (Onboarding / Capacitación en Cultura de Mejora). Se activa de manera inmediata cada vez que ocurre un evento atípico, inspección de campo, cambio normativo o cierre de un hito en la evaluación de un Plan de Negocio."
+      }
+    }
+  },
+  "ToqueDelExpertoYAlertasCampo": {
+    "AlertaRojaPeligroAEvitar": "¡No confundas una lección aprendida con una queja o un reporte de culpa! Una FLA no busca sancionar a responsables, sino analizar objetivamente las causas raíz de un problema para generar una recomendación preventiva que beneficie a toda la entidad.",
+    "TipPracticoDelExperto": "¡Documenta mientras el hecho está fresco! Llena la Ficha FLA inmediatamente después de resolver el imprevisto de campo; capturar los detalles técnicos en caliente garantiza la máxima precisión pedagógica de la recomendación."
+  },
+  "CierreOperativoYAutoevaluacion": {
+    "ReglaDeOroOperativa": "'En AGROIDEAS, un error analizado y compartido a través de una Ficha FLA se convierte en el mejor activo preventivo para la organización.'",
+    "PreguntaAutoevaluacion": {
+      "Pregunta": "¿Cuál es el propósito central de registrar una Ficha de Lección Aprendida (FLA) según la Norma Técnica N° 001-2025-PCM/SGP?",
+      "Opciones": {
+        "a": "Iniciar procedimientos sancionadores contra los servidores que cometieron equivocaciones en campo.",
+        "b": "Sistematizar experiencias y reflexiones operativas para prevenir errores recurrentes y replicar aciertos a nivel nacional.",
+        "c": "Reemplazar los manuales de procedimientos formales y las directivas institucionales."
+      },
+      "RespuestaCorrecta": "b",
+      "SustentoPedagogico": "La NT N° 001-2025-PCM/SGP establece que las lecciones aprendidas buscan convertir la reflexión sobre hechos pasados en conocimiento útil y preventivo, orientando la actuación futura de la entidad hacia la excelencia operativa."
+    }
+  }
+}

@@ -1,0 +1,95 @@
+{
+  "$schema": "./schemas/far-mc-v2.json",
+  "NavegacionYTrazabilidad": {
+    "ModuloNumero": 4,
+    "ModuloNombre": "Módulo 4: Implementación de Gestión de Innovación",
+    "EjeTematico": "EJE D: Implementación de Gestión de Innovación",
+    "SubtemaCodigo": "C.2",
+    "SubtemaTitulo": "El Modelo Doble Diamante Aplicado a AGROIDEAS",
+    "PosicionEnModulo": {
+      "ParteActual": 2,
+      "TotalPartesModulo": 3,
+      "EtiquetaSecuencia": "2 de 3",
+      "SubtemaAnteriorCodigo": "C.1",
+      "SubtemaSiguienteCodigo": "C.3"
+    },
+    "EcosistemaDigital": {
+      "Plataforma": "Portal de Modernización y Repositorio Central AGROIDEAS",
+      "ArchivoVista": "repositorio.html",
+      "NumeralSeccion": "2.5 Micro-Cursos (Fichas de Conocimiento)",
+      "FormatoNombre": "Ficha de Aprendizaje Rápido de Micro-Curso",
+      "FormatoVersion": "FAR-MC V2.0",
+      "OrigenNormativo": "INFORME EJECUTIVO Nº 023-UPP-WVP.docx"
+    }
+  },
+  "MetadatosFicha": {
+    "CodigoReferencia": "FAR-MC-MOD-04-SC.2",
+    "ProcesoVinculado": "Soporte / Estratégico: SAMGP - Metodologías de Innovación Pública (NT N° 003-2025-PCM/SGP)",
+    "TiempoLecturaMinutos": 3,
+    "PublicoObjetivo": "Personal de la Sede Central y de las 25 Unidades Regionales, innovadores públicos, evaluadores y enlaces del ETMC."
+  },
+  "SintesisEjecutiva": {
+    "ContextoYDolorInstitucional": "Esta ficha aborda la aplicación práctica de la metodología del Doble Diamante (Descubrir, Definir, Desarrollar, Entregar) adaptada al contexto operativo de AGROIDEAS según la Norma Técnica N° 003-2025-PCM/SGP. Resuelve la improvisación en el diseño de soluciones públicas, guiando a los equipos desde el diagnóstico empático del problema del productor agrario hasta el prototipado y validación de mejoras a costo cero."
+  },
+  "NucleoSaberYMarcoNormativo": {
+    "PilarLegalFundacional": [
+      {
+        "Norma": "R.S.G.P. N° 003-2025-PCM/SGP",
+        "Nombre": "Norma Técnica para la Gestión de la Innovación en las Entidades Públicas - Diseño Centrado en las Personas",
+        "Descripcion": "Establece el enfoque metodológico de innovación pública basado en el entendimiento profundo de las necesidades del ciudadano/usuario antes de desarrollar soluciones."
+      },
+      {
+        "Norma": "D.S. N° 123-2018-PCM",
+        "Nombre": "Reglamento del Sistema Administrativo de Modernización de la Gestión Pública",
+        "Descripcion": "Promueve la adopción de metodologías ágiles de innovación para la mejora continua de los servicios estatales."
+      },
+      {
+        "Norma": "R.M. N° 0188-2025-MIDAGRI",
+        "Nombre": "Manual de Operaciones (MOP) de AGROIDEAS",
+        "Descripcion": "Asigna a la UPP la conducción y orientación técnica de los marcos metodológicos de innovación e incentivos."
+      },
+      {
+        "Norma": "R.D.E. N° D000137-2026-MIDAGRI-AGROIDEAS-DE",
+        "Nombre": "Consolidación del Equipo Técnico de Mejora Continua (ETMC)",
+        "Descripcion": "Encarga al ETMC el acompañamiento y validación técnica de las fases de ideación y desarrollo metodológico de la innovación."
+      }
+    ],
+    "AplicacionPracticaAgroideas": {
+      "2.1_Objetivo": {
+        "Pregunta": "¿Qué es lo que se está desarrollando?",
+        "Respuesta": "Desplegar el flujo metodológico del Doble Diamante (1. Descubrir/Divergir en el problema, 2. Definir/Converger en el reto clave, 3. Desarrollar/Divergir en soluciones, 4. Entregar/Converger en la propuesta final) para resolver desafíos operativos en los procesos PM01 y PM02."
+      },
+      "2.2_Finalidad": {
+        "Pregunta": "¿Para qué se está desarrollando?",
+        "Respuesta": "Asegurar que las iniciativas de innovación respondan a necesidades reales verificadas en el campo y no a suposiciones teóricas de escritorio, optimizando recursos a Costo S/. 0.00 y acelerando los tiempos de respuesta a las Organizaciones Agrarias."
+      },
+      "2.3_Actores": {
+        "Pregunta": "¿Quién o quiénes desarrollan esta(s) actividad(es)?",
+        "LideresEstrategicos": "Unidad de Planeamiento y Presupuesto (UPP) y el Equipo Técnico de Mejora Continua (ETMC), como mentores metodológicos de las fases del Doble Diamante.",
+        "EjecutoresOperativos": "Equipos multidisciplinarios de las Unidades de Línea (Promoción PM01 UPDC, Negocios PM02 UGIA, Monitoreo USE) y de las 25 Unidades Regionales que aplican el marco de innovación.",
+        "Beneficiarios": "Organizaciones Agrarias (OA) cuyos problemas reales son escuchados, diagnosticados y resueltos mediante soluciones centradas en el usuario."
+      },
+      "2.4_MomentoFase": {
+        "Pregunta": "¿Cuándo se debe desarrollar?",
+        "Respuesta": "Corresponde a la Fase 1: Inducción e Hito de Entrada (Onboarding / Capacitación en Metodologías Ágiles de Innovación). Se activa al momento de estructurar iniciativas derivadas de la Ficha FIIP o al rediseñar un procedimiento crítico."
+      }
+    }
+  },
+  "ToqueDelExpertoYAlertasCampo": {
+    "AlertaRojaPeligroAEvitar": "¡No te enamores de tu primera idea de solución sin haber explorado el problema a fondo! Omitir la primera fase de divergencia (Descubrir) conduce a diseñar soluciones brillantes para problemas equivocados que no benefician al productor.",
+    "TipPracticoDelExperto": "¡Empatiza directamente con el usuario de campo! En la fase 'Descubrir', conversa con los evaluadores regionales y los dirigentes de las Organizaciones Agrarias; sus testimonios sobre cuellos de botella reales son la mejor materia prima para el Doble Diamante."
+  },
+  "CierreOperativoYAutoevaluacion": {
+    "ReglaDeOroOperativa": "'En AGROIDEAS, el Doble Diamante nos enseña a explorar primero el problema real del territorio antes de construir la solución perfecta a Costo S/. 0.00.'",
+    "PreguntaAutoevaluacion": {
+      "Pregunta": "¿Cuáles son las cuatro fases consecutivas del modelo Doble Diamante aplicado a la innovación pública según la Norma Técnica N° 003-2025-PCM/SGP?",
+      "Opciones": {
+        "a": "Planificar, Ejecutar, Controlar y Sancionar.",
+        "b": "Descubrir (explorar problema), Definir (focalizar reto), Desarrollar (idear soluciones) y Entregar (prototipar y validar).",
+        "c": "Comprar software, Contratar consultores, Emitir directivas y Archivar expedientes."
+      },
+      "RespuestaCorrecta": "b",
+      "SustentoPedagogico": "El modelo Doble Diamante combina pensamiento divergente y convergente en 4 etapas: Descubrir (comprender las necesidades), Definir (focalizar el reto), Desarrollar (generar alternativas) y Entregar (probar y desplegar la solución)."
+    }
+  }
+}

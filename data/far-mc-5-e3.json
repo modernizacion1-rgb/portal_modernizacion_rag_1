@@ -1,0 +1,95 @@
+{
+  "$schema": "./schemas/far-mc-v2.json",
+  "NavegacionYTrazabilidad": {
+    "ModuloNumero": 5,
+    "ModuloNombre": "Módulo 5: Uso de Herramientas de IA en AGROIDEAS",
+    "EjeTematico": "EJE E: Inteligencia Artificial y Eficiencia Pública",
+    "SubtemaCodigo": "E.3",
+    "SubtemaTitulo": "Prototipado Agéntico y Automatización",
+    "PosicionEnModulo": {
+      "ParteActual": 3,
+      "TotalPartesModulo": 3,
+      "EtiquetaSecuencia": "3 de 3",
+      "SubtemaAnteriorCodigo": "E.2",
+      "SubtemaSiguienteCodigo": null
+    },
+    "EcosistemaDigital": {
+      "Plataforma": "Portal de Modernización y Repositorio Central AGROIDEAS",
+      "ArchivoVista": "repositorio.html",
+      "NumeralSeccion": "2.5 Micro-Cursos (Fichas de Conocimiento)",
+      "FormatoNombre": "Ficha de Aprendizaje Rápido de Micro-Curso",
+      "FormatoVersion": "FAR-MC V2.0",
+      "OrigenNormativo": "INFORME EJECUTIVO Nº 023-UPP-WVP.docx"
+    }
+  },
+  "MetadatosFicha": {
+    "CodigoReferencia": "FAR-MC-MOD-05-SE.3",
+    "ProcesoVinculado": "Soporte / Estratégico: SAMGP - Prototipado Agéntico y Ecosistema SIPA (NT N° 003-2025-PCM/SGP)",
+    "TiempoLecturaMinutos": 3,
+    "PublicoObjetivo": "Personal de la Sede Central y de las 25 Unidades Regionales, innovadores digitales, evaluadores y enlaces del ETMC."
+  },
+  "SintesisEjecutiva": {
+    "ContextoYDolorInstitucional": "Esta ficha aborda la introducción al Prototipado Agéntico y la automatización de flujos de trabajo en el marco del Ecosistema SIPA (Sistema de Inteligencia Pública Agéntica) en AGROIDEAS. Resuelve el cuello de botella generado por tareas repetitivas de validación documental, extracción manual de datos de solicitudes y clasificación de expedientes, capacitando en el diseño de agentes autónomos especializados que asisten a los servidores bajo supervisión humana constante (Human-in-the-Loop)."
+  },
+  "NucleoSaberYMarcoNormativo": {
+    "PilarLegalFundacional": [
+      {
+        "Norma": "Ley N° 31814",
+        "Nombre": "Ley que promueve el uso de la Inteligencia Artificial en favor del desarrollo económico y social del país",
+        "Descripcion": "Consagra el principio de gobernanza participativa, transparencia y la supervisión humana obligatoria ('Human-in-the-Loop') en el uso de sistemas automatizados e inteligencia artificial."
+      },
+      {
+        "Norma": "D.S. N° 103-2022-PCM",
+        "Nombre": "Política Nacional de Modernización de la Gestión Pública al 2030",
+        "Descripcion": "Promueve la transformación digital del Estado y la automatización de trámites para lograr intervenciones públicas eficientes, oportunas y centradas en la ciudadanía."
+      },
+      {
+        "Norma": "R.M. N° 0188-2025-MIDAGRI",
+        "Nombre": "Manual de Operaciones (MOP) de AGROIDEAS",
+        "Descripcion": "Delimita la estructura funcional del Programa y las funciones de evaluación y seguimiento que son fortalecidas mediante flujos agénticos automatizados."
+      },
+      {
+        "Norma": "R.D.E. N° D000106-2026-MIDAGRI-AGROIDEAS-DE",
+        "Nombre": "Plan de Gestión del Conocimiento 2026-2027 de AGROIDEAS",
+        "Descripcion": "Fomenta el desarrollo de prototipos agénticos y automatización a Costo S/. 0.00 para la optimización del ecosistema de aprendizaje e información institucional."
+      }
+    ],
+    "AplicacionPracticaAgroideas": {
+      "2.1_Objetivo": {
+        "Pregunta": "¿Qué es lo que se está desarrollando?",
+        "Respuesta": "Comprender los principios del Prototipado Agéntico y la orquestación de agentes especializados de IA para la automatización de flujos de trabajo administrativos (validación de requisitos de elegibilidad PM01/PM02, cotejo de padrones de productores y derivación inteligente de consultas) manteniendo la supervisión humana."
+      },
+      "2.2_Finalidad": {
+        "Pregunta": "¿Para qué se está desarrollando?",
+        "Respuesta": "Reducir drásticamente los tiempos de procesamiento de expedientes, eliminar tareas manuales de escaso valor añadido, garantizar la cero tasa de error en verificaciones cruzadas y liberar tiempo técnico para la asistencia directa al productor agrario en el territorio a Costo S/. 0.00."
+      },
+      "2.3_Actores": {
+        "Pregunta": "¿Quién o quiénes desarrollan esta(s) actividad(es)?",
+        "LideresEstrategicos": "Unidad de Planeamiento y Presupuesto (UPP) y el Equipo Técnico de Mejora Continua (ETMC), encargados de la gobernanza, supervisión ética y auditoría de los flujos agénticos.",
+        "EjecutoresOperativos": "Unidades Funcionales misionales (Promoción PM01 UPDC, Negocios PM02 UGIA, Monitoreo USE) y las 25 Unidades Regionales que supervisan y aprueban las salidas de los agentes digitales.",
+        "Beneficiarios": "Organizaciones Agrarias (OA) que reciben atención acelerada, continua y transparente en sus solicitudes de cofinanciamiento."
+      },
+      "2.4_MomentoFase": {
+        "Pregunta": "¿Cuándo se debe desarrollar?",
+        "Respuesta": "Corresponde a la Fase 1: Inducción e Hito de Entrada (Onboarding / Capacitación en Automatización y Agentes Digitales). Se aplica en el rediseño de procesos de alto volumen de datos y validación rutinaria."
+      }
+    }
+  },
+  "ToqueDelExpertoYAlertasCampo": {
+    "AlertaRojaPeligroAEvitar": "¡Nunca delegues la toma de decisiones administrativa o resolutiva a un agente de IA autónomo! La tecnología agéntica actúa exclusivamente como asistente de análisis y preparación de insumos; la decisión final, visación y firma legal corresponden ineludiblemente al servidor humano (Human-in-the-Loop).",
+    "TipPracticoDelExperto": "¡Diseña agentes monotemáticos con funciones hiperespecíficas! En lugar de intentar que un solo agente haga todo el proceso, crea micro-agentes especializados: uno para validar RUC/SUNAT, otro para verificar padrones de socios y otro para cotejar predios."
+  },
+  "CierreOperativoYAutoevaluacion": {
+    "ReglaDeOroOperativa": "'En AGROIDEAS, la automatización agéntica potencia la capacidad del servidor público sin reemplazar el juicio humano ni la calidez en la atención al productor agrario a Costo S/. 0.00.'",
+    "PreguntaAutoevaluacion": {
+      "Pregunta": "¿Cuál es el principio ético y legal fundamental que debe regir la automatización y el uso de agentes de IA en la administración pública según la Ley N° 31814?",
+      "Opciones": {
+        "a": "Reemplazar totalmente a los servidores públicos para eliminar la planilla estatal.",
+        "b": "El principio de supervisión humana obligatoria ('Human-in-the-Loop'), donde la decisión final y responsabilidad legal recaen siempre en el servidor público.",
+        "c": "Permitir que los agentes de IA emitan resoluciones directorales sin revisión."
+      },
+      "RespuestaCorrecta": "b",
+      "SustentoPedagogico": "La Ley N° 31814 y los marcos éticos de IA establecen que la tecnología es una herramienta de soporte que exige supervisión humana activa ('Human-in-the-Loop'), garantizando que el juicio profesional y la responsabilidad administrativa permanezcan en los servidores civiles."
+    }
+  }
+}

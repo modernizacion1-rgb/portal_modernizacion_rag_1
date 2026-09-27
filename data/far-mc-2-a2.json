@@ -1,0 +1,95 @@
+{
+  "$schema": "./schemas/far-mc-v2.json",
+  "NavegacionYTrazabilidad": {
+    "ModuloNumero": 2,
+    "ModuloNombre": "Módulo 2: Implementación de Gestión por Procesos",
+    "EjeTematico": "EJE B: Implementación de Gestión por Procesos",
+    "SubtemaCodigo": "A.2",
+    "SubtemaTitulo": "Interpretación del Mapa de Procesos Nivel 0 de AGROIDEAS",
+    "PosicionEnModulo": {
+      "ParteActual": 2,
+      "TotalPartesModulo": 3,
+      "EtiquetaSecuencia": "2 de 3",
+      "SubtemaAnteriorCodigo": "A.1",
+      "SubtemaSiguienteCodigo": "A.3"
+    },
+    "EcosistemaDigital": {
+      "Plataforma": "Portal de Modernización y Repositorio Central AGROIDEAS",
+      "ArchivoVista": "repositorio.html",
+      "NumeralSeccion": "2.5 Micro-Cursos (Fichas de Conocimiento)",
+      "FormatoNombre": "Ficha de Aprendizaje Rápido de Micro-Curso",
+      "FormatoVersion": "FAR-MC V2.0",
+      "OrigenNormativo": "INFORME EJECUTIVO Nº 023-UPP-WVP.docx"
+    }
+  },
+  "MetadatosFicha": {
+    "CodigoReferencia": "FAR-MC-MOD-02-SA.2",
+    "ProcesoVinculado": "Soporte / Estratégico: SAMGP - Arquitectura Organizacional de Procesos (NT N° 002-2025-PCM/SGP)",
+    "TiempoLecturaMinutos": 3,
+    "PublicoObjetivo": "Personal de la Sede Central y de las 25 Unidades Regionales, evaluadores de expedientes y enlaces del ETMC."
+  },
+  "SintesisEjecutiva": {
+    "ContextoYDolorInstitucional": "Esta ficha aborda la interpretación funcional del Mapa de Procesos Nivel 0 de AGROIDEAS, aprobado institucionalmente conforme al MOP (R.M. N° 0188-2025-MIDAGRI) y la Norma Técnica N° 002-2025-PCM/SGP. Resuelve la falta de visión holística del personal sobre cómo sus tareas individuales se enmarcan en los tres tipos de macroprocesos (Estratégicos, Misionales y de Soporte), asegurando la trazabilidad desde las demandas del productor agrario hasta la entrega efectiva del incentivo cofinanciado."
+  },
+  "NucleoSaberYMarcoNormativo": {
+    "PilarLegalFundacional": [
+      {
+        "Norma": "R.S.G.P. N° 002-2025-PCM/SGP",
+        "Nombre": "Norma Técnica para la Gestión por Procesos en las Entidades Públicas",
+        "Descripcion": "Establece la metodología obligatoria para la identificación de la cadena de valor y el modelamiento del Mapa de Procesos Nivel 0 de las entidades públicas."
+      },
+      {
+        "Norma": "R.M. N° 0188-2025-MIDAGRI",
+        "Nombre": "Manual de Operaciones (MOP) de AGROIDEAS",
+        "Descripcion": "Define la estructura orgánica, funciones y responsabilidades de las Unidades Funcionales (UPP, UA, UAJ, UPDC, UGIA, USE) que componen la arquitectura de procesos."
+      },
+      {
+        "Norma": "R.D.E. N° D000137-2026-MIDAGRI-AGROIDEAS-DE",
+        "Nombre": "Consolidación del Equipo Técnico de Mejora Continua (ETMC)",
+        "Descripcion": "Encarga al ETMC la actualización, alineamiento e integración continua del Mapa de Procesos institucional de AGROIDEAS."
+      },
+      {
+        "Norma": "D.S. N° 103-2022-PCM",
+        "Nombre": "Política Nacional de Modernización de la Gestión Pública al 2030",
+        "Descripcion": "Exige que la arquitectura de procesos esté orientada a resultados e interconectada territorialmente con las necesidades de la ciudadanía."
+      }
+    ],
+    "AplicacionPracticaAgroideas": {
+      "2.1_Objetivo": {
+        "Pregunta": "¿Qué es lo que se está desarrollando?",
+        "Respuesta": "Comprender e interpretar la arquitectura del Mapa de Procesos Nivel 0 de AGROIDEAS, identificando la tipología de procesos (Estratégicos/Dirección, Misionales/Línea PM01 y PM02, y de Soporte/Administración) y sus interrelaciones para la gestión integrada de la entidad."
+      },
+      "2.2_Finalidad": {
+        "Pregunta": "¿Para qué se está desarrollando?",
+        "Respuesta": "Permitir que cada servidor identifique con claridad el rol de su unidad dentro de la cadena de valor pública de AGROIDEAS, coordinando con precisión los traspasos de información entre áreas y reduciendo cuellos de botella en la atención de los incentivos agrarios a Costo S/. 0.00."
+      },
+      "2.3_Actores": {
+        "Pregunta": "¿Quién o quiénes desarrollan esta(s) actividad(es)?",
+        "LideresEstrategicos": "Procesos Estratégicos: Dirección Ejecutiva y UPP/ETMC, encargados del direccionamiento institucional y gobernanza.",
+        "EjecutoresOperativos": "Procesos Misionales (PM01 Promoción UPDC, PM02 Gestión de Incentivos UGIA, Monitoreo USE) y Procesos de Soporte (Administración UA, Asesoría Jurídica UAJ) en Lima y las 25 Unidades Regionales.",
+        "Beneficiarios": "Organizaciones Agrarias (OA) cuyos requerimientos ingresan como insumo y se transforman en valor público cofinanciado."
+      },
+      "2.4_MomentoFase": {
+        "Pregunta": "¿Cuándo se debe desarrollar?",
+        "Respuesta": "Corresponde a la Fase 1: Inducción e Hito de Entrada (Onboarding Automatizado / Inducción en Arquitectura Organizacional). Aplica de forma permanente como marco de alineamiento estructural para la formulación de procedimientos y directivas."
+      }
+    }
+  },
+  "ToqueDelExpertoYAlertasCampo": {
+    "AlertaRojaPeligroAEvitar": "¡No consideres los procesos de soporte como barreras o 'islas' independientes! La administración, logística y legal existen exclusivamente para dar viabilidad y soporte a la cadena misional de entrega de incentivos al productor agrario.",
+    "TipPracticoDelExperto": "¡Ubica tu puesto en el Mapa Nivel 0! Si trabajas en evaluación de expedientes (PM02) o promoción (PM01), recuerda que tu proceso se alimenta directamente de la fase previa de elegibilidad y entrega insumos para la fase posterior de desembolso y seguimiento."
+  },
+  "CierreOperativoYAutoevaluacion": {
+    "ReglaDeOroOperativa": "'En AGROIDEAS, el Mapa de Procesos Nivel 0 es la brújula institucional que articula el trabajo de todas las unidades hacia la competitividad del productor agrario.'",
+    "PreguntaAutoevaluacion": {
+      "Pregunta": "¿Cómo se clasifican los procesos en el Mapa de Procesos Nivel 0 de AGROIDEAS según la Norma Técnica N° 002-2025-PCM/SGP?",
+      "Opciones": {
+        "a": "En procesos presupuestales, procesos contables y procesos de archivo documental.",
+        "b": "En procesos Estratégicos (Dirección/UPP), Misionales (Línea PM01/PM02) y de Soporte (Administración/Legal).",
+        "c": "Únicamente en procesos de la Sede Central y procesos regionales aislados."
+      },
+      "RespuestaCorrecta": "b",
+      "SustentoPedagogico": "La NT N° 002-2025-PCM/SGP clasifica la arquitectura de procesos en tres categorías: Estratégicos (orientan la entidad), Misionales (producen los bienes/servicios directos para los usuarios) y de Soporte (proporcionan recursos necesarios)."
+    }
+  }
+}

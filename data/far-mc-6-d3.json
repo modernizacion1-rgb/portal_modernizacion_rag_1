@@ -1,0 +1,95 @@
+{
+  "$schema": "./schemas/far-mc-v2.json",
+  "NavegacionYTrazabilidad": {
+    "ModuloNumero": 6,
+    "ModuloNombre": "Módulo 6: Calidad de los Servicios",
+    "EjeTematico": "EJE F: Pertinencia Territorial, Estándares de Servicio y Satisfacción Ciudadana",
+    "SubtemaCodigo": "D.3",
+    "SubtemaTitulo": "Indicadores de Calidad de Servicio y Satisfacción Ciudadana",
+    "PosicionEnModulo": {
+      "ParteActual": 3,
+      "TotalPartesModulo": 3,
+      "EtiquetaSecuencia": "3 de 3",
+      "SubtemaAnteriorCodigo": "D.2",
+      "SubtemaSiguienteCodigo": null
+    },
+    "EcosistemaDigital": {
+      "Plataforma": "Portal de Modernización y Repositorio Central AGROIDEAS",
+      "ArchivoVista": "repositorio.html",
+      "NumeralSeccion": "2.5 Micro-Cursos (Fichas de Conocimiento)",
+      "FormatoNombre": "Ficha de Aprendizaje Rápido de Micro-Curso",
+      "FormatoVersion": "FAR-MC V2.0",
+      "OrigenNormativo": "INFORME EJECUTIVO Nº 023-UPP-WVP.docx"
+    }
+  },
+  "MetadatosFicha": {
+    "CodigoReferencia": "FAR-MC-MOD-06-SD.3",
+    "ProcesoVinculado": "Soporte / Estratégico: SAMGP - Medición de la Calidad y Satisfacción Ciudadana (NT N° 001-2022-PCM/SGP / D.S. N° 009-2019-JUS)",
+    "TiempoLecturaMinutos": 3,
+    "PublicoObjetivo": "Personal de la Sede Central y de las 25 Unidades Regionales, responsables de calidad, evaluadores y enlaces del ETMC."
+  },
+  "SintesisEjecutiva": {
+    "ContextoYDolorInstitucional": "Esta ficha aborda el diseño, medición y monitoreo automatizado de los Indicadores de Calidad de Servicio y Satisfacción Ciudadana en AGROIDEAS conforme a la Norma Técnica N° 001-2022-PCM/SGP. Resuelve la falta de retroalimentación sistemática sobre la percepción del productor agrario respecto a los incentivos cofinanciados, permitiendo implementar un ciclo continuo de evaluación basada en evidencias para cerrar brechas de atención in situ y en plataformas digitales."
+  },
+  "NucleoSaberYMarcoNormativo": {
+    "PilarLegalFundacional": [
+      {
+        "Norma": "R.S.G.P. N° 001-2022-PCM/SGP",
+        "Nombre": "Norma Técnica para la Gestión de la Calidad de Servicio en las Entidades Públicas",
+        "Descripcion": "Establece las directrices para la medición de la satisfacción del ciudadano, estandarización de servicios, gestión de reclamos y mejora continua en la atención."
+      },
+      {
+        "Norma": "D.S. N° 009-2019-JUS",
+        "Nombre": "Reglamento de la Ley del Código de Ética de la Función Pública y Atención al Ciudadano",
+        "Descripcion": "Define los principios de trato de calidad, calidez, celeridad y accesibilidad sin discriminación en las intervenciones públicas."
+      },
+      {
+        "Norma": "R.M. N° 0188-2025-MIDAGRI",
+        "Nombre": "Manual de Operaciones (MOP) de AGROIDEAS",
+        "Descripcion": "Asigna a la UPP la conducción del seguimiento de indicadores de gestión, calidad institucional y desempeño de la cadena de valor."
+      },
+      {
+        "Norma": "R.D.E. N° D000106-2026-MIDAGRI-AGROIDEAS-DE",
+        "Nombre": "Plan de Gestión del Conocimiento 2026-2027 de AGROIDEAS",
+        "Descripcion": "Institucionaliza los paneles digitales (Looker Studio) para el monitoreo en tiempo real de la satisfacción de las Organizaciones Agrarias beneficiarias."
+      }
+    ],
+    "AplicacionPracticaAgroideas": {
+      "2.1_Objetivo": {
+        "Pregunta": "¿Qué es lo que se está desarrollando?",
+        "Respuesta": "Desplegar el sistema de medición de indicadores de calidad de servicio (Tiempos de Atención, Tasa de Resolución en Primer Contacto, Índice de Satisfacción del Usuario - CSAT) mediante encuestas digitales automatizadas (Google Forms/Looker Studio) aplicadas a las Organizaciones Agrarias atenciones de elegibilidad y planes de negocio."
+      },
+      "2.2_Finalidad": {
+        "Pregunta": "¿Para qué se está desarrollando?",
+        "Respuesta": "Identificar cuellos de botella específicos por región, adaptar los canales de atención a la realidad del productor agrario, elevar el nivel de satisfacción a más del 85% y asegurar que el cofinanciamiento genere un verdadero impacto positivo con costo S/. 0.00."
+      },
+      "2.3_Actores": {
+        "Pregunta": "¿Quién o quiénes desarrollan esta(s) actividad(es)?",
+        "LideresEstrategicos": "Unidad de Planeamiento y Presupuesto (UPP) y el Equipo Técnico de Mejora Continua (ETMC), encargados del diseño de indicadores, consolidación del tablero de control y propuesta de acciones correctivas.",
+        "EjecutoresOperativos": "Unidades misionales (Promoción PM01 UPDC, Negocios PM02 UGIA, Monitoreo USE) y las 25 Unidades Regionales que aplican las encuestas de satisfacción al culminar cada hito de servicio.",
+        "Beneficiarios": "Organizaciones Agrarias (OA) y productores agrarios atendidos que evalúan la calidad del servicio recibido."
+      },
+      "2.4_MomentoFase": {
+        "Pregunta": "¿Cuándo se debe desarrollar?",
+        "Respuesta": "Corresponde a la Fase 1: Inducción e Hito de Entrada (Onboarding / Capacitación en Calidad de Servicio y Satisfacción Ciudadana). Se ejecuta de manera continua al cierre de cada entrega de servicio e hito de evaluación de incentivos."
+      }
+    }
+  },
+  "ToqueDelExpertoYAlertasCampo": {
+    "AlertaRojaPeligroAEvitar": "¡No encuestes solo para cumplir un requisito formal sin analizar los resultados! Omitir el análisis de los reclamos o bajas calificaciones de satisfacción en las Unidades Regionales impide corregir fallas operativas y debilita la confianza del productor agrario.",
+    "TipPracticoDelExperto": "¡Automatiza la encuesta en el hito de notificación del resultado! Configura el envío automático del formulario breve de satisfacción (máximo 3 preguntas) inmediatamente después de notificar la resolución de elegibilidad o aprobación del Plan de Negocio."
+  },
+  "CierreOperativoYAutoevaluacion": {
+    "ReglaDeOroOperativa": "'En AGROIDEAS, la calidad del servicio se mide con la satisfacción real del productor agrario en su territorio a Costo S/. 0.00.'",
+    "PreguntaAutoevaluacion": {
+      "Pregunta": "¿Cuál es el estándar metodológico establecido por la Norma Técnica N° 001-2022-PCM/SGP para evaluar la percepción de los usuarios en la gestión pública?",
+      "Opciones": {
+        "a": "Mediciones empíricas e informales sin instrumentos estandarizados.",
+        "b": "El Índice de Satisfacción Ciudadana (CSAT) y la evaluación continua de atributos de calidad del servicio (tiempo, trato, información, infraestructura y resultado).",
+        "c": "Encuestas presenciales obligatorias de 50 preguntas impresas en papel."
+      },
+      "RespuestaCorrecta": "b",
+      "SustentoPedagogico": "La NT N° 001-2022-PCM/SGP establece que la medición de la satisfacción ciudadana debe realizarse mediante indicadores estandarizados como el CSAT, evaluando atributos clave del servicio a través de canales accesibles y oportunos."
+    }
+  }
+}

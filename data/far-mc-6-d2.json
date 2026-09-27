@@ -1,0 +1,95 @@
+{
+  "$schema": "./schemas/far-mc-v2.json",
+  "NavegacionYTrazabilidad": {
+    "ModuloNumero": 6,
+    "ModuloNombre": "Módulo 6: Calidad de los Servicios",
+    "EjeTematico": "EJE F: Pertinencia Territorial, Estándares de Servicio y Satisfacción Ciudadana",
+    "SubtemaCodigo": "D.2",
+    "SubtemaTitulo": "Herramientas Tecnológicas y Seguridad de Información",
+    "PosicionEnModulo": {
+      "ParteActual": 2,
+      "TotalPartesModulo": 3,
+      "EtiquetaSecuencia": "2 de 3",
+      "SubtemaAnteriorCodigo": "D.1",
+      "SubtemaSiguienteCodigo": "D.3"
+    },
+    "EcosistemaDigital": {
+      "Plataforma": "Portal de Modernización y Repositorio Central AGROIDEAS",
+      "ArchivoVista": "repositorio.html",
+      "NumeralSeccion": "2.5 Micro-Cursos (Fichas de Conocimiento)",
+      "FormatoNombre": "Ficha de Aprendizaje Rápido de Micro-Curso",
+      "FormatoVersion": "FAR-MC V2.0",
+      "OrigenNormativo": "INFORME EJECUTIVO Nº 023-UPP-WVP.docx"
+    }
+  },
+  "MetadatosFicha": {
+    "CodigoReferencia": "FAR-MC-MOD-06-SD.2",
+    "ProcesoVinculado": "Soporte / Estratégico: SAMGP - Seguridad de la Información y Herramientas Tecnológicas (Ley N° 29733 / D.L. N° 1412)",
+    "TiempoLecturaMinutos": 3,
+    "PublicoObjetivo": "Personal de la Sede Central y de las 25 Unidades Regionales, responsables de sistemas, evaluadores y enlaces del ETMC."
+  },
+  "SintesisEjecutiva": {
+    "ContextoYDolorInstitucional": "Esta ficha aborda el uso seguro e interoperable de las herramientas tecnológicas institucionales y la protección de datos personales en AGROIDEAS conforme a la Ley N° 29733 y el Decreto Legislativo N° 1412 (Gobierno Digital). Resuelve los riesgos de fuga de información sensible, accesos no autorizados a expedientes y el uso inadecuado de repositorios en la nube durante la evaluación de Planes de Negocio."
+  },
+  "NucleoSaberYMarcoNormativo": {
+    "PilarLegalFundacional": [
+      {
+        "Norma": "Ley N° 29733 y D.S. N° 003-2013-JUS",
+        "Nombre": "Ley de Protección de Datos Personales y su Reglamento",
+        "Descripcion": "Establece el marco obligatorio para el tratamiento legítimo, seguro y confidencial de la información de las personas naturales y productores agrarios."
+      },
+      {
+        "Norma": "Decreto Legislativo N° 1412",
+        "Nombre": "Ley de Gobierno Digital",
+        "Descripcion": "Regula el uso de tecnologías digitales, identidad digital, interoperabilidad y seguridad de la información en la administración pública."
+      },
+      {
+        "Norma": "R.M. N° 0188-2025-MIDAGRI",
+        "Nombre": "Manual de Operaciones (MOP) de AGROIDEAS",
+        "Descripcion": "Asigna las competencias para la administración, soporte y seguridad de las soluciones tecnológicas del Programa."
+      },
+      {
+        "Norma": "R.D.E. N° D000106-2026-MIDAGRI-AGROIDEAS-DE",
+        "Nombre": "Plan de Gestión del Conocimiento 2026-2027 de AGROIDEAS",
+        "Descripcion": "Establece el uso seguro y encriptado del ecosistema digital institucional a Costo S/. 0.00 para la retención y difusión del conocimiento."
+      }
+    ],
+    "AplicacionPracticaAgroideas": {
+      "2.1_Objetivo": {
+        "Pregunta": "¿Qué es lo que se está desarrollando?",
+        "Respuesta": "Implementar los estándares de seguridad digital, gestión de accesos, cifrado y buenas prácticas de confidencialidad en el uso de la suite tecnológica institucional (Google Workspace, Drive, Sites, repositorios de expedientes) para proteger la información de las Organizaciones Agrarias y del Programa."
+      },
+      "2.2_Finalidad": {
+        "Pregunta": "¿Para qué se está desarrollando?",
+        "Respuesta": "Garantizar la intangibilidad, confidencialidad, disponibilidad e integridad de los expedientes técnicos y datos personales de los productores agrarios, previniendo vulneraciones de seguridad, ciberataques y uso indebido de credenciales a Costo S/. 0.00."
+      },
+      "2.3_Actores": {
+        "Pregunta": "¿Quién o quiénes desarrollan esta(s) actividad(es)?",
+        "LideresEstrategicos": "Unidad de Administración (Área de Tecnologías de la Información), UPP y el ETMC, encargados de la gobernanza de la seguridad digital y definición de permisos.",
+        "EjecutoresOperativos": "Todos los servidores civiles y evaluadores de la Sede Central y de las 25 Unidades Regionales que manejan plataformas digitales e información confidencial.",
+        "Beneficiarios": "Organizaciones Agrarias (OA) y productores beneficiarios cuya información personal y comercial está plenamente resguardada."
+      },
+      "2.4_MomentoFase": {
+        "Pregunta": "¿Cuándo se debe desarrollar?",
+        "Respuesta": "Corresponde a la Fase 1: Inducción e Hito de Entrada (Onboarding / Capacitación en Seguridad de la Información y Gobierno Digital). Constituye una norma de conducta digital permanente."
+      }
+    }
+  },
+  "ToqueDelExpertoYAlertasCampo": {
+    "AlertaRojaPeligroAEvitar": "¡Jamás compartas información de expedientes o datos personales de productores a través de correos personales o enlaces públicos sin restricción de dominio! La vulneración de la Ley N° 29733 acarrea responsabilidad administrativa y legal grave.",
+    "TipPracticoDelExperto": "¡Aplica la autenticación de doble factor (2FA) y permisos de acceso por perfil! En Google Drive/Workspace, restringe las carpetas de expedientes únicamente a los usuarios autorizados del dominio institucional (@agroideas.gob.pe) con rol de solo lectura o edición según corresponda."
+  },
+  "CierreOperativoYAutoevaluacion": {
+    "ReglaDeOroOperativa": "'En AGROIDEAS, la tecnología al servicio del productor agrario solo es sostenible si garantiza la máxima seguridad y confidencialidad de la información a Costo S/. 0.00.'",
+    "PreguntaAutoevaluacion": {
+      "Pregunta": "¿Cuál es el marco legal peruano que regula la protección de la información personal de los ciudadanos y productores agrarios en las plataformas digitales del Estado?",
+      "Opciones": {
+        "a": "La Ley N° 29733 (Ley de Protección de Datos Personales) y el Decreto Legislativo N° 1412 (Ley de Gobierno Digital).",
+        "b": "El Código de Comercio de 1902.",
+        "c": "La Ley General de Minería."
+      },
+      "RespuestaCorrecta": "a",
+      "SustentoPedagogico": "La Ley N° 29733 y el D.L. N° 1412 garantizan el tratamiento adecuado de los datos personales y establecen las medidas de seguridad digitales obligatorias para las entidades públicas."
+    }
+  }
+}

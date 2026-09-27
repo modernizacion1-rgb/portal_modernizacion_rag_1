@@ -1,0 +1,400 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "./schemas/far-mc-v2.json",
+  "title": "Esquema Estándar FAR-MC V2.0 - AGROIDEAS",
+  "description": "Especificación JSON Schema oficial para las Fichas de Aprendizaje Rápido de Micro-Curso (FAR-MC V2.0) en el marco del Sistema de Gestión del Conocimiento y Modernización de AGROIDEAS.",
+  "type": "object",
+  "required": [
+    "NavegacionYTrazabilidad",
+    "MetadatosFicha",
+    "SintesisEjecutiva",
+    "NucleoSaberYMarcoNormativo",
+    "ToqueDelExpertoYAlertasCampo",
+    "CierreOperativoYAutoevaluacion"
+  ],
+  "properties": {
+    "$schema": {
+      "type": "string",
+      "description": "Ruta o URI de referencia al esquema JSON de validación."
+    },
+    "NavegacionYTrazabilidad": {
+      "type": "object",
+      "description": "Sección I: Metadatos de navegación, jerarquía curricular y trazabilidad digital del micro-curso.",
+      "required": [
+        "ModuloNumero",
+        "ModuloNombre",
+        "EjeTematico",
+        "SubtemaCodigo",
+        "SubtemaTitulo",
+        "PosicionEnModulo",
+        "EcosistemaDigital"
+      ],
+      "properties": {
+        "ModuloNumero": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 6,
+          "description": "Número identificador del módulo temático (1 a 6)."
+        },
+        "ModuloNombre": {
+          "type": "string",
+          "description": "Nombre completo del módulo temático."
+        },
+        "EjeTematico": {
+          "type": "string",
+          "description": "Eje temático estratégico de modernización vinculado."
+        },
+        "SubtemaCodigo": {
+          "type": "string",
+          "description": "Código corto del subtema (ej. M1.1, A.1, C.2)."
+        },
+        "SubtemaTitulo": {
+          "type": "string",
+          "description": "Título oficial de la denominación del subtema."
+        },
+        "PosicionEnModulo": {
+          "type": "object",
+          "description": "Datos de secuencia y posición del subtema dentro del módulo.",
+          "required": [
+            "ParteActual",
+            "TotalPartesModulo",
+            "EtiquetaSecuencia",
+            "SubtemaAnteriorCodigo",
+            "SubtemaSiguienteCodigo"
+          ],
+          "properties": {
+            "ParteActual": {
+              "type": "integer",
+              "minimum": 1,
+              "maximum": 3,
+              "description": "Número de parte/cápsula actual dentro del módulo."
+            },
+            "TotalPartesModulo": {
+              "type": "integer",
+              "minimum": 1,
+              "maximum": 3,
+              "description": "Total de partes/cápsulas en el módulo."
+            },
+            "EtiquetaSecuencia": {
+              "type": "string",
+              "description": "Etiqueta textual de secuencia (ej. \"1 de 3\")."
+            },
+            "SubtemaAnteriorCodigo": {
+              "type": [
+                "string",
+                "null"
+              ],
+              "description": "Código del subtema anterior en la secuencia, o null si es la primera cápsula."
+            },
+            "SubtemaSiguienteCodigo": {
+              "type": [
+                "string",
+                "null"
+              ],
+              "description": "Código del subtema siguiente en la secuencia, o null si es la última cápsula."
+            }
+          },
+          "additionalProperties": false
+        },
+        "EcosistemaDigital": {
+          "type": "object",
+          "description": "Metadatos de integración con el Portal Web de Modernización y Repositorio Institucional.",
+          "required": [
+            "Plataforma",
+            "ArchivoVista",
+            "NumeralSeccion",
+            "FormatoNombre",
+            "FormatoVersion",
+            "OrigenNormativo"
+          ],
+          "properties": {
+            "Plataforma": {
+              "type": "string",
+              "description": "Plataforma o sistema de alojamiento del activo digital."
+            },
+            "ArchivoVista": {
+              "type": "string",
+              "description": "Archivo de vista HTML o componente interfaz del repositorio."
+            },
+            "NumeralSeccion": {
+              "type": "string",
+              "description": "Numeral o sección del catálogo en la arquitectura del portal."
+            },
+            "FormatoNombre": {
+              "type": "string",
+              "description": "Nombre oficial del formato de micro-curso."
+            },
+            "FormatoVersion": {
+              "type": "string",
+              "description": "Versión técnica del estándar FAR-MC (ej. FAR-MC V2.0)."
+            },
+            "OrigenNormativo": {
+              "type": "string",
+              "description": "Documento técnico o informe legal fundacional que sustenta el micro-curso."
+            }
+          },
+          "additionalProperties": false
+        }
+      },
+      "additionalProperties": false
+    },
+    "MetadatosFicha": {
+      "type": "object",
+      "description": "Metadatos técnicos operativos de la ficha FAR-MC.",
+      "required": [
+        "CodigoReferencia",
+        "ProcesoVinculado",
+        "TiempoLecturaMinutos",
+        "PublicoObjetivo"
+      ],
+      "properties": {
+        "CodigoReferencia": {
+          "type": "string",
+          "description": "Código único de trazabilidad de la ficha (ej. FAR-MC-MOD-01-S1.1)."
+        },
+        "ProcesoVinculado": {
+          "type": "string",
+          "description": "Proceso misional o de soporte según el Mapa de Procesos de AGROIDEAS."
+        },
+        "TiempoLecturaMinutos": {
+          "type": "integer",
+          "minimum": 1,
+          "description": "Tiempo estimado de asimilación/lectura en minutos."
+        },
+        "PublicoObjetivo": {
+          "type": "string",
+          "description": "Público destinatario y perfil de usuarios dentro de la organización."
+        }
+      },
+      "additionalProperties": false
+    },
+    "SintesisEjecutiva": {
+      "type": "object",
+      "description": "Sección II: Síntesis ejecutiva y diagnóstico del dolor/problema institucional.",
+      "required": [
+        "ContextoYDolorInstitucional"
+      ],
+      "properties": {
+        "ContextoYDolorInstitucional": {
+          "type": "string",
+          "description": "Descripción del contexto, cuello de botella o problema operativo que resuelve la pauta normativa."
+        }
+      },
+      "additionalProperties": false
+    },
+    "NucleoSaberYMarcoNormativo": {
+      "type": "object",
+      "description": "Sección III: Núcleo del saber, pilares legales fundacionales y matriz de aplicación práctica 5W+2H.",
+      "required": [
+        "PilarLegalFundacional",
+        "AplicacionPracticaAgroideas"
+      ],
+      "properties": {
+        "PilarLegalFundacional": {
+          "type": "array",
+          "minItems": 1,
+          "description": "Lista de dispositivos legales clave que sustentan la norma/pauta.",
+          "items": {
+            "type": "object",
+            "required": [
+              "Norma",
+              "Nombre",
+              "Descripcion"
+            ],
+            "properties": {
+              "Norma": {
+                "type": "string",
+                "description": "Dispositivo legal o norma oficial (ej. Ley N° 27658, R.S.G.P. N° 001-2022-PCM/SGP)."
+              },
+              "Nombre": {
+                "type": "string",
+                "description": "Denominación oficial o título de la norma."
+              },
+              "Descripcion": {
+                "type": "string",
+                "description": "Resumen del impacto, alcance o contribución de la norma al proceso."
+              }
+            },
+            "additionalProperties": false
+          }
+        },
+        "AplicacionPracticaAgroideas": {
+          "type": "object",
+          "description": "Desglose metodológico 5W+2H adaptado a la operativa de AGROIDEAS.",
+          "required": [
+            "2.1_Objetivo",
+            "2.2_Finalidad",
+            "2.3_Actores",
+            "2.4_MomentoFase"
+          ],
+          "properties": {
+            "2.1_Objetivo": {
+              "type": "object",
+              "description": "Subsección 2.1: Objetivo de la actividad (¿Qué?).",
+              "required": [
+                "Pregunta",
+                "Respuesta"
+              ],
+              "properties": {
+                "Pregunta": {
+                  "type": "string"
+                },
+                "Respuesta": {
+                  "type": "string"
+                }
+              },
+              "additionalProperties": false
+            },
+            "2.2_Finalidad": {
+              "type": "object",
+              "description": "Subsección 2.2: Finalidad e impacto de la actividad (¿Para qué?).",
+              "required": [
+                "Pregunta",
+                "Respuesta"
+              ],
+              "properties": {
+                "Pregunta": {
+                  "type": "string"
+                },
+                "Respuesta": {
+                  "type": "string"
+                }
+              },
+              "additionalProperties": false
+            },
+            "2.3_Actores": {
+              "type": "object",
+              "description": "Subsección 2.3: Actores involucrados (¿Quiénes?).",
+              "required": [
+                "Pregunta",
+                "LideresEstrategicos",
+                "EjecutoresOperativos",
+                "Beneficiarios"
+              ],
+              "properties": {
+                "Pregunta": {
+                  "type": "string"
+                },
+                "LideresEstrategicos": {
+                  "type": "string"
+                },
+                "EjecutoresOperativos": {
+                  "type": "string"
+                },
+                "Beneficiarios": {
+                  "type": "string"
+                }
+              },
+              "additionalProperties": false
+            },
+            "2.4_MomentoFase": {
+              "type": "object",
+              "description": "Subsección 2.4: Oportunidad y fase de aplicación (¿Cuándo?).",
+              "required": [
+                "Pregunta",
+                "Respuesta"
+              ],
+              "properties": {
+                "Pregunta": {
+                  "type": "string"
+                },
+                "Respuesta": {
+                  "type": "string"
+                }
+              },
+              "additionalProperties": false
+            }
+          },
+          "additionalProperties": false
+        }
+      },
+      "additionalProperties": false
+    },
+    "ToqueDelExpertoYAlertasCampo": {
+      "type": "object",
+      "description": "Sección IV: Alertas operativas de campo y consejos del experto.",
+      "required": [
+        "AlertaRojaPeligroAEvitar",
+        "TipPracticoDelExperto"
+      ],
+      "properties": {
+        "AlertaRojaPeligroAEvitar": {
+          "type": "string",
+          "description": "Advertencia crítica sobre errores, vulneraciones normativas o malas prácticas a evitar."
+        },
+        "TipPracticoDelExperto": {
+          "type": "string",
+          "description": "Consejo técnico u operativo de aplicación práctica e inmediata."
+        }
+      },
+      "additionalProperties": false
+    },
+    "CierreOperativoYAutoevaluacion": {
+      "type": "object",
+      "description": "Sección V: Cierre operativo, regla de oro e instrumento de autoevaluación pedagógica.",
+      "required": [
+        "ReglaDeOroOperativa",
+        "PreguntaAutoevaluacion"
+      ],
+      "properties": {
+        "ReglaDeOroOperativa": {
+          "type": "string",
+          "description": "Frase fuerza o principio rector en caja cerrada que sintetiza la regla de oro del subtema."
+        },
+        "PreguntaAutoevaluacion": {
+          "type": "object",
+          "description": "Pregunta pedagógica con opciones múltiples y sustento normativo.",
+          "required": [
+            "Pregunta",
+            "Opciones",
+            "RespuestaCorrecta",
+            "SustentoPedagogico"
+          ],
+          "properties": {
+            "Pregunta": {
+              "type": "string",
+              "description": "Enunciado de la pregunta de autoevaluación."
+            },
+            "Opciones": {
+              "type": "object",
+              "description": "Opciones de respuesta (a, b, c).",
+              "required": [
+                "a",
+                "b",
+                "c"
+              ],
+              "properties": {
+                "a": {
+                  "type": "string"
+                },
+                "b": {
+                  "type": "string"
+                },
+                "c": {
+                  "type": "string"
+                }
+              },
+              "additionalProperties": false
+            },
+            "RespuestaCorrecta": {
+              "type": "string",
+              "enum": [
+                "a",
+                "b",
+                "c"
+              ],
+              "description": "Clave de la respuesta correcta (\"a\", \"b\" o \"c\")."
+            },
+            "SustentoPedagogico": {
+              "type": "string",
+              "description": "Fundamento legal y pedagógico que sustenta la respuesta correcta."
+            }
+          },
+          "additionalProperties": false
+        }
+      },
+      "additionalProperties": false
+    }
+  },
+  "additionalProperties": false
+}

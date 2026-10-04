@@ -6,10 +6,13 @@ El Portal Web de Gestión y Modernización adopta una estética **Modern Governm
 ---
 
 ## 1. Framework y Metodología (Tailwind CSS)
-El sitio utiliza **Tailwind CSS** (inyectado vía CDN de desarrollo o empaquetado optimizado en producción) como motor principal de diseño declarativo:
+El sitio utiliza **Tailwind CSS** (vía CDN oficial `https://cdn.tailwindcss.com` en las 16 páginas) como motor principal de diseño declarativo:
 - **Agilidad Maquetadora:** Permite construir layouts complejos y adaptativos aplicando clases directamente en las etiquetas HTML.
 - **Consistencia Visual:** Normaliza las escalas de espaciado (`p-6`, `my-12`, `gap-8`), radios de borde (`rounded-2xl`, `rounded-3xl`, `rounded-[3rem]`) y sombras (`shadow-sm`, `shadow-xl`, `shadow-2xl`).
 - **Desacoplamiento Estructural:** Evita la colisión de estilos en cascada y facilita la creación de nuevos micro-componentes por parte de desarrolladores o agentes IA sin inflar el tamaño de hojas CSS externas.
+
+> [!IMPORTANT]
+> **Cobertura real de la paleta:** 15 de las 16 páginas definen en su `<head>` la configuración `tailwind.config` con la paleta institucional "Impulsa Agroideas". La excepción es `chatbot.html`, que conserva la configuración legacy (`pcm-red: #dc2626`, `agro-blue: #1e3a8a`) pendiente de migración. Asimismo, el markup inyectado por `js/components.js` (header/footer) emplea temporalmente clases `blue-*` de la línea gráfica anterior.
 
 ---
 
@@ -27,12 +30,12 @@ Los colores clave del branding institucional han sido definidos como variables C
 }
 ```
 
-En la configuración de Tailwind, estos tokens se mapean como `primary: '#1A5336'`, `secondary: '#53A548'`, `accent: '#F1C40F'` y `bglight: '#F4F6F5'`, junto con las fuentes `sans` (Inter) y `heading` (Montserrat), garantizando contraste WCAG AAA para accesibilidad web.
+En la configuración de Tailwind (`tailwind.config` inline en el `<head>` de 15 de las 16 páginas), estos tokens se mapean como `primary: '#1A5336'`, `secondary: '#53A548'`, `accent: '#F1C40F'` y `bglight: '#F4F6F5'`, junto con las fuentes `sans` (Inter) y `heading` (Montserrat), garantizando contraste WCAG AAA para accesibilidad web.
 
 ### Tipografía Institucional
 - **Títulos y Encabezados (H1–H6):** **Montserrat** (Bold / ExtraBold), para peso e impacto institucional moderno.
 - **Cuerpo de Texto y Párrafos:** **Inter** (Regular / Medium), para lectura cómoda en documentos y descripciones.
-- Ambas fuentes se importan vía Google Fonts en `css/modern-styles.css`.
+- Ambas fuentes se importan vía `@import` de Google Fonts al inicio de `css/modern-styles.css` (los `<head>` de las páginas no las referencian directamente).
 
 ---
 
@@ -57,15 +60,15 @@ En la página `repositorio.html`, la navegación documental se divide en **4 pes
 
 ### E. Interfaz del Asistente IA (`chatbot.html` / `css/chatbot.css`)
 El módulo conversacional utiliza un diseño tipo consola ejecutiva de doble panel:
-- Panel lateral izquierdo para historial de consultas frecuentes, filtros temáticos (9 categorías normativas) y sugerencias rápidas.
-- Panel central derecho para la burbuja de chat con avatares institucionales (logo AGROIDEAS para la IA y avatar ciudadano para las consultas), indicadores de tipeo (*typing indicator*) y resaltado de enlaces normativos en formato *pill*.
-- **Widget Flotante Global (FAB):** Botón circular con resplandor inyectado en la esquina inferior derecha de todas las páginas para acceder al asistente de forma inmediata.
+- Panel lateral izquierdo para historial de consultas frecuentes, filtros temáticos (**9 categorías normativas** más la vista "Todos los Temas"), configuración del conector Gemini y sugerencias rápidas.
+- Panel central derecho para la burbuja de chat con avatares institucionales (logo AGROIDEAS para la IA y avatar ciudadano para las consultas), indicadores de tipeo (*typing indicator*), botón de reconocimiento de voz (`#btn-voice`, basado en `window.SpeechRecognition || window.webkitSpeechRecognition`) y resaltado de enlaces normativos en formato *pill*.
+- **Widget Flotante Global (FAB) — [DISEÑO RESERVADO / NO INSTANCIADO]:** La hoja `css/chatbot.css` define los estilos de un botón circular flotante con resplandor (`#global-chatbot-fab`, `.fab-pulse-ring`, `.fab-tooltip`) pensado para la esquina inferior derecha de todas las páginas. **Actualmente ningún script ni página lo instancia en el DOM**; es código CSS reservado para una futura versión del portal. Si se decide activarlo, debe inyectarse desde `js/components.js` para propagarse a las 15 páginas que consumen el inyector global.
 
 ### F. Aula Virtual de Micro-Cursos (`microcurso.html`)
-El entorno de aprendizaje SPA presenta un **visualizador de video** (iframe de YouTube/Google Vids), una **sección de descarga de fichas PDF**, un **panel lateral de Check de Aprendizaje (quiz interactivo)** y una **barra de progreso** que avanza conforme el usuario responde. El **Modal "Índice de Módulo"** en el repositorio lista los subtemas con numeración secuencial y botones "Iniciar" que enlazan al Aula Virtual.
+El entorno de aprendizaje SPA presenta un **contenedor de video** (actualmente implementado como placeholder visual; el bloque `<iframe>` real se encuentra reservado/comentado en la plantilla), una **sección de descarga de ficha PDF** que deriva al visor `ficha_microcurso.html`, un **panel lateral de Check de Aprendizaje (quiz interactivo)** con opciones de radio y una **barra de progreso** superior (#progressBar) que avanza conforme el usuario responde las preguntas. El **Modal "Índice de Módulo"** en el repositorio lista los subtemas con numeración secuencial y botones duales **"Ficha"** / **"Aula"**. Esta página es la única que no consume el inyector global (`js/components.js`), ya que emplea un mini-header sticky propio de navegación curricular con botón de retorno (`#backButton`).
 
-### G. Patrones de Componentes de Fichas Técnicas ETMC (`ficha_*.html`, `guia_*.html`, `transferencia_*.html`)
-Para garantizar rigurosidad técnica y uniformidad visual con los formularios impresos oficiales (Anexos 01 al 04 de la SGP-PCM), los 4 visores de conocimiento incorporan los siguientes componentes de diseño:
+### G. Patrones de Componentes de Fichas Técnicas y Pedagógicas (`ficha_*.html`, `guia_*.html`, `transferencia_*.html`)
+Para garantizar rigurosidad técnica y uniformidad visual con los formularios impresos oficiales (Anexos 01 al 04 de la SGP-PCM y el formato pedagógico FAR-MC V2.0), los **5 visores de conocimiento** incorporan los siguientes componentes de diseño:
 
 1. **Hero Banner Institucional:**
    - Fondo con degradado oficial: `bg-gradient-to-r from-primary to-primary/90 text-white rounded-3xl p-6 md:p-8 shadow-lg`.
@@ -87,13 +90,15 @@ Para garantizar rigurosidad técnica y uniformidad visual con los formularios im
 
 5. **Botón Oficial de Impresión / PDF (`#btn-imprimir-pdf`):**
    - Estilo institucional: `inline-flex items-center gap-2 px-6 py-3 bg-primary text-white font-bold text-sm rounded-xl hover:bg-secondary hover:shadow-lg transition-all duration-300 shadow-sm`.
-   - Acción dinámica: Invoca el enlace de Google Drive del documento oficial vía `window.open()` con fallback a `window.print()`.
+   - Acción dinámica por tipo de visor:
+     - **Visores ETMC (FLA, FBP, GT-SH, TCO):** invocan el enlace de Google Drive del documento oficial vía `window.open(linkPdf, '_blank', 'noopener,noreferrer')`, con fallback a `window.print()`.
+     - **Visor pedagógico FAR-MC (`ficha_microcurso.html`):** ejecuta únicamente `window.print()` con estilos `@media print` propios, pues está diseñado para generación/impresión directa de la ficha y no consume la propiedad `"Link"` de Google Drive.
 
 ### H. Tabla de Normatividad Institucional (`directivas-table.js`)
-- Renderiza las directivas institucionales contenidas en `data/normativas_agroideas.json`.
-- Badges por tipo de norma: `RDE` (Verde institucional), `DIRECTIVA` (Azul corporativo), `GUÍA` (Ámbar/Dorado).
-- Botón de enlace directo a Google Drive: Ícono vectorial `external-link` con hover interactivo.
-- Ordenamiento cronológico predeterminado descendente por fecha de emisión.
+- Renderiza las **43 directivas y resoluciones institucionales** contenidas en `data/normativas_agroideas.json` sobre la tabla `#tablaDirectivas` (pestaña *1. Normatividad* del repositorio).
+- Columnas: `titulo` (24%), `resolucion_aprobatoria` (18%), `fecha` convertida a ISO para ordenamiento (13%), `descripcion` (35%) y `enlace` (10%, botón "Ver norma" no ordenable).
+- Badges por tipo de norma y botón de enlace directo al documento oficial (portales gob.pe) con icono vectorial `external-link` y hover interactivo.
+- Ordenamiento cronológico **descendente** predeterminado por fecha de aprobación (`order: [[2, 'desc']]`), paginación de 10 registros (lengthMenu 10/15/20/30/50), comportamiento responsivo y **4 botones de exportación**: copiar, Excel (.xlsx), PDF (horizontal A4) e imprimir, excluyendo la columna de enlace.
 
 ---
 
@@ -104,7 +109,8 @@ Migrado en un 100% al estándar vectorial minimalista **Lucide Icons** (`https:/
 
 ### B. Animaciones al hacer Scroll (AOS)
 La biblioteca **AOS** gestiona la aparición progresiva de elementos en pantalla:
-- Configuración global: `duration: 800ms`, `easing: 'ease-out-cubic'`, `once: true`.
+- **Cobertura real:** El CSS de AOS está presente en 15 de las 16 páginas (todas menos `microcurso.html`), pero el **script AOS JS solo se carga en 13 páginas**; `chatbot.html` incluye únicamente el CSS. El inyector global protege la inicialización con `typeof AOS !== 'undefined'` para evitar errores.
+- **Configuración global:** `duration: 800`, `easing: 'ease-out-cubic'`-por defecto de la librería, `once: true`, `offset: 100`.
 - Efectos recomendados según contexto:
   - `data-aos="fade-up"`: Para tarjetas, tablas y bloques de sección principal.
   - `data-aos="fade-right"`: Para títulos de cabecera y banners laterales.

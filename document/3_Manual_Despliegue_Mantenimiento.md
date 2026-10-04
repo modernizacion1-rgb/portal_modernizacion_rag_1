@@ -29,8 +29,8 @@ Para previsualizar el sitio web en una computadora de trabajo, realizar modifica
 Debido a su diseño modular estático, el portal puede publicarse de forma inmediata sobre cualquier servidor web moderno o portal corporativo existente:
 
 ### A. Hosting Tradicional o Servidores Institucionales (Apache / Nginx / IIS)
-- **Apache / cPanel / Plesk:** Copia el contenido completo de la carpeta raíz (las 15 páginas `.html`, carpetas `/css`, `/js`, `/data`, `/images`) directamente en el directorio público (`public_html` o `www`).
-- **Microsoft IIS (Windows Server On-Premise):** Crea un nuevo sitio web en el Administrador de IIS apuntando al directorio físico del proyecto. Asegúrate de verificar en los Tipos MIME (*MIME Types*) que la extensión `.json` esté configurada como `application/json` para permitir la lectura correcta de los 17 archivos JSON ubicados en `/data`.
+- **Apache / cPanel / Plesk:** Copia el contenido completo de la carpeta raíz (las 16 páginas `.html`, carpetas `/css`, `/js`, `/data`, `/images`) directamente en el directorio público (`public_html` o `www`).
+- **Microsoft IIS (Windows Server On-Premise):** Crea un nuevo sitio web en el Administrador de IIS apuntando al directorio físico del proyecto. Asegúrate de verificar en los Tipos MIME (*MIME Types*) que la extensión `.json` esté configurada como `application/json` para permitir la lectura correcta de los 36 archivos JSON ubicados en `/data`.
 - **Nginx:** Define el `root` del server block apuntando a la carpeta del proyecto e incluye el manejo de índices (`index index.html;`).
 
 ### B. Plataformas Cloud Modernas (GitHub Pages / Vercel / Netlify / Azure Static Web Apps)
@@ -46,9 +46,10 @@ Debido a su diseño modular estático, el portal puede publicarse de forma inmed
 ### A. Modificación de la Navegación Global y Créditos (`js/components.js`)
 Si la Unidad de Planeamiento y Presupuesto (UPP) requiere añadir un nuevo enlace al menú superior, renombrar un eje estratégico o actualizar el número de contacto en el pie de página:
 1. Abre el archivo **`js/components.js`** en tu editor de código.
-2. Para cambiar el encabezado o menú superior, modifica la cadena HTML dentro del método `components.header`.
-3. Para cambiar los créditos institucionales o enlaces rápidos del pie de página, modifica el bloque `components.footer`.
-4. Al guardar el archivo en el servidor, el cambio se replicará al instante y de manera homogénea en las **15 páginas del portal**.
+2. El archivo define un objeto literal `components` con dos propiedades principales de markup HTML: `components.header` (barra de navegación y menú móvil) y `components.footer` (créditos y accesos rápidos). La inyección se realiza en el evento `DOMContentLoaded` reemplazando los elementos `<header>` y `<footer>` vacíos vía `outerHTML`.
+3. Para cambiar el encabezado o menú superior, modifica la cadena HTML de `components.header`.
+4. Para cambiar los créditos institucionales o enlaces rápidos del pie de página, modifica el bloque `components.footer`.
+5. Al guardar el archivo en el servidor, el cambio se replicará al instante y de manera homogénea en las **15 páginas del portal** que consumen el inyector (todas excepto `microcurso.html`, que usa un mini-header propio).
 
 ### B. Actualización de Secciones y Videos Tutoriales (`data/content.json`)
 Para cambiar el texto de un eje de gestión, agregar un paso en una fase, o reemplazar la URL del video tutorial de un eje:
@@ -63,27 +64,44 @@ Para cambiar el texto de un eje de gestión, agregar un paso en una fase, o reem
 
 ### C. Gestión del Repositorio Institucional (`repositorio.html`)
 La página del repositorio cuenta con **4 Pestañas / Ejes Documentales**:
-1. `normatividad` (Normatividad y Directivas)
-2. `conocimiento` (Gestión del Conocimiento)
-3. `innovacion` (Innovación Pública)
-4. `publicaciones` (Publicaciones y Procesos)
+1. `normatividad` (Normatividad y Directivas) → gestionada por `js/directivas-table.js` sobre `data/normativas_agroideas.json` (ver sección G).
+2. `conocimiento` (Gestión del Conocimiento) → 5 sub-acordeones con registros ETMC y la cuadrícula de 6 micro-cursos.
+3. `innovacion` (Innovación Pública) → tablas FIIP e Informes de Evaluación, gestionadas por `content-loader.js` desde el bloque `"repository"."innovacion_tablas"` de `data/content.json`.
+4. `publicaciones` (Publicaciones y Procesos) → biblioteca UPP en la tabla `#repoTable`, gestionada por `content-loader.js` desde `"repository"."publicaciones_upp"` de `data/content.json`.
 
-Para agregar un nuevo documento legal a estas tablas sin tocar código HTML ni reconfigurar DataTables:
-- Edita el bloque `"repository"` en **`data/content.json`** y agrega un nuevo objeto con los campos: `"title"`, `"code"`, `"category"`, `"date"` y `"file_url"`. El script `content-loader.js` creará la fila en la tabla de forma automática.
+Para agregar una nueva publicación a la tabla `#repoTable` sin tocar código HTML ni reconfigurar DataTables:
+- Edita el bloque `"repository"."publicaciones_upp"` en **`data/content.json`** y agrega un nuevo objeto con los **campos reales del esquema**:
+  ```json
+  {
+      "title": "Cuadernillo de Modernización 2026",
+      "desc": "Resumen ejecutivo de avances del eje de gestión",
+      "category": "Gestión del Conocimiento",
+      "status": "Vigente",
+      "url": "https://drive.google.com/file/d/.../view"
+  }
+  ```
+  El script `js/content-loader.js` creará la fila en la tabla de forma automática (destruyendo y reconstruyendo el DataTable vía `window.initRepoTable()`).
+
+> [!NOTE]
+> El subárbol `"repository"."directivas"` dentro de `data/content.json` se conserva como **dato heredado (no consumido)**; la tabla de normatividad se alimenta exclusivamente de `data/normativas_agroideas.json`.
 
 ### D. Actualización de la Base de Conocimiento del Asistente IA (`data/chatbot_knowledge.json`)
 El Chatbot SAMGP (`chatbot.html`) no requiere reprogramar código de inteligencia artificial cuando cambia una norma o lineamiento GxP:
 1. Abre el archivo **`data/chatbot_knowledge.json`**.
-2. Agrega o actualiza los nodos de conocimiento (`knowledge_nodes`), organizados en **9 categorías normativas** (incluyendo *8. Instructivos Operativos*).
+2. Agrega o actualiza los nodos de conocimiento (`knowledge_nodes`, actualmente **24 nodos**), organizados en las **9 categorías normativas temáticas** (`marco_modernizacion`, `politica_2030`, `reglamento_samgp`, `gestion_procesos`, `gestion_calidad`, `gestion_conocimiento`, `innovacion_publica`, `organizacion_estado`, `instructivos_agroideas`), cada nodo con `id`, `category`, `title`, `source`, `pdf_path` (ruta dentro de `MARCO NORMATIVO SAMGP 2026/`), `keywords[]`, `question_patterns[]`, `answer` (HTML) y `quick_prompt`.
 3. El motor local (`js/chatbot-engine.js`) leerá las nuevas definiciones inmediatamente para responder las consultas en la interfaz.
-4. **Conector Gemini (opcional):** Para habilitar generación en tiempo real, el usuario puede ingresar una API Key de Google Gemini desde el panel de configuración del chatbot, almacenada en `LocalStorage`.
+4. **Conector Gemini (opcional):** Para habilitar generación en tiempo real, el usuario puede ingresar una API Key de Google Gemini desde el panel de configuración del chatbot (modelo `gemini-flash-latest`), almacenada en `LocalStorage` bajo la clave `samgp_chatbot_settings`.
+
+> [!WARNING]
+> **Control de versión de la caché del chatbot:** El motor (`js/chatbot-engine.js`) valida la caché local contra `metadata.version === "2026.7"`, mientras el JSON declara `"version": "2026.6"`. Por ello, la caché `samgp_knowledge_base` se invalida y regenera en cada carga. Si actualizas el corpus, **incrementa simultáneamente** la versión en ambos lados (JSON y constante del engine) o ajusta la validación, para que la caché local funcione correctamente.
 
 ### E. Actualización de los Micro-Cursos (`data/cursos.json`)
 El Aula Virtual (`microcurso.html`) es una plantilla SPA única; **no se crean páginas HTML por curso**:
 1. Abre el archivo **`data/cursos.json`**.
-2. Localiza el módulo (`modulos`) y el subtema (`subtemas`) a modificar.
-3. Actualiza los campos `titulo`, `descripcion`, `video_url`, `pdf_url` o el arreglo `preguntas` (con `opciones` y `respuestaCorrecta`).
+2. Localiza el módulo a modificar dentro del arreglo `"modulos"` (**6 módulos**: `modulo1` Inducción en Modernización, `modulo2` Gestión por Procesos, `modulo3` Gestión del Conocimiento, `modulo4` Innovación, `modulo5` Herramientas de IA, `modulo6` Calidad de los Servicios), cada uno con su arreglo `"subtemas"` (**3 subtemas por módulo: 18 en total**, con IDs `M1.x`, `A.x`, `B.x`, `C.x`, `E.x`, `D.x` según el eje).
+3. Actualiza los campos `titulo`, `descripcion`, `video_url`, `pdf_url` o el arreglo `preguntas` (con `opciones` —3 opciones— y `respuestaCorrecta`).
 4. Al guardar, `js/microcurso.js` y `js/microcurso-modal.js` reflejarán los cambios automáticamente en el modal del repositorio y en el Aula Virtual.
+5. **Ficha pedagógica asociada (FAR-MC):** Cada subtema dispone de una ficha `data/far-mc-{modulo}-{sub}.json` (18 archivos) que se abre con el botón **"Ficha"** del modal (`ficha_microcurso.html?id=...`). La correspondencia módulo/subtema → archivo se calcula en la función `resolverFarMcId()` de `js/microcurso-modal.js` y `js/microcurso.js`; si agregas un subtema nuevo, crea su ficha FAR-MC validándola contra el esquema **`data/far-mc-v2.json`** (JSON Schema draft-07) y actualiza dicho mapeo si el patrón de nombres no lo cubre de forma generativa.
 
 ### F. Mantenimiento y Registro de Nuevos Instrumentos ETMC (FLA, FBP, GT-SH, TCO)
 Los 4 instrumentos del Equipo Técnico de Mejora Continua operan como visores dinámicos desacoplados (`ficha_*.html`, `guia_*.html`, `transferencia_*.html`). Para registrar un nuevo caso o actualizar uno existente:
@@ -105,21 +123,28 @@ Los 4 instrumentos del Equipo Técnico de Mejora Continua operan como visores di
    - `<a href="guia_tecnica_saber_hacer.html?id=simulacion-registro-GT-SH-3-4">...</a>`
    - `<a href="transferencia_conocimiento_organizacional.html?id=Formato-registro-TCO-4-4">...</a>`
 
+> [!CAUTION]
+> **Nombres de archivo exactos:** El parámetro `?id=` debe coincidir **exactamente** con el nombre del archivo JSON (sin la extensión `.json`). Existe un caso heredado en el que la fila FBP 2-3 enlaza al nombre con doble punto (`simulacion-registro-fbp-2-3..json`); evita crear nuevos enlaces con esa convención y usa el nombre limpio.
+
 ### G. Mantenimiento del Catálogo de Normativas Institucionales (`data/normativas_agroideas.json`)
-La tabla de directivas y normas institucionales de la Pestaña *1. Normatividad* se gestiona a través de `data/normativas_agroideas.json`:
+La tabla de directivas y normas institucionales de la Pestaña *1. Normatividad* (`#tablaDirectivas`) se gestiona a través de `data/normativas_agroideas.json`, un **arreglo plano de 43 registros**:
 1. Abre el archivo **`data/normativas_agroideas.json`**.
-2. Agrega una nueva entrada en el arreglo principal con los campos:
+2. Agrega una nueva entrada en el arreglo principal respetando los **campos reales del esquema**:
    ```json
    {
-       "numero": "RDE N° 045-2026-MIDAGRI-AGROIDEAS",
-       "nombre": "Aprobación de la Directiva de Gestión de Procesos",
-       "anio": "2026",
-       "fecha_aprobacion": "2026-03-15",
-       "categoria": "Resolución Directoral",
-       "enlace_drive": "https://drive.google.com/file/d/.../view?usp=sharing"
+       "titulo": "Administración y control del Fondo de Caja Chica (Versión 2025)",
+       "resolucion_aprobatoria": "RESOLUCIÓN DE DIRECTORIO N° 019-2025-AGROIDEAS",
+       "enlace": "https://www.gob.pe/institucion/agroideas/normas-legales/...",
+       "fecha": "13 de julio de 2025",
+       "descripcion": "Establece los lineamientos para la correcta administración del fondo."
    }
    ```
-3. El script **`js/directivas-table.js`** procesará la entrada en el DataTables correspondiente, aplicando ordenamiento cronológico descendente y generando el botón de descarga directa hacia Google Drive.
+   - **`fecha`:** Se registra en **texto en español** (ej. `"13 de julio de 2025"`, tolerando las variantes `setiembre`/`septiembre`); el motor `directivas-table.js` la convierte internamente a ISO para el ordenamiento cronológico descendente.
+   - **`enlace`:** URL del documento oficial publicado en los portales del Estado (`gob.pe`).
+3. El script **`js/directivas-table.js`** procesará la entrada en el DataTables correspondiente, aplicando ordenamiento cronológico descendente y generando el botón de acceso "Ver norma".
+
+> [!WARNING]
+> **No uses campos heredados:** Los campos `numero`, `nombre`, `anio`, `fecha_aprobacion`, `categoria` y `enlace_drive` **no existen** en el esquema actual del archivo. El loader no los reconoce y la fila quedaría vacía o generaría errores de visualización.
 
 ---
 

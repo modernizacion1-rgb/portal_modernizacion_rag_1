@@ -148,33 +148,28 @@ erDiagram
 ```mermaid
 graph TD
     subgraph "Capa de Presentación (Frontend / HTML)"
-        V1[Vistas Estáticas HTML\nindex, repositorio, contacto]
-        V2[Librerías Externas\nTailwind CSS, DataTables, AOS]
+        V1["Vistas Estáticas HTML<br/>index, repositorio, contacto"]
+        V2["Librerías Externas<br/>Tailwind CSS, DataTables, AOS"]
     end
-
     subgraph "Capa de Lógica y Control (Controladores JS)"
-        C1[Controladores Principales\ncontent-loader.js, directivas-table.js]
-        C2[Controladores de Detalle\ndetalle_buena_practica.js, detalle_guia_tecnica.js, etc.]
-        C3[Motores Especializados\nchatbot-engine.js]
+        C1["Controladores Principales<br/>content-loader.js, directivas-table.js"]
+        C2["Controladores de Detalle<br/>detalle_buena_practica.js, detalle_guia_tecnica.js, etc."]
+        C3["Motores Especializados<br/>chatbot-engine.js"]
     end
-
     subgraph "Capa de Datos (Modelos JSON - /data)"
-        M1[(Colecciones de Repositorio\n*.json)]
-        M2[(Corpus del Chatbot\nchatbot_knowledge.json)]
+        M1[("Colecciones de Repositorio<br/>*.json")]
+        M2[("Corpus del Chatbot<br/>chatbot_knowledge.json")]
     end
-
-    V1 <-->|Manipulación del DOM / Eventos| C1
-    V1 <-->|Manipulación del DOM / Eventos| C2
-    V1 <-->|Interfaz de Chat| C3
+    V1 <-->|"Manipulación del DOM / Eventos"| C1
+    V1 <-->|"Manipulación del DOM / Eventos"| C2
+    V1 <-->|"Interfaz de Chat"| C3
     
-    C1 -->|Fetch API (Asíncrono)| M1
-    C2 -->|Fetch API (Asíncrono) por ID| M1
-    C3 -->|Fetch API (Asíncrono)| M2
-
+    C1 -->|"Fetch API (Asíncrono)"| M1
+    C2 -->|"Fetch API (Asíncrono) por ID"| M1
+    C3 -->|"Fetch API (Asíncrono)"| M2
     classDef views fill:#dcfce7,stroke:#22c55e,stroke-width:2px;
     classDef controllers fill:#e0f2fe,stroke:#0ea5e9,stroke-width:2px;
     classDef models fill:#fef08a,stroke:#eab308,stroke-width:2px;
-
     class V1,V2 views;
     class C1,C2,C3 controllers;
     class M1,M2 models;
